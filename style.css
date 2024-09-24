@@ -1,0 +1,85 @@
+#body1 {
+    background-image: url(../HTML/image/7-min.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}   
+
+#body2 {
+    background-image: url(../HTML/image/7-min.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+
+img {
+    display: block;
+    margin-top:-40%;
+    margin-left: 15%;
+    width: 25%;
+}
+
+#img1 {
+    display: block;
+    margin-top:-40%;
+    margin-left: 10%;
+    width: 30%;
+
+}
+
+.text {
+    font-size: 2em;
+    margin-left: 65%;
+    color: aliceblue;
+}
+
+p1 {
+    width: 1200px;
+    border-left: solid;
+    border-bottom: solid;
+    padding-left: 25px;
+    padding-bottom: 25px;
+    float: right;
+    color: aliceblue;
+    font-size: 1.5em;
+}
+
+hr {
+    margin-top: 50px;
+    width: 800px;
+}
+
+a {
+    vertical-align: bottom;
+    color:white;
+    display: inline-block;
+    font-size: 2.5em;
+    margin-top: -4%;
+    margin-left: 87%;
+}
+
+#a1 {
+    vertical-align: bottom;
+    color:white;
+    display: inline-block;
+    font-size: 2.5em;
+    margin-bottom: 0.5%;
+    margin-left: 50%;
+}
+
+#a2 {
+    display: block;
+    color:white;
+    display: inline-block;
+    font-size: 2.5em;
+    margin-top: 15%;
+    margin-left: 50%;
+}
+
+p2 {
+    color: aliceblue;
+    font-size: 2em;
+    margin-left: 17%;
+
+}
