@@ -1,0 +1,23 @@
+body {
+    background-image: url(../img/RED.png) ;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    text-align: center;
+}
+.h1 {
+    color: aliceblue;
+    background-color: black;
+}
+.a {
+    color: rgb(255, 0, 0);
+    background-color: black;
+    font-size: 25px;
+}
+.h3 {
+    color: aliceblue;
+    background-color: black;
+}
+IMG {
+    width: 35%;
+    height: 35%;
+}
