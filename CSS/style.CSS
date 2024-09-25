@@ -22,21 +22,53 @@
     background-attachment: fixed;
     text-align: center;
 }
-.h1 {
-    color: aliceblue;
+.h1_index {
     background-color: black;
+    color: aliceblue;
+    align-items: center;
+    width: 170px;
+    margin: auto;
+    border: solid 1px;
     
+}
+.h1_Page1 {
+    background-color: black;
+    color: aliceblue;
+    align-items: center;
+    width: 800px;
+    margin: auto;
+    border: solid 1px;
+}
+.h1_Page2 {
+    background-color: black;
+    color: aliceblue;
+    align-items: center;
+    width: 170px;
+    margin: auto;
+    border: solid 1px;
+}
+.h1_Page3 {
+    background-color: black;
+    color: aliceblue;
+    align-items: center;
+    width: 200px;
+    margin: auto;
+    border: solid 1px;
 }
 .a {
     color: rgb(255, 0, 0);
     background-color: black;
     font-size: 25px;
-    border: solid 2px;
+    border: solid 1px;
     border-color: aliceblue;
 }
 .h3 {
-    color: aliceblue;
     background-color: black;
+    color: aliceblue;
+    display: inline-block;
+    width: 600px;
+    height: 115px;
+    border: solid 1px;
 }
 #h1 {
     color: aliceblue;
@@ -45,7 +77,7 @@
 #img {
     width: 30%;
     height: 30%;
-    margin: 30px; 
+    margin: 30px;
 }
 #img_1 {
     width: 40%;
@@ -53,13 +85,32 @@
     margin: 30px; 
 }
 #img_2 {
-    width: 35%;
-    height: 35%;
+    width: 20%;
+    height: 20%;
     margin: 30px; 
 }
 #img_3 {
     width: 15%;
     height: 15%;
-    margin: 30px; 
+    margin: 30px;
 }
-
+#img_NCR_2 {
+    width: 19%;
+    height: 19%;
+    margin: 30px;
+}
+#img_NCR_1 {
+    width: 19%;
+    height: 19%;
+    margin: 30px;
+}
+#img_Legat1 {
+    width: 19%;
+    height: 19%;
+    margin: 30px;
+}
+#img_Legat2 {
+    width: 25%;
+    height: 25%;
+    margin: 30px;
+}
