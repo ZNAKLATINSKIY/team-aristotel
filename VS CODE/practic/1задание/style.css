@@ -1,0 +1,15 @@
+h1 {
+    color: #a52a2a; 
+    font-size: 27pt; 
+    font-family: Georgia, Times, serif; 
+    font-weight: normal;
+}
+
+.main {
+        width: 550px;
+        border-bottom: solid 1px;
+        border-left: solid 2px;
+        margin-left: 60px;
+        padding-left: 10px;
+        padding-bottom: 10px;
+}   
