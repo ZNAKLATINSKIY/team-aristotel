@@ -1,0 +1,32 @@
+.Sock_Welcome {
+    background-image: url(../img/Stock_Welcome.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+.Up {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 30px;
+    height: 20px;
+    margin-top: 30px;
+}
+#img_1 {
+    display: flex;
+    flex-direction: row;    
+    width: 100px;
+    height: 100px;
+    margin-right: 1000px;
+}   
+.a {
+    color: aliceblue;
+    text-decoration: none;
+}
