@@ -1,23 +1,51 @@
-.Sock_Welcome {
-    background-image: url(../img/Stock_Welcome.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    text-align: center;
+body {
+    font-family: "Calibiri", sans-serif;
+    margin: 0px;
+    padding: 0px;
 }
-
+.Sock_Welcome {
+    background-image: url(/img/Stock_Welcome.jpg);
+    background-repeat: no-repeat;
+    height: 1000px;
+    margin: 0px;
+    padding: 0px;
+}
 nav {
     display: flex;
     justify-content: space-around;
 }
-
+.h2_main_text {
+    display: flex;
+    flex-direction: row;
+    align-self: flex-start;
+    color: aliceblue;
+    margin-left: 750px;
+    align-self: flex-end;
+    height: 230PX;
+    width: 1130PX;
+    padding-top: 10px;
+    background-color: rgba(0, 0, 0, 0.562);
+    font-size: 160%;
+    border: solid 1px;
+    text-align: center;
+}
+.h1_main_text {
+    display: flex;   
+    color: aliceblue;
+    margin-left: 1020px;
+    height: 50PX;
+    width: 570PX;
+    background-color: rgba(0, 0, 0, 0.562);
+    font-size: 210%;
+    border: solid 1px;
+}
 .Up {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     gap: 30px;
     height: 20px;
-    margin-top: 30px;
+    padding-top: 30px;
 }
 #img_1 {
     display: flex;
@@ -29,4 +57,12 @@ nav {
 .a {
     color: aliceblue;
     text-decoration: none;
+}
+.Botton_1 {
+    display: flex;
+    justify-self: flex-end;
+    background-color: black;
+    color: green;
+    box-shadow: 5px 5px 5px rgba(0, 128, 0, 0.39);
+    font-size: 50px;
 }
