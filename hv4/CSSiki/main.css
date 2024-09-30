@@ -1,0 +1,98 @@
+        #index_body{
+    background-image: url(../Images/post_mir.jpg );
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover ;
+    text-align: center;
+    color: rgb(0, 143, 36);
+}
+.link1{
+    font-size:40px;
+    color: rgb(0, 136, 255);
+    display: block;
+    margin-top: 100px;
+     
+}
+.link2{
+    font-size:40px;
+    color: rgb(43, 255, 0);
+    display: block;
+    margin-top: 40px;
+     
+}
+.link3{
+    font-size:40px;
+    color: rgb(255, 0, 0);
+    display: block;
+    margin-top: 40px;
+     
+}         
+#edhaus{
+    transform: scale(2); 
+    margin-top: 100px;      
+}
+#body2{
+    background-image: url(../Images/Palat_of_cesar.webp );
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover ;    
+    text-align: center;
+    color: azure;
+}
+#cezar{
+    width: 30%; 
+    height: 30%;
+}
+#body3{
+    background-image: url(../Images/ruini.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover ;    
+    text-align: center;
+    color: azure;
+}
+#body2{
+    background-image: url(../Images/Palat_of_cesar.webp );
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover ;    
+    text-align: center;
+    color: azure;
+}
+#zagolovok{
+    color:black;
+}
+#shef{
+    width:30% ;
+    height:30% ;
+}
+#body4{
+    background-image: url(../Images/Palat_of_cesar.webp );
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover ;    
+    text-align: center;
+    color: azure; 
+}
+#lania{
+    width: 25%;
+    height: 25%;
+}
+.quotes{
+    font-size: 20px;
+    text-align: left;
+    font-family: monospace;
+}
+.author_quotes{
+    border:solid black;
+    float:right;
+    color: aliceblue;
+    width: 600px;
+    margin-top: -600px;
+    padding: 20px;
+    background-color: rgb(36, 36, 36);
+
+}
+.author{
+    float:right;
+}
