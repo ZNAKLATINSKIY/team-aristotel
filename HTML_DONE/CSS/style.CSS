@@ -3,6 +3,9 @@ body {
     margin: 0px;
     padding: 0px;
 }
+
+    /*Привественный сток*/
+
 .Stock_Welcome {
     background-image: url(/img/Stock_Welcome.jpg);
     background-size: cover;
@@ -75,6 +78,9 @@ nav {
     max-width: 30%; 
     font-size: 50px;
 }
+
+/*Тематика данного сайт*/
+
 .Two_Stock {
     display: flex;
     flex-direction: column;
@@ -90,6 +96,9 @@ nav {
     max-width: 200px;
     max-height: 300px;
 }
+
+/*Крутая статистика*/
+
 .Stock_Three {
     background-image: url(/img/Stock_Two_Back.jpg);
     background-size: cover;
@@ -134,6 +143,9 @@ nav {
     height: 8px;
     border-radius: 50px;
 }
+
+/*Кол-во возможностей*/
+
 .Four_Stock {
     display: flex;
     flex-direction: row;
@@ -148,6 +160,9 @@ nav {
     width: 100px;
     height: 100px;
 }
+
+/*Крутые персонажики*/
+
 .Five_Stock {
     display: flex;
     flex-direction: row;
@@ -161,6 +176,9 @@ nav {
     width: 479.7px;
     height: 479.7px;
 }
+
+/*Видос*/
+
 .Six_Stock {
     display: flex;
     flex-direction: row;
@@ -171,16 +189,27 @@ nav {
     max-width: 2000px;
     text-align: center;
 }
+
+/*Интересные факты*/
+
 .Seven_Stock {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: flex-start;
     text-align: center;
+    align-items: center;
     background-color: black;
     color: aliceblue;
     height: 700px;
     max-width: 2000px;
 }
+.Stock_Seven_Video {
+    width: 400px;
+    height: 2000px;
+}
+
+/*Цитаты*/
+
 .Vosem_stock_back {
     display: flex;
     justify-content: center;
@@ -203,6 +232,9 @@ nav {
     max-width: 300px;
     max-height: 300px;
 }
+
+/*Иконки серии*/
+
 .Nain_Stock {
     display: flex;
     flex-direction: column;
@@ -218,6 +250,9 @@ nav {
     width: 100px;
     height: 100px;
 }
+
+/*Кол-во возможностей*/
+
 .Ten_stock {
     display: flex;
     flex-direction: row;
@@ -293,6 +328,9 @@ nav {
     padding: 20px;
     font-size: 1em;
 }
+
+/*Кол-во возможностей*/
+
 .Stock_End {
     display: flex;
     flex-direction: row;
