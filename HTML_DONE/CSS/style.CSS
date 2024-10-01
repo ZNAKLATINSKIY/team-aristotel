@@ -301,5 +301,7 @@ nav {
     color: black;
     height: 200px;
     max-width: 2000px;
+    font-size: 20px;
+    font-weight: bold;
 }
 
