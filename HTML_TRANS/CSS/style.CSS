@@ -1,0 +1,23 @@
+body {
+    background-color: black;
+    background-image: url(../img/143f2efc64447b9044cfa7d5a8057.jpeg);
+    background-repeat: no-repeat;
+}
+.block {
+    display: flex;
+    flex-direction: column;
+    height: 800px;
+    justify-content: flex-end;
+    margin: 100px;
+}
+.trans.animate       {
+    margin-top: 500px;
+}
+.trans {
+    color: rgb(238, 255, 0);
+    font-size: 50px;
+    font-weight: 100;
+    transition-property: margin-top 2s ease-in-out .3s;
+    transition-duration: 5000ms;
+    transition-timing-function: ease-in-out .3s;
+}
