@@ -13,9 +13,13 @@ a {
 
 /* Header */
 header {
-    background-color: #333;
+    background-color: #05040f;
     color: #fff;
     padding: 20px 0;
+    background-image: url(../images/star_space.jpg);
+    background-size: cover;
+    position: relative;
+    height: 400px;
 }
 
 .header-container {
@@ -43,11 +47,12 @@ nav ul li {
 
 .banner {
     text-align: center;
-    padding: 100px 0;
+    padding: 20px 0;
 }
 
 .banner h1 {
     font-size: 3rem;
+    margin-bottom: 23px;
 }
 
 .banner p {
@@ -55,14 +60,20 @@ nav ul li {
     margin-top: 10px;
 }
 
-/* Portfolio Section */
-.portfolio {
+/* Portfolio Section (positioning inside header) */
+.portfolio-container {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1200px;
+    background-color: rgba(0, 0, 27, 0.836);
     display: flex;
     justify-content: space-between;
-    padding: 50px;
-    background-color: #fff;
-    max-width: 1200px;
-    margin: 0 auto;
+    padding: 20px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
 }
 
 .portfolio-content {
@@ -80,6 +91,10 @@ nav ul li {
 
 .portfolio-content a {
     color: #f00;
+}
+
+.portfolio-image {
+    width: 40%;
 }
 
 .portfolio-image img {
@@ -127,17 +142,19 @@ nav ul li {
     margin-right: 10px;
 }
 
-/* Contact and Newsletter Section */
-.contact-newsletter {
+/* Extra Content Section (Request and Newsletter) */
+.extra-content {
     display: flex;
-    justify-content: space-between;
-    padding: 50px;
-    background-color: #f9f9f9;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 45%;
+    margin-top: 20px;
 }
 
 .contact, .newsletter {
-    width: 45%;
-    text-align: center;
+    width: 100%;
+    text-align: left;
 }
 
 .contact h3, .newsletter h3 {
@@ -150,16 +167,15 @@ nav ul li {
     padding: 10px 20px;
     background-color: #333;
     color: #fff;
-    border-radius: 5px;
-    margin-top: 10px;
+    border-radius:30px
 }
-
 /* Footer */
 footer {
-    background-color: #333;
+    background-color: #05040f;
     color: #fff;
-    text-align: center;
+    text-align: left;
     padding: 20px 0;
+    padding-left: 30px;
 }
 
 footer p {
