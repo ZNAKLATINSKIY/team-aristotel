@@ -1,0 +1,203 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Header */
+header {
+    background-color: #05040f;
+    color: #fff;
+    padding: 20px 0;
+    background-image: url(../images/star_space.jpg);
+    background-size: cover;
+    position: relative;
+    height: 500px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+nav{
+    background-color: black;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+.auth-links a {
+    margin-left: 10px;
+}
+
+.banner {
+    text-align: center;
+    padding: 20px 0;
+    display: inline-block;
+}
+
+.banner h1 {
+    font-size: 3rem;
+    margin-bottom: 23px;
+}
+
+.banner p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+.Transparent_block{
+        background-color: rgba(110, 106, 106, 0.559);
+        border: solid 2px;
+        height: 30px;
+        width: 500px;
+        margin-top: 40px;
+        text-align: center;
+        padding: 60px; 
+        display: inline-block;
+}
+.banner_and_block{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    max-width: 1200px;
+}
+
+/* Portfolio Section (positioning inside header) */
+.portfolio-container {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1200px;
+    background-color: rgba(0, 0, 27, 0.836);
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+.portfolio-content {
+    width: 60%;
+}
+
+.portfolio-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.portfolio-content p {
+    margin-bottom: 20px;
+}
+
+.portfolio-content a {
+    color: #f00;
+}
+
+.portfolio-image {
+    width: 40%;
+}
+
+.portfolio-image img {
+    max-width: 100%;
+}
+
+/* Why Choose Us Section */
+.why-choose {
+    background-color: #f9f9f9;
+    padding: 50px;
+    text-align: center;
+}
+
+.why-choose h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Testimonials and More Projects Section */
+.testimonials-projects {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px;
+    background-color: #fff;
+}
+
+.testimonials, .more-projects {
+    width: 45%;
+}
+
+.testimonials h3, .more-projects h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.testimonial, .project {
+    margin-bottom: 20px;
+}
+
+.testimonial img, .project img {
+    max-width: 100px;
+    float: left;
+    margin-right: 10px;
+}
+
+/* Extra Content Section (Request and Newsletter) */
+.extra-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 45%;
+    margin-top: 20px;
+}
+
+.contact, .newsletter {
+    width: 100%;
+    text-align: left;
+}
+
+.contact h3, .newsletter h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border-radius:30px
+}
+/* Footer */
+footer {
+    background-color: #05040f;
+    color: #fff;
+    text-align: left;
+    padding: 20px 0;
+    padding-left: 30px;
+}
+
+footer p {
+    margin: 5px 0;
+}
