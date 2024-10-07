@@ -1,0 +1,41 @@
+h1 {
+    text-align: center;
+    padding-top: 50px;
+}
+
+#main {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+p {
+    margin-bottom: 25px;
+}
+
+.blocks {
+    padding-top: 25px;
+    border: 2px solid;
+    border-radius: 30px;
+    margin: 20px;
+    width: 250px;
+    text-align: center;
+    justify-content: center;
+    font-weight: bolder;
+    font-size: 1.2em;    
+
+}
+
+span {
+    display: flex;
+    justify-content: center;
+    /* border-top: 0.5px solid; */
+    padding-top: 10px;
+    font-size: 1.1em;
+    
+}
+
+hr{
+    width: 85%;
+}
