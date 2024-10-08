@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.search-bar input {
+    width: 200%;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 40px;
+}
+
+.auth-buttons .button2 {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #6200ee;
+    color: #fff;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+}
+.button1{
+    background-color: #fff;
+    border: none;
+}
+
+nav {
+    margin-top: 10px;
+    background-color: #f8f8f8;
+    padding: 10px 20px;
+    border-top: solid rgb(176, 176, 176) 1px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    cursor: pointer;
+    padding: 10px;
+    font-weight: bold;
+    border-right: solid rgb(176, 176, 176) 1px;
+    padding-right: 40px
+}
+
+.main-grid {
+    display: grid;
+    gap: 10px;
+    padding: 20px;
+}
+
+.main-article {
+    grid-column: 1/8;
+    grid-row:1/9;
+    background-image: url(../images/forza.webp);
+    background-size: cover;
+}
+
+.main-article, .small-article1, .small-article2, .small-article3, .small-article4 {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.small-article1{
+    background-image: url(../images/battlefield.webp);
+    background-size: cover;
+    grid-column: 8/9;
+    grid-row:1/4 ;
+}
+.small-article2{
+    background-image: url(../images/outer_worlds.jpg);
+    background-size: cover;
+    grid-column:9/14 ;
+}
+.small-article3{
+    background-image: url(../images/life_is_strange.jpg);
+    background-size: cover;
+}
+.small-article4{
+    background-image: url(../images/starfield.webp);
+    background-size: cover;
+}
+.main-article h2, .small-article h3 {
+    margin: 10px 0;
+}
+
+.main-article p, .small-article p {
+    font-size: 14px;
+    color: #888;
+}
