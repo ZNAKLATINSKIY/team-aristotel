@@ -80,7 +80,8 @@ nav {
 .Content_Block_Two {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    flex-wrap: wrap;
+    justify-content: flex-start;
     background-color: rgb(15, 17, 38);
     color: aliceblue;
     margin: auto;
@@ -93,5 +94,9 @@ nav {
 #tyalet {
     width: 400px;
     height: 400px;
-    margin: 100px;
+    margin: 0;
+}
+.Back_Ser {
+    background-color: aquamarine;
+    height: 100px;
 }
