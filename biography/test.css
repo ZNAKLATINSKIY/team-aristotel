@@ -1,0 +1,49 @@
+    
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #0f1016;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+.cust-color{ 
+    color: #ffffff;
+}    
+header {
+    background-color: #1D2C3B;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+.avtorskie-prava{
+    text-align: right;
+
+}
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #F7EC3F;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #333;
+}
+
+p {
+    margin-bottom: 16px;
+}
+
+.image {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}

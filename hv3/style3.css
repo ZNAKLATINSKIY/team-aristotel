@@ -1,0 +1,128 @@
+#main{
+    background-color: rgb(55, 242, 55);
+    width: 950px;
+    margin: auto;
+    height: 980px;
+    padding: 10px;
+    
+}
+#back{
+    background-color: yellow;
+    width: 880px;
+    margin: 35px;
+    height: 850px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 40px;     
+    
+}
+#regions{
+background-color: rgb(231, 46, 108);
+color:white;
+height: 95px;
+padding-left: 10px;
+margin:20px;
+padding-top: -20px;
+
+
+}
+#blocks{
+background-color: blue;
+width: 300px;
+margin-left: 10px;
+display: inline-block;
+margin-top: 15px;
+height: 45px;
+padding: 10px;
+}
+#vivod{
+    background-color: rgb(147, 151, 216);
+    margin: 15px;
+    height: 420px;
+    color:black;
+    padding: 20px;
+    
+}
+#otdelka{
+    color:black;
+    background-color: rgb(139, 236, 236);
+    margin-top: 20px;
+    padding: 10px;
+    width: 420px;
+}
+/* #visual4{
+    background-color: rgb(255, 0, 0);
+    padding: 28px;
+    margin-left: 3px;
+    height: 104px;
+    width: 630px;
+    margin-top: 10px;
+    
+}
+
+
+#visual41{
+    background-color: blue;
+    padding: 28px;
+    
+    margin-left: -19px;
+    height: 46px;
+    width: 120px;
+    margin-top:8px;
+    
+}
+
+#visual42{
+    background-color: blue;
+    padding: 28px;
+    margin-left: 200px;
+    height: 46px;
+    width: 120px;
+    margin-bottom: -207px;
+    
+}
+
+#visual43{
+    background-color: blue;
+    padding: 28px;
+    margin-left: 444px;
+    height: 46px;
+    width: 120px;
+    margin-top: -202px;
+    
+} */
+#footer {
+    background-color: rgb(231, 46, 108); 
+    color: aliceblue;
+    padding-left: 40px;
+    height: 165px;
+    width: 800px;
+    margin-left: 20px;
+ }
+ #block1 {
+     display: inline-block;
+     background-color: blue;
+     color: aliceblue;
+     width: 160px;
+     margin-left: px;
+     height: 120px;
+     padding-left: 20px;
+ }
+ #block2 {
+     display: inline-block;
+     background-color: blue;
+     color: aliceblue;
+     width: 160px;
+     margin-left: 105px;
+     height: 120px;
+     padding-left: 20px;
+ }
+ #block3 {
+     display: inline-block;
+     background-color: blue;
+     color: aliceblue;
+     width: 160px;
+     margin-left: 105px;
+     height: 120px;
+     padding-left: 20px;
+}

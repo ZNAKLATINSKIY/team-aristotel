@@ -1,0 +1,11 @@
+li {
+    background-color: rgb(114, 45, 45);
+    min-width: 70px;
+    line-height: 50px;
+    
+}
+ol{
+    background-color: rgb(201, 110, 110);
+    width: 400px;
+    height: 200px;
+}

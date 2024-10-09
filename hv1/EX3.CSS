@@ -1,0 +1,32 @@
+body{
+    border: 3px solid black;
+    padding: 10px;
+}
+#zagolovok{
+    text-align:center;  
+    color:rgb(0, 0, 134) ;
+    font-family: Calibri ;
+
+}
+.alltext{
+    text-align: left;
+}
+.vestext{
+    font-family:'Segoe Print'; 
+}
+#blue{
+    color: rgb(32, 110, 255);
+    font-size: 30px;
+    font-family: 'Monotype Corsiva';
+}
+#red{
+    color:red;
+    font-size: 23px;
+    font-family: 'Arial Black';
+}
+#green{
+    color:rgb(0, 133, 0);
+    font-family:"Calibri";
+    font-size: 25px;
+    
+}
