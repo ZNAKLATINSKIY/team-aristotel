@@ -1,0 +1,162 @@
+.b1 {
+    background-color: greenyellow;
+    margin: auto;
+    width: 630px;
+    height: 850px;
+    padding: 15px;
+
+}
+
+#b2 {
+    background-color: yellow;
+    height: 750px;
+    padding: 20px;
+    margin-top: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+
+}
+
+#b3 {
+    margin-top: 50px;
+    margin-left: -10px;
+    background-color: rgb(241, 78, 78);
+    color: white;
+    width: 600px;
+    height: 85px;
+}
+
+#b4 {
+    padding-top: 7px;
+    padding-left: 15px;
+    margin-top: 12px;
+    margin-left: 15px;
+    display: inline-block;
+    background-color: blue;
+    color: white;
+    width: 330px;
+    height: 59px;
+}
+
+#b5 {
+    margin-top: -73px;
+    margin-left: 370px;
+    color: rgb(255, 255, 255);
+}
+
+#b6 {
+    display: inline-block;
+    margin-top: 15px;
+    margin-left: -5px;
+    padding-left: 15px;
+    padding-top: 7px;
+    width: 210px;
+    height: 450px;
+    background-color: rgb(241, 78, 78);
+    color: white;
+
+}
+
+#b7 {
+    margin: 10px;
+    margin-left: -5px;
+    padding-left: 20px;
+    padding-top: 10px;
+    width: 190px;
+    height: 200px;
+    background-color: blue;
+}
+
+#b8 {
+    padding-left: 15px;
+    padding-top: 10px;
+    margin-top: -459px;
+    margin-left: 250px;
+    background-color: rgb(241, 78, 78);
+    color: white;
+    height: 455px;
+}
+
+#b9 {
+    margin-top: 15px;
+    margin-right: 15px;
+    margin-left: -3px;
+    padding-top: 12px;
+    padding-left: 30px;
+    height: 395px;
+    background-color: rgb(161, 163, 185);
+    color:black
+}
+
+#b10 {
+    font-size: 1.16em;
+    padding-top: 10px;
+    padding-left: 15px;
+    background-color: darkslateblue;
+    margin-top: -220px;
+    margin-left: 7px;
+    width: 270px;
+    height: 200px;
+
+}
+
+#b11 {
+    font-size: large;
+    background-color: rgb(130, 165, 177);
+    padding-left: 5px;
+    width: 255px;
+    height: 45px;
+
+}
+
+#b12 {
+    margin: -5px;
+    background-color: rgb(130, 165, 177);
+    padding-left: 15px;
+    padding-top: 10px;
+    margin-top: 9%;
+    height: 35px;
+
+}
+
+#b13 {
+    margin-top: 10px;
+    padding-left: 35px;
+    height: 115px;
+    color: white;
+    background-color: rgb(241, 78, 78);
+}
+
+
+.triple1 {
+    color:white;
+    padding-left: 10px;
+    padding-top: 10px;
+    margin-top: -93px;
+    margin-left: 15px;
+    background-color: blue;
+    width: 165px;
+    height: 75px;
+}
+
+.triple2 {
+    color:white;
+    padding-left: 10px;
+    padding-top: 10px;
+    background-color: blue;
+    margin-left: 200px;
+    margin-top: -85px;
+    width: 165px;
+    height: 75px;
+}
+
+.triple3 {
+    color:white;
+    padding-left: 10px;
+    padding-top: 10px;
+    background-color: blue;
+    margin-left: 385px;
+    margin-top: -85px;
+    width: 165px;
+    height: 75px;
+}

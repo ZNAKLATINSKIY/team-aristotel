@@ -1,0 +1,351 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family:'Times New Roman', Times, serif;
+}
+
+
+header {
+    background-image: url(/image/back.jpg);
+    background-size: cover;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    background-size: cover;
+}
+
+
+
+.navi {
+    color: white;
+    text-decoration: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 15px;
+}
+
+
+.number_one {
+    display: flex;
+    justify-content: center;
+    gap: 10em;
+    padding: 1%;
+}
+
+.h1WebOnDemand {
+    color: aliceblue;
+    padding-top: 50px;
+}
+
+.h1WebOnDemand > h1 {
+    font-size: 5em;
+}
+
+.h1WebOnDemand > p {
+    text-align: end;
+    font-size: 1.2em;
+}
+
+.adverblock {
+    background-color: gray;
+    color: aliceblue;
+    border: 3px solid;
+    border-color: aliceblue;
+    opacity: .5;
+    font-size: 1.3em;
+    width: 50%;
+    padding: 5%;
+    text-align: center;
+}
+
+
+.page_two {
+    background-color: rgba(0, 0, 0, 0.7);
+    background-size: cover;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    padding-left: 0.7%;
+    padding-top: 0.7%;
+    padding-right: 0.7%;
+}
+
+.back_two {
+    background-color: black;
+    border-radius: 20px;
+    color: aliceblue;
+}
+
+.back_three {
+    display: flex;
+}
+
+.text {
+    word-spacing: 2px;
+    margin: 1%;
+    margin-left: 2%;
+    width: 45%;
+}
+
+.text > h2 {
+    font-size: 3em;
+}
+
+.by_znaklatinskiy {
+    color: gray;
+}
+
+.image {
+    margin: 1%;
+}
+
+.viev_more {
+    text-align: end;
+    padding: 1%;
+    margin-right: 5%;
+    height: 50px;
+}
+
+.viev_more > a {
+    text-decoration: none;
+    color: purple;
+    font-size: 1.3em;
+}
+
+.container1 {
+    background-color: rgb(66, 45, 90);
+    padding: 1%;
+    padding-left: 3%;
+}
+
+
+.all_text {
+    color: aliceblue;
+
+}
+
+.all_text > h2 {
+    font-size: 3em;
+}
+
+.all_text > p {
+    font-size: 1.1em;
+    width: 90%;
+}
+
+.hr {
+    background-color: rgb(131, 41, 143);
+    color: rgb(131, 41, 143);
+    height: 6px;
+    width: 90%;
+    border: 2px solid;
+    border-radius: 5px;
+    border-color: rgb(177, 177, 177);
+    opacity: .3;
+}
+
+.hr1 {
+    background-color: rgb(131, 41, 143);
+    color: rgb(131, 41, 143);
+    height: 6px;
+    width: 50%;
+    border: 2px solid;
+    border-radius: 5px;
+    border-color: rgb(177, 177, 177);
+    opacity: .3;
+}
+
+.hr11 {
+    background-color: rgb(131, 41, 143);
+    color: rgb(131, 41, 143);
+    height: 6px;
+    width: 47%;
+    border: 2px solid;
+    border-radius: 5px;
+    border-color: rgb(177, 177, 177);
+    opacity: .3;
+}
+
+.hr2 {
+    background-color: rgb(131, 41, 143);
+    color: rgb(131, 41, 143);
+    height: 6px;
+    width: 20%;
+    border: 2px solid;
+    border-radius: 5px;
+    border-color: rgb(177, 177, 177);
+    opacity: .3;
+    margin-left: 5.5%;
+    margin-top: 1%;
+
+}
+
+
+.hr22 {
+    background-color: rgb(131, 41, 143);
+    color: rgb(131, 41, 143);
+    height: 6px;
+    width: 25%;
+    border: 2px solid;
+    border-radius: 5px;
+    border-color: rgb(177, 177, 177);
+    opacity: .3;
+    margin-left: 3%;
+    margin-top: 1%;
+
+}
+
+
+.up_lines {
+    display: flex;
+    gap: 5%;
+}
+
+.down_lines {
+    display: flex;
+    gap: 2.5%;
+}
+
+
+
+.testimonials_projects {
+    color: aliceblue;
+}
+
+.testi_and_more {
+    display: flex;
+    justify-content: space-around;
+}
+
+.testi_and_more > h3 {
+    padding-top: 2%;
+    font-size: 2.4em;
+}
+
+h3 {
+    font-size: 2.4em;
+}
+
+.imgtestimonial0 {
+    width: 200px;
+}
+
+.imgtestimonial1 {
+    width: 200px;
+}
+
+.testimonial_one_and_imagesprojects {
+    display: flex;
+    padding-top: 0.5%;
+
+}
+
+.images_and_req_and_newsletter {
+    display: flex;
+    flex-direction: column;
+    padding-left: 6%;
+}
+
+.imagesprojects {
+    display: flex;
+    gap: 3em;
+}
+
+.request_and_newsletter {
+    display: flex;
+    gap: 10em;
+    padding-top: 3%;
+}
+
+.imageprojects {
+    width: 250px;
+    height: 250px;
+}
+
+.testimonial_two {
+    display: flex;
+    margin-top: -8.3%;
+}
+
+.text_testimonial1 {
+    font-style: italic;
+    padding-left: 1%;
+    width: 35%;
+    font-size: 1.1em;
+}
+
+.text_testimonial1 > p{
+    color: rgb(195, 46, 214);
+}
+
+.text_testimonial2 {
+    font-style: italic;
+    padding-left: 1%;
+    width: 35%;
+    font-size: 1.1em;
+    word-spacing: 2px;
+}
+
+.text_testimonial2 > p{
+    color: rgb(195, 46, 214);
+}
+
+
+.downtext {
+    display: flex;
+    flex-direction: column;
+}
+
+.istext {
+    display: flex;
+    justify-content: end;
+    gap: 3em;
+    padding-top: 1%;
+    padding-right: 1.5%;
+
+}
+
+span {
+    width: 400px;
+}
+
+input {
+    background-color: rgb(78, 78, 78);
+    margin-top: 6%;
+    height: 30px;
+    width: 100%;
+    border-radius: 1em;
+    border-color: rgb(255, 255, 255);
+    padding: 1em;
+}
+
+.container2 {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    background-size: cover;
+    height: 130px;
+}
+
+.copy {
+    padding-top: 2%;
+    padding-left: 5%;
+    color: aliceblue;
+    font-size: 1.1em;
+}
+
+.follow {
+    color: aliceblue;
+    font-size: 1.3em;
+    padding-right: 5%;
+    padding-top: 2%;
+}
+
+.mnemo {
+    font-size: 1.5em;
+}
