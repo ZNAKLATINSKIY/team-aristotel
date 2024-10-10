@@ -1,17 +1,32 @@
+@font-face {
+    font-family: 'font';
+    src: url(./МатериалыкДЗ/AVENGEANCE\ HEROIC\ AVENGER\ AT.ttf);
+}
+
+
+
 body {
+    font-family: 'font';
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
 }
 
+.text {
+    text-align: center;
+    font-size: 7.5em;
+    padding-top: 3.5%;
+    padding-left: 15.8%;
+}
 
 .all_avengers {
     position: relative;
+    overflow: hidden;
     background-image: url(./МатериалыкДЗ/bg.png);
     background-size: 100% 100%;
     height: 700px;
-    width: 70%;
+    width: 1440px;
     margin-top: 4.5%;
 }
 
@@ -28,7 +43,7 @@ body {
 
 #widow {
     left: 220px;
-    top: 200px;
+    top: 260px;
 }
 
 #cap {
@@ -52,3 +67,4 @@ body {
     top: 200px;
     width: 650px;
 }
+
