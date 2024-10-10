@@ -1,0 +1,101 @@
+.Field {
+    background-image: url(../img/1622923675_26-phonoteka_org-p-shakhmatnaya-doska-tekstura-krasivo-35.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: auto;
+    height: 1300px;
+    max-width: 1300px;
+}
+.Chess {
+    position: absolute;
+}
+.Black_Slon_1 {
+    position: absolute;
+    top: 270px;
+    left: 945px;
+}
+.Black_Slon_2 {
+    position: absolute;
+    top: 270px;
+    left: 275px; 
+}
+.White_Slon_1 {
+    position: absolute;
+    top: 940px;
+    left: 270px;
+}
+.White_Slon_2 {
+    position: absolute;
+    top: 940px;
+    left: 940px;
+}
+.Black_Ken_1 {
+    position: absolute;
+    top: 270px;
+    left: 845px;
+}
+.Black_Ken_2 {
+    position: absolute;
+    top: 465px;
+    left: 465px; 
+}
+.Black_Fers_1 {
+    position: absolute;
+    top: 270px;
+    left: 465px; 
+}
+.Black_Fers_2 {
+    position: absolute;
+    top: 270px;
+    left: 750px;
+}
+.Black_Queen {
+    position: absolute;
+    top: 270px;
+    left: 655px;
+}
+.Black_King {
+    position: absolute;
+    top: 270px;
+    left: 555px;
+}
+.Soldar_1 {
+    position: absolute;
+    top: 270px;
+    left: 555px;
+}
+.Soldar_2 {
+    position: absolute;
+    top: 270px;
+    left: 555px;
+}
+.Soldar_3 {
+    position: absolute;
+    top: 270px;
+    left: 555px;
+}
+.Soldar_4 {
+    position: absolute;
+    top: 270px;
+    left: 555px;
+}
+.Soldar_5 {
+    position: absolute;
+    top: 270px;
+    left: 555px;
+}
+.Soldar_6 {
+    position: absolute;
+    top: 270px;
+    left: 555px;
+}
+.Soldar_7 {
+    position: absolute;
+    top: 270px;
+    left: 555px;
+}
+.Soldar_8 {
+    position: absolute;
+    top: 270px;
+    left: 555px;
+}
