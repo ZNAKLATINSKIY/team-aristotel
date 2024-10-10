@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+
+.all_avengers {
+    position: relative;
+    background-image: url(./МатериалыкДЗ/bg.png);
+    background-size: 100% 100%;
+    height: 700px;
+    width: 70%;
+    margin-top: 4.5%;
+}
+
+.avengers {
+    position: absolute;
+    width: 500px;
+}
+
+#hulk {
+    left: 0;
+    top: 200px;
+    width: 600px;
+}
+
+#widow {
+    left: 220px;
+    top: 200px;
+}
+
+#cap {
+    left: 380px;
+    top: 200px;
+}
+
+#ironman {
+    left: 570px;
+    top: 160px;
+}
+
+#hawkeye {
+    left: 780px;
+    top: 280px;
+    width: 380px;
+}
+
+#thor {
+    left: 880px;
+    top: 200px;
+    width: 650px;
+}
