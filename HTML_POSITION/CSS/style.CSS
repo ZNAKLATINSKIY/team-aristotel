@@ -1,0 +1,55 @@
+@font-face {
+    font-family: 'at';
+    src: url(../img/AVENGEANCE\ HEROIC\ AVENGER\ AT.ttf);
+}
+.shrift {
+    font-family: 'at';
+    font-size: 100px;
+    color: aliceblue;
+}
+.Comix {
+    background-image: url(../img/bg.png);
+    background-size: contain;
+    background-color: brown;
+    background-repeat: no-repeat;
+    background-size: 1000px;
+    margin: auto;
+    height: 710px;
+    width: 1000px;
+    position: relative;
+    overflow: hidden;
+}
+.two_avangers {
+text-align: center;
+}
+.heroes {
+    position: absolute;
+    width: 300px;
+    top: 250px;
+}
+#Hulk {
+    right: 550px ;
+    width: 50%;
+}
+#thor {
+    left: 700px;
+    width: 50%;
+}
+#widow {
+    left: 150px;
+    top: 287px;
+}
+#hawkeye {
+    right: 100px;
+    top: 280px;
+}   
+#cap {
+    left: 200px;
+    width: 50%;
+    top: 261px;
+}
+#ironman {
+    right: 180px;
+    width: 45%;
+    top: 200px;
+}
