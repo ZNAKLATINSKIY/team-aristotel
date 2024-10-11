@@ -3,6 +3,144 @@ body {
     padding: 0;
 }
 
+.chess {
+    position: absolute;
+    left: 35%;
+    top: 15%;
+}
 .background {
-    background-image: url(./Поля/моядоска.jpg);
+    width: 600px;
+}
+.allchess {
+    width: 70px;
+    position: absolute;
+}
+.bB_ {
+    left: 27.2%;
+    bottom: 83.5%;
+}
+.bB {
+    left: 61%;
+    bottom: 83.5%;
+}
+.wB_ {
+    left: 27.2%;
+    bottom: 5.5%;
+}
+.wB {
+    left: 16.1%;
+    bottom: 50.2%;
+}
+.bK {
+    left: 49.9%;
+    bottom: 83.5%;
+}
+.wK {
+    left: 49.9%;
+    bottom: 5.5%;
+}
+.bN_ {
+    left: 27.2%;
+    bottom: 61.2%;
+}
+.bN {
+    left: 72.2%;
+    bottom: 83.5%;
+}
+.wN_ {
+    left: 16%;
+    bottom: 5.3%;
+}
+.wN {
+    left: 61%;
+    bottom: 27.6%;
+}
+.bQ {
+    left: 38.5%;
+    bottom: 83.5%;
+}
+.wQ {
+    left: 38.5%;
+    bottom: 5.5%;
+}
+.bR_ {
+    left: 4.6%;
+    bottom: 83.5%;
+}
+.bR {
+    left: 83.5%;
+    bottom: 83.5%;
+}
+.wR_ {
+    left: 4.6%;
+    bottom: 5.5%;
+}
+.wR {
+    left: 83.5%;
+    bottom: 5.5%;
+}
+.bP_1 {
+    left: 4.6%;
+    bottom: 72.5%;
+}
+.bP_2 {
+    left: 27.2%;
+    bottom: 72.5%;
+}
+.bP_3 {
+    left: 38.5%;
+    bottom: 72.5%;
+}
+.bP_4 {
+    left: 49.9%;
+    bottom: 50.2%;
+}
+.bP_5 {
+    left: 61%;
+    bottom: 72.5%;
+}
+.bP_6 {
+    left: 72.2%;
+    bottom: 72.5%;
+}
+.bP_7 {
+    left: 83.5%;
+    bottom: 72.5%;
+}
+.bP_8 {
+    left: 16%;
+    bottom: 72.5%;
+}
+
+.wP_1 {
+    left: 4.6%;
+    bottom: 16.5%;
+}
+.wP_2 {
+    left: 16%;
+    bottom: 16.5%;
+}
+.wP_3 {
+    left: 27.2%;
+    bottom: 16.5%;
+}
+.wP_4 {
+    left: 38.5%;
+    bottom: 16.5%;
+}
+.wP_5 {
+    left: 49.9%;
+    bottom: 38.9%;
+}
+.wP_6 {
+    left: 61%;
+    bottom: 16.5%;
+}
+.wP_7 {
+    left: 72.2%;
+    bottom: 16.5%;
+}
+.wP_8 {
+    left: 83.5%;
+    bottom: 16.5%;
 }
