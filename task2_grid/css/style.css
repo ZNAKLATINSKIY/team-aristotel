@@ -93,8 +93,8 @@ nav ul li {
 
 /* Анимация при наведении */
 .main-article:hover, .small-article1:hover, .small-article2:hover, .small-article3:hover, .small-article4:hover {
-    transform: scale(1.05); /* Увеличение */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Более выраженная тень */
+    transform: scale(1.05); 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
     filter: brightness(100%);
 }
 

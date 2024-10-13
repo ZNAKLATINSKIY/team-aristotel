@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 2px dashed #000000;
+}
+
+th, td {
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2d99c;
+}
+
+td {
+    background-color: #ffffff;
+}
+
+.right-align {
+    text-align: right;
+}
+
+.total {
+    font-weight: bold;
+}
