@@ -74,8 +74,6 @@ nav ul li {
     gap: 10px;
     padding: 20px;
     height: 500px;
-    filter: brightness(30%);
-
 }
 
 .main-article {
@@ -84,6 +82,22 @@ nav ul li {
     background-image: url(../images/forza.webp);
     background-size: cover;
 }
+.main-article, .small-article1, .small-article2, .small-article3, .small-article4 {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.9s ease;
+    filter: brightness(60%);
+}
+
+/* Анимация при наведении */
+.main-article:hover, .small-article1:hover, .small-article2:hover, .small-article3:hover, .small-article4:hover {
+    transform: scale(1.05); /* Увеличение */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Более выраженная тень */
+    filter: brightness(100%);
+}
+
 
 .main-article, .small-article1, .small-article2, .small-article3, .small-article4 {
     background-color: #fff;
