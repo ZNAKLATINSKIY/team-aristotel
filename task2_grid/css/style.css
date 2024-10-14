@@ -72,8 +72,8 @@ nav ul li {
 /* Grid Layout for Main Content */
 .main-grid {
     display: grid;
-    grid-template-columns: repeat(12, 1fr); /* 12-column grid */
-    grid-template-rows: repeat(6, 150px);   /* Each row is 150px tall */
+    grid-template-columns: repeat(12, 1fr); 
+    grid-template-rows: repeat(6, 150px);  
     gap: 15px;
     padding: 20px;
     height: auto;
@@ -81,8 +81,8 @@ nav ul li {
 
 /* Main Article */
 .main-article {
-    grid-column: 1 / span 6; /* spans 7 columns */
-    grid-row: 1 / span 2;    /* spans 6 rows */
+    grid-column: 1 / span 6; 
+    grid-row: 1 / span 2;    
     background-image: url(../images/forza.webp);
     background-size: cover;
     padding: 15px;
@@ -97,8 +97,8 @@ nav ul li {
 
 /* Small Articles */
 .small-article1 {
-    grid-column: 7 / span 2; /* spans from column 8 to 12 */
-    grid-row: 1 / span 1;    /* spans 2 rows */
+    grid-column: 7 / span 2; 
+    grid-row: 1 / span 1;   
     background-image: url(../images/battlefield.webp);
     background-size: cover;
     padding: 15px;
@@ -108,8 +108,8 @@ nav ul li {
 }
 
 .small-article2 {
-    grid-column: 9 / span 8; /* spans from column 8 to 12 */
-    grid-row: 1 / span 1;    /* spans 2 rows */
+    grid-column: 9 / span 8; 
+    grid-row: 1 / span 1;   
     background-image: url(../images/outer_worlds.jpg);
     background-size: cover;
     padding: 15px;
@@ -118,8 +118,8 @@ nav ul li {
 }
 
 .small-article3 {
-    grid-column: 7  / span 4; /* spans from column 1 to 4 */
-    grid-row: 2 / span 1;    /* spans 2 rows */
+    grid-column: 7  / span 4; 
+    grid-row: 2 / span 1;    
     background-image: url(../images/life_is_strange.jpg);
     background-size: cover;
     padding: 15px;
@@ -129,8 +129,8 @@ nav ul li {
 }
 
 .small-article4 {
-    grid-column: 11 / span 6; /* spans from column 5 to 9 */
-    grid-row: 2 / span 1;    /* spans 2 rows */
+    grid-column: 11 / span 6; 
+    grid-row: 2 / span 1;   
     background-image: url(../images/starfield.webp);
     background-size: cover;
     padding: 15px;
@@ -139,7 +139,7 @@ nav ul li {
     color: white;
 }
 
-/* Common Article Styles */
+/* Articles */
 .main-article h2, .small-article1 h3, .small-article2 h3, .small-article3 h3, .small-article4 h3 {
     margin: 10px 0;
     color: white;
@@ -180,4 +180,78 @@ nav ul li {
 .sidebar ul li {
     padding: 8px 0;
     
+}
+
+.additional-article1 {
+    border-radius: 10px;
+    border: solid 1px black;
+    background-color: white;
+    grid-column: 2 / span 5; 
+    grid-row: 3 / span 3;
+}
+
+.additional-article1 img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 280px;
+}
+
+.additional-article1 button {
+    border-radius: 100%;
+    background-color: #6200ee;
+    padding: 10px;
+    text-align: right;
+    justify-content: end;
+}
+
+.additional-article1 p, h3{
+     margin: 10px;
+}
+
+.additional-article2 {
+    border-radius: 10px;
+    border: solid 1px black;
+    background-color: white;
+    grid-column: 7 / span 4; 
+    grid-row: 3 / span 3;
+}
+
+.additional-article2 img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.additional-article2 button {
+    border-radius: 100%;
+    background-color: #6200ee;
+    padding: 10px;
+    text-align: right;
+    justify-content: end;
+}
+.additional-article2 p, h3{
+     margin: 10px;
+}
+.additional-article3{
+    grid-column: 11 / span 6; 
+    grid-row: 3 / span 3;
+}
+.additional-article3 div{
+    border-radius: 10px;
+    border: solid 1px black;
+    background-color: rgb(223, 223, 223);
+    margin-top: 15px;
+    
+}
+.additional-article3 img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.additional-article2 hr {
+    margin-bottom: 20px;
+
+}
+.additional-article3 p, h3{
+    margin: 10px;
 }
