@@ -66,73 +66,118 @@ nav ul li {
     padding: 10px;
     font-weight: bold;
     border-right: solid rgb(176, 176, 176) 1px;
-    padding-right: 40px
+    padding-right: 40px;
 }
 
+/* Grid Layout for Main Content */
 .main-grid {
     display: grid;
-    gap: 10px;
+    grid-template-columns: repeat(12, 1fr); /* 12-column grid */
+    grid-template-rows: repeat(6, 150px);   /* Each row is 150px tall */
+    gap: 15px;
     padding: 20px;
-    height: 500px;
+    height: auto;
 }
 
+/* Main Article */
 .main-article {
-    grid-column: 1/6;
-    grid-row:1/9;
+    grid-column: 1 / span 6; /* spans 7 columns */
+    grid-row: 1 / span 2;    /* spans 6 rows */
     background-image: url(../images/forza.webp);
     background-size: cover;
-}
-.main-article, .small-article1, .small-article2, .small-article3, .small-article4 {
-    background-color: #fff;
     padding: 15px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.9s ease;
     filter: brightness(60%);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
-/* Анимация при наведении */
-.main-article:hover, .small-article1:hover, .small-article2:hover, .small-article3:hover, .small-article4:hover {
-    transform: scale(1.05); 
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
-    filter: brightness(100%);
-}
-
-
-.main-article, .small-article1, .small-article2, .small-article3, .small-article4 {
-    background-color: #fff;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-.small-article1{
+/* Small Articles */
+.small-article1 {
+    grid-column: 7 / span 2; /* spans from column 8 to 12 */
+    grid-row: 1 / span 1;    /* spans 2 rows */
     background-image: url(../images/battlefield.webp);
     background-size: cover;
-    grid-column: 6/7;
-    grid-row:1/4 ;
-}
-.small-article2{
-    background-image: url(../images/outer_worlds.jpg);
-    background-size: cover;
-    grid-column:9/14 ;
-    grid-row: 1/3;
-}
-.small-article3{
-    background-image: url(../images/life_is_strange.jpg);
-    background-size: cover;
-    grid-column: 6/10;
-    grid-row:4/9;
-}   
-.small-article4{
-    background-image: url(../images/starfield.webp);
-    background-size: cover;
-}
-.main-article h2, .small-article1, .small-article2, .small-article3, .small-article4 h3 {
-    margin: 10px 0;
-    color:white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 12px;
 }
 
-.main-article p, .small-article p {
+.small-article2 {
+    grid-column: 9 / span 8; /* spans from column 8 to 12 */
+    grid-row: 1 / span 1;    /* spans 2 rows */
+    background-image: url(../images/outer_worlds.jpg);
+    background-size: cover;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.small-article3 {
+    grid-column: 7  / span 4; /* spans from column 1 to 4 */
+    grid-row: 2 / span 1;    /* spans 2 rows */
+    background-image: url(../images/life_is_strange.jpg);
+    background-size: cover;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: black;
+}
+
+.small-article4 {
+    grid-column: 11 / span 6; /* spans from column 5 to 9 */
+    grid-row: 2 / span 1;    /* spans 2 rows */
+    background-image: url(../images/starfield.webp);
+    background-size: cover;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+/* Common Article Styles */
+.main-article h2, .small-article1 h3, .small-article2 h3, .small-article3 h3, .small-article4 h3 {
+    margin: 10px 0;
+    color: white;
+}
+
+.main-article p, .small-article1 p, .small-article2 p, .small-article3 p, .small-article4 p {
     font-size: 14px;
-    color: #888;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.main-article, .small-article1, .small-article2, .small-article3, .small-article4{
+    transition: 0.9s;
+    filter: brightness(80%);
+}
+
+.main-article:hover, .small-article1:hover, .small-article2:hover, .small-article3:hover, .small-article4:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    filter: brightness(100%);
+}
+.sidebar {
+    background-color: #fff;
+    width: 180px;
+    padding: 15px;
+    border-radius: 0px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: 21rem;
+}
+
+.sidebar h4 {
+    margin-bottom: 10px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    padding: 8px 0;
+    
 }
