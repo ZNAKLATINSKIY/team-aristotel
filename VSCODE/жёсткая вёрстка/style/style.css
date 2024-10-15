@@ -27,9 +27,8 @@
     height: 1180px;
 }
 
-.container {
-    max-width: 1440px;
-    margin: 0 auto;
+.container1 {
+    
 }
 
 #services {
@@ -98,19 +97,14 @@ body {
     align-items: end;
     color: aliceblue;
     font-size: 2.5em;
-    margin-right: 4%;
-
-
 }
 
 .cat {
-    display: flex;
     width: 700px;
 
 }
 
 .cats {
-    display: flex;
     width: 700px;
 }
 
