@@ -3,37 +3,69 @@ body {
     padding: 0;
 }
 
-@keyframes anim {
+ /* @keyframes anim {
+
     0% {
-        box-shadow: inset 0px 0px 0px 0px;        
-    }
-    50% {
-        box-shadow: inset 0px 0px 5px 10px red;
+        box-shadow: inset 0px 0px 3px 7px red;
 
     }
     100% {
-        box-shadow: inset 0px 0px 0px 0px;
-
+        box-shadow: inset 0px 0px 2px 15px red;
     }
-}
 
-@keyframes anim_ {
+} */
+
+/* @keyframes anim_ {
     0% {
         box-shadow: 0px 0px 0px 0px;
     }
-    50% {
+    100% {
         box-shadow: 0px 0px 5px 10px red;
+    } */
+
+/* } */
+
+/* @keyframes circle_one {
+    0% {
+        margin: 0;
     }
     100% {
-        box-shadow: 0px 0px 0px 0px;
+        margin-left: 10%;
     }
 }
+
+@keyframes circle_two {
+    0% {
+        margin: 0;
+    }
+    100% {
+        margin-top: 10%;
+    }
+}
+
+@keyframes circle_three {
+    0% {
+        margin: 0;
+    }
+    100% {
+        margin-bottom: 10%;
+    }
+}
+
+@keyframes circle_four {
+    0% {
+        margin: 0;
+    }
+    100% {
+        margin-right: 10%;
+    }
+} */
 
 main {
     background-color: black;
-    background-size: cover;
     background-repeat: no-repeat;
     margin: auto;
+    height: 1440px;
 }
 
 .flex-container-png {
@@ -41,35 +73,80 @@ main {
     justify-content: center;
 }
 
-.png {
-    height: 945px;
-    filter: invert(0.5);
-}
+
 
 .anima {
     position: absolute;
-    left: 37%;
-    top: 15%;
-    width: 500px;
-    height: 520px;
+    left: 31%;
+    top: 10%;
+    width: 700px;
+    height: 720px;
     border-radius: 50%;
     border: solid 4px;
     border-color: white;
+    box-shadow: inset 0px 0px 13px 5px blueviolet;
 
-    animation: anim infinite;
-    animation-duration: 3s;
+    transition: 4s;
+
 }
 
 .anima_ {
     position: absolute;
-    left: 37%;
-    top: 15%;
-    width: 500px;
-    height: 520px;
+    left: 31%;
+    top: 10%;
+    width: 700px;
+    height: 720px;
     border-radius: 50%;
     border: solid 4px;
     border-color: white;
+    box-shadow: 0px 0px 13px 5px blueviolet;
 
-    animation: anim_ infinite;
-    animation-duration: 3s;
+    transition: 4s;
+}
+
+
+.circle_one {
+    position: absolute;
+    top: 25%;
+    left: 54%;
+    width: 90px;
+    height: 90px;
+    border: 4px solid white;
+    border-radius: 50%;
+
+    animation: circle_one;
+    animation-duration: 4s;
+}
+
+.circle_two {
+    /* position: absolute;
+    top: 25%;
+    left: 40%; */
+    width: 90px;
+    height: 90px;
+    border: 4px solid white;
+    border-radius: 50%;
+
+    animation: circle_two;
+    animation-duration: 4s;
+}
+
+.circle_three {
+    width: 90px;
+    height: 90px;
+    border: 4px solid white;
+    border-radius: 50%;
+
+    animation: circle_three;
+    animation-duration: 4s;
+}
+
+.circle_four {
+    width: 90px;
+    height: 90px;
+    border: 4px solid white;
+    border-radius: 50%;
+
+    animation: circle_four;
+    animation-duration: 4s;
 }
