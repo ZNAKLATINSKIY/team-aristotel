@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes minutes {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes hours {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.base {
+    margin: auto;
+    width: 300px;
+    height: 320px;
+    border: 4px solid darkcyan;
+    border-radius: 100%;
+    position: relative;
+    top: 150px;
+
+}
+
+.dot {
+    height: 11px;
+    width: 11px;
+    background-color: darkcyan;
+    border: solid 5px darkcyan;
+    border-radius: 100%;
+    position: absolute;
+    left: 140px;
+    top: 145px;
+}
+
+.minute {
+    background-color: darkcyan;
+    width: 6px;
+    height: 40%;
+    border: none;
+    position: absolute;
+    left: 147px;
+    top: 25px;
+    transform-origin: bottom center;
+
+    animation: minutes linear infinite;
+    animation-duration: 5s;
+}
+
+.hour {
+    background-color: darkcyan;
+    width: 6px;
+    height: 25%;
+    border: none;
+    position: absolute;
+    left: 147px;
+    top: 75px;
+
+    transform-origin: bottom center;
+    animation: hours linear infinite;
+    animation-duration: 10s;
+}
