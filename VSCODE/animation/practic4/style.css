@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+
+}
+@keyframes anim {
+    0% {
+        margin-left: 0;
+        transform: skew(0);
+    }
+    25% {
+        margin-left: 25%;
+        transform: skew(15deg);
+    }
+    50% {
+        margin-left: 50%;
+        transform: skew(30deg);
+    }
+    100% {
+        margin-left: 100%;
+        transform: skew(50deg);
+    }
+}
+main {
+    position: relative;
+}
+.block {
+    position: absolute;
+    top: 200px;
+    width: 250px;
+    height: 270px;
+    background: red;
+
+   animation: anim 2s infinite linear normal
+}
