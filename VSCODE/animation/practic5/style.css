@@ -1,0 +1,11 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+.block {
+    width: 350px;
+    height: 350px;
+    border-radius: 10%;
+    background:linear-gradient(blueviolet, deeppink);
+}
