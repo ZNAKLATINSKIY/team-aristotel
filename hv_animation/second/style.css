@@ -1,0 +1,72 @@
+@keyframes bob{
+    0%{
+        transform: rotate(0) scale(0);
+        margin-top: 0;
+        filter: opacity(0);
+    }
+    50%{
+        margin-top: 100vh;
+    }
+    75%{
+        margin-top: 0;
+    }
+    100%{
+        transform: rotate(1080deg) scale(1);
+        margin-top: 200px;
+        filter: opacity(1);
+    }    
+        
+}
+body{
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+.main{
+    width: 900px;
+    height: 400px;
+    transition: 2s;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 200px;
+    animation: bob 5s ease-in-out;
+}
+ .left{
+    border: solid 5px black;
+    display: flex;
+    z-index: 2;
+    width: 50%;
+    height: 400px;
+    background-color: brown;
+    float: left;
+    transform-origin: left;
+    transition: 2s;
+}
+.right{
+    background-color: brown;
+    width: 50%;
+    height: 400px;
+    float: right;
+    border: solid 5px black;
+    z-index: 2;
+    transform-origin: right;
+    transition: 2s ;
+}
+.main img {
+    position: absolute;
+    z-index: 1;
+    font-weight: bold;
+    font-size: 30px;
+    width: 400px;
+    height: 250;
+    margin-top: 90px;
+}
+.main:active{
+    .left{
+        transform: perspective(30px) rotateY(3deg);
+    }
+    .right{
+        transform: perspective(30px) rotateY(-3deg);
+    }
+}
