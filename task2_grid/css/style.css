@@ -15,6 +15,15 @@ header {
     padding-bottom: 10px;
 }
 
+.container {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.main-article {
+    cursor: pointer;
+}
+
 .header-top {
     display: flex;
     justify-content: space-between;
@@ -187,14 +196,13 @@ nav ul li {
     border: solid 1px black;
     background-color: white;
     grid-column: 2 / span 5; 
-    grid-row: 3 / span 3;
+    height: 600px;
 }
 
 .additional-article1 img {
     width: 100%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    height: 280px;
 }
 
 .additional-article1 button {
@@ -203,6 +211,13 @@ nav ul li {
     padding: 10px;
     text-align: right;
     justify-content: end;
+    color: white;
+    border: none;
+    font-size: 20px;    
+    float: right;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: 1s; 
 }
 
 .additional-article1 p, h3{
@@ -214,7 +229,7 @@ nav ul li {
     border: solid 1px black;
     background-color: white;
     grid-column: 7 / span 4; 
-    grid-row: 3 / span 3;
+    height: 550px;
 }
 
 .additional-article2 img {
@@ -227,8 +242,21 @@ nav ul li {
     background-color: #6200ee;
     padding: 10px;
     text-align: right;
-    justify-content: end;
+    color: white;
+    border: none;
+    font-size: 20px;
+    float: right;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: 0.5s;
 }
+.additional-article2 button:hover, .additional-article1 button:hover{
+    background-color: #b68fff;
+    color: black;
+    transform: scale(1.05);
+
+} 
+
 .additional-article2 p, h3{
      margin: 10px;
 }

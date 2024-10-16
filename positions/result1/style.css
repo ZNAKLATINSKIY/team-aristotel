@@ -1,47 +1,64 @@
-
-.main{
-    background-image: url(../Position1/Материалы_к_ДЗ/bg.png);
-    background-size: cover;
-    width: 100%;
-    position: absolute;
-    
+@font-face {
+    font-family: 'at' ;
+    src: url(../Position1/Материалы_к_ДЗ/AVENGEANCE\ HEROIC\ AVENGER\ AT.ttf);
 }
 body {
     margin: 0;
     padding: 0;
     background: #fff;
+    display: flex;
+    justify-content: center;
+   
 }
 .main {
     position: relative;
-    width: 100%;
-    height: 500px;
+    width: 70%;
+    background-size: 100% 100%;
+    height: 700px;
     background-image: url(../Position1/Материалы_к_ДЗ/bg.png);
+    overflow: hidden;
+    margin-top: 5%;
+    background-color: red;
+}
+.text{
+    color: black;
+    font-family:'at';
+    font-size: 150px;
+    position: absolute;
+    top: 100px;
+    left: 600px;
 }
 .avenger {
     position: absolute;
-    width: 150px;
+    width: 500px;
 }
-.image1 {
-    left: 0;
-    top: 50px;
+#cap {
+    left: 380px;
+    top: 200px;
+    z-index: 3;
 }
-.image2{
-    left: 150px;
-    top: 100px;
+#hawkeye{
+    left: 780px;
+    top: 280px;
+    width: 380px;
+    z-index:3;
 }
-.image3 {
-    left: 300px;
-    top: 50px;
+#hulk {
+    left: 0px;
+    top: 200px;
+    width: 600px;
 }
-.image4 {
-    left: 450px;
-    top: 100px;
+#ironman {
+    left: 570px;
+    top: 160px;
+    z-index: 4;
 }
-.image5 {
-    left: 600px;
-    top: 50px;
+#thor {
+    left: 880px;
+    top: 200px;
+    width: 650px;
 }
-.image6 {
-    left: 750px;
-    top: 100px;
+#widow {
+    left: 220px;
+    top: 230px;
 }

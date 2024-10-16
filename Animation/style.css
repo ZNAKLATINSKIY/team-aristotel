@@ -1,21 +1,47 @@
 body{
     margin: 0;
     padding: 0;
+    
 }
+/*
 .main{
     height: 100vh;
     background-image: url(images_and_gifs/galactic.webp);
     background-repeat: repeat-x;
-    animation: slide 10s linear infinite;
-}
-@keyframes slide {
+    animation: slide 40s linear infinite;
+    height: 100vh;
+ }   */
+
+/* @keyframes slide {
     0%{
         background-position: 0% 0%;
     }
     50%{
-         background-position: 100% 0%;
+         background-position: 3000% 0%;
     }
-    100%{
+    300%{
         background-position: 0% 0%;
     }
-}
+} */
+.wrapper {
+    animation: scroll 50s linear infinite;
+    background: url("./images_and_gifs/retro-style-geometric-background-black-white_1048-15515.avif"),
+      #111111;
+    
+    background-size: 100% 100%;
+    color: #ff0000;
+    height: 100vh;
+    min-width: 360px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size:40px;
+    align-items: center;
+  }
+  
+  @keyframes scroll {
+    100% {
+      background-position: 400% 0px;
+    }
+  }
+  
