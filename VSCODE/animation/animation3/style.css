@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+span {
+    font-size: 1.5em;
+    position: absolute;
+    left: 48.5%;
+    top: 270px;
+}
+.all_blocks {
+    margin: auto;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 200px;
+    transition: 2s;
+}
+.block {
+    background-color: red;
+    border: solid 2px black;
+    width: 200px;
+    height: 200px;
+}
+.block1 {
+    transform-origin: left;
+    transition: 2s;
+}
+.block2 {
+    transform-origin: right;
+    transition: 2s;
+}
+
+/* hover */
+.all_blocks:hover {
+    .block1 {
+        transform: perspective(400px) rotateY(50deg);
+    }
+    .block2 {
+        transform: perspective(400px) rotateY(-50deg);
+    }
+}
