@@ -1,0 +1,43 @@
+@keyframes speed_anim{
+    0%{
+        transform: skew(0);
+    }
+
+    25%{
+        transform: skew(20deg);
+        background: linear-gradient(.25turn, red, 60%, orange);
+    }    
+    
+    50%{
+        transform: skew(0deg);
+        margin-left: 1000px;
+        background: red;
+        }
+    75%{
+        transform: skew(-20deg);
+        margin-right: -1000px;
+        background: linear-gradient(.25turn, orange, 40%, red);
+    }
+    100%{
+        transform: skew(0);
+        background: red;
+    }    
+  
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+.container{
+    border: solid black 3px ;
+    height: 200px;
+    width: 1200px;
+    margin: auto;
+    margin-top: 200px;
+}
+.speedster{
+    background-color: red;
+    width: 200px;
+    height: 200px;
+    animation: speed_anim 4s ease-in-out infinite;
+}
