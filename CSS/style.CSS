@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+}
+.Container {
+    display: flex;
+    justify-content: center;
+}
+.box {
+    background-color: black;
+    margin-top: 100px;
+    transition: 5s;
+    height: 385px;
+    width: 385px;
+    border-radius: 10px;
+
+}
+img {
+    opacity: 0%;
+    border-radius: 10px;
+    width: 100%;
+    transition: 5s;
+}
+.box:hover {
+    transform: perspective(100px) rotateX(20deg) rotateY(-20deg);
+    img {
+        opacity: 100%;
+    }
+}
