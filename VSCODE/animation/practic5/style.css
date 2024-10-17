@@ -1,11 +1,22 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: black;
+    background-color: white;
+}
+main {
+    display: flex;
+    justify-content: center;
+    position: relative;
 }
 .block {
+    position: absolute;
+    top: 150px;
     width: 350px;
     height: 350px;
-    border-radius: 10%;
     background:linear-gradient(blueviolet, deeppink);
+    transition: 1s;
+}
+.block:hover {
+    border-radius: 15%;
+    transform: perspective(500px) rotateY(-22deg) rotateX(20deg); 
 }
