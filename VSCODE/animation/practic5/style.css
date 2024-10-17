@@ -13,10 +13,17 @@ main {
     top: 150px;
     width: 350px;
     height: 350px;
-    background:linear-gradient(blueviolet, deeppink);
+    background:linear-gradient(red, blue);
+    transition: 1s;
+}
+svg {
+    opacity: 0%;
     transition: 1s;
 }
 .block:hover {
     border-radius: 15%;
     transform: perspective(500px) rotateY(-22deg) rotateX(20deg); 
+    svg {
+        opacity: 20%;
+    }
 }

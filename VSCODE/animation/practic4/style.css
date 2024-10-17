@@ -13,22 +13,27 @@ body {
     }
     50% {
         transform: skew(0deg);
-        margin-left: 90%;
+        margin-left: 750px;
     }
     75% {
         transform: skew(-30deg);
-        margin-right: 90%;
+        margin-right: 900px;
     }
     100% {
         transform: skew(0deg);
     }
 }
-
-.block {
+.cont {
     position: absolute;
-    top: 200px;
+    top: 50px;
+    left: 150px;
+    width: 1000px;
+    height: 250px;
+    border: solid 2px white;
+}
+.block {
     width: 250px;
-    height: 270px;
+    height: 250px;
     background: red;
 
    animation: anim 2s infinite ease-in-out normal
