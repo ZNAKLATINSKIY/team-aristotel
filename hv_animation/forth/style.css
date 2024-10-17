@@ -14,7 +14,7 @@
         background: red;
         }
     75%{
-        transform: skew(-20deg) ;
+        transform: skew(-20deg) ;   
         margin-right: -1000px;
         background: linear-gradient(.25turn, orange, 40%, red);
     }
