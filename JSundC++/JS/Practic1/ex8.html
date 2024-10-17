@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        let wallet;
+        let schokolade;
+
+        wallet = parseFloat(prompt("Сколько у Вас денег? "));
+        schokolade = parseInt(prompt("Сколько стоит шоколадка? "));
+
+        if (wallet < schokolade) {
+            let ostatok = schokolade-wallet;
+            alert(`"Вам не хватает: ${ostatok}"`);
+        } else {
+            let schokolade_count = Math.floor(wallet/schokolade);
+            let ostatok = wallet % schokolade;
+            alert(`"Вы можете купить: ${schokolade_count} шоколадок. Сдача: ${ostatok}"`)
+        }
+
+    </script>
+
+</body>
+</html>
