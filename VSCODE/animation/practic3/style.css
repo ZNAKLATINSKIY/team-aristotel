@@ -58,7 +58,6 @@ p {
 /* hover */
 
 .block:hover {
-
     .images {
         transform: scale(1.5);
     }
