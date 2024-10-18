@@ -15,7 +15,6 @@ span {
     justify-content: center;
     position: relative;
     top: 200px;
-    transition: 2s;
 }
 .block {
     background-color: red;
@@ -25,19 +24,22 @@ span {
 }
 .block1 {
     transform-origin: left;
-    transition: 2s;
+    /* transition: 2s; */
 }
 .block2 {
     transform-origin: right;
-    transition: 2s;
+    /* transition: 2s; */
 }
 
 /* hover */
 .all_blocks:hover {
     .block1 {
         transform: perspective(400px) rotateY(50deg);
+        transition: 2s;
     }
     .block2 {
         transform: perspective(400px) rotateY(-50deg);
+        transition: 2s;
     }
+    
 }

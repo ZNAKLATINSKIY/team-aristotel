@@ -19,7 +19,7 @@ body {
     100% {
         transform: rotate(360deg);
     }
-}
+} 
 
 .base {
     margin: auto;
@@ -39,27 +39,31 @@ body {
     border: solid 5px darkcyan;
     border-radius: 100%;
     position: absolute;
-    left: 140px;
-    top: 145px;
+    left: 136.5Px;
+    top: 147px;
+    z-index: 7;
 }
 
 .minute {
     background-color: darkcyan;
-    width: 6px;
+    width: 0px;
+    outline:solid 2px darkcyan;
     height: 40%;
     border: none;
     position: absolute;
     left: 147px;
-    top: 25px;
+    top: 28px;
     transform-origin: bottom center;
 
     animation: minutes linear infinite;
     animation-duration: 5s;
+    z-index: 4;
 }
 
 .hour {
     background-color: darkcyan;
-    width: 6px;
+    width: 0px;
+    outline:solid 3px rgb(139, 21, 0);
     height: 25%;
     border: none;
     position: absolute;
