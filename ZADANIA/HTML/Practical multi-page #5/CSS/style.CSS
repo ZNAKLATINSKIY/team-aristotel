@@ -1,0 +1,116 @@
+.body_0 {
+    background-image: url(../img/GREEN.webp) ;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    text-align: center;
+}
+.body_1 {
+    background-image: url(../img/YELLOW_1.jpg) ;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    text-align: center;
+}
+.body_2 {
+    background-image: url(../img/RED.png) ;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    text-align: center;
+}
+.body_3 {
+    background-image: url(../img/BLACK.jpeg) ;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    text-align: center;
+}
+.h1_index {
+    background-color: black;
+    color: aliceblue;
+    align-items: center;
+    width: 170px;
+    margin: auto;
+    border: solid 1px;
+    
+}
+.h1_Page1 {
+    background-color: black;
+    color: aliceblue;
+    align-items: center;
+    width: 800px;
+    margin: auto;
+    border: solid 1px;
+}
+.h1_Page2 {
+    background-color: black;
+    color: aliceblue;
+    align-items: center;
+    width: 170px;
+    margin: auto;
+    border: solid 1px;
+}
+.h1_Page3 {
+    background-color: black;
+    color: aliceblue;
+    align-items: center;
+    width: 200px;
+    margin: auto;
+    border: solid 1px;
+}
+.a {
+    color: rgb(255, 0, 0);
+    background-color: black;
+    font-size: 25px;
+    border: solid 1px;
+    border-color: aliceblue;
+}
+.h3 {
+    background-color: black;
+    color: aliceblue;
+    display: inline-block;
+    width: 600px;
+    height: 115px;
+    border: solid 1px;
+}
+#h1 {
+    color: aliceblue;
+    background-color: black;
+}
+#img {
+    width: 30%;
+    height: 30%;
+    margin: 30px;
+}
+#img_1 {
+    width: 40%;
+    height: 40%;
+    margin: 30px; 
+}
+#img_2 {
+    width: 20%;
+    height: 20%;
+    margin: 30px; 
+}
+#img_3 {
+    width: 15%;
+    height: 15%;
+    margin: 30px;
+}
+#img_NCR_2 {
+    width: 19%;
+    height: 19%;
+    margin: 30px;
+}
+#img_NCR_1 {
+    width: 19%;
+    height: 19%;
+    margin: 30px;
+}
+#img_Legat1 {
+    width: 19%;
+    height: 19%;
+    margin: 30px;
+}
+#img_Legat2 {
+    width: 25%;
+    height: 25%;
+    margin: 30px;
+}

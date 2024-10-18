@@ -1,0 +1,58 @@
+@keyframes minut {
+    0% {
+        transform: rotate(0deg); 
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes hour {
+    0% {
+        transform: rotate(0deg); 
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.around {
+    height: 300px;
+    width: 300px;
+    border: solid 10px;
+    border-radius: 100%;
+    border-color: rgb(29, 99, 99);
+    position: relative;
+}
+.Tochka {
+    height: 10px;
+    width: 10px;
+    border: solid 10px;
+    border-radius: 100%;
+    border-color: rgb(29, 99, 99);
+    background-color: rgb(29, 99, 99);
+    position: absolute;
+    left: 135px;
+    top: 130px;
+}
+.hr_Minute {
+    height: 45%;
+    width: 5px; 
+    background-color: rgb(29, 99, 99); /* Цвет линии */
+    border: none;
+    position: absolute;
+    top: 45%;
+    left: 147px;
+    animation: minut 5s linear infinite;
+    transform-origin: top center;
+    
+}
+.hr_Hour {
+    height: 25%; 
+    width: 5px; 
+    background-color: rgb(29, 99, 99);
+    position: absolute;
+    border: none;
+    top: 45%;
+    left: 147px;
+    animation: hour 10s linear infinite;
+    transform-origin: top center;
+}
