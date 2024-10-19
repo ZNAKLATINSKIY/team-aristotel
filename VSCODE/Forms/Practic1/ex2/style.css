@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 1900px;
+}
+
+.cont0 {
+    display: flex;
+    justify-content: center;
+}
+
+.back {
+    background-color: gainsboro;
+    width: 800px;
+    height: 1000px;
+}
+
+.cont1 {
+    width: 700px;
+    padding-left: 20px;
+}
+
+.inputs {
+    opacity: 50%;
+    padding: 10px;
+    width: 200px;
+    border: solid 2px;
+    border-color: rgb(165, 164, 164);
+    font-size: 1.1em;
+}
+
+.valid:valid {
+    border-color: green;
+}
+.valid:invalid {
+    border-color: red;
+}
+
+.invalid:valid {
+    border-color: green;
+}
+.invalid:invalid {
+    border-color: red;
+}
