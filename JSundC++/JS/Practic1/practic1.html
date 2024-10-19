@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>alltasks JS</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 50px;
+            margin: 10px;
+            background-color: #f0f0f0;
+        }
+
+        button {
+            display: block;
+            margin: 20px 0;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .by {
+            color: aqua;
+            font-style: italic;
+            font-weight: bold;
+            font-size: 7em;
+            position: absolute;
+            left: 40%;
+            bottom: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>JS TASKS (Помогаю Олегу тем, что тырю у него идеи)</h1>
+
+    <button onclick="ex1()">Задание с приветствием</button>
+    <button onclick="ex2()">Задание с годом рождения</button>
+    <button onclick="ex3()">Задание с периметром квадрата</button>
+    <button onclick="ex4()">Задание с радиусом окружности</button>
+    <button onclick="ex5()">Задание с вычислением необходимой скорости</button>
+    <button onclick="ex6()">Задание с переводом в евро</button>
+    <button onclick="ex7()">Задание с файлами и 820МБ</button>
+    <button onclick="ex8()">Задание с шоколадом</button>
+    <button onclick="ex9()">Задание с перевёрнутым числом</button>
+    <div class="by">BY SOLOVEY</div>
+
+    <script>
+        function ex1() {
+            let name;
+            name = prompt("Введите Ваше имя: ");
+            alert(`"Привет, ${name}!"`)
+        }
+
+        function ex2() {
+            const own_year = 2024;
+            let user_year;
+            user_year = parseInt(prompt("Введите год своего рождения: "))
+
+            alert(`"Вам ${own_year - user_year} лет."`)
+        }
+
+        function ex3() {
+            let i;
+            i = parseInt(prompt("Введите длину стороны квадрата: "));
+            alert(`"Периметр квадрата: ${i*4}"`)
+        }
+
+        function ex4() {
+            let r;
+            r = parseInt(prompt("Введите радиус окружности: "));
+            alert(`"Площадь окружности: ${3.14*(r*=r)}"`)
+        }
+
+        function ex5() {
+            let s, t, v;
+            s = parseInt(prompt("Введите расстояние в км, которое Вам нужно преодолеть: "));
+            t = parseInt(prompt("Введите за сколько часов Вам требуется преодолеть данное расстояние: "));
+            v = s/t;
+            alert(`"Чтобы преодолеть ${s} километров за ${t} часов, Вам требуется двигаться со скоростью ${v}км/ч"`)
+        }
+
+        function ex6() {
+            let user_i;
+            user_i = parseInt(prompt("Введите количество долларов: "))
+            const euro = user_i * 0.85;
+            alert(`"Перевёл в евро: ${euro}"`)
+        }
+
+        function ex7() {
+            let gb = parseInt(prompt("Введите объём флешки в ГБ: "));
+            let file_count = (gb*1000) / 820;
+            alert(`"${Math.floor(file_count)} файлов размером 820Мб помещается на флешку."`)
+        }
+
+        function ex8() {
+            let wallet;
+            let schokolade;
+
+            wallet = parseFloat(prompt("Сколько у Вас денег? "));
+            schokolade = parseInt(prompt("Сколько стоит шоколадка? "));
+
+            if (wallet < schokolade) {
+                let ostatok = schokolade-wallet;
+                alert(`"Вам не хватает: ${ostatok}"`);
+            } else {
+                let schokolade_count = Math.floor(wallet/schokolade);
+                let ostatok = wallet % schokolade;
+                alert(`"Вы можете купить: ${schokolade_count} шоколадок. Сдача: ${ostatok}"`)
+            }
+        }
+
+        function ex9() {
+            let num;
+            num = parseInt(prompt("Введите трёхзначное число: "));
+
+            let one_number, two_number, three_number, result;
+
+            // изымание числа
+            one_number = Math.floor(num / 100); // изымаем первую цифру числа
+            two_number =  Math.floor((num % 100) / 10);// изымаем вторую цифру числа
+            three_number = num % 10; // изымаем третью цифру числа
+
+            result = three_number * 100 + two_number * 10 + one_number;
+            alert("Перевёрнутое число: " + result);
+        }
+    </script>
+
+</body>
+</html>
