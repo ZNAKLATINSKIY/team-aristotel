@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.cont {
+    display: flex;
+    justify-content: center;
+
+}
+
+.back {
+    margin-top: 75px;
+    background-color: rgba(25, 207, 231, 0.555);
+    width: 650px;
+    height: 450px;
+    border-radius: 5%;
+    overflow: hidden;
+}
+
+.details_block {
+    position: relative;
+    top: 20px;
+    right: 5%;
+    background-color: orangered;
+    height: 55px;
+    width: 500px;
+}
+
+.CCD {
+    color: white;
+    font-size: 1.3em;
+    padding-top: 3.5%;
+    padding-left: 10%;
+    font-weight: bold;
+    word-spacing: 7px;
+}
+
+form {
+    margin-top: 50px;
+    margin-left: 35px;
+    width: 350px;
+}
+
+.p {
+    opacity: 40%;
+}
+
+input {
+    width: 350px;
+    height: 40px;
+    padding: 10px;
+    background-color: rgb(140, 238, 238);
+    border: solid 1px;
+    border-color: rgb(99, 156, 156);
+    opacity: 70%;
+}
+
+.date_cvv_cvn {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.inputs {
+    display: flex;
+    gap: 35px;
+}
+
+.inp {
+    width: 100px;
+}
+
+.moon {
+    position: relative;
+    bottom: 30%;
+    left: 73%;
+    width: 250px;
+    height: 250px;
+}
