@@ -11,7 +11,7 @@
 
         <div class="back">
             <div class="cont1">
-                <h1>Inputs</h1>
+                <p>Inputs</p>
                 <form action="inputs" method="get">
 
                     <input
@@ -24,15 +24,31 @@
                     type="text"
                     placeholder="valid text"
                     pattern="valid text">
+                    <span><img class="validimg" src="../Материалы к ДЗ/valid.png" alt="valid"></span>
 
                     <input
                     class="inputs invalid"
                     type="text"
                     placeholder="invalid text"
-                    pattern="invalid text">
+                    pattern="text invalid">
+                    <span><img class="invalidimg" src="../Материалы к ДЗ/invalid.png" alt="invalid"></span>
 
                 </form>
+
+                <div class="checkboxes">
+                    <p>Check boxes</p>
+                </div>
+
+                <div class="radiobuttons">
+                    <p>Radio buttons</p>
+                    <div class="radio">
+                        <span>Gender:</span>
+                        <label for=""><input type="radio" name="Male" id="male">Male</label>
+                        <label for=""><input type="radio" id="female">Female</label>
+                    </div>
+                </div>
             </div>
+
         </div>
 
     </div>
