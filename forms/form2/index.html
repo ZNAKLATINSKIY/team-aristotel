@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мини-библиотека стилей</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h3>Inputs</h3>
+        <div class="input-row">
+            <input type="text" placeholder="Enter some text" class="input-default">
+            <input type="text" value="valid text" class="input-valid">
+            <span class="icon-valid">&#10004;</span>
+            <input type="text" value="invalid text" class="input-invalid">
+            <span class="icon-invalid">&#10008;</span>
+        </div>
+
+        <h3>Check boxes</h3>
+        <label><input type="checkbox" class="checkbox" checked> Subscribe</label>
+        <label><input type="checkbox" class="checkbox"> Subscribe</label>
+
+        <h3>Radio buttons</h3>
+        <label>Gender: </label>
+        <label><input type="radio" name="gender" class="radio" checked> Male</label>
+        <label><input type="radio" name="gender" class="radio"> Female</label>
+
+        <h3>Buttons</h3>
+        <div class="button-row">
+            <button class="btn btn-green active">Active</button>
+            <button class="btn btn-green hover">Hover</button>
+            <button class="btn btn-red">Danger</button>
+            <button class="btn btn-red hover">Hover</button>
+            <button class="btn btn-disabled" disabled>Disabled</button>
+            <button class="btn-round btn-green">+</button>
+            <button class="btn-round btn-red">-</button>
+        </div>
+
+        <h3>Text area</h3>
+        <textarea class="textarea" placeholder="Enter some text..."></textarea>
+    </div>
+</body>
+</html>
