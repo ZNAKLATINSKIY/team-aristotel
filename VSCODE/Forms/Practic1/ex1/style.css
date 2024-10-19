@@ -48,6 +48,8 @@ form {
 }
 
 .p {
+    position: relative;
+    top: 10px;
     opacity: 40%;
 }
 
