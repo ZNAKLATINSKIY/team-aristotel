@@ -42,7 +42,7 @@
 
         function calculateAge() {
             const birthYear = prompt("Введите ваш год рождения:");
-            const currentYear = 2024; // Текущий год
+            const currentYear = 2024; 
             const age = currentYear - birthYear;
             alert(`Вам ${age} лет!`);
         }
@@ -68,15 +68,15 @@
 
         function convertCurrency() {
             const dollars = prompt("Введите сумму в долларах:");
-            const exchangeRate = 0.92; // Курс доллара к евро
+            const exchangeRate = 0.92;
             const euros = dollars * exchangeRate;
             alert(`Это будет ${euros.toFixed(2)} евро.`);
         }
 
         function calculateFilesOnFlash() {
             const flashSizeGB = prompt("Введите объем флешки в Гб:");
-            const fileSizeMB = 820; // Размер одного файла
-            const flashSizeMB = flashSizeGB * 1024; // Переводим Гб в Мб
+            const fileSizeMB = 820; 
+            const flashSizeMB = flashSizeGB * 1024; 
             const fileCount = Math.floor(flashSizeMB / fileSizeMB);
             alert(`На флешку поместится ${fileCount} файлов размером 820 Мб.`);
         }
