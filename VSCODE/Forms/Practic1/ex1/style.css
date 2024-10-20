@@ -16,7 +16,7 @@ body {
 
 .back {
     margin-top: 75px;
-    background-color: rgba(25, 207, 231, 0.555);
+    background: linear-gradient(purple, red);
     width: 650px;
     height: 450px;
     border-radius: 5%;

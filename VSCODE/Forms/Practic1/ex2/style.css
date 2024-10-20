@@ -2,22 +2,46 @@ body {
     margin: 0;
     padding: 0;
     width: 1900px;
+    margin: auto;
 }
+
+@keyframes dangeranim {
+    0% {
+        box-shadow: 0 0 0 0;
+    }
+    50% {
+        box-shadow: 0 0 20px 7px rgb(206, 38, 94);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0;
+    }
+}
+
 
 .cont0 {
     display: flex;
     justify-content: center;
+
 }
 
 .back {
     background-color: gainsboro;
-    width: 800px;
-    height: 1000px;
+    width: 1000px;
+    height: 945px;
+
 }
 
 .cont1 {
     width: 700px;
     padding-left: 20px;
+}
+
+
+/* ИНПУТЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫ */
+.pad {
+    position: relative;
+    bottom: 20px;
 }
 
 p {
@@ -34,7 +58,7 @@ p {
     font-size: 1.1em;
 }
 
-.validimg {
+/* .validimg {
     width: 25px;
     height: 25px;
     position: absolute;
@@ -47,13 +71,10 @@ p {
     position: absolute;
     top: 11.7%;
     right: 34.7%;
-}
+} */
 
 .valid:valid {
     border-color: green;
-    .validimg {
-        opacity: 100;
-    }
 }
 .valid:invalid {
     border-color: red;
@@ -68,3 +89,120 @@ p {
     border-color: red;
 }
 
+/* ЧЕК БОКСЫЫЫЫ (ЕЩЁ НЕЕЕЕЕЕЕЕЕЕЕЕТ) */
+
+
+/* РАДИОО БОКСЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫ */
+.gen {
+    font-size: 1.3em;
+}
+
+.radio {
+    accent-color: green;
+    transform: scale(1.7);
+}
+label {
+    margin-left: 10px;
+    font-size: 1.3em;
+}
+
+/* КНОПКИИИИИИИИ */
+.all_buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.base {
+    width: 120px;
+    height: 50px;
+    padding: 15px;
+    font-size: 1.1em;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+}
+.nobase {
+    height: 50px;
+    padding: 15px;
+    font-size: 1.1em;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+}
+.active {
+    box-sizing: border-box;
+    transition: 2s;
+    background-color: rgb(115, 192, 0);
+}
+.active:active {
+    margin: 0;
+    padding: 0;
+    font-size: 2em;
+    transform: perspective(400px) rotateY(-360deg) rotateX(360deg);
+}
+
+.hover_ {
+    background-color: green;
+    transition: 0.5s;
+}
+.hover_:hover {
+    background-color: rgba(0, 0, 0, 0);
+    color: red;
+    box-shadow: inset 0 0 20px 3px red;
+}
+
+.danger {
+    background-color: rgb(206, 38, 94);
+    width: 150px;
+}
+.danger:hover {
+    animation: dangeranim infinite 1s ease-in-out;
+}
+
+.hover {
+    background-color: brown;
+    transition: 0.5s;
+}
+.hover:hover {
+    background-color: black;
+    transform: perspective(500px) rotateY(20deg) rotateX(50deg) skew(5deg);
+    box-shadow: 0 0 20px 5px red;
+}
+
+.disable {
+    background-color: gray;
+    width: 150px;
+}
+
+.plusbut {
+    border-radius: 100%;
+    border: none;
+    width: 50px;
+    height: 50px;
+    color: white;
+    background-color: rgb(115, 192, 0);
+    font-size: 1.2em;
+}
+
+.minusbut {
+    border-radius: 100%;
+    border: none;
+    width: 50px;
+    height: 50px;
+    color: white;
+    background-color: rgb(206, 38, 94);
+    font-size: 1.2em;
+
+}
+
+/* ТЕКСТ АРЕААААААААААА */
+.textinarea {
+    width: 670px;
+    height: 250px;
+    padding: 20px;
+    font-size: 1.2em;
+    position: relative;
+    bottom: 15px;
+}

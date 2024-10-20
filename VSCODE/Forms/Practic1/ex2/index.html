@@ -11,8 +11,9 @@
 
         <div class="back">
             <div class="cont1">
-                <p>Inputs</p>
-                <form action="inputs" method="get">
+                <div class="inputs_area">
+                    <p>Inputs</p>
+                    <form class="pad" action="inputs" method="get">
 
                     <input
                     class="inputs"
@@ -24,28 +25,119 @@
                     type="text"
                     placeholder="valid text"
                     pattern="valid text">
-                    <span><img class="validimg" src="../Материалы к ДЗ/valid.png" alt="valid"></span>
+                    <!-- <span><img class="validimg" src="../Материалы к ДЗ/valid.png" alt="valid"></span> -->
 
                     <input
                     class="inputs invalid"
                     type="text"
                     placeholder="invalid text"
                     pattern="text invalid">
-                    <span><img class="invalidimg" src="../Материалы к ДЗ/invalid.png" alt="invalid"></span>
+                    <!-- <span><img class="invalidimg" src="../Материалы к ДЗ/invalid.png" alt="invalid"></span> -->
 
                 </form>
+                </div>
 
                 <div class="checkboxes">
                     <p>Check boxes</p>
+                    <label>
+                        <input
+                        type="checkbox"
+                        class="checkbox"
+                        checked> Subscribe
+                    </label>
+                    <label>
+                        <input
+                        type="checkbox"
+                        class="checkbox">Subscribe
+                    </label>
                 </div>
 
                 <div class="radiobuttons">
                     <p>Radio buttons</p>
-                    <div class="radio">
-                        <span>Gender:</span>
-                        <label for=""><input type="radio" name="Male" id="male">Male</label>
-                        <label for=""><input type="radio" id="female">Female</label>
+                    <div class="pad radio_">
+                        <span class="gen">Gender:</span>
+                        <label>
+                            <input
+                            type="radio"
+                            name="gender"
+                            class="radio"
+                            checked> Male
+                        </label>
+                        <label>
+                            <input
+                            type="radio"
+                            name="gender"
+                            class="radio"
+                            checked> Female
+                        </label>
                     </div>
+                </div>
+
+                <div class="buttons">
+                    <p>Buttons</p>
+
+                    <div class="all_buttons pad">
+                        <div class="activebut">
+                            <input
+                            class="active base"
+                            type="button"
+                            name="activebut"
+                            value="Active">
+                        </div>
+                        <div class="hoverbut">
+                            <input
+                            role="hoverbut"
+                            class="hover_ base"
+                            type="button"
+                            name="activebut"
+                            value="Hover">
+                        </div>
+                        <div class="dangerbut">
+                            <input
+                            class="danger nobase"
+                            type="button"
+                            name="activebut"
+                            value="Danger">
+                        </div>
+                        <div class="hoverbut_">
+                            <input
+                            class="hover base"
+                            type="button"
+                            name="activebut"
+                            value="Hover">
+                        </div>
+                        <div class="disabledbut">
+                            <input
+                            class="disable nobase"
+                            type="button"
+                            name="activebut"
+                            value="Disabled">
+                        </div>
+                        <div class="plus">
+                            <input
+                            class="plusbut"
+                            type="button"
+                            name="activebut"
+                            value="+">
+                        </div>
+                        <div class="minus">
+                            <input
+                            class="minusbut"
+                            type="button"
+                            name="activebut"
+                            value="-">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text_area">
+                    <p>Text area</p>
+                    <textarea
+                    class="textinarea"
+                    name=""
+                    id=""
+                    placeholder="Enter some text...">
+                    </textarea>
                 </div>
             </div>
 
