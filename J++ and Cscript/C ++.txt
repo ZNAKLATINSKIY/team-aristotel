@@ -1,0 +1,139 @@
+Task 1: 
+
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() 
+{
+    string name;
+    cout << "Как вас зовут? ";
+    cin >> name;
+    
+    cout << "Привет, " << name << "!";
+}
+
+
+Task 2:
+
+
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    const int yearsnow = 2024;
+    int birthday;
+    int result;
+    
+    cout << "В каком году родились? ";
+    cin >> birthday;
+    result = yearsnow - birthday;
+    cout << "Вам " << result;
+    
+}
+
+
+Task 3:
+
+
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    int length;
+    int result;
+    
+    cout << "Какова длина стороны квадрта? В см ";
+    cin >> length;
+    result = 4 * length;
+    cout << "Периметр равен " << result << "см";
+    
+}
+
+
+Task 4:
+
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() 
+{
+    float radius;
+    float result;
+
+    cout << "Каков-же ваш радиус окржности? В см ";
+    cin >> radius;
+    result = M_PI * pow(radius, 2);
+    cout << "Площадь вашего радиуса окружности равен - " << result << "см";
+    
+}
+
+
+Task 5:
+
+
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    float kilometers;
+    float time;
+    float speed;
+    
+    cout << "Сколько километров между городами? ";
+    cin >> kilometers;
+    cout << "За сколько часов хотите туда доехать? ";
+    cin >> time;
+    speed = kilometers / time;
+    cout << "Вам нужно набрать " << speed << "км/ч, чтоб туда добраться";
+    
+}
+
+
+Task 6:
+
+
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    const float euro = 0.93;
+    float dollars;
+    float result;
+
+    cout << "Сколько баксов надо перевести? ";
+    cin >> dollars;
+    result = dollars * euro;
+    cout << "Это " << result << " евро";
+    
+}
+
+
+Task 7:
+
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() 
+{
+    int GB;
+    int MB = 820;
+    int result;
+    int multiplication;
+
+    cout << "Сколько у вас гб? на флешке ";
+    cin >> GB;
+    multiplication = GB * 1024;
+    result = multiplication / MB;
+    cout << "Вы можете поместить " << floor(result) << " файлов размером 820мб";
+    
+}
