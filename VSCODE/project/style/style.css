@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+
+}
+
+
+header {
+    margin: auto;
+    width: 1600px;
+    height: 1331px;
+    background-image: url(../images/background_header.png);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 61px;
+    padding-left: 100px;
+    padding-right: 102px;
+}
+.logo_text {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 27.71px;
+    text-align: left;
+    color: white;
+}
+.nav_menu > a {
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 27.71px;
+    text-align: left;
+    color: white;
+}
+.nav_menu {
+    display: flex;
+    gap: 54px;
+}
+.nav_menu :last-child {
+    color: #8941FB;
+}
+
+.nav_menu_hr {
+    width: 1388px;
+    margin-top: 50px;
+    border: solid 1px;
+    opacity: 0.2;
+    color: #FFFFFF;
+}
+
+.header_all_text {
+    display: flex;
+    flex-direction: column;
+    width: 931px;
+    margin-left: 260px;
+    margin-top: 80px;
+}
+.second_nav_text {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 27.71px;
+    text-align: left;
+    color: #FFFFFF;
+}
+.head_title {
+    font-family: arial, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 85px;
+    font-weight: 400;
+    line-height: 76.36px;
+    text-align: left;
+    padding-top: 80px;
+    color: #FFFFFF;
+}
+.p_title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 27.71px;
+    text-align: left;
+    color: #FFFFFF;
+    padding-top: 50px;
+}
