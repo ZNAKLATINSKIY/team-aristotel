@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ TASKS</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 50px;
+            margin: 10px;
+            background-color: white;
+        }
+        pre {
+            background-color: black;
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>C++ TASKS</h1>
+
+    <h2>ex1	Запросите у пользователя его имя и выведите в ответ: «Привет, его имя!».</h2>
+    <pre>
+        #include < iostream>
+        #include < string>
+
+        using namespace std;
+
+        int main()
+            {
+                string name;
+
+                cout << "Введите Ваше имя: ";
+                cin >> name;
+
+                cout << "Привет, " << name << "!";
+            }
+    </pre>
+
+    <h2>ex2 Запросите у пользователя год его рождения, посчитайте, сколько ему лет и выведите результат. Текущий год укажите в коде как константу.</h2>
+    <pre>
+        #include < iostream>
+        #include < string>
+
+        using namespace std;
+
+        int main()
+            {
+                int year_user;
+                int year;
+                year = 2024;
+
+                cout << "Введите год Вашего рождения: ";
+                cin >> year_user;
+
+                int years_user;
+                years_user = year - year_user;
+
+                cout << "Вам " << years_user << " лет!";
+
+
+            }
+    </pre>
+
+    <h2>ex3 Запросите у пользователя длину стороны квадрата и выведите периметр такого квадрата. </h2>
+    <pre>
+        #include < iostream>
+        #include < string>
+
+        using namespace std;
+
+        int main()
+            {
+                setlocale(LC_ALL, "Russian");
+
+                int i;
+
+                cout << "Введите длину стороны квадрата: ";
+                cin >> i;
+
+                cout << "Периметр квадрата: " << i*4;
+
+            }
+    </pre>
+
+    <h2>ex4 Запросите у пользователя радиус окружности и выведите площадь такой окружности.</h2>
+    <pre>
+        #include < iostream>
+        #include < string>
+
+        using namespace std;
+
+        int main()
+            {
+                setlocale(LC_ALL, "Russian");
+
+                int i;
+
+                cout << "Введите радиус окружности: ";
+                cin >> i;
+
+                cout << "Площадь окружности: " << 3.14*(i*=i);
+
+            }
+    </pre>
+
+    <h2>ex5 Запросите у пользователя расстояние в км между двумя городами и за сколько часов он хочет добраться. Посчитайте скорость, с которой необходимо двигаться, чтобы успеть вовремя.</h2>
+    <pre>
+        #include < iostream>
+        #include < string>
+
+        using namespace std;
+
+        int main()
+            {
+                setlocale(LC_ALL, "Russian");
+
+                int s;
+                int t;
+                int v;
+
+                cout << "Введите расстояние в км, которое Вам нужно преодолеть: ";
+                cin >> s;
+
+                cout << "Введите время в часах, за которое Вам нужно проехать дорогу: ";
+                cin >> t;
+
+                v = s/t;
+                cout << "Вам нужно двигаться со скоростью " << v << "км/ч";
+
+            }
+    </pre>
+
+    <h2>ex6 Реализуйте конвертор валют. Пользователь вводит доллары, программа переводит в евро. Курс валюты храните в константе.</h2>
+    <pre>
+        #include < iostream>
+        #include < string>
+
+
+        using namespace std;
+
+        int main()
+            {
+                setlocale(LC_ALL, "Russian");
+
+                int user_i;
+
+                cout << "Введите количество долларов: ";
+                cin >> user_i;
+
+                float euro = user_i * 0.85;
+                cout << "Перевёл в евро: " << euro;
+            }
+    </pre>
+
+    <h2>ex7 Пользователь указывает объем флешки в Гб. Программа должна посчитать сколько файлов размером в 820 Мб помещается на флешку.</h2>
+    <pre>
+        #include < iostream>
+        #include < string>
+
+        using namespace std;
+
+        int main()
+            {
+                setlocale(LC_ALL, "Russian");
+
+                int gb;
+
+                cout << "Введите объём флешки в гигабайтах: ";
+                cin >> gb;
+
+                cout << "820мб поместятся на флешке " << (gb*1024)/820 << " раз";
+            }
+    </pre>
+
+    <h2>ex8 Пользователь вводит сумму денег в кошельке и цену одной шоколадки. Программа выводит сколько шоколадок может купить пользователь и сколько сдачи у него останется. </h2>
+    <pre>
+        #include < iostream>
+        #include < cmath>
+        using namespace std;
+
+        int main() {
+                int wallet;
+                int schokolade;
+
+                cout << "Введите сумму денег в Вашем кошельке: " << endl;
+                cin >> wallet;
+
+                cout << "Введите цену на шоколад: " << endl;
+                cin >> schokolade;
+
+                if (wallet < schokolade) {
+                    int ostatok = schokolade - wallet;
+                    
+                    cout << "Вам не хватает: " << ostatok << endl;
+                } else {
+                    int schokolade_count = wallet / schokolade;
+                    int ostatok = wallet % schokolade;
+
+                    cout << "Вы можете купить данное количество шоколадок: " << schokolade_count << endl;
+                    cout << "Сдача: " << ostatok;
+                }
+
+            }
+    </pre>
+
+    <h2>ex9 Запросите у пользователя трехзначное число и выведите его задом наперед. Для решения задачи вам понадобится оператор % (остаток от деления).</h2>
+    <pre>
+        #include < iostream>
+        #include < cmath>
+        using namespace std;
+
+        int main() {
+                int num;
+                int one_num, two_num, three_num;
+                int result;
+
+                cout << "Введите трёхзначное число: ";
+                cin >> num;
+
+                one_num = floor(num / 100);
+                two_num = floor((num % 100) / 10);
+                three_num = floor(num % 10);
+
+                result = three_num*100 + two_num*10 + one_num;
+                cout << result;
+
+                return 0;
+            }
+    </pre>
+
+</body>
+</html>
