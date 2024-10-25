@@ -134,7 +134,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 118px;
+    margin-top: 200px;
 }
 .circles {
     width: 6px;
@@ -147,4 +147,75 @@ main {
     width: 2.5px;
     height: 170px;
     background: #CB3D9A;
+}
+.main_two_title > h2 {
+    font-family: arial, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 85px;
+    font-weight: 400;
+    line-height: 76.36px;
+    text-align: center;
+    text-shadow: 0px 0px 6px #8941FB;
+    text-transform: uppercase;
+}
+.main_two_title {
+    margin-top: 161px;
+}
+.text_twotitle {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 44.97px;
+    text-align: center;
+    color: #FFFFFF;
+    width: 1036px;
+    position: relative;
+    bottom: 30px;
+}
+.texttwotitle {
+    display: flex;
+    justify-content: center;
+
+}
+.deadlines {
+    display: flex;
+    justify-content: center;
+    gap: 290px;
+}
+.text {
+    display: flex;
+    flex-direction: column;
+}
+.text > h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 44.97px;
+    text-align: left;
+    width: 322px;
+    color: #8941FB;
+}
+.text > p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 27.71px;
+    text-align: left;
+    width: 450px;
+    height: 140px;
+    color: white;
+}
+.svg_image_one {
+    margin-top: 85px;
+}
+.conveyor {
+    margin-top: 150px;
+    gap: 302px;
+    display: flex;
+    justify-content: center;
+}
+.deadlines_two {
+    display: flex;
+    justify-content: center;
+    gap: 250px;
+    margin-top: 175px;
 }
