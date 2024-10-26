@@ -1,12 +1,10 @@
 * {
-    box-sizing: border-box;
+    box-sizing:border-box;
 }
 body {
     margin: 0;
     padding: 0;
     background-color: #20192A;
-    ;
-
 }
 
 
@@ -29,7 +27,6 @@ nav {
     font-size: 17px;
     font-weight: bold;
     line-height: 27.71px;
-    text-align: left;
     color: white;
 }
 .nav_menu > a {
@@ -38,7 +35,6 @@ nav {
     font-size: 17px;
     font-weight: 400;
     line-height: 27.71px;
-    text-align: left;
     color: white;
 }
 .nav_menu {
@@ -69,7 +65,6 @@ nav {
     font-size: 17px;
     font-weight: 400;
     line-height: 27.71px;
-    text-align: left;
     color: #FFFFFF;
 }
 .head_title {
@@ -77,7 +72,6 @@ nav {
     font-size: 85px;
     font-weight: 400;
     line-height: 76.36px;
-    text-align: left;
     padding-top: 80px;
     color: #FFFFFF;
 }
@@ -86,7 +80,6 @@ nav {
     font-size: 17px;
     font-weight: 400;
     line-height: 27.71px;
-    text-align: left;
     color: #FFFFFF;
     padding-top: 50px;
 }
@@ -165,7 +158,6 @@ main {
     font-size: 35px;
     font-weight: 400;
     line-height: 44.97px;
-    text-align: center;
     color: #FFFFFF;
     width: 1036px;
     position: relative;
@@ -190,7 +182,7 @@ main {
     font-size: 35px;
     font-weight: 400;
     line-height: 44.97px;
-    text-align: left;
+
     width: 322px;
     color: #8941FB;
 }
@@ -199,12 +191,15 @@ main {
     font-size: 17px;
     font-weight: 400;
     line-height: 27.71px;
-    text-align: left;
+
     width: 450px;
     height: 140px;
     color: white;
 }
 .svg_image_one {
+    margin-top: 85px;
+}
+.svg_image_three {
     margin-top: 85px;
 }
 .conveyor {
@@ -218,4 +213,256 @@ main {
     justify-content: center;
     gap: 250px;
     margin-top: 175px;
+}
+.partners_images {
+    margin-top: 143px;
+    display: flex;
+    justify-content: center;
+    gap: 85.5px;
+}
+.cases > :first-child {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 85px;
+    font-weight: 400;
+    line-height: 76.36px;
+    text-shadow: 0px 0px 6px #8941FB;
+    margin-top: 143px;
+}
+.cases {
+    display: flex;
+    justify-content: center;
+    gap: 595px;
+}
+.more_cases {
+    margin-top: 170px;
+    display: flex;
+    justify-content: center;
+    gap: 34px;
+}
+.more_cases > :first-child {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    font-weight: 550;
+    line-height: 30.23px;
+    color: #8941FB;
+}
+.circle_morecases {
+    width: 64px;
+    height: 64px;
+    border: 1px solid #8941FB;
+    border-radius: 100%;
+    position: relative;
+    bottom: 17px;
+}
+.line_cases {
+    width: 80px;
+    border: 1px solid #8941FB;
+    position: absolute;
+    top: 30px;
+    right: 0px;
+}
+.center_main {
+    width: 1600px;
+    border: 1px solid #C9C9C9;
+    opacity: 0.3;
+    margin-top: 57px;
+}
+.blog {
+    margin-top: 121px;
+    display: flex;
+    justify-content: center;
+    gap: 116px;
+}
+.imageruby_and_services {
+    display: flex;
+    flex-direction: column;
+}
+.rubyroid_back {
+    width: 434px;
+    height: 281px;
+    background: #10BE56;
+    text-align: center;
+}
+.rubyroid_back > img {
+    position: relative;
+    padding-top: 125px;
+}
+.services > :first-child {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24.45px;
+    color: #FFFFFF;
+}
+.services > :last-child {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 550;
+    line-height: 24.45px;
+    color: #FFFFFF;
+}
+.services {
+    margin-top: 55px;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+}
+.types_of_content > :first-child {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24.45px;
+    color: #FFFFFF;
+}
+.types_of_content > :last-child {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 550;
+    line-height: 24.45px;
+    color: #FFFFFF;
+}
+.duration > :first-child {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24.45px;
+    color: #FFFFFF;
+}
+.duration > :last-child {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 550;
+    line-height: 24.45px;
+    color: #FFFFFF;
+}
+.number_delivered > :first-child {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24.45px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+.number_delivered > :last-child {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 550;
+    line-height: 24.45px;
+    color: #FFFFFF;
+}
+.description > :first-child {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24.45px;
+    color: #FFFFFF;
+}
+.description > :last-child {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 550;
+    line-height: 24.45px;
+    color: #FFFFFF;
+}
+.full_work {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    font-weight: 550;
+    line-height: 30.23px;
+    margin-top: 10px;
+    color: #8941FB;
+    position: relative;
+    top: 30px;
+    left: 940px;
+}
+.last_main {
+    width: 1600px;
+    border: 1px solid #C9C9C9;
+    opacity: 0.3;
+    margin-top: 150px;
+}
+.contact_us {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    gap: 100px  ;
+}
+.contact_us > :first-child {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 85px;
+    font-weight: 400;
+    line-height: 76.36px;
+    text-shadow: 0px 0px 6px #8941FB;
+    position: relative;
+    bottom: 80px;
+}
+form > input {
+    color: #FFFFFF;
+    background: none;
+    border: none;
+    border-bottom: 1px solid white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    width: 276px;
+    padding-bottom: 11px;
+}
+form > :last-child {
+    background: none;
+    border: none;
+    border-bottom: 1px solid white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    width: 588px;
+    margin-top: 39px;
+    padding-bottom: 185px;
+}
+.mail {
+    margin-left: 19px;
+}
+.agree_and_button {
+    margin-top: 73px;
+    display: flex;
+    justify-content: end;
+    margin-right: 251px;
+    gap: 490px;
+}
+.agree_and_button > :first-child {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 19.56px;
+    color: #FFFFFF;
+}
+.circle_send {
+    width: 64px;
+    height: 64px;
+    border: 1px solid #8941FB;
+    border-radius: 100%;
+}
+.line_send {
+    position: relative;
+    top: 30px;
+    right: 18px;
+    width: 80px;
+    height: 0px;
+    border: 1px solid #8941FB;
+}
+.send {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    font-weight: 550;
+    line-height: 30.23px;
+    position: relative;
+    top: 20px;
+    color: #8941FB;
+}
+.button {
+    display: flex;
+    gap: 32px;
 }
