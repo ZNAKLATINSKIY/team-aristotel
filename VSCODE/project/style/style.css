@@ -466,3 +466,69 @@ form > :last-child {
     display: flex;
     gap: 32px;
 }
+.main_foot {
+    width: 1600px;
+    border: 1px solid #C9C9C9;
+    opacity: 0.3;
+    margin-top: 150px;
+}
+footer {
+    width: 1600px;
+    height: 870px;
+}
+.onefot {
+    display: flex;
+    justify-content: center;
+    gap: 134px;
+    margin-top: 208px;
+}
+.block_all {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.text_fot {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    font-weight: 550;
+    line-height: 49.36px;
+}
+.adress > :first-child {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    font-size: 17px;
+    font-weight: 550;
+    line-height: 27.71px;
+    text-decoration: none;
+}
+.twofot {
+    display: flex;
+    justify-content: center;
+    margin-top: 251px;
+    margin-left: 228px;
+    gap: 234px;
+}
+.twofot > :first-child {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 550;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+.twofot > :nth-child(2) {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 550;
+    line-height: 24px;
+}
+.feedback {
+    display: flex;
+    gap: 17px;
+}
+.feedback > span {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 550;
+    line-height: 24px;
+    color: #FFFFFF;
+}
