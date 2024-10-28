@@ -286,19 +286,26 @@ button{
     border: none;
 }
 
-.actions_amiri{
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    column-gap: 32px;
-    width: 1440px;
-    height: 801px;
+.actions{
     background: var(--backgraund-light);
+    height: 800px;
+}
+
+.actions_amiri{
+    display: flex;
+    justify-content: space-evenly;
+    width: 1440px;
+    height: 400px;
+    background: var(--backgraund-light);
+    margin: auto;
 }
 
 .act_head{
     width: 529px;
     height: 149px;
     margin: auto;
+    margin-top: 96px;
+    margin-bottom: 40px;
 }
 .act_head div:first-child{
     font-family: var(--second-family);
@@ -328,10 +335,12 @@ button{
     height: 396px;
     background: #a68f84;
     padding-left: 38px;
+    overflow: hidden;
+
 }
 
 .action svg{
-    margin-top: 26px;
+    margin-top: 26px
 }
 
 .action div:first-of-type{
@@ -362,11 +371,81 @@ button{
 }
 .action svg:last-of-type{
     position: relative;
-    left: px;
+    left: 150px;
+    top: -170px;
+    z-index: 20;
 }
 .navbar{
     display: flex;
     justify-content: space-between;
     width: 1200px;
     height: 30px;
+    margin-top: 69px;
+    margin-left: 64px;   
+}
+
+.arrows svg{
+    margin-left: 50px;
+    cursor: pointer;
+}
+
+.dots svg{
+    margin-right: 15px;
+}
+
+.news{
+    width: 1440px;
+    height: 624px;
+    background: var(--backgraund-light);
+}
+
+.news_head{
+    margin: auto;
+    width: 529px;
+    height: 149px;
+    margin-bottom: 48px;
+}
+
+.news_head div:first-of-type{
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 150%;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: #3f3124;
+}
+
+.news_head div:last-of-type{
+    font-family: var(--font-family);
+    font-weight: 490;
+    font-size: 18px;
+    line-height: 150%;
+    text-align: center;
+    color: var(--text);
+}
+
+.news_main{
+    display: flex;
+    justify-content: space-between;
+    width: 1310px;
+    height: 216px;
+    gap: 33px;
+    margin-left: 64px;
+}
+
+.news_main div{
+    border-radius: 10px;
+    padding: 35px 31px;
+    width: 414px;
+    height: 216px;
+    background: #f0e5e3;
+}
+.navbar1{
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    height: 30px;
+    margin-top: 128px;
+    margin-left: 64px;   
 }
