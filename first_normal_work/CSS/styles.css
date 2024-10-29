@@ -1,7 +1,7 @@
 body{
     margin: 0;
     padding: 0;
-    background: #fff;
+    background: #353535;
 }
 :root {
 	--backgraund-light: #f4faff;
@@ -20,6 +20,7 @@ body{
 .container{
     margin: auto;
     width: 1440px;
+    background: #fff;
 }
 header{
     width: 1440px;
@@ -277,6 +278,19 @@ header svg{
     overflow: hidden;
 }
 
+.about_us::before {
+    content: "";
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 900px;
+    background-color: rgba(0, 0, 0, 0.3); 
+}
+.about_us * {
+    position: relative;
+    z-index: 2;
+}
 .about{
     width: 594px;
     height: 661px;
@@ -410,6 +424,52 @@ button{
     overflow: hidden;
     background-image: url(../images/WhatsApp\ Image\ 2024-08-01\ at\ 18.39.21\ 1.png);
 }
+
+.action_image1{
+    left: 371.36px;
+    top: -134.35px;
+}
+
+.action_image2{
+    left: -195.45px;
+    top: -187.2px;
+}
+
+.action_image3{
+    left: 460.32px;
+    top: -465.46px;
+
+}
+
+.action_image4{
+    left: 486.69px;
+    top: 55.77px;
+}
+
+.action_image5{
+    left: 320.75px;
+    top: -470px;
+}
+
+.action_image6{
+    left: -50px;
+    top: -200px;
+}
+
+.action::before {
+    content: "";
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 900px;
+    background-color: rgba(0, 0, 0, 0.3); 
+}
+.action * {
+    position: relative;
+    z-index: 2;
+}
+
 .action img{
     z-index: 15;
 }
