@@ -475,6 +475,7 @@ form > :last-child {
 footer {
     width: 1600px;
     height: 870px;
+    margin: auto;
 }
 .onefot {
     display: flex;
