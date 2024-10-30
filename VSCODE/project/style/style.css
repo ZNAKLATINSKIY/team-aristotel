@@ -58,7 +58,7 @@ header {
 }
 
 .nav_menu_hr {
-    width: 1388px;
+    max-width: 1388px;
     margin-top: 50px;
     border: solid 1px;
     opacity: 0.2;
@@ -68,7 +68,7 @@ header {
 .header_all_text {
     display: flex;
     flex-direction: column;
-    width: 931px;
+    max-width: 931px;
     margin-left: 260px;
     margin-top: 80px;
 }
@@ -96,8 +96,8 @@ header {
     padding-top: 50px;
 }
 .header_paragraph {
-    width: 1036px;
-    height: 225px;
+    max-width: 1036px;
+    min-height: 225px;
     margin-top: 459px;
     margin-left: 23px;
 }
@@ -109,9 +109,7 @@ header {
     text-align: center;
     color: #FFFFFF;
 }
-main {
-    margin: auto;
-}
+
 .up_main_hr {
     width: 272px;
     border: 1px solid;
@@ -120,8 +118,8 @@ main {
     margin-top: 82px;
 }
 .main_one_title {
-    width: 1129px;
-    height: 228px;
+    max-width: 1129px;
+    min-height: 228px;
     margin: auto;
     position: relative;
     top: 30px;
@@ -171,7 +169,7 @@ main {
     font-weight: 400;
     line-height: 44.97px;
     color: #FFFFFF;
-    width: 1036px;
+    max-width: 1036px;
     position: relative;
     bottom: 30px;
 }
@@ -195,7 +193,7 @@ main {
     font-weight: 400;
     line-height: 44.97px;
 
-    width: 322px;
+    max-width: 322px;
     color: #8941FB;
 }
 .text > p {
@@ -274,7 +272,7 @@ main {
     right: 0px;
 }
 .center_main {
-    width: 1600px;
+    max-width: 1600px;
     border: 1px solid #C9C9C9;
     opacity: 0.3;
     margin-top: 57px;
@@ -390,7 +388,7 @@ main {
     left: 940px;
 }
 .last_main {
-    width: 1600px;
+    max-width: 1600px;
     border: 1px solid #C9C9C9;
     opacity: 0.3;
     margin-top: 150px;
@@ -466,8 +464,8 @@ form > :last-child {
     border: 1px solid #8941FB;
 }
 .q1 {
-    width: 50px;
-    height: 50px;
+    max-width: 50px;
+    min-height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -477,8 +475,8 @@ form > :last-child {
 }
 
 .q2 {
-    width: 100px;
-    height: 2px;
+    max-width: 100px;
+    min-height: 2px;
     background-color: #10BE56;
     margin-left: -5px;
 }
@@ -503,8 +501,8 @@ form > :last-child {
     margin-top: 150px;
 }
 footer {
-    width: 1600px;
-    height: 870px;
+    max-width: 1600px;
+    min-height: 870px;
     margin: auto;
 }
 .onefot {
