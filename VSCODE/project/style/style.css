@@ -6,22 +6,34 @@ body {
     padding: 0;
     background-color: #20192A;
 }
-
-
 header {
-    margin: auto;
-    width: 1600px;
-    height: 1331px;
     background-image: url(../images/background_header.png);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-nav {
+.container {
+    max-width: 1398px;
+    margin: 0 auto;
+
+}
+.header__nav {
     display: flex;
     justify-content: space-between;
-    padding-top: 61px;
-    padding-left: 100px;
-    padding-right: 102px;
+    padding: 62px 0 52px 0;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
+
+.circle_one span {
+    display: block;
+    margin-left: 200px;
+    color: white;
+    font-size: 45px;
+}
+
+
+
 .logo_text {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 17px;
@@ -453,6 +465,24 @@ form > :last-child {
     height: 0px;
     border: 1px solid #8941FB;
 }
+.q1 {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 2px solid red;
+    margin-left: 150px;
+}
+
+.q2 {
+    width: 100px;
+    height: 2px;
+    background-color: #10BE56;
+    margin-left: -5px;
+}
+
 .send {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 17px;
