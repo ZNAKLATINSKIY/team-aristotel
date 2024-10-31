@@ -291,19 +291,16 @@ footer {
 }
 .footer_up {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    width: 1440px;
-    height: 250px;
+    max-width: 1440px;
+    min-height: 250px;
     background-color: #141A20;
     color: #FFFFFF;
-    display: flex;
-    justify-content: space-around;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .footer_down {
-    width: 1440px;
-    height: 60px;
+    min-height: 60px;
     background-color: #171819;
 }
 
@@ -320,25 +317,43 @@ footer {
 
 
 }
+.bl1 > span {
+    opacity: 0.6;
+}
+.bl > :first-child {
+    opacity: 0.6;
+}
 .bl {
    margin-right: 71px;
+
 }
 .bl1 {
   margin-right: 34px;
+  display: flex;
+    flex-direction: column;
+    gap: 3px;
 }
 .bl2 {
     margin-right: 38px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
 }
 .bl3 {
     margin-right: 58px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
 }
 .bl4 {
     margin-right: 56px;
 }
+.test > span {
+    color: #FFFFFF;
+}
 .bl4 > span {
     color: #FFFFFF;
 }
-
 .block1 {
     max-width: 76px;
     font-size: 11px;
@@ -349,6 +364,7 @@ footer {
     display: flex;
     text-decoration: none;
     color: #FFFFFF;
+
 
 }
 .block2 {
@@ -371,11 +387,37 @@ footer {
     text-decoration: none;
     color: #FFFFFF;
 }
-.bl4 {
+.bl4 > span{
     font-size: 11px;
     line-height: 16px;
     letter-spacing: 0.8461539149284363px;
     text-align: left;
-
-
+}
+.test {
+    padding-top: 40px;
+}
+.test > span {
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: 0.8461539149284363px;
+    text-align: left;
+}
+.bl4 > :first-child {
+    opacity: 0.6;
+}
+.footer_down {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer_down > span {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 11px;
+    line-height: 12.89px;
+    letter-spacing: 0.8461539149284363px;
+    color: #FFFFFF;
+}
+.footer-up-icons {
+    display: flex;
+    gap: 75px;
 }
