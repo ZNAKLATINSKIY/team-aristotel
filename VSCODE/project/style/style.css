@@ -242,12 +242,17 @@ header {
     display: flex;
     justify-content: center;
     gap: 595px;
+    padding-bottom: 57px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 .more_cases {
     margin-top: 170px;
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 34px;
+    border: none;
+    background-color: #20192A;
 }
 .more_cases > :first-child {
     font-family: Arial, Helvetica, sans-serif;
@@ -257,19 +262,19 @@ header {
     color: #8941FB;
 }
 .circle_morecases {
-    width: 64px;
-    height: 64px;
+    max-width: 64px;
+    min-height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
     border: 1px solid #8941FB;
-    border-radius: 100%;
-    position: relative;
-    bottom: 17px;
 }
 .line_cases {
     width: 80px;
+    margin-left: -20px;
     border: 1px solid #8941FB;
-    position: absolute;
-    top: 30px;
-    right: 0px;
+
 }
 .center_main {
     max-width: 1600px;
@@ -278,10 +283,12 @@ header {
     margin-top: 57px;
 }
 .blog {
-    margin-top: 121px;
+    padding-top: 121px;
+    padding-bottom: 114px;
     display: flex;
     justify-content: center;
     gap: 116px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 .imageruby_and_services {
     display: flex;
@@ -289,13 +296,14 @@ header {
 }
 .rubyroid_back {
     width: 434px;
-    height: 281px;
+    min-height: 281px;
     background: #10BE56;
     text-align: center;
 }
-.rubyroid_back > img {
-    position: relative;
-    padding-top: 125px;
+.rubyroid_back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .services > :first-child {
     font-family: Arial, Helvetica, sans-serif;
@@ -381,11 +389,8 @@ header {
     font-size: 17px;
     font-weight: 550;
     line-height: 30.23px;
-    margin-top: 10px;
     color: #8941FB;
-    position: relative;
-    top: 30px;
-    left: 940px;
+
 }
 .last_main {
     max-width: 1600px;
@@ -393,11 +398,16 @@ header {
     opacity: 0.3;
     margin-top: 150px;
 }
+.contacts_ {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 222px;
+    padding-top: 60px;
+}
 .contact_us {
     display: flex;
     justify-content: center;
     margin-top: 100px;
-    gap: 100px  ;
+    gap: 100px;
 }
 .contact_us > :first-child {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -436,11 +446,11 @@ form > :last-child {
     margin-left: 19px;
 }
 .agree_and_button {
-    margin-top: 73px;
+    padding-top: 73px;
+    padding-right: 180px;
     display: flex;
     justify-content: end;
-    margin-right: 251px;
-    gap: 490px;
+    gap: 310px;
 }
 .agree_and_button > :first-child {
     font-family: Arial, Helvetica, sans-serif;
@@ -501,7 +511,6 @@ form > :last-child {
     margin-top: 150px;
 }
 footer {
-    max-width: 1600px;
     min-height: 870px;
     margin: auto;
 }
