@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background: #353535;
+    background: #fff;
 }
 :root {
 	--backgraund-light: #f4faff;
@@ -22,12 +22,17 @@ body {
     width: 1440px;
     background: #fff;
 }
-.header {
+.header__container{
+    display: flex;
     width: 1440px;
+    justify-content: space-between;
+}
+.header {
+    width: 100%;
     height: 100px;
     background: #3f3124;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     position: fixed;
     z-index: 50;
@@ -46,14 +51,18 @@ body {
     justify-content: space-between;
     margin-right: 64px;
 }
-.section-discription {
-    width: 1440px;
-    height: 600px;
-    background: #806356;
-    margin: auto;
+.discription__container{
+    max-width: 1920px;
+    min-height: 600px;
+    background-image: url(../images/close-up-couple-with-dog-indoors\ 1.png);
+    background-size: cover;
+    margin: 0 auto;
     margin-top: 100px;
     padding-top: 200px;
-    background-image: url(../images/close-up-couple-with-dog-indoors\ 1.png);
+}
+.section-discription {
+    min-height: 800px;
+    margin: auto;
 }
 .section-discription__internalities {
     width: 594px;
@@ -104,6 +113,11 @@ body {
     cursor: pointer;
     border: none;
 }
+.prem-food__container{
+    position: relative;
+    max-width: 1920px;
+    margin: auto;
+}
 .section-prem-food__food {
     font-family: var(--second-family);
     font-weight: 700;
@@ -114,9 +128,12 @@ body {
     letter-spacing: -0.02em;
     text-align: center;
     color: #3f3124;
+    position: relative;
+    display: flex;
+    justify-content: center;
 }
 .section-prem-food__rounds {
-    width: 1314px;
+    max-width: 1314px;
     height: 159px;
     display: flex;
     margin: auto;
@@ -137,7 +154,7 @@ body {
 }
 .section-prem-food__lorem {
     position: relative;
-    left: 494px;
+    left: 725px;
     top: 16px;
 }
 .section-store {
@@ -581,6 +598,7 @@ button {
     padding-left: 64px;
     padding-right: 64px;
     margin: auto;
+    padding-top: 70px;
 }
 .footer__item {
     display: flex;
@@ -588,15 +606,12 @@ button {
 }
 .footer__item--main-nav {
     margin-left: 118px;
-    margin-top: 70px;
 }
 .footer__item--store {
     margin-left: 118px;
-    margin-top: 70px;
 }
 .footer__item--contacts {
     margin-left: 118px;
-    margin-top: 70px;
 }
 .footer__text {
     width: 304px;
@@ -638,13 +653,14 @@ button {
     letter-spacing: -0.02em;
     color: #fff;
 }
-.footer__equalizer div:first-child {
+.footer__item div:first-of-type {
     font-family: var(--second-family);
     font-weight: 700;
     font-size: 20px;
     line-height: 150%;
     letter-spacing: -0.02em;
     color: #fff;
+    margin-bottom: 20px;
 }
 .to_dark1 {
     left: -29px;
@@ -658,4 +674,12 @@ button {
 .footer__equalizer a{ 
     text-decoration: none;
     color: #fff;
+    cursor: pointer;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.02em;
+    color: #fff;
 }
+
