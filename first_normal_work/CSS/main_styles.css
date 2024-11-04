@@ -156,6 +156,7 @@ body {
     position: relative;
     left: 725px;
     top: 16px;
+    width: 222px;
 }
 .section-store {
     min-height: 740px;
@@ -377,13 +378,13 @@ button {
     border: none;
 }
 .section-actions {
+    max-width: 1920px;
     background: var(--backgraund-light);
     height: 800px;
     margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 1920px;
 }
 
 .actions__container{
@@ -393,11 +394,12 @@ button {
 
 .section-actions__amiri {
     display: flex;
-    justify-content: space-evenly;
-    width: 1740px;
+    justify-content: space-between;
+    max-width:  1740px;
     height: 400px;
     background: var(--backgraund-light);
     margin: auto;
+    gap: 20px;
 }
 .section-actions__head {
     width: 529px;
@@ -427,6 +429,7 @@ button {
     line-height: 150%;
     text-align: center;
     color: var(--text);
+    margin-top: -30px;
 }
 .section-actions__action {
     position: relative;
@@ -518,7 +521,7 @@ button {
     cursor: pointer;
 }
 .section-news {
-    width: 1920px;
+    max-width: 1920px;
     height: 624px;
     background: var(--backgraund-light);
     margin: auto;
@@ -528,8 +531,9 @@ button {
 }
 
 .news__container{
-
+    max-width: 1920px;
 }
+
 
 .section-news__head {
     margin: auto;
@@ -539,6 +543,7 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 .section-news__head-title {
     font-family: var(--second-family);
@@ -548,6 +553,7 @@ button {
     letter-spacing: -0.02em;
     text-align: center;
     color: #3f3124;
+    margin-top: -10px;
 }
 .section-news__head-text {
     font-family: var(--font-family);
@@ -622,14 +628,13 @@ button {
     height: 516px;
     background: #3f3124;
     display: flex;
-    padding-left: 64px;
-    padding-right: 64px;
+
     margin: auto;
     padding-top: 70px;
 }
 
 .footer__container{
-    max-width: 1920px;
+    max-width: 1920 px;
     display: flex;
     margin: 0 auto;
     justify-content: space-around;
