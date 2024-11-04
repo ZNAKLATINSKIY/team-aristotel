@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задания на JS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+
+        button {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>JavaScript Задания</h1>
+
+    <button onclick="greetUser()">Приветствие</button>
+    <button onclick="calculateAge()">Вычислить возраст</button>
+    <button onclick="calculateSquarePerimeter()">Периметр квадрата</button>
+    <button onclick="calculateCircleArea()">Площадь окружности</button>
+    <button onclick="calculateSpeed()">Вычислить скорость</button>
+    <button onclick="convertCurrency()">Конвертер валют</button>
+    <button onclick="calculateFilesOnFlash()">Файлы на флешку</button>
+    <button onclick="calculateChocolates()">Сколько шоколадок купить</button>
+    <button onclick="reverseNumber()">Перевернуть число</button>
+
+    <script>
+        function greetUser() {
+            const name = prompt("Введите ваше имя:");
+            alert(`Привет, ${name}!`);
+        }
+
+        function calculateAge() {
+            const birthYear = prompt("Введите ваш год рождения:");
+            const currentYear = 2024; 
+            const age = currentYear - birthYear;
+            alert(`Вам ${age} лет!`);
+        }
+
+        function calculateSquarePerimeter() {
+            const side = prompt("Введите длину стороны квадрата:");
+            const perimeter = 4 * side;
+            alert(`Периметр квадрата: ${perimeter}`);
+        }
+
+        function calculateCircleArea() {
+            const radius = prompt("Введите радиус окружности:");
+            const area = Math.PI * Math.pow(radius, 2);
+            alert(`Площадь окружности: ${area.toFixed(2)}`);
+        }
+
+        function calculateSpeed() {
+            const distance = prompt("Введите расстояние в км между двумя городами:");
+            const time = prompt("За сколько часов хотите добраться?");
+            const speed = distance / time;
+            alert(`Необходимая скорость: ${speed} км/ч`);
+        }
+
+        function convertCurrency() {
+            const dollars = prompt("Введите сумму в долларах:");
+            const exchangeRate = 0.92;
+            const euros = dollars * exchangeRate;
+            alert(`Это будет ${euros.toFixed(2)} евро.`);
+        }
+
+        function calculateFilesOnFlash() {
+            const flashSizeGB = prompt("Введите объем флешки в Гб:");
+            const fileSizeMB = 820; 
+            const flashSizeMB = flashSizeGB * 1024; 
+            const fileCount = Math.floor(flashSizeMB / fileSizeMB);
+            alert(`На флешку поместится ${fileCount} файлов размером 820 Мб.`);
+        }
+
+        function calculateChocolates() {
+            const money = prompt("Введите сумму денег в кошельке:");
+            const price = prompt("Введите цену одной шоколадки:");
+            const chocolates = Math.floor(money / price);
+            const change = money % price;
+            alert(`Вы можете купить ${chocolates} шоколадок. Ваша сдача: ${change.toFixed(2)}.`);
+        }
+
+        function reverseNumber() {
+            const number = prompt("Введите трехзначное число:");
+            const reversed = number.split('').reverse().join('');
+            alert(`Число задом наперед: ${reversed}`);
+        }
+    </script>
+
+</body>
+</html>
