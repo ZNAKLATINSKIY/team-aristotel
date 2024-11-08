@@ -1,0 +1,13 @@
+body {
+    margin: o;
+}
+footer {
+    max-width: 1920px;
+    height: 206px;
+    background-color: #FF7936;
+}
+.COC-CETY {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
