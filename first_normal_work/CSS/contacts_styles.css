@@ -44,6 +44,7 @@ body {
 }
 .header__logo {
     fill: #fff;
+    z-index: -1;
 }
 .header__other {
     display: flex;
@@ -68,10 +69,17 @@ body {
 .contacts__main{
     display: flex;
     min-height: 530px;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
 }
 
-.main__map{
+/* .main__map{
     margin-left: 64px;
+
+} */
+
+.main__map img{
+    max-width: 100%;
 }
 
 .main__directors{
@@ -152,7 +160,7 @@ body {
 }
 
 .legal_data__container{
-    
+    margin: auto;
 }
 
 table th{
@@ -206,7 +214,7 @@ table tr{
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 18px;
-
+    
     /* line-height: 29px; */ 
     line-height: 160%;
     letter-spacing: -0.02em;
@@ -216,7 +224,7 @@ table tr{
 
 .footer {
     width: 100%;
-    height: 516px;
+    min-height: 516px;
     background: #3f3124;
     display: flex;
 
@@ -225,11 +233,13 @@ table tr{
 }
 
 .footer__container{
-    max-width: 1920 px;
+    max-width: 1920px;
     display: flex;
     margin: 0 auto;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
+
 
 .footer__item {
     display: flex;
@@ -245,8 +255,8 @@ table tr{
     margin-left: 118px;
 }
 .footer__text {
-    width: 304px;
-    height: 72px;
+    max-width: 304px;
+    min-height: 72px;
     margin-top: 28px;
     font-family: var(--font-family);
     font-weight: 490;
@@ -312,4 +322,14 @@ table tr{
     line-height: 150%;
     letter-spacing: -0.02em;
     color: #fff;
+}
+
+@media screen and (max-width:768px){
+    .header{
+        height: 60px;
+    }
+    
+    .footer{
+        max-width: 100%;
+    }
 }
