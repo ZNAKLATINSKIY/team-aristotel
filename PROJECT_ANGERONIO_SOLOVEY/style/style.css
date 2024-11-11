@@ -17,6 +17,7 @@ h1 {
 .main__cards {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 25px;
 }
 .main__cards-pizzacard {
