@@ -24,8 +24,9 @@ body {
 } */
 .header__container{
     display: flex;
-    width: 1920px;
+    width: 1798px;
     justify-content: space-between;
+    padding: 0 64px;
 }
 .header {
     width: 100%;
@@ -40,21 +41,18 @@ body {
 }
 .header__navigation {
     cursor: pointer;
-    margin-left: 64px;
 }
 .header__logo {
     fill: #fff;
 }
 .header__other {
     display: flex;
-    width: 197px;
-    justify-content: space-between;
-    margin-right: 64px;
+    gap: 48px;
 }
 .discription__container{
     max-width: 1920px;
-    min-height: 600px;
-    background-image: url(../images/close-up-couple-with-dog-indoors\ 1.png);
+    height: 600px;
+    background-image: url(../images/close-up-couple-with-dog-indoors_1.png);
     background-size: cover;
     margin: 0 auto;
     margin-top: 100px;
@@ -65,8 +63,8 @@ body {
     margin: auto;
 }
 .section-discription__internalities {
-    width: 594px;
-    height: 398px;
+    max-width: 594px;
+    min-height: 398px;
     margin-left: 64px;
     display: flex;
     flex-direction: column;
@@ -134,7 +132,7 @@ body {
 }
 .section-prem-food__rounds {
     max-width: 1314px;
-    height: 159px;
+    min-height: 159px;
     display: flex;
     margin: auto;
     justify-content: space-between;
@@ -163,6 +161,7 @@ body {
     text-align: center;
     margin: auto;
     margin-top: 58px;
+
 }
 .store__container{
     max-width: 1920px;
@@ -231,8 +230,9 @@ body {
     left: 1050px;    
 }
 .section-store__card {
+    position: relative;
     border-radius: 10px;
-    width: 304px;
+    max-width: 304px;
     height: 423px;
     font-family: var(--second-family);
     font-weight: 700;
@@ -270,10 +270,10 @@ body {
 }
 .section-about-us {
     max-width: 1815px;
-    height: 732px;
+    min-height: 732px;
     background: #3f3124;
     padding-top: 43px;
-    background-image: url(../images/WhatsApp\ Image\ 2024-08-01\ at\ 18.39.21\ 1\ \(1\).png);
+    background-image: url(../images/doski1.png);
     padding-right: 64px;
     margin: auto;
     position: relative;
@@ -287,6 +287,8 @@ body {
     position: relative;
     overflow: hidden;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .section-about-us::before {
@@ -295,7 +297,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 900px;
+    min-height: 900px;
     background-color: rgba(0, 0, 0, 0.3); 
 }
 .section-about-us * {
@@ -304,21 +306,27 @@ body {
 }
 .section-about-us__about {
     width: 594px;
-    height: 661px;
+    min-height: 661px;
     margin-left: 64px;
     display: flex;
     flex-direction: column;
 }
 .section-about-us__img {
     border-radius: 7px;
-    width: 640px;
+    max-width: 640px;
     height: 620px;
     margin-top: 45px;  
     display: flex;
     align-items: center;
     justify-content: center;
     margin-left: 100px;
+    margin-bottom: 20px;
 }
+
+.section-about-us__img img{
+    width: 100%;
+}
+
 .section-about-us__mission {
     display: flex;
     justify-content: space-between;
@@ -385,11 +393,13 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: scroll;
 }
 
 .actions__container{
     margin: auto;
     max-width: 1920px;
+    text-align: center;
 }
 
 .section-actions__amiri {
@@ -400,9 +410,10 @@ button {
     background: var(--backgraund-light);
     margin: auto;
     gap: 20px;
+
 }
 .section-actions__head {
-    width: 529px;
+    max-width: 529px;
     height: 149px;
     margin: auto;
     margin-top: 96px;
@@ -439,7 +450,7 @@ button {
     background: #a68f84;
     padding-left: 38px;
     overflow: hidden;
-    background-image: url(../images/WhatsApp\ Image\ 2024-08-01\ at\ 18.39.21\ 1.png);
+    background-image: url(../images/doski2.png);
     display: flex;
     flex-direction: column;
 }
@@ -528,6 +539,7 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
 }
 
 .news__container{
@@ -634,7 +646,7 @@ button {
 }
 
 .footer__container{
-    max-width: 1920 px;
+    max-width: 1920px;
     display: flex;
     margin: 0 auto;
     justify-content: space-around;
@@ -727,6 +739,7 @@ button {
 @media screen and (max-width:768px){
     .header{
         height: 60px;
+        margin-top: -60px;
     }
     
     .footer{
@@ -735,5 +748,160 @@ button {
 
     .discription__container{
         flex-wrap: wrap;
+        height: 480px;
+        background-size: cover;
+    }
+
+    .section-prem-food{
+        display: none;
+    }
+
+    .header__navigation{
+        display: none;
+    }
+
+    .header svg{
+        max-width: 75%;
+    }
+
+    .header__container{
+        padding: 0 26px;
+    }
+
+    .header__other svg{
+        width: 28px;
+        fill: #3f3124;
+    }
+
+    .section-discription{
+        height: 485px;
+        margin-top: -40px;
+    }
+    
+    .discription__container{
+        height: 485px;
+        
+    }
+
+
+    .section-about-us__button-company{
+        max-width: 338px;
+    }
+
+    .section-about-us__img{
+        margin: 0;
+    }
+
+    .store__container{
+        overflow: scroll;
+        width: 1920px;
+    }
+
+    .section-store{
+            overflow: scroll;
+            max-width: 1920px;
+        }
+
+    .section-about-us__korm-razny{
+        font-family: var(--second-family);
+        font-weight: 700;
+        font-size: 24px;
+
+        /* line-height: 29px; */ 
+        line-height: 121%;
+        text-transform: uppercase;
+        color: #fff;
+    }
+
+    .section-about-us__korm-polny{
+        font-family: var(--font-family);
+        font-weight: 453;
+        font-size: 16px;
+        color: var(--backgraund-light);
+    }
+
+    .section-about-us__mission{
+        display: none;
+    }
+
+    .section-discription__text-3{
+        display: none;
+    }
+
+    .section-about-us__img{
+        margin-bottom: 20px;
+    }
+
+}
+
+@media screen and (max-width:420px){
+
+    .section-prem-food{
+        display: none;
+    }
+
+    .header__navigation{
+        display: none;
+    }
+
+    .header svg{
+        max-width: 75%;
+    }
+
+    .header__container{
+        padding: 0 26px;
+    }
+
+    .header__other svg{
+        width: 28px;
+        fill: #3f3124;
+    }
+
+    .section-discription{
+        height: 485px;
+
+
+    }
+    .discription__container{
+        height: 485px;
+        
+    }
+
+    .section-about-us__about{
+        text-align: center;
+    }
+
+    .section-about-us__button-company{
+        max-width: 338px;
+    }
+
+    .section-about-us__img{
+        margin: 0;
+    }
+
+    .section-about-us__korm-razny{
+        font-family: var(--second-family);
+        font-weight: 700;
+        font-size: 24px;
+
+        /* line-height: 29px; */ 
+        line-height: 121%;
+        text-transform: uppercase;
+        color: #fff;
+    }
+
+    .section-about-us__korm-polny{
+        font-family: var(--font-family);
+        font-weight: 453;
+        font-size: 16px;
+        color: var(--backgraund-light);
+    }
+
+    .section-about-us__mission{
+        display: none;
+    }
+
+    .section-discription__text-3{
+        display: none;
     }
 }
