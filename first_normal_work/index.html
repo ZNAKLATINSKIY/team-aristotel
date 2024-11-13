@@ -107,37 +107,40 @@
                 </div> -->
                 </div>
             </section>
-            <section class="section-store">
+            <section id="store" class="section-store">
                 <div class="store__container">
                 <span class="section-store__title">Интернет-магазин</span>
-                <div class="section-store__cards">
-                    <div class="section-store__card">Сухой корм для кошек
-                        <img class="section-store__img-card section-store__img-card--1" src="./images/cat_food1.png" alt="feed">
-                        <img class="section-store__img-card section-store__img-card--2" src="./images/cat_food2.png" alt="feed">
-                        <img class="section-store__img-card section-store__img-card--3" src="./images/cat_food3.png" alt="feed">
+                <div class="section-store__scroller">
+                    <div class="section-store__cards">
+                        <div class="section-store__card">Сухой корм для кошек
+                            <img class="section-store__img-card section-store__img-card--1" src="./images/cat_food1.png" alt="feed">
+                            <img class="section-store__img-card section-store__img-card--2" src="./images/cat_food2.png" alt="feed">
+                            <img class="section-store__img-card section-store__img-card--3" src="./images/cat_food3.png" alt="feed">
+                        </div>
+                        <div class="section-store__card">Влажный корм для кошек
+                            <img class="section-store__img-card section-store__img-card--4" src="./images/cat_food4.png" alt="feed">
+                            <img class="section-store__img-card section-store__img-card--5" src="./images/cat_food5.png" alt="feed">
+                            <img class="section-store__img-card section-store__img-card--6" src="./images/cat_food8.png" alt="feed">
+                        </div>
+                        <div class="section-store__card">Сухой корм для собак
+                            <img class="section-store__img-card section-store__img-card--7" src="./images/dog_food1.png" alt="feed">
+                            <img class="section-store__img-card section-store__img-card--8" src="./images/dog_food2.png" alt="feed">
+                            <img class="section-store__img-card section-store__img-card--9" src="./images/dog_food3.png" alt="feed">
+                        </div>
+                        <div class="section-store__card">Наполнитель для кошачьего <br>туалета</div>
                     </div>
-                    <div class="section-store__card">Влажный корм для кошек
-                        <img class="section-store__img-card section-store__img-card--4" src="./images/cat_food4.png" alt="feed">
-                        <img class="section-store__img-card section-store__img-card--5" src="./images/cat_food5.png" alt="feed">
-                        <img class="section-store__img-card section-store__img-card--6" src="./images/cat_food8.png" alt="feed">
+                
+                    <div class="section-store__otkrivashki">
+                        <button class="section-store__button-otkrivashki">Открыть</button>
+                        <button class="section-store__button-otkrivashki">Открыть</button> 
+                        <button class="section-store__button-otkrivashki">Открыть</button>
+                        <button class="section-store__button-otkrivashki">Открыть</button>
                     </div>
-                    <div class="section-store__card">Сухой корм для собак
-                        <img class="section-store__img-card section-store__img-card--7" src="./images/dog_food1.png" alt="feed">
-                        <img class="section-store__img-card section-store__img-card--8" src="./images/dog_food2.png" alt="feed">
-                        <img class="section-store__img-card section-store__img-card--9" src="./images/dog_food3.png" alt="feed">
-                    </div>
-                    <div class="section-store__card">Наполнитель для кошачьего <br>туалета</div>
-                </div>
-                <div class="section-store__otkrivashki">
-                    <button class="section-store__button-otkrivashki">Открыть</button>
-                    <button class="section-store__button-otkrivashki">Открыть</button> 
-                    <button class="section-store__button-otkrivashki">Открыть</button>
-                    <button class="section-store__button-otkrivashki">Открыть</button>
                 </div>
                 </div>
             </section>
 
-            <section class="section-about-us">
+            <section id="about" class="section-about-us">
                 <div class="about-us__container">
                 <div class="section-about-us__about">
                     <div class="section-about-us__mission">
@@ -154,7 +157,7 @@
                 </div>
             </section>
 
-            <section class="section-actions">
+            <section id="action" class="section-actions">
                 <div class="actions__container">
                 <div class="section-actions__head">
                     <h2 class="section-actions__head-title">Акции</h2>
@@ -184,7 +187,7 @@
                 </div>
             </section>
 
-            <section class="section-news">
+            <section id="news" class="section-news">
                 <div class="news__container"></div>
                 <div class="section-news__head">
                     <h2 class="section-news__head-title">Новости</h2>
@@ -271,19 +274,19 @@
             <div class="footer__item footer__item--main-nav">
                 <div>Главная</div>
                 <div class="footer__equalizer">
-                    <a>О нас</a>
-                    <a>Благотворительность</a>
-                    <a>Новости</a>
-                    <a>Акции</a>
+                    <a href="#about">О нас</a>
+                    <a href="./other_pages/history.html">Благотворительность</a>
+                    <a href="#news">Новости</a>
+                    <a href="#action">Акции</a>
                 </div>
             </div>  
             <div class="footer__item footer__item--store">
                 <div>Интернет-магазин</div>
                 <div class="footer__equalizer">
-                    <a>Сухой корм для кошек</a>
-                    <a>Корм для собак</a>
-                    <a>Влажный корм для кошек</a>
-                    <a>Наполнитель</a>
+                    <a href="#store">Сухой корм для кошек</a>
+                    <a href="#store">Корм для собак</a>
+                    <a href="#store">Влажный корм для кошек</a>
+                    <a href="#store">Наполнитель</a>
                 </div>
             </div>
             <div class="footer__item footer__item--contacts">

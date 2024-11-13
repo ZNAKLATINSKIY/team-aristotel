@@ -183,6 +183,7 @@ body {
     justify-content: space-around;
     margin-top: 38px;
     overflow: hidden;
+    
 }
 .section-store__cards img {
     position: absolute;
@@ -251,7 +252,6 @@ body {
     height: 66px;
     display: flex;
     justify-content: space-around;
-    margin: auto;
     margin-top: 11px;
 }
 .section-store__button-otkrivashki {
@@ -269,7 +269,7 @@ body {
     cursor: pointer;
 }
 .section-about-us {
-    max-width: 1815px;
+    max-width: 1792px;
     min-height: 732px;
     background: #3f3124;
     padding-top: 43px;
@@ -280,7 +280,7 @@ body {
     overflow: hidden;
     display: flex;
     background-size: cover;
-    padding-left: 40px;
+    padding-left: 64px;
 }
 
 .about-us__container{
@@ -297,7 +297,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    min-height: 900px;
+    min-height: 1500px;
     background-color: rgba(0, 0, 0, 0.3); 
 }
 .section-about-us * {
@@ -307,7 +307,6 @@ body {
 .section-about-us__about {
     width: 594px;
     min-height: 661px;
-    margin-left: 64px;
     display: flex;
     flex-direction: column;
 }
@@ -319,13 +318,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 100px;
     margin-bottom: 20px;
 }
 
-.section-about-us__img img{
-    width: 100%;
-}
 
 .section-about-us__mission {
     display: flex;
@@ -399,7 +394,6 @@ button {
 .actions__container{
     margin: auto;
     max-width: 1920px;
-    text-align: center;
 }
 
 .section-actions__amiri {
@@ -522,7 +516,7 @@ button {
 .section-actions__navbar {
     display: flex;
     justify-content: space-between;
-    width: 1200px;
+    max-width: 1200px;
     height: 30px;
     margin-top: 69px;
     margin-left: 64px;
@@ -746,6 +740,10 @@ button {
         max-width: 100%;
     }
 
+    .about-us__container {
+        padding: 0 26px;
+    }
+
     .discription__container{
         flex-wrap: wrap;
         height: 480px;
@@ -784,21 +782,34 @@ button {
     }
 
 
+    .section-store__cards{
+        width: 1312px;
+    }
+
+    .section-store__otkrivashki{
+        width: 1312px;
+        justify-content: space-between;
+        margin-left: 5px;
+    }
+
+    .section-store__scroller{
+        width: 100%;
+        overflow: scroll;
+    }
+
     .section-about-us__button-company{
-        max-width: 338px;
+        width: 95%;
     }
 
     .section-about-us__img{
         margin: 0;
     }
 
-    .store__container{
-        overflow: scroll;
-        width: 1920px;
+    .store__container {
+        max-width: 1920px;
     }
 
     .section-store{
-            overflow: scroll;
             max-width: 1920px;
         }
 
@@ -829,7 +840,9 @@ button {
     }
 
     .section-about-us__img{
+        margin-top: -50px;
         margin-bottom: 20px;
+        max-height: 352px;
     }
 
 }
@@ -872,12 +885,9 @@ button {
     }
 
     .section-about-us__button-company{
-        max-width: 338px;
+        width: 100%;
     }
 
-    .section-about-us__img{
-        margin: 0;
-    }
 
     .section-about-us__korm-razny{
         font-family: var(--second-family);
