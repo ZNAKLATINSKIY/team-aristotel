@@ -1,0 +1,111 @@
+img {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin-left: 590px;
+    right: 100px;
+    bottom: 170px;
+}
+
+.container {
+    display: flex;
+    justify-self: center;
+    margin: 0px;
+    margin-top: 100px;
+    position: relative;
+}
+.CENTER {
+    margin: auto;
+}
+.box_crdit {
+    font-family: 'Calibri', sans-serif;
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    height: 400px;
+    background-color: rgba(150, 200, 212, 0.718);
+    border: solid 0px;
+    border-radius: 30px;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    z-index: 1;
+}
+.REDBLOCK {
+    font-family: 'Calibri', sans-serif;
+    background-color: rgb(245, 108, 23);
+    font-size: 20px;
+    line-height: 2.5;
+    padding-right: 200px;
+    text-align: center;
+    color: aliceblue;
+    width: 400px;
+    height: 50px;
+    top: 100px;
+    right:100px;
+    position: relative;
+    margin: auto;
+    z-index: 2;
+}
+.label_1 {
+    color: rgb(70, 122, 139);
+    display: flex;
+    flex-direction:column;
+    padding-top: 120px;
+    padding-left: 30px;
+    font-size: 15px;
+}
+.input_up {
+    margin-left: 30px;
+    margin-top: 10px;
+    background-color: rgb(175, 231, 232);
+    border: none;
+    border-bottom: solid 2px;
+    font-size:20px;
+    width: 400px;
+    height: 300px;
+}
+.label_2 {
+    color: rgb(70, 122, 139);
+    display: flex;
+    flex-direction:column;
+    padding-top: 20px;
+    padding-left: 30px;
+    font-size: 15px;
+}
+.Bottom {
+    display: flex;
+    flex-direction: row;
+}
+.Bottom_Label {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 400px;
+}
+.label_3 {
+    color: rgb(70, 122, 139);
+    display: flex;
+    flex-direction:column;
+    padding-top: 20px;
+    padding-left: 30px;
+    font-size: 15px;
+}
+.input_Bottom_Label_3 {
+    margin-left: 30px;
+    margin-top: 10px;
+    background-color: rgb(175, 231, 232);
+    border: none;
+    border-bottom: solid 1px;
+    font-size:17px;
+    width: 100px;
+    height: 40px;
+}
+.label_4 {
+    color: rgb(70, 122, 139);
+    display: flex;
+    flex-direction:column;
+    padding-top: 20px;
+    padding-left: 20px;
+    font-size: 15px;
+}

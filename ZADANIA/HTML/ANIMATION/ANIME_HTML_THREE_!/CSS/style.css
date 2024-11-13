@@ -1,0 +1,51 @@
+body{
+    margin: 0;
+}
+.image {
+    display: flex;
+    width: 1850px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    transition: 3s;
+}
+.img {
+    display: flex;
+    position:relative;
+    width: 50%;
+    height: 400px;
+    transition: 0.3s ;
+    overflow: hidden;
+}
+img{
+    height: auto;
+    width: 100%;
+    transition: 1s;
+}
+.text {
+    display: flex;
+    margin: auto;
+    font-size: 60PX;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: 1s ;
+    width: 50%;
+    height: 100%;
+}
+.image:hover{
+    img{
+        transform: scale(1.2);
+        color:  rgba(255, 162, 162, 0.346) ;
+        filter: invert(100%);
+    }
+}
+.one:hover {
+    background-color:  rgba(255, 0, 0, 0.346) ;
+}
+.two:hover {
+    background-color:  rgba(60, 171, 250, 0.493) ;
+}
+.three:hover {
+    background-color:  rgba(137, 21, 200, 0.346) ;
+}

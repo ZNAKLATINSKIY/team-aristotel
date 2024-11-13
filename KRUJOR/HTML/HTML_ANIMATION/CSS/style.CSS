@@ -1,0 +1,20 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+@keyframes slide {
+    100% {
+        background-position: 400% 0%;
+    }
+    50% {
+        background-position: 3000% 0%;
+    }
+    300% {
+
+    }
+}
+.Back {
+    background-image: url(../IMG/9190175.webp );
+    height: 100%;
+    width: 100%;
+}

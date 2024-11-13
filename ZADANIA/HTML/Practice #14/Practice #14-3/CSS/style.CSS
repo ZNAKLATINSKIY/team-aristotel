@@ -1,0 +1,123 @@
+body {
+    margin: 0;
+    font-family: 'Calibri', sans-serif;
+}
+.container {
+    margin: 0 auto;
+}
+.blocks {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 50px;
+}
+.blocks p {
+    font-size: 20px;
+    font-weight: bold;
+    gap: 50px;
+    margin: 20px;
+}
+.block-block{
+    max-width: 400px;
+    min-height: 530px;
+    box-shadow: 0 0 5px 10px rgba(0, 0, 0, 0.199);
+    border-radius: 10px;
+    text-align: center;
+    transition: 1s;
+}
+.block-1 h2 {
+    text-align: center;
+    padding: 30px;
+    margin: 0;
+}
+.mounth {
+    color: rgba(128, 128, 128, 0.425);
+    padding-bottom: 30px;
+}
+.sena {
+    font-size: 80px;
+    font-weight: bold;
+    margin: 0;
+    padding-top: 20px;
+}
+.block-but-1 {
+    background-color: brown;
+    border: none;
+    width: 150px;
+    min-height: 50px;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+.block-but-1 {
+    background-color: brown;
+    border: none;
+    width: 150px;
+    min-height: 50px;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+.block-but-2 {
+    background-color: darkorange;
+    border: none;
+    width: 150px;
+    min-height: 50px;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+.block-but-3 {
+    background-color: blue;
+    border: none;
+    width: 150px;
+    min-height: 50px;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+.block-but-4 {
+    background-color: green;
+    border: none;
+    width: 150px;
+    min-height: 50px;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+.hr-1 {
+    background-color: brown;
+    max-width: 400px;
+    min-height: 5px;
+    margin-bottom: 100px;
+    margin: 0;
+}
+.hr-2 {
+    background-color: darkorange;
+    max-width: 400px;
+    min-height: 5px;
+    margin-bottom: 100px;
+    margin: 0;
+}
+.hr-3 {
+    background-color: blue;
+    max-width: 400px;
+    min-height: 5px;
+    margin-bottom: 100px;
+    margin: 0;
+}
+.hr-4 {
+    background-color: green;
+    max-width: 400px;
+    min-height: 5px;
+    margin-bottom: 100px;
+    margin: 0;
+}
+.block-block:hover {
+    transform: scale(1.20);
+}

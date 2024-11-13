@@ -1,0 +1,42 @@
+body {
+    padding: 0px;
+    position: relative;
+}
+.red_wall_1 {
+    width: 500px;
+    height: 300px;
+    background-color: brown;
+    border: solid 5px;
+    transform-origin: left;
+    z-index: 2;
+}
+.red_wall_2 {
+    width: 500px;
+    height: 300px;
+    background-color: brown;
+    border: solid 5px;
+    transform-origin: right;
+    z-index: 2;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    width: 1000px;
+    margin: auto;
+}
+.container:hover {
+.red_wall_1 {
+    transform: perspective(500px) rotateY(30deg);
+    transition: 2s;
+}
+.red_wall_2 {
+    transform: perspective(500px) rotateY(-30deg);
+    transition: 2s;
+}
+}
+#Text{
+    position: absolute;
+    top: 100px;
+    z-index: 1;
+    font-size: 50px;
+}

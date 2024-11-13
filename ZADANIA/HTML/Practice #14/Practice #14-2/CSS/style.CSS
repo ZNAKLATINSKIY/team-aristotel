@@ -1,0 +1,49 @@
+body{
+    margin: 0;
+}
+.content {
+    font-size: 35px;
+    margin: 130px;
+}
+.menu {
+    display: flex;
+    flex-direction: column;
+    background-color: gray;
+    color: white;
+    font-family: 'Calibri', sans-serif;
+    max-width: 100px;
+    height: 100vh;
+    transition: 1s;
+    position: fixed;
+}
+.div- {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.h1 {
+    padding: 30px;
+}
+.img {
+    max-width: 100px;
+    height: 100px;
+}
+.menu:hover {
+    max-width: 2000px;
+}
+.menu:hover a {
+    opacity: 100;
+}
+.all {
+    display: flex;
+}
+.p {
+    opacity: 0;
+    transition: 1s;
+    margin-top: 40px;
+    margin-right: 20px;
+}
+a {
+    text-decoration: none;
+    color: white;
+}

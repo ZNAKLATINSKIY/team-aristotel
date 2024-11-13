@@ -1,0 +1,364 @@
+body {
+    font-family: "Calibiri", sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+    /*Привественный сток*/
+
+.Stock_Welcome {
+    background-image: url(/img/Stock_Welcome.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 1000px;
+    margin: 0px;
+    padding: 0px;
+}
+nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+.container {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+.section {
+    background-color: black;
+}
+.h2_main_text {
+    display: flex;
+    flex-direction: row;
+    align-self: flex-start;
+    color: aliceblue;
+    margin-left: 750px;
+    align-self: flex-end;
+    height: 230PX;
+    width: 1130PX;
+    padding-top: 10px;
+    background-color: rgba(0, 0, 0, 0.562);
+    font-size: 160%;
+    border: solid 1px;
+    text-align: center;
+}
+.h1_main_text {
+    display: flex;   
+    color: aliceblue;
+    margin-left: 1020px;
+    height: 50PX;
+    width: 570PX;
+    background-color: rgba(0, 0, 0, 0.562);
+    font-size: 210%;
+    border: solid 1px;
+}
+.Up {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 30px;
+    height: 20px;
+    padding-top: 30px;
+}
+#img_1 {
+    display: flex;
+    justify-content: center;     
+    max-width: 200px;
+    height: 100px;
+    margin-right: 888px;
+    margin-top: 10px;
+}   
+.a {
+    color: aliceblue;
+    text-decoration: none;
+}
+.DIV_Botton {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+
+}
+.Botton_1 {
+    background-color: black;
+    color: aliceblue;
+    box-shadow: 60px -16px rgba(0, 0, 0, 0.562);
+    margin: auto;
+    max-width: 30%; 
+    font-size: 50px;
+}
+
+/*Тематика данного сайт*/
+
+.Two_Stock {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: black;
+    padding-top: 30px;
+    color: aliceblue;
+    height: 300px;
+    max-width: 2000px;
+    text-align: center;
+}
+.Two_Stocks {
+    background-color: black;
+}
+.image_two_stock {
+    max-width: 200px;
+    max-height: 300px;
+}
+
+/*Крутая статистика*/
+
+.Stock_Three {
+    background-image: url(/img/Stock_Two_Back.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 1000px;
+    margin: 0px;
+    padding: 0px;
+}
+.Three {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.Three_Stock_h2_1 {
+    color: aliceblue;
+    margin: 100px;
+    font-size: 30px;
+}
+.Three_Stock_h2_2 {
+    color: aliceblue;
+    font-size: 30px;
+    margin: 30px;
+}
+.Three_Stock_hr_1 {
+    width: 100px;
+    border-radius: 50px;
+}
+.Content_Stock_Three {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: aliceblue;
+}
+.Three_Stock_bar {
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    height: 8px;
+}
+.Green_Bar {
+    background-color: #ff0000;
+    height: 8px;
+    border-radius: 50px;
+}
+
+/*Кол-во возможностей*/
+
+.Four_Stock {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: black;
+    color: aliceblue;
+    height: 250px;
+    max-width: 2000px;
+    align-items: center;
+}
+.Icons_Four_Stock {
+    width: 100px;
+    height: 100px;
+}
+
+/*Крутые персонажики*/
+
+.Five_Stock {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: black;
+    flex-wrap: wrap;
+    max-width: 5000px;
+    height: 950px;
+}
+.Stock_Image_Five {
+    width: 479.7px;
+    height: 479.7px;
+}
+
+/*Видос*/
+.Seven_Stock_sec {
+    background-color: black;
+}
+
+.Six_Stock {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: black;
+    color: aliceblue;
+    height: 100px;
+    max-width: 2000px;
+    text-align: center;
+}
+
+/*Интересные факты*/
+
+.Seven_Stock {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: center;
+    align-items: center;
+    background-color: black;
+    color: aliceblue;
+    height: 700px;
+    max-width: 2000px;
+}
+.Stock_Seven_Video {
+    width: 400px;
+    height: 2000px;
+}
+
+/*Цитаты*/
+
+.Vosem_stock_back {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap; 
+    gap: 100px;
+    background-color: black;
+    color: aliceblue;
+    max-width: 2000px;
+    height: 900px;
+    row-gap: 1px;
+    text-align: center;
+    
+}
+.img_vosem_icons {
+    height: 150px;
+    width: 150px;
+    margin-top: 50px;
+}
+.Stock_vosem_h3 {
+    max-width: 300px;
+    max-height: 300px;
+}
+
+/*Иконки серии*/
+
+.Nain_Stock {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(49, 49, 49);
+    color: aliceblue;
+    max-width: 2000px;
+    height: 300px;
+    align-items: center;
+}
+.Nain_img {
+    width: 100px;
+    height: 100px;
+}
+
+/*Иконки серии*/
+
+.Ten_stock {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+    background-color: black;
+    color: aliceblue;
+    max-width: 2000px;
+    height: 300px;
+}
+
+/*Если нечего делать*/
+
+#contact{
+    background-color: black;
+    height: 1000px;
+}
+.need {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(255, 255, 255);
+}
+.needproj {
+    font-size: 3.5em;
+    padding-top: 4%;
+}
+.needproj1 {
+    font-size: 2em;
+    width: 750px;
+}
+.nameandmail {
+    display: flex;
+    justify-content: center;
+    color: rgb(32, 32, 32);
+    gap: 20px;
+}
+.name {
+    background-color: rgb(235, 235, 235);
+    width: 400px;
+    padding: 20px;
+    font-size: 1.5em;
+}
+.mail {
+    background-color: rgb(235, 235, 235);
+    width: 400px;
+    padding: 20px;
+    font-size: 1.5em;
+}
+.titleandcomm {
+    color: rgb(32, 32, 32);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+    margin-top: 2%;
+}
+.title {
+    background-color: rgb(235, 235, 235);
+    width: 860px;
+    padding: 20px;
+    font-size: 1.5em;
+}
+.comm {
+    background-color: rgb(235, 235, 235);
+    width: 860px;
+    padding: 20px;
+    height: 150px;
+    font-size: 1.5em;
+}
+.sms {
+    background-color: rgb(255, 0, 0);
+    color: rgb(235, 235, 235);
+    width: 250px;
+    text-align: center;
+    padding: 20px;
+    font-size: 1em;
+}
+
+/*Контакты*/
+.Footer_End_1 {
+    max-width: 1920px;
+    margin: 0 auto;
+    background-color: aliceblue;
+}
+.Stock_End {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: aliceblue;
+    color: black;
+    height: 200px;
+    max-width: 2000px;
+    font-size: 20px;
+    font-weight: bold;
+}
+

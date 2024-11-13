@@ -1,0 +1,39 @@
+@keyframes sonic {
+    0% {
+        transform:  skew(0);
+    }
+    25% {
+        transform: skew(25deg);
+    }
+    50% {
+        transform: skew(0deg);
+        translate: 900px;
+    }
+    75% {
+        transform: skew(-25deg);
+
+    }
+    100% {
+        transform: skew(0);
+    }
+}
+body {
+    margin: 0;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 15%;
+}
+.box {
+    border: solid 2px;
+    border-color: rgb(0, 0, 0);
+    height: 160px;
+    width: 1000px;
+}
+.sonic {
+    width: 100px;
+    height: 160px;
+    background-color: brown;
+    animation: sonic 5s ease-in-out infinite;
+}

@@ -1,0 +1,16 @@
+
+.Container {
+    display: flex;
+    justify-content: center;
+}
+.box {
+    margin-top: 100px;
+    height: 385px;
+    width: 385px;
+    transition: 2s;
+    background: linear-gradient(to left top, red, 40%, blue);
+}
+.box:hover {
+    transform: perspective(400px) rotateX(20deg) rotateY(-20deg);
+    border-radius: 50px;
+}
