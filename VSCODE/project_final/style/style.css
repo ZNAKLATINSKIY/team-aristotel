@@ -1,5 +1,6 @@
 * {
     box-sizing:border-box;
+    outline: 1px solid red;
 }
 body {
     margin: 0;
@@ -569,4 +570,12 @@ footer {
     font-weight: 550;
     line-height: 24px;
     color: #FFFFFF;
+}
+
+@media screen and (max-width: 1150px) {
+    .contact_us {
+        flex-direction: column;
+        gap: 0;
+        justify-content: center;
+    }
 }
