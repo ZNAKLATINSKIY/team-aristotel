@@ -192,43 +192,47 @@ body {
     z-index: 10;
 }
 .section-store__img-card--1 {
-    left: 152.86px;
-    top: 156.13px;
-    z-index: 20;
+    left: 18.45px;
+    top: 114.46px;
+    
 }
 .section-store__img-card--2 {
-    left: 217.41px;
+    left: 147.41px;
     top: 111.31px;
+    
 }
 .section-store__img-card--3 {
-    left: 88.45px;
-    top: 114.46px;
+    left: 72.86px;
+    top: 156.13px;
+
 }
 .section-store__img-card--4 {
-    left: 650.9px;
-    top: 104.17px;
+    left: 191.16px;
+    top: 212.08px;
     z-index: 20;
 }
 .section-store__img-card--5 {
-    left: 732px;
-    top: 212.08px;
-}
-.section-store__img-card--6 {
-    left: 562px;
+    left: -11.67px;
     top: 212.92px;
 }
+.section-store__img-card--6 {
+    left: 74.9px;
+    top: 104.17px;
+    z-index: 20;
+}
 .section-store__img-card--7 {
-    left: 1200px;
+    left: 106.54px;
     top: 111.2px;
 }
 .section-store__img-card--8 {
+    left: 137.65px;
     top: 147.54px;
-    left: 1120px;
-    z-index: 20;
+
 }
 .section-store__img-card--9 {
-    top: 117.54px;
-    left: 1050px;    
+    top: 147.54px;
+    left: 12.6px;
+    z-index: 20;    
 }
 .section-store__card {
     position: relative;
@@ -388,7 +392,6 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow: scroll;
 }
 
 .actions__container{
@@ -399,12 +402,11 @@ button {
 .section-actions__amiri {
     display: flex;
     justify-content: space-between;
-    max-width:  1740px;
-    height: 400px;
+    max-width: 1740px;
+    min-height: 420px;
     background: var(--backgraund-light);
-    margin: auto;
     gap: 20px;
-
+    overflow-x: scroll;
 }
 .section-actions__head {
     max-width: 529px;
@@ -439,7 +441,7 @@ button {
 .section-actions__action {
     position: relative;
     border-radius: 10px;
-    width: 602px;
+    max-width: 602px;
     height: 396px;
     background: #a68f84;
     padding-left: 38px;
@@ -447,36 +449,37 @@ button {
     background-image: url(../images/doski2.png);
     display: flex;
     flex-direction: column;
+    z-index: 2;
 }
 .section-actions__img-action {
     position: absolute;
     z-index: 15;
 }
 .section-actions__img-action--1 {
-    left: 371.36px;
-    top: -134.35px;
+    left: 301.36px;
+    top: 153.35px;
 }
 .section-actions__img-action--2 {
-    left: -195.45px;
-    top: -187.2px;
+    left: 480.32px;
+    top: 145.46px;
 }
 .section-actions__img-action--3 {
-    left: 460.32px;
-    top: -465.46px;
+    left: 371.36px;
+    top: 123.35px;
 }
-.section-actions__img-action--4 {
+/* .section-actions__img-action--4 {
     left: 486.69px;
     top: 55.77px;
-}
+} */
 .section-actions__img-action--5 {
     left: 320.75px;
-    top: -470px;
+    top: 125.35px;
 }
 .section-actions__img-action--6 {
-    left: -50px;
-    top: -200px;
+    left: 413.08px;
+    top: 113.42px;
 }
-.section-actions__action::before {
+/* .section-actions__action::before {
     content: "";
     position: absolute; 
     top: 0;
@@ -484,11 +487,12 @@ button {
     width: 100%;
     height: 900px;
     background-color: rgba(0, 0, 0, 0.3); 
-}
-.section-actions__action * {
+    z-index: 1;
+} */
+/* .section-actions__action * {
     position: relative;
     z-index: 2;
-}
+} */
 .section-actions__action-title {
     font-family: var(--second-family);
     font-weight: 700;
@@ -527,7 +531,7 @@ button {
 }
 .section-news {
     max-width: 1920px;
-    height: 624px;
+    min-height: 624px;
     background: var(--backgraund-light);
     margin: auto;
     display: flex;
@@ -541,9 +545,10 @@ button {
 }
 
 
+
 .section-news__head {
     margin: auto;
-    width: 529px;
+    max-width: 529px;
     height: 149px;
     margin-bottom: 48px;
     display: flex;
@@ -572,10 +577,9 @@ button {
 .section-news__main {
     display: flex;
     justify-content: space-between;
-    width: 1310px;
-    height: 216px;
+    max-width: 1310px;
+    min-height: 216px;
     gap: 20px;
-    margin-left: 64px;
 }
 .section-news__block {
     border-radius: 10px;
@@ -766,6 +770,10 @@ button {
         padding: 0 26px;
     }
 
+    .header__other{
+        gap: 25px;
+    }
+
     .header__other svg{
         width: 28px;
         fill: #3f3124;
@@ -782,6 +790,7 @@ button {
     }
 
 
+
     .section-store__cards{
         width: 1312px;
     }
@@ -794,7 +803,7 @@ button {
 
     .section-store__scroller{
         width: 100%;
-        overflow: scroll;
+        overflow-x: scroll;
     }
 
     .section-about-us__button-company{
@@ -843,6 +852,10 @@ button {
         margin-top: -50px;
         margin-bottom: 20px;
         max-height: 352px;
+    }
+
+    .section-news__main{
+        overflow-x: scroll;
     }
 
 }
