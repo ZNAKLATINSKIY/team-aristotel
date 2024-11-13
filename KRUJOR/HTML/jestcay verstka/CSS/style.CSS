@@ -74,13 +74,9 @@ footer {
     cursor: pointer;
 }
 .heading__tagline {
-    display: flex;
-    flex-wrap: wrap;
     font-weight: 300;
     font-size: 60px;
     color: white;
-    overflow: hidden;
-    word-wrap: break-word;
 }
 .heading__button--gray {
     color: rgba(119, 124, 136, 1);
