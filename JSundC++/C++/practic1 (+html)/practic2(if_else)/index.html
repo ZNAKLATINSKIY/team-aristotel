@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ TASKS</title>
+    <style>
+        pre {
+            background-color: black;
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>C++ TASKS</h1>
+
+    <h2>Запросить у человека два числа
+        сравнить их
+        вывести одну из трёх надписей:
+        1) первое число больше 
+        2) второе число больше
+        3) они равны</h2>
+    <pre>
+        #include < iostream>
+        using namespace std;
+        int main() {
+            // Негативное ветвление
+            int a;
+            int b;
+            cout << "Введите первое число: ";
+            cin >> a;
+            
+            cout << "Введите второе число: ";
+            cin >> b;
+        
+            if (a == b) {
+                cout << "Числа равны.";
+            } else if (a > b) {
+                cout << "Первое число больше второго.";
+            } else if (b > a) {
+                cout << "Второе число больше первого.";
+            }
+            return 0;
+            
+
+
+            // Последовательное ветвление
+            int a;
+            int b;
+            
+            cout << "Введите первое число: ";
+            cin >> a;
+            
+            cout << "Введите второе число: ";
+            cin >> b;
+        
+            if (a == b) {
+                cout << "Числа равны.";
+            }
+            if (a > b) {
+                cout << "Первое число больше второго.";
+            }
+            if (b > a) {
+                cout << "Второе число больше первого.";
+            }
+        
+        
+
+            // Положительное ветвление
+            int a;
+            int b;
+            
+            cout << "Введите первое число: ";
+            cin >> a;
+            
+            cout << "Введите второе число: ";
+            cin >> b;
+        
+            if (a >= b) {
+                if (a <= b) {
+                    if (a == b) {
+                        cout << "Числа равны.";
+                        }
+                } else {
+                    cout << "Первое число больше.";
+                }
+            } else {
+                cout << "Второе число больше.";
+            }
+            return 0;
+        }
+    </pre>
+</body>
+</html>

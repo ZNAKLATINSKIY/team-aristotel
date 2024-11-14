@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IF_ELSE TASK</title>
+    <style>
+        body {
+            background-color: aliceblue;
+            margin: 0 auto;
+            padding: 0;
+        }
+        button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            width: 400px;
+            height: 250px;
+            background-color: black;
+            color: aliceblue;
+        }
+        div {
+            width: 1920px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin: 30px auto;
+
+        }
+        h1 {
+            font-size: 40px;
+            font-style: italic;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Задания по условиям</h1>
+    <div>
+        <button onclick="comparison_negative()">По негативной ветке</button>
+        <button onclick="comparison()">По последовательной ветке</button>
+        <button onclick="comparison_positive()">По положительной ветке</button>
+    </div>
+    <script>
+        function comparison_negative() {
+            let a, b;
+            a = parseInt(prompt("Введите первое число: "));
+            b = parseInt(prompt("Введите второе число: "))
+
+            if (a === b) {
+                alert("Числа равны.")
+            } else if (a > b) {
+                alert("Первое число больше второго.")
+            } else if (b > a) {
+                alert("Второе число больше первого.")
+            }
+        }
+
+        function comparison() {
+            let a, b;
+            a = parseInt(prompt("Введите первое число: "));
+            b = parseInt(prompt("Введите второе число: "))
+
+            if (a === b) {
+                alert("Числа равны.")
+            }
+            if (a > b) {
+                alert("Первое число больше второго.")
+            }
+            if (b > a) {
+                alert("Второе число больше первого.")
+            }
+        }
+
+        function comparison_positive() {
+            let a, b;
+            a = parseInt(prompt("Введите первое число: "));
+            b = parseInt(prompt("Введите второе число: "))
+
+            if (a >= b) {
+                if (a <= b) {
+                    if (a === b) {
+                        alert("Числа равны.")
+                    }
+                } else {
+                    alert("Первое число больше.")
+                }
+            } else {
+                alert("Второе число больше.")
+            }
+        }
+    </script>
+</body>
+</html>

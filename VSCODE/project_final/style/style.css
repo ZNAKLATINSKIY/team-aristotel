@@ -1,6 +1,6 @@
 * {
     box-sizing:border-box;
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
 }
 body {
     margin: 0;
@@ -255,6 +255,7 @@ header {
     border: none;
     background-color: #20192A;
 }
+
 .more_cases > :first-child {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 17px;
@@ -275,7 +276,6 @@ header {
     width: 80px;
     margin-left: -20px;
     border: 1px solid #8941FB;
-
 }
 .center_main {
     max-width: 1600px;
@@ -448,7 +448,7 @@ form > :last-child {
 }
 .agree_and_button {
     padding-top: 73px;
-    padding-right: 180px;
+    padding-right: 140px;
     display: flex;
     justify-content: end;
     gap: 310px;
@@ -460,18 +460,33 @@ form > :last-child {
     line-height: 19.56px;
     color: #FFFFFF;
 }
-.circle_send {
-    width: 64px;
-    height: 64px;
-    border: 1px solid #8941FB;
-    border-radius: 100%;
+.agree_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    border: none;
+    background-color: #20192A;
 }
-.line_send {
-    position: relative;
-    top: 30px;
-    right: 18px;
+.agree_button > :first-child {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    font-weight: 550;
+    line-height: 30.23px;
+    color: #8941FB;
+}
+.circle_agree {
+    max-width: 64px;
+    min-height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid #8941FB;
+}
+.line_agree {
     width: 80px;
-    height: 0px;
+    margin-left: -20px;
     border: 1px solid #8941FB;
 }
 .q1 {
