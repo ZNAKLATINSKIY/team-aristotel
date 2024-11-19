@@ -1,3 +1,5 @@
+$color: #ffff;
+
 body {
     margin: 0;
     padding: 0;
@@ -19,8 +21,8 @@ body {
 
             a {
                 text-decoration: none;
-                color: white;
-                transition: 1s;
+                color: $color;
+                transition: 0.5s;
                 &:hover {
                     color: red;
                 }
@@ -61,7 +63,7 @@ body {
 
         .footer_contact-us {
             height: 140px;
-            color: white;
+            color: $color;
             font-size: 30px;
             display: flex;
             justify-content: space-evenly;
