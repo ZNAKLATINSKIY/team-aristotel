@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- 5. Запросить координаты точки (x, y) 
+    и определить номер четверти, 
+    в которую попала эта точка. 
+    Необходимо учесть случаи попадания точки
+    на оси X или Y или в начало координат. -->
+    
+<script>
+    let x, y;
+    x = prompt('X координату')
+    y = prompt('Y координату')
+    if (x == 0 && y == 0) {
+        alert('Стоим на месте сэр!')
+    } else if (x == 0) {
+        alert('Стоим на оси X!')
+    } else if (y == 0) {
+        alert('Стоим на оси Y!')
+    } else if (x > 0 && y > 0) {
+        alert('Стоим на первой четверти!')
+    } else if (x < 0 && y > 0) {
+        alert('Стоим на второй четверти!')
+    } else if (x < 0 && y < 0) {
+        alert('Стоим на третей четверти!')
+    } else if (x > 0 && y < 0) {
+        alert('Стоим на четвертой четверти!')
+    }
+
+</script>
+
+
+</body>
+</html>

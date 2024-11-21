@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- 1. Запросить у пользователя число и определить, 
+    оно положительное, отрицательное или ноль. -->
+
+    <script>
+        let number;
+        number = parseInt(prompt('Введите число: '));
+        if (number === 0) {
+            alert('Вы ввели число НОЛЬ!')
+        } else if (number < 0) {
+            alert('Вы ввели отрицательное число')
+        } else {
+            alert('Вы ввели положительное число')
+        };
+    </script>
+</body>
+</html>

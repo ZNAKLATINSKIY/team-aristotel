@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- 2. Реализовать калькулятор. Пользователь вводит 2 числа и
+    знак (+ - * /). В зависимости от введенного знака решить
+    пример и вывести результат. -->
+
+<script>
+    let oneNumber, twoNumber, Operator;
+    oneNumber = parseFloat (prompt('Первое число: '))
+    twoNumber = parseFloat (prompt('Второе число: '))
+    operator = prompt('Нужный вам оператор: ')
+    switch (operator) {
+        case "+": 
+            let res1 = oneNumber + twoNumber;
+            alert('Ваш результат = ' + res1)
+        break;
+        case "-": 
+            let res2 = oneNumber - twoNumber;
+            alert('Ваш результат = ' + res2)
+        break;
+        case "*": 
+            let res3 = oneNumber * twoNumber;
+            alert('Ваш результат = ' + res3)
+        break;
+        case "/": 
+            let res4 = oneNumber / twoNumber;
+            alert('Ваш результат = ' + res4)
+        break;
+        default:
+            alert('Вы неправельно ввели!')
+    }
+    
+</script>
+
+
+
+
+</body>
+</html>

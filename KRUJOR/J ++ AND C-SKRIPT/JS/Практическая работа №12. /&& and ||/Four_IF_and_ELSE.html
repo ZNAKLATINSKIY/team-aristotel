@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- 4. Запросить у пользователя время 
+    (часы, минуты, секунды) и проверить 
+    корректность введенных данных. -->
+
+<script>
+    let hour, minut, seconds;
+    hour = prompt('Какой сейчас час? ');
+    minute = prompt('А сколько минут? ');
+    seconds = prompt('А секунды? ');
+    if (hour > 0 && hour <= 24) {
+        if (minute > 0 && minute <= 60) {
+            if (seconds > 0 && seconds <= 60) {
+                alert('Спасибо! Точное время!')
+            } else {
+                alert('С секундами у вас что-то не те!')
+            }
+        } else {
+            alert('Минутки у вас не те!')
+        }
+    } else {
+        alert('Час не тот!')
+    }
+</script>    
+
+</body>
+</html>
