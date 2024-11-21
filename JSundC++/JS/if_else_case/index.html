@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 30px;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+        .main_n {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+        .main {
+            width: 1000px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        button {
+            width: 150px;
+            height: 150px;
+            background-color: teal;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 15px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="main_n">
+        <h1>ЗАДАНИЯЯЯЯ</h1>
+        <div class="main">
+            <button onclick="ex1()">Условия первое задание</button>
+            <button onclick="ex2()">Условия второе задание</button>
+            <button onclick="ex3()">Условия третье задание</button>
+            <button onclick="ex4()">Условия четвёртое задание</button>
+            <button onclick="ex5()">Условия пятое задание</button>
+            <button onclick="ex_case1()">Кейсы первое</button>
+            <button onclick="ex_case2()">Кейсы второе</button>
+            <button onclick="ex_ternar1()">Тернарный оператор (1 задание)</button>
+            <button onclick="ex_ternar2()">Тернарный оператор (2 задание)</button>
+            <button onclick="ex_ternar3()">Тернарный оператор (3 задание)</button>
+        </div>
+        
+    </div>
+    
+    <script>
+        function ex1() {
+            let a;
+            a = parseInt(prompt("Введите число: "));
+            if (a > 0) {
+                alert("Число положительное")
+            }
+            else if (a < 0) {
+                alert("Число отрицательное")
+            }
+            else {
+                alert("Число равно нулю")
+            }
+        }
+
+        function ex2() {
+            let age;
+            age = parseInt(prompt("Введите Ваш возраст: "));
+
+            if (age <= 0) {
+                alert("Вы ещё не родились");
+            }
+            else if (age >= 120) {
+                alert("Вы должны умереть");
+            }
+            else {
+                alert("Урааа, Вам " + age);
+            }
+        }
+
+        function ex3() {
+            let a;
+            a = parseInt(prompt("Введите число: "));
+            alert(Math.abs(a));
+        }
+
+        function ex4() {
+            let hour, minute, second;
+            hour = parseInt(prompt("Введите время по часам: "));
+            minute = parseInt(prompt("Введите время по минутам: "));
+            second = parseInt(prompt("Введите время по секундам: "));
+
+
+            if ((hour <= 0 || hour >= 24) || (minute <= 0 || minute >= 60) || (second <= 0 || second >= 60)) {
+                alert("Вы ввели некорректные данные.");
+            } else {
+                alert(`Ваше время: ${hour}:${minute}:${second}`);
+            }
+        }
+
+        function ex5() {
+            // Запросить координаты точки (x, y) и определить номер четверти, в которую попала эта точка. 
+            // Необходимо учесть случаи попадания точки на оси X или Y или в начало координат.
+            let x, y;
+            x = parseInt(prompt("Введите координаты точки на оси Х: "));
+            y = parseInt(prompt("Введите координаты точки на оси Y: "));
+            if (x > 0 && y > 0) {
+                alert("Точка находится на первой четверти.");
+            }
+            else if (x < 0 && y < 0) {
+                alert("Точка находится на третьей четверти.");
+            }
+            else if (x > 0 && y < 0) {
+                alert("Точка находится на четвёртой четверти.");
+            }
+            else if (x < 0 && y > 0) {
+                alert("Точка находится на второй четверти.");
+            }
+            else {
+                alert("Точка находится поосередине координат.");
+            }
+        }
+
+        function ex_case1() {
+            let mounth;
+            mounth = parseInt(prompt("Введите номер месяца: "));
+
+            switch(mounth){
+                case 1:
+                    alert("Январь");
+                    break
+                case 2:
+                    alert("Февраль");
+                    break
+                case 3:
+                    alert("Март");
+                    break
+                case 4:
+                    alert("Апрель");
+                    break
+                case 5:
+                    alert("Май");
+                    break
+                case 6:
+                    alert("Июнь");
+                    break
+                case 7:
+                    alert("Июль");
+                    break
+                case 8:
+                    alert("Август");
+                    break
+                case 9:
+                    alert("Сентябрь");
+                    break
+                case 10:
+                    alert("Октябрь");
+                    break
+                case 11:
+                    alert("Ноябрь");
+                    break
+                case 12:
+                    alert("Декабрь");
+                    break
+            }
+
+        function ex_case2() {
+            let num1, num2, oper;
+            num1 = parseInt(prompt("Введите первое число: "));
+            num2 = parseInt(prompt("Введите второе число: "));
+            oper = prompt("Введите операцию: ");
+
+            switch(oper) {
+                case '+':
+                    alert(num1 + num2);
+                    break
+                case '-':
+                    alert(num1 - num2);
+                    break
+                case '*':
+                    alert(num1 * num2);
+                    break
+                case '/':
+
+                    alert(num1 / num2);
+                    break
+            }
+        }
+
+        function ex_ternar1() {
+            let num1, num2, result;
+            num1 = parseInt(prompt("Введите первое число: "));
+            num2 = parseInt(prompt("Введите второе число: "));
+
+            if (num1 === num2) {
+                alert("Числа равны.")
+            }
+            result = (num1 > num2) ? "Первое число больше второго." : "Второе число больше первого.";
+            alert(result);
+        }
+
+        function ex_ternar2() {
+            let num1, result;
+            num1 = parseInt(prompt("Введите первое число: "));
+            result = num1 % 5 === 0 ? 'Число кратно пяти.' : 'Число не кратно пяти.';
+
+            alert(result);
+        }
+
+        function ex_ternar3() {
+            let planet, result;
+            planet = prompt("Введите первое число: ");
+
+            result = (planet === 'Земля') || (planet === 'земля') ? "Привет, землянин!" : "Привет, инопланетянин!";
+        }
+        }
+    </script>
+
+</body>
+</html>
