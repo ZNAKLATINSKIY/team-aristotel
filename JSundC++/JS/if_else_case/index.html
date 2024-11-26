@@ -171,29 +171,29 @@
                 case 12:
                     alert("Декабрь");
                     break
-            }
+        }
+        }
+            function ex_case2() {
+                let num1, num2, oper;
+                num1 = parseInt(prompt("Введите первое число: "));
+                num2 = parseInt(prompt("Введите второе число: "));
+                oper = prompt("Введите операцию: ");
 
-        function ex_case2() {
-            let num1, num2, oper;
-            num1 = parseInt(prompt("Введите первое число: "));
-            num2 = parseInt(prompt("Введите второе число: "));
-            oper = prompt("Введите операцию: ");
+                switch(oper) {
+                    case '+':
+                        alert(num1 + num2);
+                        break
+                    case '-':
+                        alert(num1 - num2);
+                        break
+                    case '*':
+                        alert(num1 * num2);
+                        break
+                    case '/':
 
-            switch(oper) {
-                case '+':
-                    alert(num1 + num2);
-                    break
-                case '-':
-                    alert(num1 - num2);
-                    break
-                case '*':
-                    alert(num1 * num2);
-                    break
-                case '/':
-
-                    alert(num1 / num2);
-                    break
-            }
+                        alert(num1 / num2);
+                        break
+                }
         }
 
         function ex_ternar1() {
@@ -218,11 +218,11 @@
 
         function ex_ternar3() {
             let planet, result;
-            planet = prompt("Введите первое число: ");
+            planet = prompt("Введите слово Земли: ");
 
             result = (planet === 'Земля') || (planet === 'земля') ? "Привет, землянин!" : "Привет, инопланетянин!";
         }
-        }
+        
     </script>
 
 </body>
