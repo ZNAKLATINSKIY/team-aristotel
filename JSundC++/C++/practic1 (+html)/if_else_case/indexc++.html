@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        pre {
+            background-color: black;
+            color: aliceblue;
+        }
+        span {
+            font-size: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <pre>
+        <span>IF--------------------------------------------------------------------------------------------------------------------</span>
+        ex1
+        #include < iostream>
+            using namespace std;
+
+            void ex1() {
+                int a;
+                cout << "Введите число: ";
+                cin >> a;
+                if (a > 0) {
+                    cout << "Число положительное" << endl;
+                }
+                else if (a < 0) {
+                    cout << "Число отрицательное" << endl;
+                }
+                else {
+                    cout << "Число равно нулю" << endl;
+                }
+            }
+
+
+
+        ex2
+        #include < iostream>
+            using namespace std;
+
+            void ex2() {
+                int age;
+                cout << "Введите Ваш возраст: ";
+                cin >> age;
+
+                if (age <= 0) {
+                    cout << "Вы ещё не родились" << endl;
+                }
+                else if (age >= 120) {
+                    cout << "Вы должны умереть" << endl;
+                }
+                else {
+                    cout << "Урааа, Вам " << age << endl;
+                }
+            }
+
+
+        ex3
+        #include < iostream>
+            #include < cmath> // Для функции abs
+            using namespace std;
+
+            void ex3() {
+                int a;
+                cout << "Введите число: ";
+                cin >> a;
+                cout << abs(a) << endl;
+            }
+
+
+        ex4
+        #include < iostream>
+            using namespace std;
+
+            void ex4() {
+                int hour, minute, second;
+                cout << "Введите время по часам: ";
+                cin >> hour;
+                cout << "Введите время по минутам: ";
+                cin >> minute;
+                cout << "Введите время по секундам: ";
+                cin >> second;
+
+                if ((hour < 0 || hour >= 24) || (minute < 0 || minute >= 60) || (second < 0 || second >= 60)) {
+                    cout << "Вы ввели некорректные данные." << endl;
+                } else {
+                    cout << "Ваше время: " << hour << ":" << minute << ":" << second << endl;
+                }
+            }
+
+
+        ex5
+        #include < iostream>
+            using namespace std;
+
+            void ex5() {
+                int x, y;
+                cout << "Введите координаты точки на оси Х: ";
+                cin >> x;
+                cout << "Введите координаты точки на оси Y: ";
+                cin >> y;
+
+                if (x > 0 && y > 0) {
+                    cout << "Точка находится на первой четверти." << endl;
+                }
+                else if (x < 0 && y < 0) {
+                    cout << "Точка находится на третьей четверти." << endl;
+                }
+                else if (x > 0 && y < 0) {
+                    cout << "Точка находится на четвёртой четверти." << endl;
+                }
+                else if (x < 0 && y > 0) {
+                    cout << "Точка находится на второй четверти." << endl;
+                }
+                else {
+                    cout << "Точка находится по осередине координат." << endl;
+                }
+            }
+
+        <span>SWITCH--------------------------------------------------------------------------------------------------------------------</span>
+        ex6
+        #include < iostream>
+            using namespace std;
+
+            void ex_case1() {
+                int month;
+                cout << "Введите номер месяца: ";
+                cin >> month;
+
+                switch (month) {
+                    case 1:
+                        cout << "Январь" << endl;
+                        break;
+                    case 2:
+                        cout << "Февраль" << endl;
+                        break;
+                    case 3:
+                        cout << "Март" << endl;
+                        break;
+                    case 4:
+                        cout << "Апрель" << endl;
+                        break;
+                    case 5:
+                        cout << "Май" << endl;
+                        break;
+                    case 6:
+                        cout << "Июнь" << endl;
+                        break;
+                    case 7:
+                        cout << "Июль" << endl;
+                        break;
+                    case 8:
+                        cout << "Август" << endl;
+                        break;
+                    case 9:
+                        cout << "Сентябрь" << endl;
+                        break;
+                    case 10:
+                        cout << "Октябрь" << endl;
+                        break;
+                    case 11:
+                        cout << "Ноябрь" << endl;
+                        break;
+                    case 12:
+                        cout << "Декабрь" << endl;
+                        break;
+                    default:
+                        cout << "Некорректный номер месяца" << endl;
+                }
+            }
+
+
+
+        ex7
+        #include < iostream>
+            using namespace std;
+
+            void ex_case2() {
+                int num1, num2;
+                char oper;
+                cout << "Введите первое число: ";
+                cin >> num1;
+                cout << "Введите второе число: ";
+                cin >> num2;
+                cout << "Введите операцию (+, -, *, /): ";
+                cin >> oper;
+
+                switch(oper) {
+                    case '+':
+                        cout << num1 + num2 << endl;
+                        break;
+                    case '-':
+                        cout << num1 - num2 << endl;
+                        break;
+                    case '*':
+                        cout << num1 * num2 << endl;
+                        break;
+                    case '/':
+                        if (num2 != 0) {
+                            cout << num1 / num2 << endl;
+                        } else {
+                            cout << "Ошибка: деление на ноль" << endl;
+                        }
+                        break;
+                    default:
+                        cout << "Некорректная операция" << endl;
+                }
+            }
+
+
+        <span>TERNAR--------------------------------------------------------------------------------------------------------------------</span>
+        ex8
+        #include < iostream>
+            using namespace std;
+
+            void ex_ternar1() {
+                int num1, num2;
+                cout << "Введите первое число: ";
+                cin >> num1;
+                cout << "Введите второе число: ";
+                cin >> num2;
+
+                string result = (num1 > num2) ? "Первое число больше второго." : (num1 == num2) ? "Числа равны." : "Второе число больше первого.";
+                cout << result << endl;
+            }
+
+
+
+        ex9
+        #include < iostream>
+            using namespace std;
+
+            void ex_ternar2() {
+                int num1;
+                cout << "Введите первое число: ";
+                cin >> num1;
+
+                string result = (num1 % 5 == 0) ? "Число кратно пяти." : "Число не кратно пяти.";
+                cout << result << endl;
+            }
+
+
+
+        ex10
+        #include < iostream>
+            using namespace std;
+
+            void ex_ternar3() {
+                string planet;
+                cout << "Введите слово Земли: ";
+                cin >> planet;
+
+                string result = (planet == "Земля" || planet == "земля") ? "Привет, землянин!" : "Привет, инопланетянин!";
+                cout << result << endl;
+            }
+
+    </pre>
+</body>
+</html>
