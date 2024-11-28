@@ -1,15 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <script type="module">
 
-import MAXNUMBER from './function.js';
 
+// Написать алгортм, классифицирующий треугольники 
+// (остроугольные, прямоугольные, тупоугольные, равнобедренные, равносторонние), 
+// если даны углы.
+
+
+
+import * as MAXNUMBER from "./function";
 
 
 
@@ -26,16 +23,10 @@ if ( A + B + C > 180) {
     alert('Равнобедренный треугольник')
 } else if (A == 90, B == 90, C == 90) {
     alert('Прямоугольный треугольник')
-} else if (MAXNUMBER(A, B, C) > 90 && MAXNUMBER(A, B, C) < 180) {
+} else if (MAXNUMBER(A, B, C) > 90 && Math.max(A, B, C) < 180) {
     alert('Тупоугольный треугольник')
 } else if (A < 90, B < 90, C < 90) {
     alert('Остроугольный треугольник')
 } else {
     alert('Ошибка данных')
 }
-
-
-    </script>
-    
-</body>
-</html>
