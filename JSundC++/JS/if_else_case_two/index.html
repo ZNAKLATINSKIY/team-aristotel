@@ -6,8 +6,316 @@
     <title>Ветвления 2</title>
 </head>
 <body>
+
+    <button onclick="ex_two_if"></button>
     <script>
+        function ex_one_if(corn1, corn2, corn3) {
+            if ((Math.max(corn1, corn2, corn3) < 178) && ((corn1 + corn2 + corn3) > 180)){
+                alert("Неверно введенные данные!!!!")
+            }
+            else if (Math.max(corn1, corn2, corn3) > 90){
+                alert('это тупоугольный треугольник')
+            }
+            else if (Math.max(corn1, corn2, corn3 ) < 90){
+                alert("это остроугольный треугольник")
+            }
+            else if (Math.max(corn1, corn2, corn3) == 90){
+                alert("это прямоугольный треугольник")
+            }
+        }
+
+        function ex_one_case(grade) {
+            switch(grade) {
+                case 1:
+                    alert("КООООЛ");
+                    break
+                case 2:
+                    alert("Плохо");
+                    break
+                case 3:
+                    alert("Удовлетворитльно");
+                    break
+                case 4:
+                    alert("Хорошо");
+                    break
+                case 5:
+                    alert("Отлично");
+                    break
+                default:
+                    alert("У вас магическая оценка");
+            }
+        }
+
+        function ex_two_if(mushr) {
+            let mushr_str = mushr.toString();
+            
+            if ((mushr % 100 === 11) || (mushr % 10 === 0)) {
+                alert(`Мы нашли в лесу ${mushr} грибов.`);
+            }
+
+            else if (mushr % 10 === 1) {
+                alert(`Мы нашли в лесу ${mushr} гриб.`);
+            }
+
+            else if ((mushr % 10 < 4) || mushr % 100 > 20) {
+                alert(`Мы нашли в лесу ${mushr} гриба.`);
+            }
+
+            else {
+                alert(`Мы нашли в лесу ${mushr} грибов.`);
+            }
+        }
+        ex_two_if(111)
+
         
+        function ex_two_case(week_day) {
+            switch(week_day) {
+                case 1:
+                    alert("Понедельник. 7 уроков.");
+                    break
+                case 2:
+                    alert("Вторник. 5 уроков.");
+                    break
+                case 3:
+                    alert("Среда. 6 уроков.");
+                    break
+                case 4:
+                    alert("Четверг. 8 уроков.");
+                    break
+                case 5:
+                    alert("Пятница. 6 уроков.");
+                    break
+                case 6:
+                    alert("Суббота. Выходной.");
+                    break
+                case 7:
+                    alert("Воскресенье. Выходной.");
+                    break
+            }
+        }
+
+        function ex_three_if(num1, num2, num3) {
+            if (num2 > num1 > num3 || num3 > num1 > num2) {
+                alert("Среднее число из предложенных: " + num1);
+            }
+            else if (num1 > num2 > num3 || num3 > num2 > num1) {
+                alert("Среднее число из предложенных: " + num2);    
+            }
+            else if (num1 > num3 > num2 || num2 > num3 > num1) {
+                alert("Среднее число из предложенных: " + num3);
+            }
+            else {
+                alert("Числа не соответствуют условиям задания.\nПроверьте их на равенство и повторите попытку.");
+            }
+        }
+
+        function ex_three_case(n, a) {
+            switch(a) {
+                case 0:
+                    switch(mounth){
+                        case 1:
+                            alert("Январь, 31 день.");
+                            break
+                        case 2:
+                            alert("Февраль, 28 дней.");
+                            break
+                        case 3:
+                            alert("Март, 31 дней.");
+                            break
+                        case 4:
+                            alert("Апрель, 30 дней.");
+                            break
+                        case 5:
+                            alert("Май, 31 день.");
+                            break
+                        case 6:
+                            alert("Июнь, 30 дней.");
+                            break
+                        case 7:
+                            alert("Июль, 31 день.");
+                            break
+                        case 8:
+                            alert("Август, 31 день.");
+                            break
+                        case 9:
+                            alert("Сентябрь, 31 день.");
+                            break
+                        case 10:
+                            alert("Октябрь, 31 день.");
+                            break
+                        case 11:
+                            alert("Ноябрь, 30 дней.");
+                            break
+                        case 12:
+                            alert("Декабрь, 31 день.");
+                            break
+                case 1:
+                    switch(mounth){
+                        case 1:
+                            alert("Январь, 31 день.");
+                            break
+                        case 2:
+                            alert("Февраль, 29 дней.");
+                            break
+                        case 3:
+                            alert("Март, 31 дней.");
+                            break
+                        case 4:
+                            alert("Апрель, 30 дней.");
+                            break
+                        case 5:
+                            alert("Май, 31 день.");
+                            break
+                        case 6:
+                            alert("Июнь, 30 дней.");
+                            break
+                        case 7:
+                            alert("Июль, 31 день.");
+                            break
+                        case 8:
+                            alert("Август, 31 день.");
+                            break
+                        case 9:
+                            alert("Сентябрь, 31 день.");
+                            break
+                        case 10:
+                            alert("Октябрь, 31 день.");
+                            break
+                        case 11:
+                            alert("Ноябрь, 30 дней.");
+                            break
+                        case 12:
+                            alert("Декабрь, 31 день.");
+                            break
+                default:
+                    alert("Введите корректные значения данных переменных.");
+            }
+            }
+        }
+    }
+
+    function ex_four_if(age) {
+        let result_head, result_eyes;
+        if (age >= 100) {
+
+            result_head = (age - 100) * 2 + 300;
+            result_eyes = result_head * 2;
+            alert(`Голов: ${result_head}.\nГлаз: ${result_eyes}`);
+        
+        } else {
+            result_head = age * 3;
+            result_eyes = result_head * 2;
+            alert(`Голов: ${result_head}.\nГлаз: ${result_eyes}`);
+        }
+    }
+
+    function ex_four_case(day) {
+        switch(day) {
+            case 1:
+                alert("Понедельник");
+                break
+    
+            case 2:
+                alert("Вторник");
+                break    
+    
+            case 3:
+                alert("Среда");
+                break
+    
+            case 4:
+                alert("Четверг");
+                break
+    
+            case 5:
+                alert("Пятница");
+                break
+
+            case 6:
+                alert("Суббота");
+                break    
+
+            case 7:
+                alert("Воскресенье");
+                break
+            
+            default:
+                alert("Ошибка данных.")
+        }
+    }
+
+    function ex_five_if(num1, num2) {
+        let result;
+        result = parseInt(prompt("Каков результат умножения двух чисел?"));
+
+        if (num1*num2 === result) {
+            alert("Верно!");
+        }
+        else {
+            alert("Неверно!");
+        }
+    }
+
+    function ex_five_case(char) {
+        switch(char) {
+            case '(':
+                alert("Открытая круглая скобка.");
+            case ')':
+                alert("Закрытая круглая скобка.");
+            case '{':
+                alert("Открытая фигурная скобка.");
+            case '}':
+                alert("Закрытая фигурная скобка.");
+            case '[':
+                alert("Открытая квадратная скобка.");
+            case ']':
+                alert("Закрытая квадратная скобка.");
+            default:
+                alert("Введите скобки((((((");
+        }
+    }
+
+    function ex_six_case(code) {
+        switch(code) {
+            case 1:
+                alert("Blue");
+                break
+            case 2:
+                alert("Orange");
+                break
+            case 3:
+                alert("Green");
+                break
+            case 4:
+                alert("Brown");
+                break
+            case 5:
+                alert("Gray");
+                break
+            case 6:
+                alert("White");
+                break
+            case 7:
+                alert("Red");
+                break
+            default:
+                alert("Введите цветовой код от 1 до 7 включительно.");
+        }
+    }
+
+    function ex_seven_case(char) {
+
+        switch(char) {
+            case "у" || "У" || "Е" || "е" || "Э" || "э" || "О" || "о" || "А" || "а" || "Ы" || "ы" || "Я" || "я" || "И" || "и" || "Ю" || "ю":
+                alert("Бука гласная");
+                break
+            default:
+                alert("Буква согласная.");
+        }
+    }
+
+
+
     </script>
 </body>
 </html>
