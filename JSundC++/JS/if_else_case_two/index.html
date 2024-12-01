@@ -48,7 +48,7 @@
 
         function ex_two_if(mushr) {
             let mushr_str = mushr.toString();
-            
+
             if ((mushr % 100 === 11) || (mushr % 10 === 0)) {
                 alert(`Мы нашли в лесу ${mushr} грибов.`);
             }
@@ -65,9 +65,8 @@
                 alert(`Мы нашли в лесу ${mushr} грибов.`);
             }
         }
-        ex_two_if(111)
 
-        
+
         function ex_two_case(week_day) {
             switch(week_day) {
                 case 1:
@@ -99,7 +98,7 @@
                 alert("Среднее число из предложенных: " + num1);
             }
             else if (num1 > num2 > num3 || num3 > num2 > num1) {
-                alert("Среднее число из предложенных: " + num2);    
+                alert("Среднее число из предложенных: " + num2);
             }
             else if (num1 > num3 > num2 || num2 > num3 > num1) {
                 alert("Среднее число из предложенных: " + num3);
@@ -201,7 +200,7 @@
             result_head = (age - 100) * 2 + 300;
             result_eyes = result_head * 2;
             alert(`Голов: ${result_head}.\nГлаз: ${result_eyes}`);
-        
+
         } else {
             result_head = age * 3;
             result_eyes = result_head * 2;
@@ -214,31 +213,31 @@
             case 1:
                 alert("Понедельник");
                 break
-    
+
             case 2:
                 alert("Вторник");
-                break    
-    
+                break
+
             case 3:
                 alert("Среда");
                 break
-    
+
             case 4:
                 alert("Четверг");
                 break
-    
+
             case 5:
                 alert("Пятница");
                 break
 
             case 6:
                 alert("Суббота");
-                break    
+                break
 
             case 7:
                 alert("Воскресенье");
                 break
-            
+
             default:
                 alert("Ошибка данных.")
         }
@@ -307,7 +306,7 @@
 
         switch(char) {
             case "у" || "У" || "Е" || "е" || "Э" || "э" || "О" || "о" || "А" || "а" || "Ы" || "ы" || "Я" || "я" || "И" || "и" || "Ю" || "ю":
-                alert("Бука гласная");
+                alert("Буква гласная");
                 break
             default:
                 alert("Буква согласная.");
@@ -315,7 +314,191 @@
     }
 
 
+    function ex_eight_if(num1, num2, num3) {
+        if (num1 === num2 && num1 === num3) {
+            alert("Все числа равны.");
+        }
+        else if (num1 === num2 && num1 !== num3) {
+            alert("Третье число отличается от остальных.");
+        }
+        else if (num1 === num3 && num1 !== num2) {
+            alert("Второе число отличается от остальных");
+        }
+        else {
+            alert("Первое число отличается от остальных.");
+        }
+    }
 
+    function ex_eight_case(hour) {
+        switch(hour) {
+            case 0, 1, 2, 3, 4, 5:
+                alert("Сейчас ночь.");
+                break
+            case 6, 7, 8, 9, 10, 11:
+                alert("Сейчас утро.");
+                break
+            case 12, 13, 14, 15, 16, 17:
+                alert("Сейчас день");
+                break
+            case 18, 19, 20, 21, 22, 23:
+                alert("Сейчас вечер.");
+                break
+            default:
+                alert("Введены некорректные данные.");
+        }
+    }
+
+    function ex_nein_if(a, b, c) {
+        if ((a < b < c) || (a > b > c)) {
+            alert(`Новые значения переменных: ${a*2}, ${b*2}, ${c*2}`);
+        }
+
+        // ИНАЧЕ заменить значение на противоположное
+    }
+
+    function ex_nein_case(mounth) {
+            switch(mounth){
+                case 1:
+                    alert("Январь");
+                    break
+                case 2:
+                    alert("Февраль");
+                    break
+                case 3:
+                    alert("Март");
+                    break
+                case 4:
+                    alert("Апрель");
+                    break
+                case 5:
+                    alert("Май");
+                    break
+                case 6:
+                    alert("Июнь");
+                    break
+                case 7:
+                    alert("Июль");
+                    break
+                case 8:
+                    alert("Август");
+                    break
+                case 9:
+                    alert("Сентябрь");
+                    break
+                case 10:
+                    alert("Октябрь");
+                    break
+                case 11:
+                    alert("Ноябрь");
+                    break
+                case 12:
+                    alert("Декабрь");
+                    break
+        }
+    }
+
+
+    function ex_ten_case(char) {
+        switch(char) {
+            case "у" || "У" || "Е" || "е" || "Э" || "э" || "О" || "о" || "А" || "а" || "Ы" || "ы" || "Я" || "я" || "И" || "и" || "Ю" || "ю":
+                alert("Буква гласная");
+                break
+            default:
+                alert("Буква согласная.");
+        }
+    }
+
+    function ex_oneone_if(a, b, c) {
+        if ((a > c && b > c) || (a === b && a > c)) {
+            alert(`Сумма двух наибольших: ${a+b}`);
+        }
+        else if ((c > a && b > a) || (c === b && c > a)) {
+            alert(`Сумма двух наибольших: ${c+b}`);
+        }
+        else if ((c > b && a > b) || (c === a && c >b)) {
+            alert(`Сумма двух наибольших: ${a+c}`);
+        }
+        else {
+            alert(`Сумма двух наибольших: ${a+b}`);
+        }
+    }
+
+    function ex_oneone_case(char) {
+        switch(char) {
+            case '@':
+                alert("Знак 'собачка'.");
+                break
+            case '%':
+                alert("Знак 'процент'.");
+                break
+            case '№':
+                alert("Знак нумерации.");
+                break
+            case '*':
+                alert("Знак 'звёздочка'.");
+                break
+            case '#':
+                alert("Знак 'решётка'.");
+                break
+            case '&':
+                alert("Знак 'амперсанд'.");
+                break
+        }
+    }
+
+    function ex_onetwo_ifone(a, b) {
+        if (a === b) {
+            a *= 0;
+            b *= 0;
+            alert("Присвоил переменным нулевые значения.");
+        }
+        else if (a > b) {
+            b = a;
+            alert(`Присвоили второй переменной значение ${a}.\nЗначения переменных: ${a}, ${b}`);
+        }
+        else {
+            a = b;
+            alert(`Присвоили второй переменной значение ${b}.\nЗначения переменных: ${a}, ${b}`);
+        }
+    }
+
+    function ex_onetwo_iftwo(ball) {
+        if (char >= 80 && char <= 100) {
+            alert("Поступлю на бюджет.");
+        }
+        else if (char >= 60 && char <= 79) {
+            alert("Есть шанс поступить на бюджет.");
+        }
+        else if (char >= 40 && char <= 59) {
+            alert("Экзамены сданы, рассматриваю все варианты.");
+        }
+        else if (char >= 0 && char <= 39) {
+            alert("Не унываю, всё ещё будет)");
+        }
+        else {
+            alert("Введена магическая оценка, магическое количество баллов");
+        }
+    }
+
+    function ex_onetwo_case(ball) {
+        switch (true) {
+            case (ball >= 80 && ball <= 100):
+                console.log("Поступлю на бюджет.");
+                break;
+            case (ball >= 60 && ball <= 79):
+                console.log("Есть шанс поступить на бюджет.");
+                break;
+            case (ball >= 40 && ball <= 59):
+                console.log("Экзамены сданы, рассматриваю все варианты.");
+                break;
+            case (ball >= 0 && ball <= 39):
+                console.log("Не унываю, всё ещё будет)");
+                break;
+            default:
+                console.log("Введена магическая оценка, магическое количество баллов");
+                break;
+        }
+    }
     </script>
 </body>
 </html>
