@@ -483,21 +483,94 @@
     function ex_onetwo_case(ball) {
         switch (true) {
             case (ball >= 80 && ball <= 100):
-                console.log("Поступлю на бюджет.");
+                alert("Поступлю на бюджет.");
                 break;
             case (ball >= 60 && ball <= 79):
-                console.log("Есть шанс поступить на бюджет.");
+                alert("Есть шанс поступить на бюджет.");
                 break;
             case (ball >= 40 && ball <= 59):
-                console.log("Экзамены сданы, рассматриваю все варианты.");
+                alert("Экзамены сданы, рассматриваю все варианты.");
                 break;
             case (ball >= 0 && ball <= 39):
-                console.log("Не унываю, всё ещё будет)");
+                alert("Не унываю, всё ещё будет)");
                 break;
             default:
-                console.log("Введена магическая оценка, магическое количество баллов");
+                alert("Введена магическая оценка, магическое количество баллов");
                 break;
         }
+    }
+
+    function ex_onethree_if(a, b) {
+        let i;
+        if (a === b) {
+            alert(`Числа равны. Их значения: ${a}, ${b}`);
+        }
+        else if (a > b) {
+            i = a;
+            a = b;
+            b = min;
+            alert(`А больше Б. Их значения: ${a}, ${b}`);
+        }
+        else {
+            alert(`Б больше А. Их значения: ${a}, ${b}`);
+        }
+    }
+
+    function ex_onethree_case(fruit) {
+        switch(fruit) {
+            case 1:
+                alert("Яблоко");
+                break
+            case 2:
+                alert("Айва");
+                break
+            case 3:
+                alert("Апельсин");
+                break
+            case 4:
+                alert("Арбуз");
+                break
+            case 5:
+                alert("Банан");
+                break
+            case 6:
+                alert("Груша");
+                break
+            case 7:
+                alert("Абрикос");
+                break
+            case 8:
+                alert("Грейпфрукт");
+                break
+            case 9:
+                alert("Персик");
+                break
+            case 10:
+                alert("Мандарин");
+                break
+        default:
+            alert("Продукта нет в кодировке.");
+        }
+    }
+
+    function ex_onefour_if(a, b, c, d, e) {
+        let i = 0;
+        if (a > 0) {
+            i++;
+        }
+        if (b > 0) {
+            i++;
+        }
+        if (c > 0) {
+            i++;
+        }
+        if (d > 0) {
+            i++;
+        }
+        if (e > 0) {
+            i++;
+        }
+        alert(`Количество положительных чисел: ${i}`)
     }
     </script>
 </body>
