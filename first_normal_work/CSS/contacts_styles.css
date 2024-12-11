@@ -24,11 +24,12 @@ body {
 } */
 .header__container{
     display: flex;
-    width: 1920px;
+    width: 1798px;
     justify-content: space-between;
+    padding: 0 64px;
 }
 .header {
-    width: 100%;
+    max-width: 100vw;
     height: 100px;
     background: #3f3124;
     display: flex;
@@ -40,17 +41,13 @@ body {
 }
 .header__navigation {
     cursor: pointer;
-    margin-left: 64px;
 }
 .header__logo {
     fill: #fff;
-    z-index: -1;
 }
 .header__other {
     display: flex;
-    width: 197px;
-    justify-content: space-between;
-    margin-right: 64px;
+    gap: 48px;
 }
 
 .main{
@@ -331,5 +328,65 @@ table tr{
     
     .footer{
         max-width: 100%;
+    }
+
+    .header__navigation{
+        display: none;
+    }
+
+    .header svg{
+        max-width: 75%;
+    }
+
+    .header__container{
+        padding: 0 26px;
+    }
+
+    .header__other{
+        gap: 25px;
+    }
+
+    .header__other svg{
+        width: 28px;
+        fill: #3f3124;
+    }
+
+    .main__map{
+        margin: 0 26px;
+    }
+
+    .delivery__head{
+        font-size: 30px;
+    }
+
+    .directors__director-1 h2, .directors__director-2 h2{
+        font-size: 24px;
+    }
+
+    .directors__director-1 span, .directors__director-2 span{
+        font-size: 20px;
+    }
+
+    .directors__director-1 a, .directors__director-2 a{
+        font-size: 18px;
+    }
+
+    .directors__text{
+        display: none;
+    }
+
+    .directors__director-1, .directors__director-2{
+        margin-left: 0px;
+        padding: 0 26px;
+    }
+    
+    .legal_data{
+        padding: 0 26px;
+    }
+
+    .delivery__text{
+        flex-direction: column;
+        font-size: 16px;
+        gap: 26px;
     }
 }

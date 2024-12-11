@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+</head>
+<body>
+    <script>
+        function NumOfDayAnd(day){
+            switch (day){
+                case 1: 
+                    console.log("понедельник (52 урока)");
+                    break;
+                case 2:
+                    console.log("вторник (два урока)");
+                    break;
+                case 3:
+                    console.log("среда (14 уроков)");
+                    break;
+                case 4:
+                    console.log("четверг (88 урока)");
+                    break;
+                case 5:
+                    console.log("пятница (2 урока (сегодня отдыхаешь))");
+                    break;
+                case 6:
+                    console.log("суббота (выходной день)");
+                    break;
+                case 7:
+                    console.log("четверг (завтра понедельник :(");
+                    break;
+                default:
+                    console.log("чет ты вышел за границы недели");
+                    break;
+            }
+        }
+        
+        function MeanOfnumbers(num1, num2, num3){
+            if (num2 > num1 > num3 || num3 > num1 > num2) {
+                console.log("Среднее число из предложенных: " + num1);
+            }
+            else if (num1 > num2 > num3 || num3 > num2 > num1) {
+                console.log("Среднее число из предложенных: " + num2);    
+            }
+            else if (num1 > num3 > num2 || num2 > num3 > num1) {
+                console.log("Среднее число из предложенных: " + num3);
+            }
+            else {
+                console.log("Числа не соответствуют условиям задания.\nПроверьте их на равенство и повторите попытку.");
+            }
+        }
+        
+        function DragonHeads(age){
+            if (age < 0) {
+                return "Возраст дракона не может быть отрицательным!";
+            }
+            let heads;
+
+            if (age <= 100) {
+                heads = 3 * age + 1;
+            } else {
+                heads = 3 * 100 +  2 * (age - 100); 
+            }
+            
+            const eyes = heads * 2;
+
+            return `В возрасте ${age} лет у дракона ${heads} голов и ${eyes} глаз.`;
+
+        }
+
+        function DayOfWeek(num){
+            switch (day){
+                case 1: 
+                    console.log("понедельник");
+                    break;
+                case 2:
+                    console.log("вторник");
+                    break;
+                case 3:
+                    console.log("среда");
+                    break;
+                case 4:
+                    console.log("четверг");
+                    break;
+                case 5:
+                    console.log("пятница");
+                    break;
+                case 6:
+                    console.log("суббота");
+                    break;
+                case 7:
+                    console.log("воскресенье");
+                    break;
+                default:
+                    console.log("чет ты вышел за границы недели");
+                    break;
+            }
+        }
+
+        function CountitYoutself(num1, num2){
+            num1 = parseInt(prompt('введите первое число: '));
+            num2 = parseInt(prompt("теперь второе число: "));
+            let resultusr = parseInt(prompt(`тепеперь напиши произведение ${num1} и ${num2}`))
+
+            let result = num1 * num2;
+
+            if (resultusr == result){
+                console.log("Молодец, правильный ответ!")
+            }else{
+                console.log("неправильно, попробуй еще раз")
+            }
+        }
+
+        function ExFiveCase(char) { 
+        switch(char) {
+            case '(':
+                console.log("Открытая круглая скобка.");
+            case ')':
+                console.log("Закрытая круглая скобка.");
+            case '{':
+                console.log("Открытая фигурная скобка.");
+            case '}':
+                console.log("Закрытая фигурная скобка.");
+            case '[':
+                console.log("Открытая квадратная скобка.");
+            case ']':
+                console.log("Закрытая квадратная скобка.");
+            default:
+                console.log("Введите скобки((((((");
+        }
+    }
+
+    function canPassThroughDoor(a, b, x, y, z) {
+    if ((x <= a && y <= b) || (x <= b && y <= a) || 
+        (x <= a && z <= b) || (x <= b && z <= a) || 
+        (y <= a && z <= b) || (y <= b && z <= a)) {
+        return "ДА";
+    }
+    return "НЕТ";
+    }
+        </script>
+</body>
+</html>

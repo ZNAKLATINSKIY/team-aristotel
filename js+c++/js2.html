@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задания на JS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+
+        button {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+    <body>
+
+        <h1>JavaScript Задания #2</h1>
+
+        <button onclick="comparison_negative()">По негативной ветке</button>
+        <button onclick="comparison()">По средней ветке</button>
+        <button onclick="comparison_positive()">По положительной ветке</button>
+
+        <script>
+                function comparison_negative() {
+                    let a, b;
+                    a = parseInt (prompt("Введите ваше число: "));
+                    b = parseInt (prompt("Введите ваше число: "));
+
+                    if (a === b) {
+                        alert("Ваши числа равны")
+                    }   else if (a > b){
+                        alert("Первое число больше второго")
+                    }   else if (a < b) {
+                        alert("Второе число больше первого")
+                    }
+                }
+                function comparison() {
+                    let a, b;
+                    a = parseInt (prompt("Введите ваше число: "));
+                    b = parseInt (prompt("Введите ваше число: "));
+                    
+                    if (a ===  b){
+                        alert("Ваши числа равны")
+                    }
+                    if (a > b){
+                        alert("Первое число больше второго")
+                    }
+                    if (a < b){
+                        alert("Vtoroe chislo bolshe pervogo")
+                    }
+                }
+
+                function comparison_positive(){
+                    let a, b;
+                    a = parseInt (prompt("Введите ваше число: "));
+                    b = parseInt (prompt("Введите ваше число: "));
+
+                    if (a >= b) {
+                        if (a <= b) {
+                            if (a === b) {
+                                alert("Ваши числа равны")
+                            } 
+                        } else {
+                            alert("Первое число больше второго")
+                        }   
+                    } else {
+                        alert("Втопое число больше первого")
+                    }
+                    
+                } 
+
+//1.	Запросить у пользователя его возраст и определить, кем он является: ребенком (0–2), подростком (12–18), взрослым (18_60) или пенсионером (60– ...).
+                
+        //#отрицательная 
+        let a = parseInt(prompt("Введите ваше взраст : "));
+
+        if (0 <= a && a < 12){
+            alert("вы младенец")
+        }
+        else if (12 <= age && a < 18){
+            alert("вы подросток")
+        }
+        else if (18 <= age && a < 60){
+            alert("вы взрослый")
+        }
+        else{
+            alert("вы пенсионер")
+        }
+        
+        //последовательная
+        if (0 <= a && a < 12){
+            alert("вы младенец")
+        }
+        if (12 <= age && a < 18){
+            alert("вы подросток")
+        }
+        if (18 <= age && a < 60){
+            alert("вы взрослый")
+        }
+        if (a > 60){
+            alert("вы пенсионер")
+        }
+            
+
+        //положительная 
+        if (a < 60){
+            if (a > 18 ){
+
+            }
+        }
+        else{
+            alert("вы пенсинер")
+        }
+
+        //2.	Запросить у пользователя число от 0 до 9 и вывести ему спецсимвол, который расположен на этой клавише (1–!, 2–@, 3–# и т. д).
+
+        const input1 = prompt("Введите число от 0 до 9:");
+
+        if (input1=== "1") {
+            alert("!");
+        } else if (input1=== "2") {
+            alert("@");
+        } else if (input1=== "3") {
+            alert("#");
+        } else if (input1=== "4") {
+            alert("$");
+        } else if (input1=== "5") {
+            alert("%");
+        } else if (input1=== "6") {
+            alert("^");
+        } else if (input1=== "7") {
+            alert("&");
+        } else if (input1=== "8") {
+            alert("*");
+        } else if (input1=== "9") {
+            alert("(");
+        } else if (input1=== "0") {
+            alert(")");
+        } else {
+            alert("Введите корректное число от 0 до 9.");
+        }
+        
+        //по последовательной ветке
+        const input2 = prompt("Введите число от 0 до 9:");
+
+        if (input2 === "1") {
+            console.log("!");
+        } 
+        if (input2 === "2") {
+            console.log("@");
+        } 
+        if (input2 === "3") {
+            console.log("#");
+        } 
+        if (input2 === "4") {
+            console.log("$");
+        } 
+        if (input2 === "5") {
+            console.log("%");
+        } 
+        if (input2 === "6") {
+            console.log("^");
+        } 
+        if (input2 === "7") {
+            console.log("&");
+        } 
+        if (input2 === "8") {
+            console.log("*");
+        } 
+        if (input2 === "9") {
+            console.log("(");
+        } 
+        if (input2 === "0") {
+            console.log(")");
+        } 
+        if (input2 !== "0" && input2 !== "1" && input2 !== "2" && input2 !== "3" && input2 !== "4" && input2 !== "5" && input2 !== "6" && input2 !== "7" && input !== "8" && input !== "9") {
+            console.log("Введите корректное число от 0 до 9.");
+        }
+
+        // по положительной 
+        const input = prompt("Введите число от 0 до 9:");
+        if (input !== "1") {
+            if (input !== "2") {
+                if (input !== "3") {
+                    if (input !== "4") {
+                        if (input !== "5") {
+                            if (input !== "6") {
+                                if (input !== "7") {
+                                    if (input !== "8") {
+                                        if (input !== "9") {
+                                            if (input !== "0") {
+                                                console.log("Введите корректное число от 0 до 9.");
+                                            } else {
+                                                console.log(")");
+                                            }
+                                        } else {
+                                            console.log("(");
+                                        }
+                                    } else {
+                                        console.log("*");
+                                    }
+                                } else {
+                                    console.log("&");
+                                }
+                            } else {
+                                console.log("^");
+                            }
+                        } else {
+                            console.log("%");
+                        }
+                    } else {
+                        console.log("$");
+                    }
+                } else {
+                    console.log("#");
+                }
+            } else {
+                console.log("@");
+            }
+        } else {
+            console.log("!");
+        }
+
+        //3.	Написать конвертор валют. Пользователь вводит количество KZT, выбирает, в какую валюту хочет перевести: EUR, USD или UAN, и получает в ответ соответствующую сумму.
+        
+        const money = prompt("Сколько у вас KZT?")
+        const currency = prompt("В какую валюту перевести вашу сумму?")
+
+        if (currency == "EUR") {
+            alert("У вас " + money / 600 + "евро")
+        }
+
+        if (currency == "USD") {
+            alert("у вас " + money / 550 + " долларов")
+        }
+
+        if (currency == "UAN") {
+            alert("у вас " + money / 17 + " гривней")
+        }
+
+        // по положительной
+        const kzt = parseFloat(prompt("Введите сумму в KZT:"));
+        const currency1 = prompt("Введите валюту для конвертации (EUR, USD, UAN):").toUpperCase();
+
+        const eurRate = 480; 
+        const usdRate = 430; 
+        const uanRate = 60;   
+
+        if (currency1 !== "EUR") {
+            if (currency1 !== "USD") {
+                if (currency1 !== "UAN") {
+                    console.log("Выбрана некорректная валюта.");
+                } else {
+                    console.log(`${kzt} KZT = ${(kzt / uanRate).toFixed(2)} UAN`);
+                }
+            } else {
+                console.log(`${kzt} KZT = ${(kzt / usdRate).toFixed(2)} USD`);
+            }
+        } else {
+            console.log(`${kzt} KZT = ${(kzt / eurRate).toFixed(2)} EUR`);
+        }
+
+        //по последователтной
+        const kzt = parseFloat(prompt("Введите сумму в KZT:"));
+        const currency2 = prompt("Введите валюту для конвертации (EUR, USD, UAN):").toUpperCase();
+
+        if (currency2 === "EUR") {
+            console.log(`${kzt} KZT = ${(kzt / eurRate).toFixed(2)} EUR`);
+        } 
+        if (currency2 === "USD") {
+            console.log(`${kzt} KZT = ${(kzt / usdRate).toFixed(2)} USD`);
+        } 
+        if (currency2 === "UAN") {
+            console.log(`${kzt} KZT = ${(kzt / uanRate).toFixed(2)} UAN`);
+        } 
+        if (currency2 !== "EUR" && currency2 !== "USD" && currency2 !== "UAN") {
+            console.log("Выбрана некорректная валюта.");
+}
+
+
+currencyChange()
+    </script>    
+    </body>
+</html>

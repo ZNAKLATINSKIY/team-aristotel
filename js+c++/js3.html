@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задания на JS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+
+        button {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>JavaScript Задания</h1>
+
+
+    <script>
+//1. Запросить у пользователя число и определить, оно положительное, отрицательное или ноль.
+    const number1 = prompt("Введите число:");
+    if (number1 > 0) {
+        alert("Число положительное");
+    } else if (number1 < 0) {
+        alert("Число отрицательное");
+    } else {
+        alert("Число равно нулю");
+    }
+// 2. Запросить у пользователя его возраст и проверить корректность введенных данных (0–120 лет).
+    const number = prompt("Введите число:");
+    if (number > 0) {
+        alert("Число положительное");
+    } else if (number < 0) {
+        alert("Число отрицательное");
+    } else {
+        alert("Число равно нулю");
+    }
+// 3. Запросить у пользователя число и вывести его модуль (|7| = 7, |-7| = 7).
+    const num = prompt("Введите число:");
+    if (num < 0) {
+        alert(`Модуль числа: ${-num}`);
+    } else {
+        alert(`Модуль числа: ${num}`);
+    }
+// 4. Запросить у пользователя время (часы, минуты, секунды) и проверить корректность введенных данных.
+    const hours = prompt("Введите часы (0–23):");
+    const minutes = prompt("Введите минуты (0–59):");
+    const seconds = prompt("Введите секунды (0–59):");
+
+    if (hours >= 0 && hours <= 23 && minutes >= 0 && minutes <= 59 && seconds >= 0 && seconds <= 59) {
+        alert("Время введено корректно");
+    } else {
+        alert("Время некорректно");
+    }
+
+// 5. Запросить координаты точки (x, y) и определить номер четверти, в которую попала эта точка.
+//  Необходимо учесть случаи попадания точки на оси X или Y или в начало координат.
+    const x = prompt("Введите координату x:");
+    const y = prompt("Введите координату y:");
+
+    if (x == 0 && y == 0) {
+        alert("Точка находится в начале координат");
+    } else if (x == 0) {
+        alert("Точка на оси Y");
+    } else if (y == 0) {
+        alert("Точка на оси X");
+    } else if (x > 0 && y > 0) {
+        alert("Точка в первой четверти");
+    } else if (x < 0 && y > 0) {
+        alert("Точка во второй четверти");
+    } else if (x < 0 && y < 0) {
+        alert("Точка в третьей четверти");
+    } else if (x > 0 && y < 0) {
+        alert("Точка в четвертой четверти");
+    }
+
+//    1. Запросить у пользователя номер месяца и вывести на экран его название.
+
+    const month = parseInt(prompt("Введите номер месяца (1–12):"));
+
+    switch (month) {
+        case 1: 
+            alert("Январь");
+            break;
+        case 2:
+            alert("Февраль");
+            break;
+        case 3:
+            alert("Март");
+            break;
+        case 4:
+            alert("Апрель");
+            break;
+        case 5:
+            alert("Май");
+            break;
+        case 6:
+            alert("Июнь");
+            break;
+        case 7:
+            alert("Июль");
+            break;
+        case 8:
+            alert("Август");
+            break;
+        case 9:
+            alert("Сентябрь");
+            break;
+        case 10:
+            alert("Октябрь");
+            break;
+        case 11:
+            alert("Ноябрь");
+            break;
+        case 12:
+            alert("Декабрь");
+            break;
+        default:
+            alert("Некорректный номер месяца");
+    }
+
+// 2. Реализовать калькулятор. Пользователь вводит 2 числа и знак (+ - * /). В зависимости от введенного знака решить пример и вывести результат
+
+    const num1 = parseFloat(prompt("Введите первое число:"));
+    const num2 = parseFloat(prompt("Введите второе число:"));
+    const operator = prompt("Введите оператор (+, -, *, /):");
+
+    switch (operator) {
+        case '+':
+            alert(`Результат: ${num1 + num2}`);
+            break;
+        case '-':
+            alert(`Результат: ${num1 - num2}`);
+            break;
+        case '*':
+            alert(`Результат: ${num1 * num2}`);
+            break;
+        case '/':
+            if (num2 !== 0) {
+                alert(`Результат: ${num1 / num2}`);
+            } else {
+                alert("Ошибка: деление на ноль");
+            }
+            break;
+        default:
+            alert("Некорректный оператор");
+    }
+
+
+    // тернарные
+    // 1. Запросить 2 числа и вывести большее из них.
+    const num3 = parseFloat(prompt("Введите первое число:"));
+    const num4 = parseFloat(prompt("Введите второе число:"));
+
+    const result = num3 > num4 ? `Большее число: ${num3}` : num3 < num4 ? `Большее число: ${num4}` : "Числа равны";
+    alert(result);
+
+
+    // 2. Запросить 1 число и проверить, оно кратно 5 или нет.
+    const number5 = parseFloat(prompt("Введите число:"));
+
+    const result1 = number5 % 5 === 0 ? "Число кратно 5" : "Число не кртано 5";
+    alert(result1)
+
+    // 3. Запросить у пользователя название планеты. Если пользователь ввел ≪Земля≫ или ≪земля≫, то вывести ≪Привет, землянин!≫, в остальных случаях вывести ≪Привет, инопланетянин!≫.
+    const planet = prompt("Введите название планеты:").toLocaleLowerCase();
+
+    const result2 = planet === "земля" ? "Привет, землянин!" : "Привет, инопланетянин!";
+    alert(result2);
+
+    </script>   

@@ -25,7 +25,7 @@ body {
     padding: 0 64px;
 }
 .header {
-    width: 100%;
+    width: 100vw;
     height: 100px;
     background: #3f3124;
     display: flex;
@@ -51,8 +51,6 @@ main{
     max-width: 1920px;
 }
 
-
-
 .history{
     max-width: 1920px;
     margin-top: 100px;
@@ -64,8 +62,8 @@ main{
 }
 
 .history__head{
-    width: 529px;
-    height: 136px;
+    max-width: 529px;
+    min-height: 136px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -259,6 +257,10 @@ main{
     align-items: center;
 }
 
+.values__img{
+    max-width: 592px;
+}
+
 .values__title{
     font-family: var(--second-family);
     font-weight: 700;
@@ -294,7 +296,7 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-left: 64px;
+    flex-wrap: wrap;
 }
 
 .charity__title{
@@ -366,7 +368,7 @@ main{
 }
 .footer {
     width: 100%;
-    height: 516px;
+    min-height: 516px;
     background: #3f3124;
     display: flex;
 
@@ -375,10 +377,11 @@ main{
 }
 
 .footer__container{
-    max-width: 1920 px;
+    max-width: 1920px;
     display: flex;
     margin: 0 auto;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .footer__item {
@@ -395,8 +398,8 @@ main{
     margin-left: 118px;
 }
 .footer__text {
-    width: 304px;
-    height: 72px;
+    max-width: 304px;
+    min-height: 72px;
     margin-top: 28px;
     font-family: var(--font-family);
     font-weight: 490;
@@ -549,4 +552,70 @@ main{
     .block2__cat{
         height: 242px;
     }
+
+    .values__container div:first-of-type {
+        margin-right: 0px;
+    }
+
+    .values__container{
+        flex-wrap: wrap;
+        padding: 0 26px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .value__text-box{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-right: 0;
+    }
+
+    .values__img{
+        max-width: 336px;
+        height: 246px;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+
+    .block1__img{
+        margin-top: 20px;
+    }
+
+    .charity__container{
+        padding: 0 26px;
+    }
+
+    .about_cats__block2{
+        margin-top: -90px;
+    }
+
+    .block2__img{
+        margin-top: 20px;
+    }
+
+    .block2__img svg{
+        width: 60%;
+    }
+
+    .block2__img-image{
+        width: 55%;
+        top: 70px;
+        left: 10px;
+    }
+
+    .charity__card-1, .charity__card-2{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .charity__container{
+        min-height: 200px;
+    }
+
+    .charity__title{
+        word-break: break-all;
+    }
+
 }    

@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    user-select: none;
+}
+.kartinki{
+    height: 800px;
+    background-image: url(./images/nastol.com.ua-531882.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.div{
+    border-bottom:  10px solid rgb(87, 3, 101); 
+    border-top:  10px solid rgb(87, 3, 101); 
+    color: white;
+    font-size: 100px;
+    max-width: 1400px;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+.read_button{
+    margin-top: 60px;
+}
+.img_box2{
+    margin-top: 100px;
+}
+.our-values-section {
+    background-color: #7d7d7d;
+    color: white;
+    padding: 50px 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}
+
+.values-image {
+    flex: 1;
+    max-width: 1400px;
+    margin: 15px;
+}
+
+.values-image img {
+    max-width: 600px;
+    border-radius: 10px;
+}
+.values__container{
+    display: flex;
+}
+
+.values-content {
+    flex: 2;
+    max-width: 600px;
+    margin: 15px;
+}
+
+.values-content h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.values-content p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.values-icons {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.value-item {
+    text-align: center;
+    margin: 10px;
+    flex: 1;
+    max-width: 150px;
+}
+
+.value-item .icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.value-item h3 {
+    font-size: 1.1rem;
+}
+.btn-custom {
+    background-color: #8600ab;
+    color: white;
+    margin-bottom: 10px;
+}
+.flex_gallery{
+    display: flex;
+}
+.img_gallery{
+    max-width: 200px;
+    min-height: 100px;
+    margin: 30px;
+
+}
+.col-md-4{
+    padding-left: 40px;
+
+}
+.carousel-inner{
+    max-width: 1000px;
+    border-radius: 10px;
+    margin: auto;
+} 
+.progress{
+    margin-top: 20px;
+    background-color: black;
+}
+.card-body{
+    max-width: 1000px;
+}
+.carousel{
+    background-color: rgba(163, 145, 243, 0.496);
+}

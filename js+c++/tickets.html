@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Билеты</title>
+</head>
+<body>
+    <script>
+        // - IF: Написать алгортм, классифицирующий треугольники (остроугольные, прямоугольные, тупоугольные, равнобедренные, равносторонние), если даны углы.
+        function classifyTriangleByAngles(corner1, corner2, corner3) {
+            if ((Math.max(corner1, corner2, corner3) < 178) && ((corner1 + corner2 + corner3) > 180)){
+                alert("Неверно введенные данные!!!!")
+            }
+            else if (Math.max(corner1, corner2, corner3) > 90){
+                alert('это тупоугольный треугольник')
+            }
+            else if (Math.max(corner1, corner2, corner3 ) < 90){
+                alert("это остроугольный треугольник")
+            }
+            else if (Math.max(corner1, corner2, corner3) == 90){
+                alert("это прямоугольный треугольник")
+            }
+        }
+
+        // - CASE. Написать алгоритм, позволяющий получить словесное наименование школьных оценок.
+        function evaluateGrade(grade) {
+            switch(grade) {
+                case 1:
+                    alert("Еденичка");
+                    break
+                case 2:
+                    alert("двоечка");
+                    break
+                case 3:
+                    alert("троечка");
+                    break
+                case 4:
+                    alert("Хорошо");
+                    break
+                case 5:
+                    alert("Отлично");
+                    break
+                default:
+                    alert("ты сверхчеловек");
+            }
+        }
+
+        // - IF: Напечатать фразу «Мы нашли в лесу …..грибов». Согласно окончанию слова «гриб» с числом. Например, 1- гриб, 22 – гриба.
+        function describeMushroomCount(mushr) {
+
+            if ((mushr % 100 === 11) || (mushr % 10 === 0)) {
+                alert(`Мы нашли в лесу ${mushr} грибов.`);
+            }
+
+            else if (mushr % 10 === 1) {
+                alert(`Мы нашли в лесу ${mushr} гриб.`);
+            }
+
+            else if ((mushr % 10 < 4) || mushr % 100 > 20) {
+                alert(`Мы нашли в лесу ${mushr} гриба.`);
+            }
+
+            else {
+                alert(`Мы нашли в лесу ${mushr} грибов.`);
+            }
+        }
+
+        // - Задача на switch … case. Написать алгоритм, который по номеру дня недели - целому числу от 1 до 7 выдавать в качестве результата количество уроков в классе в соответствующий день.
+        function getDaySchedule(week_day) {
+            switch(week_day) {
+                case 1:
+                    alert("Понедельник. 34 урока.");
+                    break;
+                case 2:
+                    alert("Вторник. 5546 уроков.");
+                    break;
+                case 3:
+                    alert("Среда. 623 урока.");
+                    break;
+                case 4:
+                    alert("Четверг. 823 урока.");
+                    break;
+                case 5:
+                    alert("Пятница. 61 урок. завтра выходные :)");
+                    break;
+                case 6:
+                    alert("Суббота. Отдыхаешь");
+                    break;
+                case 7:
+                    alert("Воскресенье. Отдыхаешь, но завтря пондельник :(");
+                    break;
+            }
+        }
+
+        // - IF: Найти среднее число из трех
+        function findMiddleNumber(num1, num2, num3) {
+            if ((num1 > num2 && num1 < num3) || (num1 > num3 && num1 < num2)) {
+                alert("Среднее число из предложенных: " + num1);
+            } else if ((num2 > num1 && num2 < num3) || (num2 > num3 && num2 < num1)) {
+                alert("Среднее число из предложенных: " + num2);
+            } else if ((num3 > num1 && num3 < num2) || (num3 > num2 && num3 < num1)) {
+                alert("Среднее число из предложенных: " + num3);
+            } else {
+                alert("Числа введеныы неправильно");
+            }
+        }
+
+        // - CASE. Написать алгоритм нахождения числа дней в месяце, если даны: Номер месяца n - целое число а, равное 1 для високосного года и равное 0 в противном случае.
+        function getDaysInMonth(n, a) {
+            switch(a) {
+                case 0:
+                    switch(mounth){
+                        case 1:
+                            alert("Январь, 31 день.");
+                            break
+                        case 2:
+                            alert("Февраль, 28 дней.");
+                            break
+                        case 3:
+                            alert("Март, 31 дней.");
+                            break
+                        case 4:
+                            alert("Апрель, 30 дней.");
+                            break
+                        case 5:
+                            alert("Май, 31 день.");
+                            break
+                        case 6:
+                            alert("Июнь, 30 дней.");
+                            break
+                        case 7:
+                            alert("Июль, 31 день.");
+                            break
+                        case 8:
+                            alert("Август, 31 день.");
+                            break
+                        case 9:
+                            alert("Сентябрь, 31 день.");
+                            break
+                        case 10:
+                            alert("Октябрь, 31 день.");
+                            break
+                        case 11:
+                            alert("Ноябрь, 30 дней.");
+                            break
+                        case 12:
+                            alert("Декабрь, 31 день.");
+                            break
+                case 1:
+                    switch(mounth){
+                        case 1:
+                            alert("Январь, 31 день.");
+                            break
+                        case 2:
+                            alert("Февраль, 29 дней.");
+                            break
+                        case 3:
+                            alert("Март, 31 дней.");
+                            break
+                        case 4:
+                            alert("Апрель, 30 дней.");
+                            break
+                        case 5:
+                            alert("Май, 31 день.");
+                            break
+                        case 6:
+                            alert("Июнь, 30 дней.");
+                            break
+                        case 7:
+                            alert("Июль, 31 день.");
+                            break
+                        case 8:
+                            alert("Август, 31 день.");
+                            break
+                        case 9:
+                            alert("Сентябрь, 31 день.");
+                            break
+                        case 10:
+                            alert("Октябрь, 31 день.");
+                            break
+                        case 11:
+                            alert("Ноябрь, 30 дней.");
+                            break
+                        case 12:
+                            alert("Декабрь, 31 день.");
+                            break
+                default:
+                    alert("Неправильно введенные данные!!!");
+            }
+            }
+        }
+    }
+
+    // - IF: Дракон каждый год отращивает по три головы, но после того, как ему исполнится 100 лет - только по две. Запросить сколько ему лет, вывести сколько голов и глаз у дракона в этом возрасте?
+    function calculateHeadsAndEyes(age) {
+        let heads, eyes;
+        if (age >= 100) {
+
+            heads = (age - 100) * 2 + 300;
+            result_eyes = heads * 2;
+            alert(`Голов: ${heads}.\nГлаз: ${result_eyes}`);
+
+        } else {
+            heads = age * 3;
+            result_eyes = heads * 2;
+            alert(`Голов: ${heads}.\nГлаз: ${result_eyes}`);
+        }
+    }
+
+    // - CASE. По номеру дня недели вывести его название.
+    function getDayOfWeek(day) {
+        switch(day) {
+            case 1:
+                alert("Понедельник");
+                break
+
+            case 2:
+                alert("Вторник");
+                break
+
+            case 3:
+                alert("Среда");
+                break
+
+            case 4:
+                alert("Четверг");
+                break
+
+            case 5:
+                alert("Пятница");
+                break
+
+            case 6:
+                alert("Суббота");
+                break
+
+            case 7:
+                alert("Воскресенье");
+                break
+
+            default:
+                alert("нужно вводить число от 1 до 7")
+        }
+    }
+
+
+    // - IF: Еще одна задача для самостоятельно решения.  Необходимо написать программу, которая проверяет пользователя на знание таблицы умножения. Пользователь сам вводит два целых однозначных числа. Программа задаёт вопрос: результат умножения первого числа на второе.  Пользователь должен ввести ответ и увидеть на экране правильно он ответил или нет. Если нет  – показать еще и правильный результат.
+    function checkMultiplicationResult(num1, num2) {
+        let result;
+        result = parseInt(prompt("Каков результат умножения двух чисел?"));
+
+        if (num1*num2 === result) {
+            alert("Верно!");
+        }
+        else {
+            alert("Неверно!");
+        }
+    }
+
+    // - IF: Пользователь задает размеры прямоугольной двери a, b и задает размеры шкафа, который имеет форму прямоугольного параллелепипеда x, y, z. Можно ли пронести шкаф сквозь дверь, если проносить его разрешается так, чтобы каждое ребро шкафа было параллельно или перпендикулярно стороне двери. При разных введенных данных выводить ДА или НЕТ.
+    function canPassThroughDoor(a, b, x, y, z) {
+    if ((x <= a && y <= b) || (x <= b && y <= a) || 
+        (x <= a && z <= b) || (x <= b && z <= a) || 
+        (y <= a && z <= b) || (y <= b && z <= a)) {
+        alert("ДА") ;
+    }
+    alert("НЕТ") ;
+    }
+
+    // - CASE. В зависимости от того введена ли открытая скобка или закрытая, напечатать "открытая круглая скобка" или "закрытая фигурная скобка". (Учитывать круглые, квадратные, фигурные скобки).
+    function describeBracket(bracket) {
+        switch(bracket) {
+            case '(':
+                alert("Открытая круглая скобка.");
+            case ')':
+                alert("Закрытая круглая скобка.");
+            case '{':
+                alert("Открытая фигурная скобка.");
+            case '}':
+                alert("Закрытая фигурная скобка.");
+            case '[':
+                alert("Открытая квадратная скобка.");
+            case ']':
+                alert("Закрытая квадратная скобка.");
+            default:
+                alert("Вы ввели не скобку");
+        }
+    }
+
+    // По введенному числу от 1 до 7 вывести название цвета, соответствующего этому коду.
+    function getColorByCode(num) {
+        switch(num) {
+            case 1:
+                alert("Blue");
+                break
+            case 2:
+                alert("Orange");
+                break
+            case 3:
+                alert("Green");
+                break
+            case 4:
+                alert("Brown");
+                break
+            case 5:
+                alert("Gray");
+                break
+            case 6:
+                alert("White");
+                break
+            case 7:
+                alert("Red");
+                break
+            default:
+                alert("Введите код цвета ");
+        }
+    }
+    // - CASE. Определить, является ли введенная буква русского алфавита гласной.
+    function checkVowelOrConsonant(letter) {
+    switch (char.toLowerCase(letter)) {
+        case "у":
+        case "е":
+        case "э":
+        case "о":
+        case "а":
+        case "ы":
+        case "я":
+        case "и":
+        case "ю":
+            alert("Буква гласная");
+            break;
+        default:
+            alert("Буква согласная.");
+    }
+}
+
+// - IF: Даны четыре целых числа, одно из которых отлично от трех других, равных между собой. Определить порядковый номер числа, отличного от остальных
+    function compareNumbers(num1, num2, num3) {
+        if (num1 === num2 && num1 === num3) {
+            alert("Все числа равны");
+        }
+        else if (num1 === num2 && num1 !== num3) {
+            alert("Третье число не такое как все");
+        }
+        else if (num1 === num3 && num1 !== num2) {
+            alert("Второе число не такое как все");
+        }
+        else {
+            alert("Первое число не такое как все");
+        }
+    }
+
+    // - CASE. Напишите программу, которая по введенному числу из промежутка 0..24, определяет время суток.
+    function determineTimeOfDay(hour) {
+        switch(hour) {
+            case 0:
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+            case 5:
+                alert("Сейчас ночь");
+                break;
+            case 6:
+            case 7:
+            case 8:
+            case 9:
+            case 10:
+            case 11:
+                alert("Сейчас утро");
+                break;
+            case 12:
+            case 13:
+            case 14:
+            case 15:
+            case 16:
+            case 17:
+                alert("Сейчас день");
+                break;
+            case 18:
+            case 19:
+            case 20:
+            case 21:
+            case 22:
+            case 23:
+                alert("Сейчас вечер");
+                break;
+            default:
+                alert("Введены некорректные данные");
+        }
+    }
+
+    // - IF: Даны три переменные вещественного типа: A, B, C. Если их значения упорядочены по возрастанию или убыванию, то удвоить их; в противном случае заменить значение каждой переменной на противоположное. Вывести новые значения переменных A, B, C. 
+
+    function processNumbers(a, b, c) {
+        if ((a < b && b < c) || (a > b && b > c)) {
+            a *= 2;
+            b *= 2;
+            c *= 2;
+        } else {
+            a = -a;
+            b = -b;
+            c = -c;
+        }
+        alert(`Новые значения: A = ${a}, B = ${b}, C = ${c}`);
+    }
+
+
+    // - CASE. Напишите программу, которая по введенному числу из промежутка 1..12, определяет месяц.
+    function getMonthName(month) {
+    switch (monthNumber) {
+        case 1:
+            alert("Январь");
+            break;
+        case 2:
+            alert("Февраль");
+            break;
+        case 3:
+            alert("Март");
+            break;
+        case 4:
+            alert("Апрель");
+            break;
+        case 5:
+            alert("Май");
+            break;
+        case 6:
+            alert("Июнь");
+            break;
+        case 7:
+            alert("Июль");
+            break;
+        case 8:
+            alert("Август");
+            break;
+        case 9:
+            alert("Сентябрь");
+            break;
+        case 10:
+            alert("Октябрь");
+            break;
+        case 11:
+            alert("Ноябрь");
+            break;
+        case 12:
+            alert("Декабрь");
+            break;
+        default:
+            alert("Введите число от 1 до 12!");
+    }
+}
+
+// - IF: Даны три числа. Найти сумму двух наибольших из них.
+
+    function sumOfTwoLargest(a, b, c) {
+        if ((a > c && b > c) || (a === b && a > c)) {
+            alert(`Сумма двух наибольших: ${a + b}`);
+        }
+        else if ((c > a && b > a) || (c === b && c > a)) {
+            alert(`Сумма двух наибольших: ${c + b}`);
+        }
+        else if ((c > b && a > b) || (c === a && c >b)) {
+            alert(`Сумма двух наибольших: ${a + c}`);
+        }
+        else {
+            alert(`Сумма двух наибольших: ${a + b}`);
+        }
+    }
+
+    // - CASE. В зависимости от введенных знаков:  №  % * # @ & - выводит их название.
+    function getSymbolName(symbol) {
+        switch(symbol) {
+            case '@':
+                alert("собачка");
+                break;
+            case '%':
+                alert("процент");
+                break;
+            case '№':
+                alert("нумерации");
+                break;
+            case '*':
+                alert("звёздочка");
+                break;
+            case '#':
+                alert("решётка");
+                break;
+            case '&':
+                alert("амперсанд");
+                break;
+        }
+    }
+
+    // - IF: Даны две переменные целого типа: A и B. Если их значения не равны, то присвоить каждой переменной большее из этих значений, а если равны, то присвоить переменным нулевые значения. Вывести новые значения переменных A и B.
+
+    function processIntegers(a, b) {
+        if (a !== b) {
+            const max = Math.max(a, b);
+            a = max;
+            b = max;
+        } else {
+            a = 0;
+            b = 0;
+        }
+        alert(`Новые значения: A = ${a}, B = ${b}`);
+    }
+
+//     - IF. В зависимости от набранного количества баллов, напишите ваши планы. Например:
+    // 80..100 – поступлю на бюджет
+    // 60..79 – есть шанс поступить на бюджет
+    // 40..59 – экзамены сданы, рассматриваю все варианты
+    // 0..39 – «А знаешь, всё ещё будет!».
+
+
+    function ex_onetwo_iftwo(grade) {
+        if (char >= 80 && char <= 100) {
+            alert("Поступлю на бюджет");
+        }
+        else if (char >= 60 && char <= 79) {
+            alert("Есть шанс поступить на бюджет");
+        }
+        else if (char >= 40 && char <= 59) {
+            alert("Экзамены сданы, рассматриваю все варианты");
+        }
+        else if (char >= 0 && char <= 39) {
+            alert("«А знаешь, всё ещё будет!»)");
+        }
+        else {
+            alert("Тут что-то не так");
+        }
+    }
+
+    //     Составьте программу, используя оператор выбора case и ваши варианты ответов.
+    // - В зависимости от набранного количества баллов, напишите ваши планы. Например:
+    // 80..100 – поступлю на бюджет
+    // 60..79 – есть шанс поступить на бюджет
+    // 40..59 – экзамены сданы, рассматриваю все варианты
+    // 0..39 – «А знаешь, всё ещё будет!».
+
+    function admissionPlans(grade) {
+        switch (true) {
+            case score >= 80 && score <= 100:
+                alert("Поступлю на бюджет.");
+                break;
+            case score >= 60 && score <= 79:
+                alert("Есть шанс поступить на бюджет.");
+                break;
+            case score >= 40 && score <= 59:
+                alert("Экзамены сданы, рассматриваю все варианты.");
+                break;
+            case score >= 0 && score <= 39:
+                alert("«А знаешь, всё ещё будет!».");
+                break;
+            default:
+                alert("Введите корректное количество баллов (0-100).");
+        }
+}
+
+    // - IF: Даны две переменные вещественного типа: A, B. Перераспределить значения данных переменных так, чтобы в A оказалось меньшее из значений, а в B — большее. Вывести новые значения переменных A и B.
+    function redistributeValues(a, b) {
+        if (a > b) {
+            let temp = a;
+            a = b;
+            b = temp;
+        }
+    }
+
+    // - CASE. Напишите программу выбора фруктов (не менее 10) по его уникальному коду.
+    function chooseFruit(code) {
+        switch (code) {
+            case 1:
+                alert("Яблоко");
+                break;
+            case 2:
+                alert("Апельсин");
+                break;
+            case 3:
+                alert("Банан");
+                break;
+            case 4:
+                alert("Груша");
+                break;
+            case 5:
+                alert("Вишня");
+                break;
+            case 6:
+                alert("Манго");
+                break;
+            case 7:
+                alert("Ананас");
+                break;
+            case 8:
+                alert("Клубника");
+                break;
+            case 9:
+                alert("Киви");
+                break;
+            case 10:
+                alert("Персик");
+                break;
+            default:
+                alert("Код не соответствует фрукту.");
+        }
+    }
+
+    // - IF: Даны пять целых чисел. Найти количество положительных чисел в исходном наборе.
+    function countPositiveNumbers(num1, num2, num3, num4, num5) {
+        let count = 0;
+
+        if (num1 > 0) {
+            count++;
+        }
+        if (num2 > 0) {count++;}
+        if (num3 > 0) {count++;}
+        if (num4 > 0) {count++;}
+        if (num5 > 0) {count++;}
+
+        alert(`Количество положительных чисел: ${count}`);
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Циклы</title>
+</head>
+<body>
+    <script>
+        //1. вывеасти # столько раз сколько указал пользователь
+        function numofLattice(num){
+            i = 0;
+            result = ""
+            while (i < num){
+                result += "#";
+                i++;
+                
+            }
+            return result;
+        }
+        //пользователь ввел число, а на экран вывелись числа от введенного до 0 
+        function fromNumtoNull(num1){
+            while (num1 >= 0){
+                return num1;
+                num1--;
+            }
+        }
+        //Запросить число и степень. Возвести чило в указанную стеепень и вывести результат 
+        
+        let number = parseFloat(prompt("Введите число: "));
+        let exponent = parseInt(prompt("Введите степень: "));
+
+        let result = 1;
+        let absExponent = Math.abs(exponent);
+        let counter = 0;
+
+        while (counter < absExponent) {
+            result  
+            counter++;
+        }
+
+        if (exponent < 0) {
+            result = 1 / result;
+        }
+
+        alert("Результат: " + result);
+
+        //факториал
+        function calculateFactorial(num) {
+            if (num < 0) return "отрицательные числа нельзя!!!";
+            
+            let factorial = 1;
+            let i = 1;
+
+            while (i <= num) {
+                factorial *= i;
+                i++;
+            }
+
+            return factorial;
+        }
+
+        // Функция для проверки решения примера
+            function solveMathProblem() {
+                let answer;
+                do {
+                    answer = parseInt(prompt("Решите пример: 2 + 2 * 2"));
+                } while (answer !== 6); 
+
+                console.log("Правильный ответ! Молодец!");
+            }
+
+            function divideUntilLessThan50(number) {
+                let divisions = 0;
+
+                do {
+                    number /= 2;
+                    divisions++;
+                } while (number >= 50);
+
+                console.log("Итоговое число:", number);
+                console.log("Количество делений:", divisions);
+            }
+
+
+    </script>
+</body>
+</html>
