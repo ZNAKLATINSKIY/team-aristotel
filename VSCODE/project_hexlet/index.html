@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+            :root {
+            --font-family: "Mulish", sans-serif;
+            --second-family: "Inter", sans-serif;
+            --third-family: "TT Travels", sans-serif;
+            }
+
+            .button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+            }
+
+            .custom-button {
+            position: relative;
+            background-color: #98FB98;
+            width: 314px;
+            height: 72px;
+            font-family: var(--font-family);
+            font-weight: 700;
+            color: #000;
+            border: none;
+            border-radius: 0;
+            cursor: pointer;
+            overflow: hidden;
+            }
+
+            .button-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 30px;
+            }
+
+            .block {
+            position: absolute;
+            width: 35px;
+            height: 35px;
+            background-color: #fff;
+            }
+
+            .block1 {
+            bottom: -19px;
+            left: -19px;
+            transform-origin: center;
+            transform: rotateZ(225deg);
+            }
+
+            .block2 {
+            top: -19px;
+            right: -19px;
+            transform-origin: center;
+            transform: rotateZ(226deg);
+            }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <button class="custom-button">
+            <div class="button-text">Хочу поступить</div>
+            <div class="block1 block"></div>
+            <div class="block2 block"></div>
+        </button>
+    </div>
+</body>
+</html>
