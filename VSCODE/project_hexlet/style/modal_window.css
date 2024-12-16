@@ -1,0 +1,98 @@
+body.modal--opened {
+    overflow: hidden;
+    position: fixed;
+    width: 100vw;
+}
+.modal {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed; /* Фиксированное позиционирование */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Поверх остального контента */
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.4); /* Полупрозрачный фон */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.modal__content {
+    width: 80%;
+    max-width: 531px;
+    height: 460px;
+    padding: 32px 39px;
+    background-color: #e44a77;
+    border-radius: 30px;
+    position: relative;
+    transform: scale(0.7);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+.modal.modal--show {
+    opacity: 1;
+}
+.modal.modal--show .modal__content {
+    transform: scale(1);
+    opacity: 1;
+}
+.modal__filling {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+}
+.modal__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    line-height: 48.41px;
+}
+.modal__header h2 {
+    font-family: var(--second-family);
+    font-weight: 800;
+    font-size: 32px;
+    margin: 0;
+    color: rgba(255, 255, 255, 1);
+}
+.filling__input-up {
+    width: 100%;
+    height: 50px;
+    border-radius: 16px;
+    font-size: 20px;
+    font-family: var(--font-family);
+    padding-left: 30px;
+    border: none;
+}
+.filling__button {
+    background-color: rgba(0, 171, 249, 1);
+    color: rgba(255, 255, 255, 1);
+    border-radius: 14.42px;
+    width: 100%;
+    min-height: 57.69px;
+    font-weight: 600;
+    font-size: 30px;
+    border: none;
+    line-height: 38.73px;
+}
+.modal__paragraph {
+    color: rgba(255, 255, 255, 1);
+    font-family: var(--second-family);
+    margin-top: 16px;
+    font-weight: 400;
+    font-size: 12px;
+}
+.modal__links {
+    color: rgba(255, 255, 255, 1);
+}
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    color: black;
+}
