@@ -13,11 +13,11 @@ inView(".about_hexlet__advantages", (target) => {
 inView(".demand-specialists__title", (target) => {
   animate('.demand-specialists__title', { y: ['-100px', '0px'], opacity: ['0%', '100%'] }, { duration: 1.5, delay: stagger(0.9) });
 })
-inView(".demand-specialists__description", (target) => {
-  animate('.demand-specialists__description', { x: ['-500px', '0px'], opacity: ['0%', '100%'] }, { duration: 1.5, delay: stagger(0.9) });
+inView(".presentation-card", (target) => {
+  animate('.presentation-card', { x: ['-300px', '0px'], opacity: ['0%', '100%'] }, { duration: 1, delay: stagger(0.9) });
 })
-inView(".presentation-cards", (target) => {
-  animate('.presentation-cards', { y: ['-100px', '0px'], opacity: ['0%', '100%'] }, { duration: 1, delay: stagger(0.9) });
+inView(".presentation-card", (target) => {
+  animate('.presentation-card:last-child', { x: ['300px', '0px'], opacity: ['0%', '100%'] }, { duration: 1, delay: stagger(0.9) });
 })
 
 //КАРТОЧКИ О КУРСАХ
@@ -25,10 +25,10 @@ inView(".courses__header", (target) => {
   animate('.courses__header', { y: ['-100px', '0px'], opacity: ['0%', '100%'] }, { duration: 0.8, delay: stagger(0.9) });
 })
 inView(".courses__card courses__card_left", (target) => {
-  animate('.courses__card courses__card_left', { x: ['-900px', '0px'], opacity: ['0%', '100%'] }, { duration: 20, delay: stagger(0.9) });
+  animate('.courses__card courses__card_left', { x: ['-900px', '0px'], opacity: ['0%', '100%'] }, { duration: 1, delay: stagger(0.9) });
 })
 inView(".courses__card courses__card_right", (target) => {
-  animate('.courses__card courses__card_right', { x: ['0px', '-100px', ], opacity: ['0%', '100%'] }, { duration: 20, delay: stagger(0.9) });
+  animate('.courses__card courses__card_right', { x: ['0px', '-100px', ], opacity: ['0%', '100%'] }, { duration: 1, delay: stagger(0.9) });
 })
 
 
