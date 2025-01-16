@@ -6,18 +6,18 @@ const fun = (GRIB) => {
     let STR = GRIB.toString();
 
     if ((GRIB % 100 === 11) || (GRIB % 10 === 0)) {
-        alert("Мы нашли в лесу " + GRIB + " грибов.");
+        alert(`Мы нашли в лесу  ${GRIB}  грибов.`);
     }
 
     else if (GRIB % 10 === 1) {
-        alert("Мы нашли в лесу " + GRIB + " гриб.");
+        alert(`Мы нашли в лесу ${GRIB}  гриб.`);
     }
 
     else if ((GRIB % 10 < 4) || GRIB % 100 > 20) {
-        alert("Мы нашли в лесу " + GRIB + " гриба.")
+        alert(`Мы нашли в лесу ${GRIB}  гриба.`)
     }
 
     else {
-        alert("Мы нашли в лесу " + GRIB + " грибов.");
+        alert(`Мы нашли в лесу ${GRIB} грибов.`);
     }
 }

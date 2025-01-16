@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+    --font-family: "Open Sans Hebrew", sans-serif;
+    --deep-blue: #2c234d;
+    --pink: #fc2e90;
+    --white: #fff;
+    --gray-100: #5d5a67;
+    --blue-100: #5838fc;
+    --blue-10: #f7f6fa;
+}
+
+@keyframes rotate624 {
+    0% {
+        transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+    25% {
+        transform: rotate(3deg) translate3d(0, 0, 0);
+    }
+    50% {
+        transform: rotate(-3deg) translate3d(0, 0, 0);
+    }
+    75% {
+        transform: rotate(1deg) translate3d(0, 0, 0);
+    }
+    100% {
+        transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+}
+
+@keyframes storm1261 {
+    0% {
+        transform: translate3d(0, 0, 0) translateZ(0);
+    }
+    25% {
+        transform: translate3d(4px, 0, 0) translateZ(0);
+    }
+    50% {
+        transform: translate3d(-3px, 0, 0) translateZ(0);
+    }
+    75% {
+        transform: translate3d(2px, 0, 0) translateZ(0);
+    }
+    100% {
+        transform: translate3d(0, 0, 0) translateZ(0);
+    }
+}
+
+
+.header {
+    background: rgb(151,53,243);
+    background: linear-gradient(191deg, #6337fa 0%, #9735f3 100%);
+}
+
+.navbar {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar__search {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    height: 48px;
+    cursor: pointer;
+}
+.navbar__search-input {
+    border-radius: 15px;
+    padding-left: 176px;
+    font-size: 14px;
+    font-family: var(--font-family);
+    font-weight: 700;
+    color: var(--deep-blue);
+    width: 360px;
+    height: 48px;
+    border: none;
+    background: #F7F6FA;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: all 0.3s ease;
+}
+.navbar__search-input::placeholder {
+    color: var(--deep-blue);
+    font-weight: 700;
+    font-family: var(--font-family);
+    font-size: 14px;
+}
+
+/* Анимация при фокусе */
+.navbar__search-input:focus,
+.navbar__search-input:hover {
+    outline: none;
+    padding-left: 60px
+}
+.navbar__search-input:focus ~ .navbar__search_icons::before,
+.navbar__search-input:hover ~ .navbar__search_icons::before {
+    left: -120px;
+    background-size: cover;
+}
+.navbar__search-input:focus ~ .navbar__search_icons::after,
+.navbar__search-input:hover ~ .navbar__search_icons::after {
+    left: 20px;
+    background-size: cover;
+}
+/* Logo Title */
+.navbar__search_icons::before {
+    content: "";
+    display: inline-block;
+    width: 117px;
+    height: 48px;
+    background: url(/svg/otvetiq_ico.svg) no-repeat;
+    border-radius: 15px;
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 0.3s ease;
+}
+/* Logo icon */
+.navbar__search_icons::after {
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url(/svg/logo_ico.svg) no-repeat;
+    background-size: cover;
+    position: absolute;
+    left: 140px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+/* Кнопка войти */
+.navbar__sing-in {
+    width: 136px;
+    height: 48px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border: 1px solid var(--white);
+    border-radius: 12px;
+    background: transparent;
+    padding: 8px 25px;
+    color: var(--white);
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+.navbar__sing-in span {
+    z-index: 20;
+}
+.navbar__sing-in::before {
+    content: "";
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background: url(/svg/enter_icon.svg) no-repeat;
+    background-size: cover;
+    margin-right: 8px;
+}
+
+/* Анимация кнопки */
+.navbar__sing-in:hover {
+  animation: rotate624 0.7s ease-in-out both;
+}
+
+.navbar__sing-in:hover span {
+  animation: storm1261 0.7s ease-in-out both;
+  animation-delay: 0.06s;
+}
+.navbar__sing-in:after {
+  background: #38ef7d;
+  content: "";
+  height: 155px;
+  left: -75px;
+  opacity: 0.4;
+  position: absolute;
+  top: -50px;
+  transform: rotate(35deg);
+  transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+  width: 50px;
+  z-index: -10;
+}
+.navbar__sing-in:hover:after {
+  left: 120%;
+  transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+}
