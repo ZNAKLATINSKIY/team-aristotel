@@ -1,0 +1,65 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Eater&display=swap');
+
+:root {
+    --color: #FFFFFF;
+    --font-family: "Roboto", sans-serif;
+    --button-family: "Montserrat", sans-serif;
+}
+.container {
+    max-width: 1160px;
+    margin: 0 auto;
+}
+body {
+    background-color: #111111;
+    margin: 0;
+}
+header {
+    background-image: url("/image/qwdqwd.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 1024px;
+}
+.motivation {
+    color: var(--color);
+    font-family: var(--font-family);
+    padding-top: 100px;
+}
+.motivation__details {
+    max-width: 500px;
+    min-height: 57px;
+}
+.motivation__tagline {
+    max-width: 800px;
+    min-height: 226px;
+}
+.motivation__tagline > h1 {
+    font-weight: 200;
+    font-size: 96px;
+    line-height: 112.5px;
+}
+.motivation__details > p {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 18.75px;
+}
+.button {
+    padding-top: 15%;
+}
+.button > button {
+    width: 269px;
+    height: 61px;
+    border: none;
+    border-radius: 33px;
+    font-family: var(--button-family);
+    font-size: 16px;
+    text-wrap: nowrap;
+    font-weight: 700;
+    line-height: 17.07px;
+    text-align: Center;
+    background: linear-gradient(to right, #D15A1A, #EAB425, #ECD85A);
+    color: #F0F0F0;
+}
+.What-the-sun {
+    min-height: 1000px;
+}
