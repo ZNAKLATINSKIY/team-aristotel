@@ -1,0 +1,64 @@
+
+.footer {
+    background: var(--deep-blue);
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.footer__wrapper{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.footer__item {
+    text-decoration: none;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 214%;
+    letter-spacing: 0.02em;
+    color: var(--white);
+}
+
+.footer__downloads-Appstore,.footer__downloads-googleplay {
+    border-radius: 15px;
+    width: 150px;
+    height: 50px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.03), 0 4px 6px 0 rgba(0, 0, 0, 0.04), 0 10px 15px 0 rgba(0, 0, 0, 0.06), 0 33px 51px 0 rgba(0, 0, 0, 0.08);
+    background: #000;
+    padding: 13px;
+    text-decoration: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__downloads-googleplay{
+    margin-bottom: 10px;
+}
+
+.footer__wrapper{
+    display: flex;
+}
+
+.footer__items{
+    display: flex;
+    gap: 101px;
+}
+
+.footer__item {
+    transition: 0.2s;
+}
+.footer__item:hover {
+    color: var(--blue-100);
+}
+
+.footer__items-left, .footer__items-right{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
