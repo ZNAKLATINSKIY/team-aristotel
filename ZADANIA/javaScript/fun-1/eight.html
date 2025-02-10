@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			function eight(
+				second = +prompt('Введите секунды:'),
+				minutes = +prompt('Введите минуты:'),
+				hour = +prompt('Введите часы:')
+			) {
+				let hourmin = Math.floor(hour * 3600)
+				let minutessec = Math.floor(minutes * 60)
+				let result = second + hourmin + minutessec
+				alert(`Всего у нас ${result} секунд`)
+			}
+			console.log(eight())
+		</script>
+	</body>
+</html>

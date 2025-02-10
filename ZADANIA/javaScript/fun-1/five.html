@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			function six(number = +prompt('Введите совершенное число: ')) {
+				let oneSty = number / 2
+
+				let result = 0
+
+				for (i = 1; i <= oneSty; i++) {
+					if (number % i === 0) {
+						result += i
+					}
+				}
+				if (number == result) {
+					alert('Вы ввели совершенное число!')
+				} else {
+					alert('Вы не ввели совершенное число...')
+				}
+			}
+			console.log(six())
+		</script>
+	</body>
+</html>

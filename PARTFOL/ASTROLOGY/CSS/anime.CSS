@@ -1,36 +1,136 @@
-button {
-    --green: #fdee1b;
-    font-size: 15px;
-    padding: 0.7em 2.7em;
-    letter-spacing: 0.06em;
-    position: relative;
-    font-family: inherit;
-    border-radius: 0.6em;
-    overflow: hidden;
-    transition: all 0.3s;
-    line-height: 1.4em;
-    border: 2px solid var(--green);
-    background: linear-gradient(to right, rgb(255, 136, 0) 1%, transparent 40%,transparent 60% , rgba(27, 253, 156, 0.1) 100%);
-    color: var(--green);
-    box-shadow: inset 0 0 10px rgba(255, 255, 2, 0.805), 0 0 9px 3px rgba(182, 188, 1, 0.662);
-  }
-  
-  button:hover {
-    color: #ffe100;
-    box-shadow: inset 0 0 10px rgba(255, 255, 2, 0.805), 0 0 9px 3px rgba(182, 188, 1, 0.662);
-  }
-  
-  button:before {
-    content: "";
-    position: absolute;
-    left: -4em;
-    width: 4em;
-    height: 100%;
-    top: 0;
-    transition: transform .4s ease-in-out;
-    background: linear-gradient(to right, transparent 1%, rgba(234, 255, 0, 0.1) 40%,rgba(255, 166, 0, 0.1) 60% , transparent 100%);
-  }
-  
-  button:hover:before {
-    transform: translateX(15em);
-  }
+.button-one {
+	--green: #fdee1b;
+	font-size: 15px;
+	padding: 0.7em 2.7em;
+	letter-spacing: 0.06em;
+	position: relative;
+	font-family: inherit;
+	border-radius: 0.6em;
+	overflow: hidden;
+	transition: all 0.3s;
+	line-height: 1.4em;
+	border: 2px solid var(--green);
+	background: linear-gradient(
+		to right,
+		rgb(255, 136, 0) 1%,
+		transparent 40%,
+		transparent 60%,
+		rgba(27, 253, 156, 0.1) 100%
+	);
+	color: var(--green);
+	box-shadow: inset 0 0 10px rgba(255, 255, 2, 0.805),
+		0 0 9px 3px rgba(182, 188, 1, 0.662);
+}
+.button-one:hover {
+	color: #ffe100;
+	box-shadow: inset 0 0 10px rgba(255, 255, 2, 0.805),
+		0 0 9px 3px rgba(182, 188, 1, 0.662);
+	cursor: pointer;
+	filter: invert(1);
+	color: #000000;
+}
+.button-one:before {
+	content: '';
+	position: absolute;
+	left: -4em;
+	width: 4em;
+	height: 100%;
+	top: 0;
+	transition: transform 0.4s ease-in-out;
+	background: linear-gradient(
+		to right,
+		transparent 1%,
+		rgba(234, 255, 0, 0.1) 40%,
+		rgba(255, 166, 0, 0.1) 60%,
+		transparent 100%
+	);
+}
+.button-one:hover:before {
+	transform: translateX(15em);
+}
+
+/* BUTTON-TWO */
+
+.button-two {
+	--green: #f0f0f0;
+	font-size: 15px;
+	padding: 0.7em 2.7em;
+	letter-spacing: 0.06em;
+	position: relative;
+	font-family: inherit;
+	border-radius: 0.6em;
+	overflow: hidden;
+	transition: all 0.3s;
+	line-height: 1.4em;
+	border: 2px solid var(--green);
+	color: var(--green);
+	border: none;
+}
+.button-two:hover {
+	color: #f0f0f0;
+	box-shadow: 0px 0px 70px 1px rgba(246, 237, 226, 0.8);
+	cursor: pointer;
+	filter: invert(1);
+	color: #000000;
+	background: linear-gradient(to right, #fae0be, #c2b4a3, #453520);
+}
+.button-two:before {
+	content: '';
+	position: absolute;
+	left: -4em;
+	width: 4em;
+	height: 100%;
+	top: 0;
+	transition: transform 0.4s ease-in-out;
+	background: linear-gradient(
+		to right,
+		transparent 1%,
+		rgba(132, 132, 132, 0.1) 40%,
+		rgba(225, 225, 225, 0.1) 60%,
+		transparent 100%
+	);
+}
+.button-two:hover:before {
+	transform: translateX(15em);
+}
+
+/* BUTTON-THREE */
+
+.button-three {
+	font-family: 'Montserrat', sans-serif;
+	--green: #f0f0f0;
+	font-size: 14px;
+	position: relative;
+	border-radius: 5px 20px;
+	overflow: hidden;
+	transition: all 0.3s;
+	border: 2px solid var(--green);
+	color: var(--green);
+	border: none;
+}
+.button-three:hover {
+	box-shadow: 0px 0px 70px 1px rgba(246, 237, 226, 0.8);
+	cursor: pointer;
+	filter: invert(1);
+	color: #ffffff;
+	background: linear-gradient(to right, black, gray);
+}
+.button-three:before {
+	content: '';
+	position: absolute;
+	left: -4em;
+	width: 4em;
+	height: 100%;
+	top: 0;
+	transition: transform 0.4s ease-in-out;
+	background: linear-gradient(
+		to right,
+		transparent 1%,
+		rgba(132, 132, 132, 0.1) 40%,
+		rgba(225, 225, 225, 0.1) 60%,
+		transparent 100%
+	);
+}
+.button-three:hover:before {
+	transform: translateX(15em);
+}

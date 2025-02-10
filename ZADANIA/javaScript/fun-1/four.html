@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			function four(
+				length = +prompt('Введите длину прямоугольника: '),
+				width = +prompt('Введите ширину прямоугольника: ')
+			) {
+				if (length > 0 && width > 0) {
+					alert('Площадь прямоугольника равняется: ' + length * width)
+				} else if (length > 0 || width > 0) {
+					let max = Math.max(length, width)
+					alert('Некорректный ввод данных, площадь квадрата: ' + max * max)
+				}
+			}
+			console.log(four())
+		</script>
+	</body>
+</html>

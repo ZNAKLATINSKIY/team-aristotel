@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function ten (
+            a = +prompt("Введите секунды первой даты: "),
+            b  = +prompt("Введите минуты первой даты: "),
+            c  = +prompt("Введите часы первой даты: "),
+            d  = +prompt("Введите секунды второй даты: "),
+            f = +prompt("Введите минуты второй даты: "),
+            j = +prompt("Введите часы второй даты: ")
+        ) {
+            let hourminone = Math.floor(c * 3600)
+				let minutessecone = Math.floor(b * 60)
+				let resultone = a + hourminone + minutessecone
+
+                let hourmintwo = Math.floor(j * 3600)
+				let minutessectwo = Math.floor(f * 60)
+				let resulttwo = d + hourmintwo + minutessectwo
+
+                let max = Math.max(resultone, resulttwo)
+                let min = Math.min(resultone, resulttwo)
+                let result = max - min
+
+                let second = result % 60;
+                let g =  Math.floor(result / 60)
+                let minute = g % 60
+                let hour = Math.floor(g / 60)
+
+                alert(`Разница: ${second} ; ${Math.floor(minute)} ; ${Math.floor(hour)}`)
+
+        }
+        ten()
+
+        
+    </script>
+</body>
+</html>

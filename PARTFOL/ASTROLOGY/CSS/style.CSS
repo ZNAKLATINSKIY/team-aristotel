@@ -1,65 +1,550 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Eater&display=swap');
 
 :root {
-    --color: #FFFFFF;
-    --font-family: "Roboto", sans-serif;
-    --button-family: "Montserrat", sans-serif;
+	--color: #ffffff;
+	--two-color: #f3d7b3;
+	--font-family: 'Roboto', sans-serif;
+	--button-family: 'Montserrat', sans-serif;
 }
 .container {
-    max-width: 1160px;
-    margin: 0 auto;
+	max-width: 1160px;
+	margin: 0 auto;
 }
 body {
-    background-color: #111111;
-    margin: 0;
+	background-color: #111111;
+	margin: 0;
 }
+
+/* HEADER */
+
 header {
-    background-image: url("/image/qwdqwd.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 1024px;
+	background-image: url('/SVG/Background_Sun.svg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: 1024px;
 }
 .motivation {
-    color: var(--color);
-    font-family: var(--font-family);
-    padding-top: 100px;
+	color: var(--color);
+	font-family: var(--font-family);
+	padding-top: 100px;
 }
 .motivation__details {
-    max-width: 500px;
-    min-height: 57px;
+	max-width: 500px;
+	min-height: 57px;
 }
 .motivation__tagline {
-    max-width: 800px;
-    min-height: 226px;
+	max-width: 800px;
+	min-height: 226px;
 }
 .motivation__tagline > h1 {
-    font-weight: 200;
-    font-size: 96px;
-    line-height: 112.5px;
+	font-weight: 200;
+	font-size: 96px;
+	line-height: 112.5px;
 }
 .motivation__details > p {
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 18.75px;
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 18.75px;
 }
 .button {
-    padding-top: 15%;
+	padding-top: 15%;
 }
 .button > button {
-    width: 269px;
-    height: 61px;
-    border: none;
-    border-radius: 33px;
-    font-family: var(--button-family);
-    font-size: 16px;
-    text-wrap: nowrap;
-    font-weight: 700;
-    line-height: 17.07px;
-    text-align: Center;
-    background: linear-gradient(to right, #D15A1A, #EAB425, #ECD85A);
-    color: #F0F0F0;
+	width: 269px;
+	height: 61px;
+	border: none;
+	border-radius: 33px;
+	font-family: var(--button-family);
+	font-size: 16px;
+	text-wrap: nowrap;
+	font-weight: 700;
+	line-height: 17.07px;
+	text-align: Center;
+	background: linear-gradient(to right, #d15a1a, #eab425, #ecd85a);
+	color: #f0f0f0;
 }
+
+/* WHAT-THE-SUN SECTION */
+
 .What-the-sun {
-    min-height: 1000px;
+	background-image: url('/SVG/sun-blink.svg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	overflow: hidden;
+	min-height: 971px;
+}
+.question-taglain {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-height: 871px;
+}
+.question-taglain > h2 {
+	font-family: var(--font-family);
+	font-weight: 300;
+	font-size: 72px;
+	color: var(--two-color);
+}
+.question-taglain__explanation > p {
+	font-family: var(--font-family);
+	font-weight: 200;
+	font-size: 36px;
+	color: var(--color);
+}
+.question-taglain__explanation {
+	max-width: 586px;
+	min-height: 351px;
+}
+
+/* BAD-EMOTIONS SECTION */
+
+.bad-emotions {
+	overflow: hidden;
+}
+.modern-weaknesses {
+	display: flex;
+	justify-content: center;
+}
+.modern-weaknesses__content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.modern-weaknesses__title {
+	font-family: var(--font-family);
+	color: var(--color);
+	font-weight: 300;
+	font-size: 36px;
+}
+.modern-weaknesses__description {
+	font-family: var(--font-family);
+	color: var(--color);
+	font-weight: 200;
+	font-size: 35px;
+	margin: 0;
+}
+
+/* EMOTIONAL BURNOUT SECTION */
+
+.emotional-burnout {
+	background-image: url('/SVG/section-three.svg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: 594px;
+}
+.humiliation-psychologists {
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-height: 594px;
+}
+.humiliation-psychologists > h2,
+.humiliation-psychologists > p,
+.humiliation-psychologists > span {
+	font-family: var(--font-family);
+	font-weight: 700;
+	font-size: 50px;
+	color: var(--color);
+	text-wrap: nowrap;
+}
+.humiliation-psychologists > p {
+	margin: 0;
+}
+
+/* WHAT DOING SECTION */
+
+.what-doing {
+	overflow: hidden;
+}
+.what-doing__content {
+	display: flex;
+}
+.instructions > h2 {
+	font-family: var(--font-family);
+	font-weight: 300;
+	font-size: 72px;
+	color: var(--two-color);
+}
+.instructions > p {
+	font-family: var(--font-family);
+	font-size: 30px;
+	line-height: 35.16px;
+}
+.instructions__paragraph-1 {
+	font-weight: 400;
+	color: var(--two-color);
+}
+.instructions__paragraph-2 {
+	font-weight: 200;
+	color: var(--color);
+}
+.instructions__paragraph-3 {
+	font-weight: 700;
+	color: var(--color);
+}
+.instructions__button {
+	padding: 100px 0 100px 0;
+}
+.instructions__button > button {
+	width: 399px;
+	height: 78px;
+	border-radius: 50px;
+	font-family: var(--button-family);
+	font-weight: 700;
+	font-size: 20px;
+	text-align: center;
+	background: linear-gradient(to right, #dac1a0, #c3a885, #c1a683);
+	box-shadow: 0px 0px 40px rgba(240, 222, 198, 0.8);
+}
+
+/* RECEIVE-FILES SECTION */
+.product-explanation {
+	display: flex;
+}
+.provision-services {
+	font-family: var(--font-family);
+	font-weight: 300;
+	font-size: 72px;
+	color: var(--two-color);
+}
+.product-presentation {
+	display: flex;
+	align-items: center;
+}
+.product-presentation__content {
+	position: relative;
+	bottom: 40px;
+}
+.product-presentation__text {
+	position: absolute;
+	font-family: var(--font-family);
+	font-weight: 700;
+	font-size: 30px;
+	color: var(--color);
+	width: 500px;
+}
+#product-presentation__one {
+	bottom: 60px;
+}
+.about-service__content p,
+.about-service span {
+	font-family: var(--font-family);
+	font-weight: 200;
+	font-size: 30px;
+	line-height: 35.16px;
+	color: var(--color);
+	max-width: 460px;
+	padding-top: 50px;
+}
+.product-presentation__actions {
+	list-style-type: none;
+	padding-left: 0;
+	font-family: var(--font-family);
+	font-weight: 200;
+	font-size: 30px;
+	line-height: 35.16px;
+	color: var(--color);
+	max-width: 460px;
+}
+.manual {
+	display: flex;
+	padding-top: 150px;
+}
+.about-service__content {
+	display: flex;
+}
+#about-service__paragraph {
+	padding-top: 25px;
+}
+.image {
+	width: 167px;
+	height: 242px;
+}
+#product-presentation__five {
+	left: 810px;
+}
+
+/* COST SECTION */
+
+.cost {
+	height: 1000px;
+}
+.pricing-block {
+	display: flex;
+	gap: 200px;
+}
+.offers {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	height: 681px;
+	width: 457px;
+	box-shadow: 0px 0px 10px 1px #f3d7b31a;
+	background-color: rgba(31, 31, 31, 1);
+	border-radius: 24px;
+	padding-top: 30px;
+}
+.сost__title {
+	font-family: var(--font-family);
+	font-weight: 300;
+	font-size: 72px;
+	color: var(--two-color);
+}
+.offers__title {
+	font-family: var(--font-family);
+	font-weight: 300;
+	font-size: 28px;
+	padding-left: 50px;
+	color: var(--two-color);
+	margin: 0;
+}
+.offers__title > span {
+	font-weight: 400;
+}
+.offers__description {
+	padding-left: 20px;
+	display: flex;
+	align-items: center;
+}
+.offers__description > p {
+	font-family: var(--font-family);
+	font-weight: 300;
+	font-size: 18px;
+	color: var(--color);
+	width: 324px;
+}
+.offers__ticket {
+	position: absolute;
+	top: 570px;
+	left: 30px;
+}
+.signature__cost {
+	font-family: var(--font-family);
+	font-size: 20px;
+	font-weight: 300;
+	color: #525252;
+}
+.signature__amount {
+	font-family: var(--font-family);
+	font-weight: 500;
+	font-size: 28px;
+	background-image: linear-gradient(to bottom, #cbb191, #a7875f);
+	-webkit-background-clip: text;
+	color: transparent;
+}
+.offers__signature {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	top: 650px;
+	left: 180px;
+}
+.offers__button {
+	position: absolute;
+	top: 160px;
+	left: 100px;
+	border: none;
+	background: linear-gradient(to right, #dac1a0, #c3a885, #c1a683);
+	border-left: 500px;
+	height: 59px;
+	width: 262px;
+	box-shadow: 0 -2px 0 #f0dec6cc, 0 2px 0 #ae926d;
+	font-weight: 500;
+	font-size: 14px;
+	text-align: center;
+	color: var(--color);
+}
+#button-left {
+	top: 449px;
+}
+
+/* IS THE SUN WORKING? SECTION */
+.sun-work {
+	background-image: url('/SVG/potok1.svg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 910px;
+}
+.blur-block {
+	width: 650px;
+	height: 224px;
+	background: #00000066;
+	backdrop-filter: blur(10px);
+	display: flex;
+	align-items: center;
+	border-radius: 20px;
+}
+.blur-block > p {
+	font-family: var(--font-family);
+	font-weight: 200;
+	font-size: 18px;
+	line-height: 21px;
+	color: var(--color);
+	margin: auto;
+	width: 554px;
+}
+#WORKING {
+	padding-bottom: 100px;
+}
+
+/* QUOTE SECTION */
+
+.smiling-woman {
+	display: flex;
+	position: relative;
+}
+.smiling-woman__blackout {
+	position: absolute;
+	top: 337px;
+	width: 350px;
+}
+.quote__content {
+	display: flex;
+	gap: 100px;
+	padding-bottom: 100px;
+}
+.quote__text {
+	display: flex;
+	position: relative;
+	align-items: center;
+}
+.quote__text > p {
+	font-family: var(--font-family);
+	font-style: italic;
+	font-weight: 200;
+	font-size: 18px;
+	color: #fff;
+	z-index: 2;
+}
+.quote__begin-quot,
+.quote__end-quot {
+	position: absolute;
+	z-index: 1;
+}
+.quote__begin-quot {
+	bottom: 70px;
+	right: -80px;
+	transform: rotate(180deg);
+}
+.quote__end-quot {
+	top: 70px;
+	left: -100px;
+	transform: rotate(180deg);
+}
+
+/* ELABORATED SUN SECTION */
+
+.elaborated-sun h2 {
+	width: 625px;
+	font-family: var(--font-family);
+	font-weight: 400;
+	font-size: 30px;
+	color: #fff;
+}
+.list {
+	display: flex;
+	gap: 60px;
+}
+.list__column-mark {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	padding-bottom: 100px;
+}
+.list__conditions-block {
+	display: flex;
+	align-items: center;
+}
+.list__conditions-block > span {
+	width: 472px;
+	font-family: var(--font-family);
+	font-weight: 100;
+	font-size: 28px;
+	color: #fff;
+}
+
+/* REVIEWS SECTION */
+
+.reviews h2 {
+	font-family: var(--font-family);
+	font-weight: 300;
+	font-size: 72px;
+	color: var(--two-color);
+}
+.commentators__content {
+	position: relative;
+	width: 618px;
+	z-index: 1;
+}
+.commentators__content > span {
+	display: flex;
+	align-items: center; /* Центрирование по вертикали */
+	justify-content: center; /* Центрирование по горизонтали */
+	position: absolute;
+	left: 160px;
+	top: 435px;
+	width: 280.64px;
+	height: 63.98px;
+	font-family: var(--button-family);
+	font-weight: 300;
+	font-size: 22px;
+	color: #fff;
+	text-align: center;
+	z-index: 1;
+}
+
+.commentators__launch {
+	position: absolute;
+	top: 225px;
+	left: 150px;
+	z-index: 2;
+}
+.commentators {
+	display: flex;
+	padding-bottom: 50px;
+}
+
+/* FOOTER SECTION */
+
+.latest-data {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 50px;
+}
+.latest-data__instagram {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 20px;
+	width: 289px;
+	height: 108px;
+	background-color: rgba(31, 31, 31, 1);
+	gap: 20px;
+}
+.latest-data__instagram > span {
+	font-family: var(--button-family);
+	font-weight: 300;
+	font-size: 19px;
+	text-align: center;
+	color: #fff;
+}
+#buttom__bottom {
+	top: -10px;
+	left: 20px;
+}
+.latest-data__name {
+	width: 304px;
+	font-family: var(--font-family);
+	font-weight: 200;
+	font-size: 18px;
+	color: #fff;
+}
+.latest-data__others {
+	width: 304px;
+	font-family: var(--font-family);
+	font-weight: 400;
+	font-size: 18px;
+	color: #545454;
 }

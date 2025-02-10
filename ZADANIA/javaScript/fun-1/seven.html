@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			function seven(
+				second = +prompt('Введите секунды, в формате 00:'),
+				minutes = +prompt('Введите минуты, в формате 00:'),
+				hour = +prompt('Введите часы, в формате 00:')
+			) {
+				if (second === '') {
+					second = '00'
+				}
+				if (minutes === '') {
+					minutes = '00'
+				} else {
+				}
+				alert(`Сейчас ${hour};${minutes};${second}`)
+			}
+			console.log(seven())
+		</script>
+	</body>
+</html>
