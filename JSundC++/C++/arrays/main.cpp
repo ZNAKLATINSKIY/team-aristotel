@@ -4,7 +4,6 @@
 using namespace std;
 
 void ex_1() {
-  setlocale(LC_ALL, "");
   int n;
   cout << "Введите размер массива: ";
   cin >> n;
@@ -165,7 +164,192 @@ void ex_4() {
   }
 }
 
+void ex_5() {
+  int n;
+  cout << "Введите размер массива: ";
+  cin >> n;
+
+  vector<int> array(n);
+  cout << "Введите элементы массива." << endl;
+  for (int i = 0; i < n; i++) {
+    cout << "Индекс элемента - " << i << " ";
+    cout << "Элемент: ";
+    cin >> array[i];
+  }
+
+  cout << endl;
+  cout << "Элементы массива." << endl;
+  cout << endl;
+  for (int i = 0; i < n; i++) {
+    cout << "Индекс - " << i << " ";
+    cout << "Элемент: " << array[i] << endl;
+  }
+
+  cout << endl;
+  cout << "Элементы массива в обратном порядке." << endl;
+  cout << endl;
+  for (int i = n-1; i >= 0; i--) {
+    cout << "Индекс - " << i << " ";
+    cout << "Элемент: " << array[i] << endl;
+  }
+}
+
+void ex_6() {
+  int n;
+  cout << "Введите количество элементов в массиве: ";
+  cin >> n;
+
+  vector<int> array(n);
+  cout << endl;
+  cout << "Введите элементы массива." << endl;
+  for (int i = 0; i < n; i++) {
+    cout << "Индекс - " << i << " ";
+    cout << "Элемент: " << endl;
+    cin >> array[i];
+  }
+
+  cout << endl;
+  cout << "Элементы массива." << endl;
+  for (int i = 0; i < n; i++) {
+    cout << "Индекс - " << i << " ";
+    cout << "Элемент: " << array[i] << endl;
+  }
+
+  int min = array[0];
+  for (int i = 0; i < n; i++) {
+    if (min > array[i]) {
+      min = array[i];
+    }
+  }
+  cout << "Минимальное значение массива: " << min << endl;
+}
+
+void ex_7() {
+  int n;
+  cout << "Введите количество элементов в массиве: ";
+  cin >> n;
+
+  vector<int> array(n);
+  cout << endl;
+  cout << "Введите элементы массива." << endl;
+  for (int i = 0; i < n; i++) {
+    cout << "Индекс - " << i << " ";
+    cout << "Элемент: " << endl;
+    cin >> array[i];
+  }
+
+  cout << endl;
+  cout << "Элементы массива." << endl;
+  for (int i = 0; i < n; i++) {
+    cout << "Индекс - " << i << " ";
+    cout << "Элемент: " << array[i] << endl;
+  }
+
+  int max = array[0];
+  for (int i = 0; i < n; i++) {
+    if (max < array[i]) {
+      max = array[i];
+    }
+  }
+  cout << "Максимальное значение массива: " << max << endl;
+}
+
+void ex_8() {
+  int n;
+  cout << "Введите размер массива: ";
+  cin >> n;
+
+  vector<int> array(n);
+  cout << endl;
+  cout << "Введите элементы массива." << endl;
+  for (int i = 0; i < n; i++) {
+    cout << "Индекс - " << i << " ";
+    cout << "Элемент: ";
+    cin >> array[i];
+  }
+
+  cout << endl;
+  cout << "Элементы массива:" << endl;
+  for (int i = 0; i < n; i++) {
+    cout << "Индекс - " << i << " ";
+    cout << "Элемент: " << array[i] << endl;
+  }
+
+  int min = array[0];
+  for (int i = 0; i < n; i++) {
+    if (min > array[i]) {
+      min = array[i];
+    }
+  }
+  cout << "Минимальное значение массива: " << min << endl;
+
+  int max = array[0];
+  for (int i = 0; i < n; i++) {
+    if (max < array[i]) {
+      max = array[i];
+    }
+  }
+  cout << "Максимальное значение массива: " << max << endl;
+
+  cout << "Заменяю значения..." << endl;
+  for (int i = 0; i < n; i++) {
+    if (array[i] == min) {
+      array[i] = max;
+    }
+    else if (array[i] == max) {
+      array[i] = min;
+    }
+  }
+
+  cout << endl;
+  cout << "Обновлённый массив: " << endl;
+  for (int i = 0; i < n; i++) {
+    cout << "Индекс элемента - " << i << " ";
+    cout << "Элемент массива: " << array[i] << endl;
+  }
+}
+
+auto array() {
+  return arr;
+}
+
+void ex_9() {
+  int n;
+  cout << "Введите размер массива: ";
+  cin >> n;
+
+  vector<int> array(n);
+  cout << endl;
+  cout << "Введите элементы массива." << endl;
+  for (int i = 0; i < n; i++) {
+    cout << "Индекс - " << i << " ";
+    cout << "Элемент: " << endl;
+    cin >> array[i];
+  }
+
+  cout << endl;
+  cout << "Элементы массива." << endl;
+  for (int i = 0; i < n; i++) {
+    cout << "Индекс - " << i << " ";
+    cout << "Элемент: " << array[i] << endl;
+  }
+
+  int element;
+  cout << "Введите элемент массива, который желаете удалить: ";
+  cin >> element;
+
+
+  // понять, как работает
+  for (int i = element; i < n-1; i++) {
+    array[i] = array[i + 1];
+  }
+
+
+}
+
+
 int main() {
-  setlocale(LC_ALL, "Russian");
+  setlocale(LC_ALL, "");
+  ex_5();
   return 0;
 }

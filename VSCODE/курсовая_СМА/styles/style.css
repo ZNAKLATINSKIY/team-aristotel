@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Bakbak+One&family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Nova+Mono&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    max-width: 1650px;
+    margin: 0 auto;
+}
+:root {
+    --font-family: "Inter", sans-serif;
+}
+body {
+    background-image: url(/images/background_body.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.header {
+    min-height: 1083px;
+    background-image: url(/images/header_background.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.navbar {
+    padding-top: 40px;
+    padding-inline: 135px;
+    display: flex;
+    justify-content: space-between;
+}
+.nav {
+    display: flex;
+    align-items: center;
+}
+ul {
+    display: flex;
+    gap: 40px;
+    margin: 0;
+}
+li {
+    list-style-type: none;
+}
+ul > li > a {
+    font-family: var(--font-family), sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 167%;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+
+}
+.home {
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    text-underline-offset: 4px;
+    color: #dc052d;
+}
+.navbar__login-register {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.header__button {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+    width: 130px;
+    height: 50px;
+    border-radius: 30px;
+    font-family: var(--font-family), sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 167%;
+    color: #fff;
+    border: none;
+}
+.login {
+    background: #dc052d;
+    margin-left: 60px;
+}
+.signup {
+    background: #0066b2;
+    margin-left: 20px;
+}
+.header__content {
+    margin-top: 164px;
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 135px;
+    align-items: center;
+}
+
+.content__right {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.header__content-text {
+    display: flex;
+    flex-direction: column;
+}
+.header__title {
+    font-family: var(--font-family), sans-serif;
+    font-weight: 600;
+    font-size: 100px;
+    line-height: 110%;
+    color: #fff;
+    max-width: 571px;
+}
+.header__parag {
+    font-family: var(--font-family), sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 136%;
+    color: #fff;
+    max-width: 670px;
+    padding-top: 40px;
+}
+.header__content-buttons {
+    margin-top: 68px;
+    display: flex;
+    gap: 30px;
+}
+.header__button-bottom {
+    border-radius: 30px;
+    width: 190px;
+    height: 50px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+    font-family: var(--font-family), sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 167%;
+    color: #fff;
+    border: none;
+}
+.button__token {
+    background: #dc052d;
+}
+.button__register {
+    background: #0066b2;
+}
+.purshared {
+    margin-top: 190px;
+}
+h2 {
+    font-family: var(--font-family), sans-serif;
+    font-weight: 600;
+    font-size: 150px;
+    line-height: 73%;
+    color: rgba(160, 0, 48, 0.3);
+}
+.purshared__lines {
+    display: flex;
+    align-items: center;
+    margin-top: 90px;
+}
+.purshared__lines-block {
+    width: 660px;
+    height: 100%;
+    display: flex;
+    border: 2px solid #fff;
+    position: relative;
+    z-index: 1;
+}
+.lines__block-light {
+    width: 546px;
+    height: 71px;
+    background: #dc052d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.lines__block-light > span {
+    font-family: var(--font-family), sans-serif;
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 86%;
+    color: #fff;
+}
+.lines__block-dark {
+    width: 110px;
+    height: 71px;
+    background: #31000f;
+}
+.purshared__lines-img {
+    position: relative;
+    right: 50px;
+    bottom: 10px;
+}
+.economics {
+    margin: 200px 0;
+
+.economics__title {
+    text-align: right;
+    padding-right: 135px;
+}
+.economics__content {
+    margin-top: 84px;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 100px;
+}
+.economics__content-circle {
+    position: relative;
+}
+.economics__content-text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.economics__content-text > h3 {
+    max-width: 690px;
+    font-family: var(--font-family), sans-serif;
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 114%;
+    color: #fff;
+}
+.economics__content-text > p {
+    max-width: 700px;
+    font-family: var(--font-family), sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 175%;
+    color: #fff;
+}
+.circle__text {
+    font-family: var(--font-family), sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #fff;
+    position: absolute;
+}
+.circle__red-text {
+    color: #dc052d;
+}
+.circle__reserve {
+    left: 43px;
+    top: -14px;
+}
+.circle__football {
+    left: -195px;
+    top: 85px;
+    max-width: 202px;
+}
+.circle__ido {
+    left: -105px;
+    top: 340px;
+    max-width: 150px;
+}
+.circle__dev {
+    left: -115px;
+    top: 475px;
+}
+.circle__staking {
+    max-width: 140px;
+    right: -150px;
+    top: 210px;
+}
+.circle__total {
+    font-family: var(--font-family), sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #fff;
+    bottom: 0;
+    right: -150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.circle__big-text {
+    font-family: var(--font-family), sans-serif;
+    font-weight: 700;
+    font-size: 35px;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    color: #dc052d;
+}
+.about__text-button > h3 {
+    font-family: var(--font-family), sans-serif;
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 114%;
+    color: #fff;
+}
