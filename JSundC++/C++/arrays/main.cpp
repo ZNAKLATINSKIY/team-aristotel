@@ -309,9 +309,6 @@ void ex_8() {
   }
 }
 
-auto array() {
-  return arr;
-}
 
 void ex_9() {
   int n;
@@ -335,7 +332,7 @@ void ex_9() {
   }
 
   int element;
-  cout << "Введите элемент массива, который желаете удалить: ";
+  cout << "Введите индекс элемента массива, который желаете удалить: ";
   cin >> element;
 
 
@@ -343,10 +340,41 @@ void ex_9() {
   for (int i = element; i < n-1; i++) {
     array[i] = array[i + 1];
   }
+  n--;
 
+  cout << endl;
+  cout << "Элементы массива." << endl;
+  for (int i = 0; i < n; i++) {
+    cout << "Индекс - " << i << " ";
+    cout << "Элемент: " << array[i] << endl;
+  }
 
 }
 
+void ex_10() {
+  int n;
+  cout << "Введите размер массива: ";
+  cin >> n;
+
+  vector<int> array(n);
+  cout << endl;
+  cout << "Введите значения элементов." << endl;
+  for (int i = 0; i < n; i++) {
+    cout << "Индекс: " << i << endl;
+    cout << "Элемент: ";
+    cin >> array[i];
+  }
+
+  cout << endl;
+  cout << "Элементы массива: " << endl;
+  for (int i = 0; i < n; i++) {
+    cout << "Индекс: " << i << endl;
+    cout << "Элемент: " << array[i] << endl;
+  }
+
+  // по убыванию отсортировать
+
+}
 
 int main() {
   setlocale(LC_ALL, "");
