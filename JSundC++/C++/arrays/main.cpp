@@ -358,23 +358,42 @@ void ex_10() {
 
   vector<int> array(n);
   cout << endl;
-  cout << "Введите значения элементов." << endl;
+  cout << "Введите элементы массива." << endl;
   for (int i = 0; i < n; i++) {
-    cout << "Индекс: " << i << endl;
-    cout << "Элемент: ";
+    cout << "Индекс - " << i << " ";
+    cout << "Элемент: " << endl;
     cin >> array[i];
   }
 
   cout << endl;
-  cout << "Элементы массива: " << endl;
+  cout << "Элементы массива." << endl;
   for (int i = 0; i < n; i++) {
-    cout << "Индекс: " << i << endl;
+    cout << "Индекс - " << i << " ";
     cout << "Элемент: " << array[i] << endl;
   }
 
-  // по убыванию отсортировать
+  int index_element;
+  cout << "Введите индекс элемента массива, после которого впихнуть элемент: ";
+  cin >> index_element;
 
+  int element;
+  cout << "Введите элемент, который хотите добавить: ";
+  cin >> element;
+
+  n++;
+  for (int i = n; i > index_element; i--) {
+      array[i] = array[i - 1];
+  }
+  array[index_element+1] = element;
+  cout << endl;
+  cout << "Элементы массива." << endl;
+  for (int i = 0; i < n; i++) {
+    cout << "Индекс - " << i << " ";
+    cout << "Элемент: " << array[i] << endl;
+  }
 }
+
+
 
 int main() {
   setlocale(LC_ALL, "");

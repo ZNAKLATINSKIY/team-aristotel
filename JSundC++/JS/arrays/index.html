@@ -4,12 +4,253 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Массивы</title>
+    <style>
+        body {
+            background-color: black;
+            color: blueviolet;
+            font-size: 20px;
+            text-align: center;
+        }
+        pre {
+            color: aqua;
+        }
+        button {
+            width: 350px;
+            height: 70px;
+            background: aqua;
+            font-size: 20px;
+            border: none;
+            border-radius: 25px;
+        }
+        .wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 0 auto;
+            max-width: 1440px;
+            gap: 20px;
+        }
+    </style>
 </head>
 <body>
-    <script>
-        function exercice_one() {
-            
+    <h1>Массивы</h1>
+    <div class="wrapper">
+        <button onclick="ex_1()">Задание 1</button>
+        <button onclick="ex_2()">Задание 2</button>
+        <button onclick="ex_3()">Задание 3</button>
+        <button onclick="ex_4()">Задание 4</button>
+        <button onclick="ex_5()">Задание 5</button>
+        <button onclick="ex_6()">Задание 6</button>
+        <button onclick="ex_7()">Задание 7</button>
+        <button onclick="ex_8()">Задание 8</button>
+        <button onclick="ex_9()">Задание 9</button>
+        <button onclick="ex_10()">Задание 10</button>
+    </div>
+<script>
+    function ex_1() {
+        let arr = [];
+        let n = +prompt("Введите количество элементов массива: ");
+        let element;
+        for (let i = 0; i < n; i++) {
+            element = +prompt(`Индекс элемента: ${i}\nЭлемент: `);
+            arr.push(element);
         }
-    </script>
+        console.log("Массив: " + arr);
+
+        let positive, negative, zero;
+        positive = negative = zero = 0;
+
+        for (let i = 0; i < n; i++) {
+            if (arr[i] > 0) {
+                positive++;
+            }
+            if (arr[i] < 0) {
+                negative++;
+            }
+            if (arr[i] === 0) {
+                zero++;
+            }
+        }
+
+        console.log(`Количество положительных элементов массива: ${positive}\nОтрицательных: ${negative}\nНулей в массиве: ${zero}`);
+
+    }
+
+    function ex_2() {
+        let arr = [];
+        let arr_negative = [];
+        let n = +prompt(`Введите количество элементов в массиве: `);
+        let element;
+        for (let i = 0; i < n; i++) {
+            element = +prompt(`Индекс элемента: ${i}\nЭлемент: `);
+            arr.push(element);
+            for (let i = 0; i < n; i++) {
+                if (arr[i] < 0) {
+                    arr_negative.push(arr[i]);
+                }
+            }
+        }
+            console.log("Массив, состоящий из негативных элементов первого: " + arr_negative);
+    }
+
+    function ex_3() {
+        let arr = [];
+        let n = +prompt(`Введите количество элементов в массиве: `);
+        let element;
+        for (let i = 0; i < n; i++) {
+            element = +prompt(`Индекс элемента: ${i}\nЭлемент: `);
+            arr.push(element);
+        }
+        console.log("Массив: " + arr);
+
+        let i = arr[0];
+        arr[0] = arr[n-1];
+        arr[n-1] = i;
+        console.log("Обновлённый массив: " + arr);
+    }
+
+    function ex_4() {
+        let arr = [];
+        let n = +prompt(`Введите количество элементов в массиве: `);
+        let element;
+        for (let i = 0; i < n; i++) {
+            element = +prompt(`Индекс элемента: ${i}\nЭлемент: `);
+            arr.push(element);
+        }
+        console.log("Массив: " + arr);
+
+        let element1, element2;
+        element1 = +prompt("Укажите первый элемент массива: ");
+        element2 = +prompt("Укажите второй элемент массива: ");
+        for (let i = 0; i < n; i++) {
+            if (arr[i] === element1) {
+                arr[i] = element2;
+            }
+            else if (arr[i] === element2) {
+                arr[i] = element1;
+            }
+        }
+        console.log("Массив с обновлениями: " + arr);
+    }
+
+    function ex_5() {
+        let arr = [];
+        let result = ""
+        let n = +prompt(`Введите количество элементов в массиве: `);
+        let element;
+        for (let i = 0; i < n; i++) {
+            element = +prompt(`Индекс элемента: ${i}\nЭлемент: `);
+            arr.push(element);
+        }
+        console.log("Массив: " + arr);
+
+        for (let i = n-1; i >= 0; i--) {
+            result += arr[i] + ',';
+        }
+        console.log("Массив в обратном порядке: " + result);
+    }
+
+    function ex_6() {
+        let arr = [];
+        let n = +prompt(`Введите количество элементов в массиве: `);
+        let element, min;
+        for (let i = 0; i < n; i++) {
+            element = +prompt(`Индекс элемента: ${i}\nЭлемент: `);
+            arr.push(element);
+        }
+        console.log("Массив: " + arr);
+
+        min = arr[0];
+        for (let i = 0; i < n; i++) {
+            if (arr[i] < min) {
+                min = arr[i];
+            }
+        }
+        console.log("Наименьший элемент массива: " + min);
+    }
+
+    function ex_7() {
+        let arr = [];
+        let n = +prompt(`Введите количество элементов в массиве: `);
+        let element, max;
+        for (let i = 0; i < n; i++) {
+            element = +prompt(`Индекс элемента: ${i}\nЭлемент: `);
+            arr.push(element);
+        }
+        console.log("Массив: " + arr);
+
+        max = arr[0];
+        for (let i = 0; i < n; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+        }
+        console.log("Наибольший элемент массива: " + max);
+    }
+
+    function ex_8() {
+        let arr = [];
+        let n = +prompt(`Введите количество элементов в массиве: `);
+        let element, max, min;
+        for (let i = 0; i < n; i++) {
+            element = +prompt(`Индекс элемента: ${i}\nЭлемент: `);
+            arr.push(element);
+        }
+        console.log("Массив: " + arr);
+
+        max = arr[0];
+        for (let i = 0; i < n; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+        }
+        min = arr[0];
+        for (let i = 0; i < n; i++) {
+            if (arr[i] < min) {
+                min = arr[i];
+            }
+        }
+        console.log(`Наибольший элемент массива: ${max}, наименьший: ${min}`)
+    }
+
+    function ex_9() {
+        let arr = [];
+        let n = +prompt(`Введите количество элементов в массиве: `);
+        let element;
+        for (let i = 0; i < n; i++) {
+            element = +prompt(`Индекс элемента: ${i}\nЭлемент: `);
+            arr.push(element);
+        }
+        console.log("Массив: " + arr);
+
+        let element_delete = +prompt("Какой элемент массива вы желаете удалить?\nУкажите ИНДЕКС: ");
+        for (let i = element_delete; i < n; i++) {
+            arr[i] = arr[i + 1];
+        }
+
+        console.log(arr)
+    }
+
+    function ex_10() {
+        let arr = [];
+        let n = +prompt(`Введите количество элементов в массиве: `);
+        let element;
+        for (let i = 0; i < n; i++) {
+            element = +prompt(`Индекс элемента: ${i}\nЭлемент: `);
+            arr.push(element);
+        }
+        console.log("Массив: " + arr);
+
+        let element_add = +prompt("Какой элемент массива Вы желаете добавить?: ");
+        let element_index = +prompt("После какого элемента Вы желаете впихнуть элемент? Укажите индекс: ");
+
+        for (let i = n; i > element_index; i--) {
+            arr[i] = arr[i - 1];
+        }
+        arr[element_index + 1] = element_add;
+
+        console.log("Обновлённый массив: " + arr);
+    }
+</script>
 </body>
 </html>
