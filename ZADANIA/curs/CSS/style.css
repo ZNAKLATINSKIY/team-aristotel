@@ -258,6 +258,7 @@ body {
 	justify-content: center;
 	gap: 50px;
 	padding-top: 100px;
+	padding-bottom: 100px;
 }
 .block__border {
 	border: 1px solid rgba(0, 0, 0, 0.14);
@@ -269,6 +270,8 @@ body {
 	flex-direction: column;
 }
 .block__offer > a {
+	position: relative;
+	display: inline-block;
 	text-decoration: none;
 	font-family: var(--font-family), sans-serif;
 	font-weight: 400;
@@ -277,7 +280,6 @@ body {
 	text-transform: uppercase;
 	color: #000;
 	padding-top: 30px;
-	padding-bottom: 30px;
 }
 .block__offer > a::after {
 	content: "";
@@ -285,12 +287,12 @@ body {
 	left: 0;
 	bottom: 0;
 	width: 0;
-	height: 2px; /* Толщина линии */
-	background-color: #E44933; /* Цвет подчеркивания */
-	transition: width 0.3s ease; /* Длительность и тип анимации */
+	height: 2px;
+	background-color: #E44933;
+	transition: width 0.3s ease;
 }
 
 .block__offer > a:hover::after {
-	width: 100%; /* Линия плавно растягивается по всей ширине текста */
+	width: 100%;
 }
 
