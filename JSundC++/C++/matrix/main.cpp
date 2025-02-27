@@ -59,6 +59,61 @@ void ex_1() {
 	cout << newMatrixStr;
 }
 
+void ex_2() {
+    int n;
+    cout << "Введите количество массивов в массиве: ";
+    cin >> n;
+    int elements;
+    cout << "Введите количество элементов в одном массиве: ";
+    cin >> elements;
+
+    
+    vector<vector<int>> matrix(elements, vector<int>(n));
+    string matrixStr = "";
+    cout << endl << endl;
+    
+    cout << "Введите элементы матрицы." << endl;
+    cout << "*****************************" << endl;
+    for (int i = 0; i < elements; i++) {
+        for (int j = 0; j < n; j++) {
+            cout << "Индекс массива: " << j << endl;
+            cout << "Индекс элемента: " << i << endl;
+            cout << "Элемент: ";
+            cin >> matrix[i][j];
+        }
+    }
+    
+    for (int i = 0; i < elements; i++) {
+        for (int j = 0; j < n; j++) {
+            matrixStr += to_string(matrix[i][j]) + " ";
+        }
+        matrixStr += "\n";
+    }
+    cout << "Матрица: " << endl << matrixStr;
+    
+    
+    int n_stroka;
+    cout << "Введите индекс строки, которую желаете заменить на 0 - ";
+    cin >> n_stroka;
+    
+    for (int i = 0; i < elements + 1; i++) {
+        for (int j = 0; j < n; j++); {
+            matrix[n_stroka][i] = 0;
+        }
+    }
+    
+    string newMatrixStr = "";
+    for (int i = 0; i < elements; i++) {
+        for (int j = 0; j < n; j++) {
+            newMatrixStr += to_string(matrix[i][j]) + " ";
+        }
+        newMatrixStr += "\n";
+    }
+    
+    cout << "Обновлённая матрица: " << endl << newMatrixStr;
+    
+}
+
 int main()
 {
 	setlocale(LC_ALL, "ru");
