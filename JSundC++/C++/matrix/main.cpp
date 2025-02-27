@@ -161,6 +161,53 @@ void ex_3() {
     
 }
 
+void ex_4() {
+    int n;
+    cout << "Введите количество массивов в матрице: ";
+    cin >> n;
+    int elements;
+    cout << "Введите количество элементов в одном массиве: ";
+    cin >> elements;
+    
+    vector<vector<int>> matrix(elements, vector<int>(n));
+    string matrixStr = "";
+    cout << endl << endl;
+    
+    cout << "Введите элементы матрицы." << endl;
+    cout << "*****************************" << endl;
+    for (int i = 0; i < elements; i++) {
+        for (int j = 0; j < n; j++) {
+            cout << "Индекс массива: " << j << endl;
+            cout << "Индекс элемента: " << i << endl;
+            cout << "Элемент: ";
+            cin >> matrix[i][j];
+        }
+    }
+    for (int i = 0; i < elements; i++) {
+        for (int j = 0; j < n; j++) {
+            matrixStr += to_string(matrix[i][j]) + " ";
+        }
+        matrixStr += "\n";
+    }
+    cout << "Матрица:" << endl << matrixStr;
+    
+    string newMatrixStr = "";
+    for (int i = elements-1; i >= 0; i--) {
+        for (int j = 0; j < n; j++) {
+            matrix[i][j] = 0;
+            i--;
+        }
+    }
+    for (int i = 0; i < elements; i++) {
+        for (int j = 0; j < n; j++) {
+            newMatrixStr += to_string(matrix[i][j]) + " ";
+        }
+        newMatrixStr += "\n";
+    }
+    
+    cout << "Обновлённая матрица:" << endl << newMatrixStr;
+}
+
 int main()
 {
 	setlocale(LC_ALL, "ru");
