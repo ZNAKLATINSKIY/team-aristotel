@@ -208,6 +208,33 @@ void ex_4() {
     cout << "Обновлённая матрица:" << endl << newMatrixStr;
 }
 
+void ex_5() {
+  int n;
+  cout << "Введите предел таблицы Пифагора (не включая сам предел): ";
+  cin >> n;
+
+  vector<vector<int>> matrix(n, vector<int>(n));
+  string matrixStr = "";
+  cout << endl << endl;
+
+  for (int i = 1; i < n; i++) {
+   for (int j = 1; j < n; j++) {
+    matrix[i][j] = i*j;
+   }
+  }
+	
+  for (int i = 1; i < n; i++) {
+   for (int j = 1; j < n; j++) {
+    matrixStr += to_string(matrix[i][j]) + " ";
+   }
+   matrixStr += "\n";
+  }
+	
+  cout << endl << "***********************" << endl;
+  cout << "Матрица:" << endl << matrixStr;
+
+ }
+
 int main()
 {
 	setlocale(LC_ALL, "ru");
