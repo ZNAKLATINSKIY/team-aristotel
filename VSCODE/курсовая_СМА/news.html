@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Новости</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/navbar_styles.css">
+    <link rel="stylesheet" href="./styles/footer_styles.css">
+    <link rel="stylesheet" href="./styles/news_style.css">
 </head>
 <body>
     <header class="header">
@@ -16,21 +19,21 @@
             </div>
             <nav class="nav">
                 <ul>
-                    <li><a href="" class="home">Home</a></li>
-                    <li><a href="" class="about">ABOUT THE CLUB</a></li>
+                    <li><a href="./index.html" class="home">Главная</a></li>
+                    <li><a href="./about.html" class="about">О клубе</a></li>
                     <li><a href="" class="FAQ">FAQ</a></li>
-                    <li><a href="" class="news">NEWS</a></li>
-                    <li><a href="" class="rules">RULES</a></li>
-                    <li><a href="" class="contacts">CONTACTS</a></li>
+                    <li><a href="./news.html" class="news_nav">Новости</a></li>
+                    <li><a href="" class="rules">Правила</a></li>
+                    <li><a href="" class="contacts">Контакты</a></li>
                 </ul>
-                <button class="login header__button">LOGIN</button>
-                <button class="signup header__button">SIGN UP</button>
+                <button class="login header__button">ВХОД</button>
+                <button class="signup header__button">РЕГИСТРАЦИЯ</button>
             </nav>
         </div>
         <div class="header__content">
             <div class="content__left">
                 <div class="header__content-text">
-                    <h1 class="header__title">NEWS</h1>
+                    <h1 class="header__title">Новости</h1>
                </div>
             </div>
             <div class="content__right">
@@ -49,5 +52,120 @@
             </div>
         </div>
     </header>
+    <main class="main">
+        <section class="news">
+            <div class="container">
+
+                <div class="news__content">
+                    <div class="news__content-news">
+                        <div class="content__news-card">
+                            <div class="card__img">
+                                <img src="./images/ecommerce.svg" alt="рис11">
+                                <div class="filter">
+                                    <button class="news__card-button">Подробнее</button>
+                                </div>
+                            </div>
+                            <div class="card__text">
+                                <h3>Левандовский побил рекорд Бундеслиги</h3>
+                                <span>Роберт Левандовский установил новый рекорд по количеству голов в одном сезоне Бундеслиги, побив достижение Герда Мюллера.</span>
+                            </div>
+                        </div>
+                        <div class="content__news-card">
+                            <div class="card__img">
+                                <img src="./images/ecommerce.svg" alt="рис11">
+                                <div class="filter">
+                                    <button class="news__card-button">Подробнее</button>
+                                </div>
+                            </div>
+                            <div class="card__text">
+                                <h3>Роналду возвращается в Манчестер Юнайтед</h3>
+                                <span>Криштиану Роналду подписал контракт с Манчестер Юнайтед, возвращаясь в клуб, который принес ему мировую славу.</span>
+                            </div>
+                        </div>
+                        <div class="content__news-card">
+                            <div class="card__img">
+                                <img src="./images/ecommerce.svg" alt="рис11">
+                                <div class="filter">
+                                    <button class="news__card-button">Подробнее</button>
+                                </div>
+                            </div>
+                            <div class="card__text">
+                                <h3>Салах и Мане выводят Ливерпуль на первое место</h3>
+                                <span>Голы Мохамеда Салаха и Садио Мане помогают Ливерпулю возглавить таблицу АПЛ.</span>
+                            </div>
+                        </div>
+                        <div class="content__news-card">
+                            <div class="card__img">
+                                <img src="./images/ecommerce.svg" alt="рис11">
+                                <div class="filter">
+                                    <button class="news__card-button">Подробнее</button>
+                                </div>
+                            </div>
+                            <div class="card__text">
+                                <h3>Погба может вернуться в Ювентус</h3>
+                                <span>Пол Погба рассматривает вариант возвращения в Ювентус летом, так как его контракт с Манчестер Юнайтед подходит к концу.</span>
+                            </div>
+                        </div>
+                        <div class="content__news-card">
+                            <div class="card__img">
+                                <img src="./images/ecommerce.svg" alt="рис11">
+                                <div class="filter">
+                                    <button class="news__card-button">Подробнее</button>
+                                </div>
+                            </div>
+                            <div class="card__text">
+                                <h3>Барселона подписала бразильского таланта</h3>
+                                <span>Барселона подписала 18-летнего бразильского полузащитника, который вскоре может стать частью основной команды.</span>
+                            </div>
+                        </div>
+                        <div class="content__news-card">
+                            <div class="card__img">
+                                <img src="./images/ecommerce.svg" alt="рис11">
+                                <div class="filter">
+                                    <button class="news__card-button">Подробнее</button>
+                                </div>
+                            </div>
+                            <div class="card__text">
+                                <h3>Дешам продлил контракт с Францией</h3>
+                                <span>Дидье Дешам продлил контракт с национальной сборной Франции до 2026 года.</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__logo">
+                    <img src="images/logo__footer.svg" alt="logotype">
+                </div>
+                <div class="footer__links">
+                    <ul>
+                        <li><a href="./index.html" class="home">Главная</a></li>
+                        <li><a href="./about.html" class="about">О клубе</a></li>
+                        <li><a href="" class="FAQ">FAQ</a></li>
+                        <li><a href="./news.html" class="news_nav">Новости</a></li>
+                        <li><a href="" class="rules">Правила</a></li>
+                        <li><a href="" class="contacts">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer__images-links">
+                    <a href=""><img src="./images/footer__insta.svg" alt="instagram"></a>
+                    <a href=""><img src="./images/footer__youtube.svg" alt="youtube"></a>
+                    <a href=""><img src="./images/footer__facebook.svg" alt="facebook"></a>
+                    <a href=""><img src="./images/footer__twitter.svg" alt="twitter"></a>
+                </div>
+                <div class="footer__content-copyright">
+                    <span class="copyright__footer-text">Copyright © 2024 Bayern Token. All rights reserved.</span>
+                </div>
+                <div class="footer__content-back">
+                    <span class="footer__token-text">FC BAYERN FAN TOKEN</span>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

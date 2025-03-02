@@ -1,0 +1,113 @@
+.navbar {
+    padding-top: 40px;
+    padding-inline: 135px;
+    display: flex;
+    justify-content: space-between;
+}
+.nav {
+    display: flex;
+    align-items: center;
+}
+ul {
+    display: flex;
+    gap: 40px;
+    margin: 0;
+}
+li {
+    list-style-type: none;
+}
+ul > li > a {
+    font-family: var(--font-family), sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 167%;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.home {
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    text-underline-offset: 4px;
+    color: #dc052d;
+}
+.navbar__login-register {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.header__button {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+    width: 130px;
+    height: 50px;
+    border-radius: 30px;
+    font-family: var(--font-family), sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 167%;
+    color: #fff;
+    border: none;
+    transition: 0.4s;
+
+    &:hover {
+        background: white;
+        color: black;
+        border: 1px solid black;
+    }
+}
+.login {
+    background: #dc052d;
+    margin-left: 60px;
+}
+.signup {
+    background: #0066b2;
+    margin-left: 20px;
+    width: 200px;
+}
+
+@media (max-width: 1440px) {
+    .logotype > img {
+        width: 75px;
+    }
+    .header__button {
+        width: 100px;
+    }
+    .header__button {
+        width: 100px !important;
+    }
+    .signup {
+        width: 170px !important;
+    }
+}
+@media (max-width: 1024px) {
+    .navbar {
+        justify-content: space-around;
+        padding-inline: 5px;
+    }
+    .logotype {
+        display: none;
+    }
+    .header__button {
+        width: 100px;
+        font-size: 15px;
+    }
+    .signup {
+        width: 150px;
+    }
+    ul > li > a {
+        font-size: 15px;
+    }
+}
+@media (max-width: 768px) {
+    .navbar {
+        justify-content: center;
+    }
+    .nav {
+        display: block;
+    }
+    .header__button {
+        margin-top: 60px;
+        margin-left: 120px;
+    }
+}
