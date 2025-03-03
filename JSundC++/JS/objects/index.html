@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Объекты</title>
+</head>
+<body>
+    <script>
+        let buy_list = [
+            {
+                name: 'Хлеб',
+                price: 20,
+                count: 1,
+                buy: true
+            },
+            {
+                name: 'Молоко',
+                price: 40,
+                count: 1,
+                buy: true,
+            },
+            {
+                name: 'Масло',
+                price: 60,
+                count: 1,
+                buy: false,
+            },
+            {
+                name: 'Сыр',
+                price: 30,
+                count: 1,
+                buy: false,
+            }
+        ]
+
+        function print_buy_list() {
+            for (let i = 0; i < buy_list.length; i++) {
+                if (!buy_list[i].buy) {
+                    console.log(buy_list[i].name + ' - ' + buy_list[i].price + ' руб.' + ' - куплено');
+                }
+            }
+            for (let i = 0; i < buy_list.length; i++) {
+                if (buy_list[i].buy) {
+                    console.log(buy_list[i].name + ' - ' + buy_list[i].price + ' руб.' + ' - не куплено');
+                }
+            }
+        }
+
+        function buyListAdd(product, price, count) {
+            for(let i = 0; i < buy_list.length; i++) {
+                if (buy_list[i].name === product) {
+                    buy_list[i].count += 1;
+                } else {
+                    buy_list.push({
+                        name: product,
+                        price: price,
+                        count: count,
+                        buy: false,
+                    });
+                }
+            }
+        }
+
+        function buyProduct(product) {
+            for (let i = 0; i < buy_list.length; i++) {
+                if (buy_list[i].name === product) {
+                    buy_list[i].buy = true;
+                }
+            }
+        }
+
+
+        let academyRooms = [
+            {
+                name: 'Аудитория 1',
+                places: 19,
+                faculty: 'Экономический',
+            },
+            {
+                name: 'Аудитория 2',
+                places: 14,
+                faculty: 'Технический',
+            },
+            {
+                name: 'Аудитория 3',
+                places: 17,
+                faculty: 'Математический',
+            },
+            {
+                name: 'Аудитория 4',
+                places: 12,
+                faculty: 'Юридический',
+            },
+            {
+                name: 'Аудитория 5',
+                places: 18,
+                faculty: 'Технический',
+            },
+        ]
+        let academyGroup = {
+            name: "ТИС",
+            places: 17,
+            faculty: 'Технический',
+        }
+        let academyGroup_1 = {
+            name: "ЮРИ",
+            places: 18,
+            faculty: 'Юридический',
+        }
+
+        function academyPrint() {
+            for (let i = 0; i < academyRooms.length; i++) {
+                console.log(academyRooms[i].name + ' - \n' +
+                    'Мест: ' + academyRooms[i].places + '\n' +
+                    'Факультет: ' + academyRooms[i].faculty);
+            }
+        }
+
+        function academyRoomFaculty(faculty) {
+            for (let i = 0; i < academyRooms.length; i++) {
+                if (academyRooms[i].faculty === faculty) {
+                    console.log("Подходящие аудитории:\n" + academyRooms[i].name + ' -\n' + 'Мест: ' + academyRooms[i].places)
+                }
+            }
+        }
+
+        function academyGroupSort(group) {
+            let no_error = 0;
+            for (let i = 0; i < academyRooms.length; i++) {
+                if (group.places <= academyRooms[i].places && group.faculty === academyRooms[i].faculty) {
+                    no_error++;
+                    console.log("Подходящие аудитории:\n" + academyRooms[i].name + '.\n' + 'Мест: ' + academyRooms[i].places + '.');
+                }
+            }
+            if (no_error === 0) {
+                console.log("Подходящих аудиторий не нашлось.");
+            }
+        }
+
+        function academyPlacesSort() {
+            let sort_places = [];
+            for (let i = 0;  i < academyRooms.length; i++) {
+                sort_places.push(academyRooms[i].places);
+            }
+            console.log(sort_places)
+            for (let i = sort_places.length-1; i >= 0; i--) {
+                for (let j = 0; j < sort_places.length; j++) {
+                    if (sort_places[j] > sort_places[j+1]) {
+                        let temp = sort_places[j];
+                        sort_places[j] = sort_places[j+1];
+                        sort_places[j+1] = temp;
+                    }
+                }
+            }
+            console.log("Отсортированные аудитории по кол-ву мест:\n" + sort_places);
+        }
+
+        academyPlacesSort();
+    </script>
+</body>
+</html>
