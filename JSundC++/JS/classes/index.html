@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Классы</title>
+</head>
+<body>
+    <script>
+
+        class User {
+            constructor(name, age, role="user") {
+                this.name = name;
+                this.age = age;
+                this.role = role;
+            }
+
+            describe() {
+                return `Имя пользователя: ${this.name}\nВозраст пользователя: ${this.age}\nРоль пользователя: ${this.role}`;
+            }
+        }
+
+        class Admin extends User {
+            constructor(name, age, pass, role="user", func = ["Удаление пользователей"], session="admin") {
+                super(name, age, role);
+                this.pass = pass;
+                this.func = func;
+                this.session = session;
+            }
+
+            deleteUser(user) {
+                return `Пользователь ${user.name} был удалён.`;
+            }
+        }
+
+
+        class Moderator extends User {
+            constructor(name, age, categories, role="user", pass, users="all") {
+                super(name, age, role);
+                this.categories = categories;
+                this.pass = pass;
+                this.users = users;
+            }
+
+            editUser(user, newName) {
+                user.name = newName;
+                return user;
+            }
+        }
+
+    </script>
+</body>
+</html>
