@@ -140,25 +140,32 @@
             }
         }
 
-        function academyPlacesSort() {
-            let sort_places = [];
-            for (let i = 0;  i < academyRooms.length; i++) {
-                sort_places.push(academyRooms[i].places);
+        function academyPlacesSort(academyRooms) {// Сортировка массива по количеству мест
+                for (let i = 0; i < academyRooms.length - 1; i++) {
+                    for (let j = 0; j < academyRooms.length - i - 1; j++) {
+                        if (academyRooms[j + 1].places < academyRooms[j].places) {
+                            let temp = academyRooms[j];
+                            academyRooms[j] = academyRooms[j + 1];
+                            academyRooms[j + 1] = temp;
+                        }
+                    }
+                }
+                console.log(academyRooms);
             }
-            console.log(sort_places)
-            for (let i = sort_places.length-1; i >= 0; i--) {
-                for (let j = 0; j < sort_places.length; j++) {
-                    if (sort_places[j] > sort_places[j+1]) {
-                        let temp = sort_places[j];
-                        sort_places[j] = sort_places[j+1];
-                        sort_places[j+1] = temp;
+
+
+        function academyAlphabetSort(academyRooms) {// Сортировка массива по алфавиту
+            for (let i = 0; i < academyRooms.length - 1; i++) {
+                for (let j = 0; j < academyRooms.length - i - 1; j++) {
+                    if (academyRooms[j + 1].name < academyRooms[j].name) {
+                        let temp = academyRooms[j];
+                        academyRooms[j] = academyRooms[j + 1];
+                        academyRooms[j + 1] = temp;
                     }
                 }
             }
-            console.log("Отсортированные аудитории по кол-ву мест:\n" + sort_places);
+            console.log(academyRooms);
         }
-
-        academyPlacesSort();
     </script>
 </body>
 </html>
