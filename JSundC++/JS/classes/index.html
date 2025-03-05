@@ -35,9 +35,19 @@
             }
         }
 
+        class SuperAdmin extends Admin {
+            constructor(name, age, pass, role="user", func = ["Удаление пользователей"], session="admin") {
+                super(name, age, role, func, session);
+            }
+
+
+            banUser(user) {
+                user.banned = true;
+            }
+        }
 
         class Moderator extends User {
-            constructor(name, age, categories, role="user", pass, users="all") {
+            constructor(name, age, categories, pass, role="user", users="all") {
                 super(name, age, role);
                 this.categories = categories;
                 this.pass = pass;
@@ -48,6 +58,67 @@
                 user.name = newName;
                 return user;
             }
+        }
+
+        let usersArray = [];
+        let countUsers = +prompt("Введите количество пользователей: ");
+        for(let i = 0; i < countUsers; i++) {
+            let questionRole = prompt("Вы желаете добавить Пользователя, Модератора или Админа?\n(Введите: user, moder, admin)");
+            if (questionRole === "user") {
+                usersArray[i] = new User (
+                    prompt("Введите имя Пользователя: "),
+                    +prompt("Введите возраст Пользователя: "),
+                    prompt("Введите роль Пользователя: ")
+                )
+            }
+            if (questionRole === "moder") {
+                usersArray[i] = new Moderator (
+                    prompt("Введите имя Модератора: "),
+                    +prompt("Введите возраст Модератора: "),
+                    prompt("Введите категорию Модератора: "),
+                    +prompt("Введите пароль Модератора: "),
+                    prompt("Введите роль Модератора: "),
+                    prompt("Введите пользователей, имена которых Модератор имеет право изменять: ")
+                )
+            }
+            if(questionRole === "admin") {
+                usersArray[i] = new Admin (
+                    prompt("Введите имя Админа: "),
+                    +prompt("Введите возраст Админа: "),
+                    +prompt("Введите пароль Админа: "),
+                    prompt("Введите роль Админа: "),
+                )
+            }
+        }
+        for(let i = 0; i < countUsers; i++) {
+            console.log(usersArray[i].describe());
+        }
+        console.log("**********************\n********************");
+        for(let i = 0; i < countUsers; i++) {
+            if (usersArray[i].role === 'moder') {
+                for(let j = 0; j < countUsers; j++) {
+                    if (usersArray[j].role === 'user') {
+                        if (usersArray[j].banned === true) {
+                            continue;
+                        } else {
+                            usersArray[i].editUser(usersArray[j], 'Тест');
+                            break;
+                        }
+                    }
+                    j++;
+                }
+            }
+            if (usersArray[i].role === 'admin') {
+                for (let j = countUsers-1; j >= 0; j--) {
+                    if (usersArray[j].role === 'user') {
+                        console.log(usersArray[i].deleteUser(usersArray[j]));
+                        break;
+                    }
+                }
+            }
+        }
+        for(let i = 0; i < countUsers; i++) {
+            console.log(usersArray[i].describe());
         }
 
     </script>
