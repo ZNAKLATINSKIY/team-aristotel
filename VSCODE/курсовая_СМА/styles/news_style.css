@@ -66,6 +66,9 @@
         margin-top: 100px;
         margin-bottom: 40px;
     }
+    .header__button {
+        margin-top: 65px !important;
+    }
     .content__right {
         flex-direction: row;
     }
