@@ -66,7 +66,29 @@ ul > li > a {
     width: 200px;
 }
 
-@media (max-width: 1440px) {
+@media (min-width: 1601px) {
+    .logotype {
+        width: 100px;
+    }
+    .header__button {
+        width: 150px;
+    }
+    .signup {
+        width: 220px;
+    }
+}
+@media (min-width: 1444px) and (max-width: 1600px) {
+    .logotype > img {
+        width: 90px;
+    }
+    .header__button {
+        width: 120px;
+    }
+    .signup {
+        width: 180px;
+    }
+}
+@media (max-width: 1443px) {
     .logotype > img {
         width: 75px;
     }
@@ -74,13 +96,42 @@ ul > li > a {
         width: 100px;
     }
     .header__button {
-        width: 100px !important;
+        width: 100px;
     }
     .signup {
-        width: 170px !important;
+        width: 170px;
     }
 }
-@media (max-width: 1024px) {
+
+@media (min-width: 1310px) and (max-width: 1442px) {
+    .logotype {
+        width: 70px;
+    }
+    .header__button {
+        width: 100px;
+    }
+    .signup {
+        width: 160px;
+    }
+    .navbar {
+        padding-inline: 100px;
+    }
+}
+@media (min-width: 1261px) and (max-width: 1321px) {
+    .logotype {
+        display: none;
+    }
+    .header__button {
+        width: 100px;
+    }
+    .signup {
+        width: 160px;
+    }
+    .navbar {
+        padding-inline: 100px;
+    }
+}
+@media (max-width: 1260px) {
     .navbar {
         justify-content: space-around;
         padding-inline: 5px;

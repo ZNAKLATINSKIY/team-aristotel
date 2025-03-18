@@ -19,7 +19,6 @@ body {
     background-repeat: no-repeat;
 }
 .header {
-    min-height: 1070px;
     background-image: url(/images/header_background.svg);
     background-size: 100%;
     background-repeat: no-repeat;
@@ -152,8 +151,8 @@ h2 {
 .economics__content {
     margin-top: 84px;
     display: flex;
-    justify-content: space-evenly;
-    gap: 100px;
+    justify-content: center;
+    gap: 200px;
 }
 .economics__content-circle {
     position: relative;
@@ -313,15 +312,37 @@ h2 {
     min-height: 71px;
     background: #31000f;
     border: 1px solid #fff;
+    display: flex;
+    align-items: center;
+}
+#tokenTextCopy {
+    width: 100%;
     font-family: var(--font-family), sans-serif;
     font-weight: 600;
     font-size: 20px;
     letter-spacing: 0.05em;
     text-transform: uppercase;
     color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
+    background: none;
+    border: none;
+    outline: none;
+}
+.custom-alert {
+    width: 300px;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: green; /* Зеленый цвет */
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    display: none; /* Скрыто по умолчанию */
+    z-index: 1000; /* Чтобы оно было поверх всего */
 }
 .token__content-button {
     display: flex;
@@ -660,332 +681,22 @@ h2 {
 .desktop-none {
     display: none;
 } /* класс для удаления добавления при адаптиве*/
-
-@media (max-width: 1440px) {
-    .desktop-none {
-        display: block;
-    }
-    .mobile-none {
-        display: none;
-    }
-    .container {
-        padding-inline: 50px;
-    }
-    .header {
-        min-height: 800px;
-    }
-    .header__title {
-        font-size: 90px;
-    }
-    .header__parag {
-        font-size: 20px;
-    }
-    .header__content {
-        margin-top: 100px;
-    }
-    .header__content-buttons {
-        margin-top: 40px;
-    }
-    .header__button-bottom {
-        width: 170px;
-        height: 50px;
-        font-size: 16px;
-    }
-    h2 {
-        font-size: 100px;
-    }
-    .purshared {
-        margin-top: 100px;
-    }
-    .purshared__lines {
-        margin-top: 60px;
-        display: flex;
-    }
-    .purshared__lines-block {
-        width: 90vw;
-    }
-    .lines__block-dark {
-        width: 15%;
-    }
-    .lines__block-light > span {
-        font-size: 30px;
-    }
-    .lines__block-light {
-        width: 85%;
-    }
-    .economics {
-        margin: 100px 0;
-    }
-    .economics__title {
-        padding-right: 20px;
-    }
-    .economics__content {
-        margin-top: 50px;
-        justify-content: right;
-        gap: 250px;
-    }
-    .economic__red-laptop {
-        display: none;
-    }
-    .economics__content-circle {
-        position: relative;
-    }
-    .economics__content-text > h3 {
-        font-size: 30px;
-        max-width: 400px;
-    }
-    .economics__content-text > p {
-        font-size: 16px;
-        max-width: 400px;
-    }
-    .circle__text {
-        font-size: 16px;
-    }
-    .circle__reserve {
-        left: -5px;
-        top: -12px;
-    }
-    .circle__football {
-        left: -220px;
-        top: 98px;
-        max-width: 250px;
-    }
-    .circle__ido {
-        left: -120px;
-        top: 340px;
-        max-width: 100px;
-    }
-    .circle__staking {
-        top: 190px
-    }
-    .circle__dev {
-        left: -90px;
-        top: 475px;
-    }
-    .about__content {
-        gap: 20px;
-    }
-    .about__button {
-        width: 90vw;
-    }
-    .about__text-button > h3, .about__text-button > p {
-        font-size: 25px;
-        max-width: 90vw;
-    }
-    .about__text-button > h3 {
-        font-size: 50px;
-    }
-    .list__one {
-        left: -100px;
-    }
-    .list__one-down {
-        left: -140px;
-    }
-    .list__two {
-        right: -10px;
-    }
-    .list__two-down {
-        right: -140px;
-    }
-    .list__three > li {
-        max-width: 350px;
-    }
-    .list__three {
-        right: -190px;
-    }
-    .card__text > h3 {
-        font-size: 25px;
-    }
-    .card__text > span {
-        font-size: 20px;
-    }
-    .strategy__content-laptop {
-        display: none;
-    }
+.economic__red-laptop {
+    max-width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px
 }
-@media (max-width: 1024px) {
-    .container {
-        padding-inline: 20px;
-    }
-    .header {
-        min-height: 600px;
-    }
-    .header__content {
-        margin-top: 25px;
-        padding-inline: 50px;
-    }
-    .header__title {
-        font-size: 70px;
-    }
-    .header__parag {
-        font-size: 20px;
-    }
-    .header__content-buttons {
-        margin-top: 40px;
-    }
-    .header__button-bottom {
-        width: 180px;
-        height: 50px;
-        font-size: 16px;
-    }
-    h2 {
-        font-size: 80px;
-    }
-    .purshared {
-        margin-top: 50px;
-    }
-    .purshared__lines {
-        margin-top: 60px;
-        display: flex;
-    }
-    .purshared__lines-block {
-        width: 90vw;
-    }
-    .lines__block-dark {
-        width: 15%;
-    }
-    .lines__block-light > span {
-        font-size: 30px;
-    }
-    .lines__block-light {
-        width: 85%;
-    }
-    .economics {
-        margin: 100px 0;
-    }
-    .economics__title {
-        text-align: center;
-    }
-    .economics__content {
-        margin-top: 50px;
-        justify-content: center;
-        gap: 0;
-    }
-    .economics__content-circle {
-        display: none;
-    }
-    .economics__content-text {
-        gap: 0;
-        align-items: center;
-    }
-    .economics__content-text > h3 {
-        padding-bottom: 20px;
-        font-size: 40px;
-        max-width: 900px;
-        text-align: center;
-    }
-    .economics__content-text > p {
-        font-size: 25px;
-        max-width: 800px;
-        text-align: center;
-    }
-    .economic__red-laptop {
-        max-width: 800px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 15px
-    }
-    .economics__laptop-span {
-        font-size: 25px;
-        text-align: center;
-        color: #fff;
-    }
-    .economics__laptop-line {
-        height: 200px;
-        background: #dc052d;
-        width: 1px;
-    }
-    .about__text-button > h3 {
-        text-align: center;
-        font-size: 60px;
-    }
-    .token__content {
-        margin-top: 50px;
-    }
-    .strategy__content {
-        display: none;
-    }
-    .strategy__content-laptop {
-        display: flex;
-        justify-content: center;
-        margin-top: 100px;
-    }
-    .strategy__lis {
-        max-width: 305px;
-    }
-    .strategy__content-listleft {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        margin-right: 30px;
-    }
-    .strategy__content-listright {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        margin-left: 30px;
-    }
-    .content__lists-list {
-        position: static;
-    }
-    .strategy__content-listline {
-        min-height: 1200px;
-        width: 3px;
-        background-color: #dc052d;
-    }
-    .strategy__content-circles {
-        display: flex;
-        flex-direction: column;
-        gap: 280px;
-        position: relative;
-        right: 13px;
-    }
-    .circle {
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        position: static !important;
-        margin: 0 !important;
-    }
-    .strategy__content-qright {
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        gap: 590px;
-        right: 338px;
-    }
-    .strategy__content-qleft {
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        left: 425px;
-        margin-top: 315px;
-        gap: 590px;
-    }
-    .q3, .q2025 {
-        color: #ac7878;
-    }
-    .list__one {
-        margin-left: 40px;
-    }
-    .list__two {
-        margin-left: 135px;
-    }
-    .list__three {
-        position: relative;
-        right: -20px;
-        top: 57px;
-    }
-    .list__one-down, .list__two-down {
-        margin-left: -20px;
-        margin-top: 10px;
-    }
-    .list__two-down {
-        position: relative;
-        right: 0;
-        top: -12px;
-    }
+.economics__laptop-span {
+    font-size: 25px;
+    text-align: center;
+    color: #fff;
+}
+.economics__laptop-line {
+    height: 200px;
+    background: #dc052d;
+    width: 1px;
 }
 @media (max-width: 768px) {
     .container {
@@ -1096,3 +807,594 @@ h2 {
         margin-bottom: 5px;
     }
 }
+@media (max-width: 1024px) {
+    .container {
+        padding-inline: 20px;
+    }
+    .header {
+        min-height: 600px;
+    }
+    .header__content {
+        margin-top: 25px;
+        padding-inline: 50px;
+    }
+    .header__title {
+        font-size: 70px;
+    }
+    .header__parag {
+        font-size: 20px;
+    }
+    .header__content-buttons {
+        margin-top: 40px;
+    }
+    .header__button-bottom {
+        width: 180px;
+        height: 50px;
+        font-size: 16px;
+    }
+    h2 {
+        font-size: 80px;
+    }
+    .purshared {
+        margin-top: 50px;
+    }
+    .purshared__lines {
+        margin-top: 60px;
+        display: flex;
+    }
+    .purshared__lines-block {
+        width: 90vw;
+    }
+    .lines__block-dark {
+        width: 15%;
+    }
+    .lines__block-light > span {
+        font-size: 30px;
+    }
+    .lines__block-light {
+        width: 85%;
+    }
+    .economics {
+        margin: 100px 0;
+    }
+    .economics__title {
+        text-align: center;
+    }
+    .economics__content {
+        margin-top: 50px;
+        justify-content: center;
+        gap: 0;
+    }
+    .economics__content-circle {
+        display: none;
+    }
+    .economics__content-text {
+        gap: 0;
+        align-items: center;
+    }
+    .economics__content-text > h3 {
+        padding-bottom: 20px;
+        font-size: 40px;
+        max-width: 900px;
+        text-align: center;
+    }
+    .economics__content-text > p {
+        font-size: 25px;
+        max-width: 800px;
+        text-align: center;
+    }
+
+    .about__text-button > h3 {
+        text-align: center;
+        font-size: 60px;
+    }
+    .token__content {
+        margin-top: 50px;
+    }
+    .strategy__content {
+        display: none;
+    }
+    .strategy__content-laptop {
+        display: flex;
+        justify-content: center;
+        margin-top: 100px;
+    }
+    .strategy__lis {
+        max-width: 305px;
+    }
+    .strategy__content-listleft {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-right: 30px;
+    }
+    .strategy__content-listright {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-left: 30px;
+    }
+    .content__lists-list {
+        position: static;
+    }
+    .strategy__content-listline {
+        min-height: 1200px;
+        width: 3px;
+        background-color: #dc052d;
+    }
+    .strategy__content-circles {
+        display: flex;
+        flex-direction: column;
+        gap: 280px;
+        position: relative;
+        right: 13px;
+    }
+    .circle {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        position: static !important;
+        margin: 0 !important;
+    }
+    .strategy__content-qright {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        gap: 590px;
+        right: 338px;
+    }
+    .strategy__content-qleft {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        left: 425px;
+        margin-top: 315px;
+        gap: 590px;
+    }
+    .q3, .q2025 {
+        color: #ac7878;
+    }
+    .list__one {
+        margin-left: 40px;
+    }
+    .list__two {
+        margin-left: 135px;
+    }
+    .list__three {
+        position: relative;
+        right: -20px;
+        top: 57px;
+    }
+    .list__one-down, .list__two-down {
+        margin-left: -20px;
+        margin-top: 10px;
+    }
+    .list__two-down {
+        position: relative;
+        right: 0;
+        top: -12px;
+    }
+}
+@media (min-width: 1201px) and (max-width: 1438px) {
+
+    .mobile-none {
+        display: none;
+    }
+    .container {
+        padding-inline: 50px;
+    }
+    .header {
+        min-height: 700px;
+    }
+    .header__title {
+        font-size: 80px;
+    }
+    .header__parag {
+        font-size: 20px;
+    }
+    .header__content {
+        margin-top: 100px;
+    }
+    .header__content-buttons {
+        margin-top: 40px;
+    }
+    .header__button-bottom {
+        width: 170px;
+        height: 50px;
+        font-size: 16px;
+    }
+    h2 {
+        font-size: 90px;
+    }
+    .purshared {
+        margin-top: 100px;
+    }
+    .purshared__lines {
+        margin-top: 60px;
+        display: flex;
+    }
+    .purshared__lines-block {
+        width: 90vw;
+    }
+    .lines__block-dark {
+        width: 15%;
+    }
+    .lines__block-light > span {
+        font-size: 30px;
+    }
+    .lines__block-light {
+        width: 85%;
+    }
+    .economics {
+        margin: 100px 0;
+    }
+    .economics__title {
+        padding-right: 20px;
+    }
+    .economics__content {
+        margin-top: 50px;
+        justify-content: center;
+    }
+    .economics__content-circle {
+        display: none;
+    }
+    .economics__content-text {
+        justify-content: center;
+    }
+    .economic__red-laptop {
+        max-width: 1000px;
+    }
+    .economics__content-text > h3 {
+        font-size: 50px;
+        max-width: 1000px;
+        text-align: center;
+    }
+    .economics__content-text > p {
+        font-size: 25px;
+        max-width: 1000px;
+        text-align: center;
+    }
+    .about__title {
+        text-align: left;
+    }
+    .about__text-button > h3 {
+        max-width: 1000px;
+        text-align: center;
+        font-size: 50px;
+    }
+    .about__text-button > p {
+        font-size: 25px;
+        max-width: 1000px;
+        text-align: center;
+    }
+    .about__button {
+        width: 95vw;
+    }
+    .strategy__content {
+        display: none;
+    }
+
+    .strategy__content-laptop {
+        display: flex;
+        justify-content: center;
+        margin-top: 100px;
+    }
+    .strategy__lis {
+        max-width: 305px;
+    }
+    .strategy__content-listleft {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-right: 30px;
+    }
+    .strategy__content-listright {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-left: 30px;
+    }
+    .content__lists-list {
+        position: static;
+    }
+    .strategy__content-listline {
+        min-height: 1200px;
+        width: 3px;
+        background-color: #dc052d;
+    }
+    .strategy__content-circles {
+        display: flex;
+        flex-direction: column;
+        gap: 280px;
+        position: relative;
+        right: 13px;
+    }
+    .circle {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        position: static !important;
+        margin: 0 !important;
+    }
+    .strategy__content-qright {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        gap: 590px;
+        right: 338px;
+    }
+    .strategy__content-qleft {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        left: 425px;
+        margin-top: 315px;
+        gap: 590px;
+    }
+    .q3, .q2025 {
+        color: #ac7878;
+    }
+    .list__one {
+        margin-left: 40px;
+    }
+    .list__two {
+        margin-left: 135px;
+    }
+    .list__three {
+        position: relative;
+        right: -20px;
+        top: 57px;
+    }
+    .list__one-down, .list__two-down {
+        margin-left: -20px;
+        margin-top: 10px;
+    }
+    .list__two-down {
+        position: relative;
+        right: 0;
+        top: -12px;
+    }
+    .card_1600 {
+        display: block;
+    }
+
+}
+@media (min-width: 1439px) and (max-width: 1600px) {
+
+    .container {
+        padding-inline: 50px;
+    }
+    .header {
+        min-height: 800px;
+    }
+    .header__title {
+        font-size: 90px;
+    }
+    .header__parag {
+        font-size: 20px;
+    }
+    .header__content {
+        margin-top: 100px;
+    }
+    .header__content-buttons {
+        margin-top: 40px;
+    }
+    .header__button-bottom {
+        width: 170px;
+        height: 50px;
+        font-size: 16px;
+    }
+    h2 {
+        font-size: 100px;
+    }
+    .purshared {
+        margin-top: 100px;
+    }
+    .purshared__lines {
+        margin-top: 60px;
+        display: flex;
+    }
+    .purshared__lines-block {
+        width: 90vw;
+    }
+    .lines__block-dark {
+        width: 15%;
+    }
+    .lines__block-light > span {
+        font-size: 30px;
+    }
+    .lines__block-light {
+        width: 85%;
+    }
+    .economics {
+        margin: 100px 0;
+    }
+    .economics__title {
+        padding-right: 20px;
+    }
+    .economics__content {
+        margin-top: 50px;
+        justify-content: right;
+        gap: 250px;
+    }
+    .economic__red-laptop {
+        display: none;
+    }
+
+    .economics__content-text > h3 {
+        font-size: 30px;
+        max-width: 400px;
+    }
+    .economics__content-text > p {
+        font-size: 16px;
+        max-width: 400px;
+    }
+    .circle__text {
+        font-size: 16px;
+    }
+    .circle__reserve {
+        left: -5px;
+        top: -12px;
+    }
+    .circle__football {
+        left: -220px;
+        top: 98px;
+        max-width: 250px;
+    }
+    .circle__ido {
+        left: -120px;
+        top: 340px;
+        max-width: 100px;
+    }
+    .circle__staking {
+        top: 190px;
+    }
+    .about__button {
+        width: 95vw;
+    }
+    .list__one {
+        left: -100px;
+    }
+    .list__two {
+        right: -40px;
+    }
+    .list__one-down {
+        left: -140px;
+    }
+    .list__two-down {
+        right: -140px;
+    }
+    .card_1600 {
+        display: block;
+    }
+    .footer__token-text {
+        font-size: 120px !important;
+    }
+    .news__content-button > button {
+        width: 76vw;
+    }
+}
+@media (min-width: 1601px) {
+    .container {
+        padding-inline: 50px;
+    }
+    .header {
+        min-height: 800px;
+    }
+    .header__title {
+        font-size: 100px;
+    }
+    .header__parag {
+        font-size: 20px;
+    }
+    .header__content {
+        margin-top: 100px;
+    }
+    .header__content-buttons {
+        margin-top: 40px;
+    }
+    .header__button-bottom {
+        width: 170px;
+        height: 50px;
+        font-size: 16px;
+    }
+    h2 {
+        font-size: 120px;
+    }
+    .purshared {
+        margin-top: 100px;
+    }
+    .purshared__lines {
+        margin-top: 60px;
+        display: flex;
+    }
+    .purshared__lines-block {
+        width: 90vw;
+    }
+    .lines__block-dark {
+        width: 15%;
+    }
+    .lines__block-light > span {
+        font-size: 30px;
+    }
+    .lines__block-light {
+        width: 85%;
+    }
+    .economics {
+        margin: 100px 0;
+    }
+    .economics__title {
+        padding-right: 20px;
+    }
+    .economics__content {
+        margin-top: 50px;
+        justify-content: right;
+        gap: 220px;
+    }
+    .economic__red-laptop {
+        display: none;
+    }
+    .economics__content-circle {
+        position: relative;
+    }
+    .economics__content-text > h3 {
+        font-size: 30px;
+        max-width: 700px;
+    }
+    .economics__content-text > p {
+        font-size: 19px;
+        max-width: 600px;
+    }
+    .circle__text {
+        font-size: 16px;
+    }
+    .circle__reserve {
+        left: -5px;
+        top: -12px;
+    }
+    .circle__football {
+        left: -220px;
+        top: 98px;
+        max-width: 250px;
+    }
+    .circle__ido {
+        left: -160px;
+        top: 320px;
+        max-width: 150px;
+    }
+    .circle__staking {
+        top: 190px;
+    }
+    .circle__dev {
+        left: -90px;
+    }
+    .about__button {
+        width: 95vw;
+    }
+    .list__one {
+        left: -200px;
+    }
+    .list__two {
+        right: 40px;
+    }
+    .list__two-down {
+        right: -100px;
+    }
+    .footer__token-text {
+        font-size: 130px !important;
+    }
+    .news__content-button > button {
+        width: 70vw;
+    }
+}
+@media (max-width: 1752px) {
+    .card_1600 {
+        display: block
+    }
+}
+@media (min-width: 1700px) {
+    .header {
+        min-height: 980px;
+    }
+}
+

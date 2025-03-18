@@ -42,6 +42,11 @@
         font-size: 115px !important;
     }
 }
+@media (min-width: 1201px) and (max-width: 1440px) {
+    .footer__token-text {
+        font-size: 90px !important;
+    }
+}
 @media (max-width: 1024px) {
     .footer__token-text {
         font-size: 80px !important;

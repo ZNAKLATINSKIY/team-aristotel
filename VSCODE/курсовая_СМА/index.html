@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./styles/footer_styles.css">
 </head>
 <body>
+
     <header class="header">
         <div class="navbar">
             <div class="logotype">
@@ -56,6 +57,7 @@
             </div>
         </div>
     </header>
+
     <main class="main">
         <section class="purshared">
             <div class="container">
@@ -74,6 +76,7 @@
                 </div>
             </div>
         </section>
+
         <section class="economics">
             <div class="container">
                 <h2 class="economics__title">Экономика</h2>
@@ -113,9 +116,10 @@
                 </div>
             </div>
         </section>
+
         <section class="about">
             <div class="container">
-                <h2 class="about__title">About us</h2>
+                <h2 class="about__title">О нас</h2>
                 <div class="about__content">
                     <div class="about__content-textimg">
 
@@ -138,19 +142,24 @@
 
             </div>
         </section>
+
         <section class="token">
             <div class="container">
                 <h2 class="token__title">ТОКЕН-БОНУС</h2>
                 <div class="token__content">
-                    <div class="token__content-token">
-                        <span>0x4A50BCA24a4852d0EE6e675076aD4ec2963fbe87</span>
-                    </div>
+                    <label class="token__content-token">
+                        <input type="text" value="0x4A50BCA24a4852d0EE6e675076aD4ec2963fbe87" id="tokenTextCopy"></input>
+                    </label>
                     <div class="token__content-button">
-                        <button class="token__button">Копировать</button>
+                        <button class="token__button" id="tokenCopy">Копировать</button>
                     </div>
                 </div>
             </div>
         </section>
+        <div id="customAlert" class="custom-alert">
+            Текст скопирован!
+        </div>
+
         <section class="strategy">
             <div class="container">
 
@@ -313,7 +322,7 @@
                                 <span>Голы Мохамеда Салаха и Садио Мане помогают Ливерпулю возглавить таблицу АПЛ.</span>
                             </div>
                         </div>
-                        <div class="content__news-card desktop-none">
+                        <div class="content__news-card desktop-none card_1600">
                             <div class="card__img">
                                 <img src="./images/ecommerce.svg" alt="рис11">
                                 <div class="filter">
@@ -365,5 +374,6 @@
             </div>
         </div>
     </footer>
+    <script src="./scripts/main.js"></script>
 </body>
 </html>
