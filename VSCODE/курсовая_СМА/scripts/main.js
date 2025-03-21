@@ -22,3 +22,7 @@ function showCustomAlert(message) {
 }
 const tokenCopyButton = document.getElementById("tokenCopy");
 tokenCopyButton.onclick = CopyFunction;
+
+
+
+

@@ -24,6 +24,14 @@ ul > li > a {
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
+    transition: 0.3s;
+
+    &:hover {
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+        text-underline-offset: 4px;
+        color: #dc052d;
+    }
 }
 
 .home {
@@ -66,69 +74,18 @@ ul > li > a {
     width: 200px;
 }
 
-@media (min-width: 1601px) {
-    .logotype {
-        width: 100px;
-    }
-    .header__button {
-        width: 150px;
-    }
-    .signup {
-        width: 220px;
-    }
-}
-@media (min-width: 1444px) and (max-width: 1600px) {
-    .logotype > img {
-        width: 90px;
-    }
-    .header__button {
-        width: 120px;
-    }
-    .signup {
-        width: 180px;
-    }
-}
-@media (max-width: 1443px) {
-    .logotype > img {
-        width: 75px;
-    }
-    .header__button {
-        width: 100px;
-    }
-    .header__button {
-        width: 100px;
-    }
-    .signup {
-        width: 170px;
-    }
-}
+/*АДАПТИВ*/
 
-@media (min-width: 1310px) and (max-width: 1442px) {
-    .logotype {
-        width: 70px;
+@media (min-width: 768px) and (max-width: 1023px) {
+    .navbar {
+        justify-content: center;
+    }
+    .nav {
+        display: block;
     }
     .header__button {
-        width: 100px;
-    }
-    .signup {
-        width: 160px;
-    }
-    .navbar {
-        padding-inline: 100px;
-    }
-}
-@media (min-width: 1261px) and (max-width: 1321px) {
-    .logotype {
-        display: none;
-    }
-    .header__button {
-        width: 100px;
-    }
-    .signup {
-        width: 160px;
-    }
-    .navbar {
-        padding-inline: 100px;
+        margin-top: 25px;
+        margin-left: 120px;
     }
 }
 @media (max-width: 1260px) {
@@ -150,15 +107,67 @@ ul > li > a {
         font-size: 15px;
     }
 }
-@media (max-width: 768px) {
-    .navbar {
-        justify-content: center;
-    }
-    .nav {
-        display: block;
+@media (min-width: 1261px) and (max-width: 1321px) {
+    .logotype {
+        display: none;
     }
     .header__button {
-        margin-top: 25px;
-        margin-left: 120px;
+        width: 100px;
+    }
+    .signup {
+        width: 160px;
+    }
+    .navbar {
+        padding-inline: 100px;
+    }
+}
+@media (min-width: 1310px) and (max-width: 1442px) {
+    .logotype {
+        width: 70px;
+    }
+    .header__button {
+        width: 100px;
+    }
+    .signup {
+        width: 160px;
+    }
+    .navbar {
+        padding-inline: 100px;
+    }
+}
+@media (max-width: 1443px) {
+    .logotype > img {
+        width: 75px;
+    }
+    .header__button {
+        width: 100px;
+    }
+    .header__button {
+        width: 100px;
+    }
+    .signup {
+        width: 170px;
+    }
+}
+@media (min-width: 1444px) and (max-width: 1600px) {
+    .logotype > img {
+        width: 90px;
+    }
+    .header__button {
+        width: 120px;
+    }
+    .signup {
+        width: 180px;
+    }
+}
+@media (min-width: 1601px) {
+    .logotype {
+        width: 100px;
+    }
+    .header__button {
+        width: 150px;
+    }
+    .signup {
+        width: 220px;
     }
 }
