@@ -316,6 +316,7 @@ h2 {
     border: 1px solid #fff;
     display: flex;
     align-items: center;
+    overflow: hidden;
 }
 #tokenTextCopy {
     width: 100%;
@@ -456,7 +457,7 @@ h2 {
 .two__line, .three__line, .five__line {
     border-left: 1px dashed #bb8383;
 }
-.line {
+.strategy__small-line {
     width: 1px;
     height: 111px;
 }
@@ -695,6 +696,607 @@ h2 {
     width: 1px;
 }
 
+@media (min-width: 450px) and (max-width: 549px) {
+    .mobile-none {
+        display: none;
+    }
+    .desktop-none {
+        display: block;
+    }
+    .container {
+        padding-inline: 20px;
+    }
+    .header {
+        min-height: 350px;
+    }
+    .header__content {
+        margin-top: 0;
+        padding-inline: 50px;
+        padding-bottom: 40px;
+        border-bottom: 2px solid #dc052d;
+    }
+    .header__title {
+        display: none;
+    }
+    .header__parag {
+        font-size: 15px;
+        max-width: 400px;
+        padding-top: 10px;
+    }
+    .content__right > a > img {
+        width: 35px;
+    }
+    .header__content-buttons {
+        display: none;
+    }
+    h2 {
+        font-size: 60px;
+        line-height: 90%;
+    }
+    .about__content {
+        gap: 50px;
+    }
+    .about__title {
+        font-size: 80px;
+        text-align: left;
+    }
+    .about__text-button > h3 {
+        font-size: 40px;
+        max-width: 800px;
+        text-align: center;
+    }
+    .about__text-button > p {
+        font-size: 24px;
+        max-width: 800px;
+        text-align: center;
+    }
+    .about__button {
+        max-width: 85vw;
+    }
+    .purshared {
+        margin-top: 50px;
+    }
+    .purshared__lines {
+        margin-top: 60px;
+        display: flex;
+    }
+    .purshared__lines-block {
+        width: 90vw;
+    }
+    .lines__block-dark {
+        width: 15%;
+    }
+    .lines__block-light > span {
+        font-size: 30px;
+    }
+    .lines__block-light {
+        width: 85%;
+    }
+    .economics__content-circle {
+        display: none;
+    }
+    .economics {
+        margin: 100px 0;
+    }
+    .economic__red-laptop {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .economics__content {
+        margin-top: 50px;
+    }
+    .economics__content-text {
+        align-items: center;
+    }
+    .economics__content-text > h3, .economics__content-text > p {
+        text-align: center;
+    }
+    .economics__laptop-line {
+        display: none;
+    }
+    .economics__laptop-span {
+        font-size: 20px;
+        border: 1px solid #dc052d;
+        border-radius: 10px;
+        padding: 20px;
+    }
+    .token__content {
+        margin-top: 50px;
+    }
+    .token__title {
+        font-size: 50px;
+    }
+    #tokenTextCopy {
+        font-size: 14px;
+    }
+    .strategy__content {
+        display: none;
+    }
+    .strategy__content-laptop {
+        display: flex;
+        justify-content: center;
+        margin-top: 100px;
+    }
+    .strategy__lis {
+        max-width: 305px;
+    }
+    .strategy__content-listleft {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-right: -15px;
+    }
+    .strategy__content-listright {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-left: 20px;
+    }
+    .content__lists-list {
+        position: static;
+    }
+    .content__lists-list > li {
+        font-size: 17px;
+    }
+    .strategy__content-listline {
+        min-height: 1200px;
+        width: 3px;
+        background-color: #dc052d;
+    }
+    .strategy__content-circles {
+        display: flex;
+        flex-direction: column;
+        gap: 280px;
+        position: relative;
+        right: 13px;
+    }
+    .circle {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        position: static !important;
+        margin: 0 !important;
+    }
+    .strategy__content-qright {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        gap: 590px;
+        right: 23%;
+    }
+    .strategy__content-qleft {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        left: 23%;
+        margin-top: 315px;
+        gap: 590px;
+    }
+    .q3, .q2025 {
+        color: #ac7878;
+    }
+    .q2025 {
+        left: -5px;
+    }
+    .content__lists-list > li {
+        font-size: 15px;
+    }
+    .list__one {
+        margin-left: -5px;
+        max-width: 200px;
+    }
+    .list__two {
+        margin-left: 50px;
+        max-width: 150px;
+    }
+    .list__three {
+        position: relative;
+        right: 5px;
+        top: 57px;
+        max-width: 220px;
+    }
+    .list__one-down, .list__two-down {
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+}
+@media (min-width: 550px) and (max-width: 649px) {
+    .mobile-none {
+        display: none;
+    }
+    .desktop-none {
+        display: block;
+    }
+    .container {
+        padding-inline: 20px;
+    }
+    .header {
+        min-height: 400px;
+    }
+    .header__content {
+        margin-top: 0;
+        padding-inline: 50px;
+        padding-bottom: 40px;
+        border-bottom: 2px solid #dc052d;
+    }
+    .header__title {
+        display: none;
+    }
+    .header__parag {
+        font-size: 17px;
+        max-width: 400px;
+        padding-top: 10px;
+    }
+    .header__content-buttons {
+        display: none;
+    }
+    h2 {
+        font-size: 70px;
+        line-height: 90%;
+    }
+    .about__content {
+        gap: 50px;
+    }
+    .about__title {
+        font-size: 100px;
+        text-align: left;
+    }
+    .about__text-button > h3 {
+        font-size: 40px;
+        max-width: 800px;
+        text-align: center;
+    }
+    .about__text-button > p {
+        font-size: 24px;
+        max-width: 800px;
+        text-align: center;
+    }
+    .about__button {
+        max-width: 85vw;
+    }
+    .purshared {
+        margin-top: 50px;
+    }
+    .purshared__lines {
+        margin-top: 60px;
+        display: flex;
+    }
+    .purshared__lines-block {
+        width: 90vw;
+    }
+    .lines__block-dark {
+        width: 15%;
+    }
+    .lines__block-light > span {
+        font-size: 30px;
+    }
+    .lines__block-light {
+        width: 85%;
+    }
+    .economics__content-circle {
+        display: none;
+    }
+    .economics {
+        margin: 100px 0;
+    }
+    .economics__content-text {
+        align-items: center;
+    }
+    .economics__content-text > h3, .economics__content-text > p {
+        text-align: center;
+        max-width: 500px;
+    }
+    .economic__red-laptop {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .economics__laptop-line {
+        display: none;
+    }
+    .economics__laptop-span {
+        font-size: 20px;
+        border: 1px solid #dc052d;
+        border-radius: 10px;
+        padding: 20px;
+    }
+    .economics__title {
+        text-align: right;
+    }
+    .economics__content {
+        margin-top: 50px;
+        justify-content: center;
+        gap: 0;
+    }
+    .token__title {
+        font-size: 70px;
+    }
+    .token__content {
+        margin-top: 50px;
+    }
+    #tokenTextCopy {
+        font-size: 17px;
+    }
+    .strategy__content {
+        display: none;
+    }
+    .strategy__content-laptop {
+        display: flex;
+        justify-content: center;
+        margin-top: 100px;
+    }
+    .strategy__lis {
+        max-width: 305px;
+    }
+    .strategy__content-listleft {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-right: -15px;
+    }
+    .strategy__content-listright {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-left: 30px;
+    }
+    .content__lists-list {
+        position: static;
+    }
+    .content__lists-list > li {
+        font-size: 17px;
+    }
+    .strategy__content-listline {
+        min-height: 1200px;
+        width: 3px;
+        background-color: #dc052d;
+    }
+    .strategy__content-circles {
+        display: flex;
+        flex-direction: column;
+        gap: 280px;
+        position: relative;
+        right: 13px;
+    }
+    .circle {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        position: static !important;
+        margin: 0 !important;
+    }
+    .strategy__content-qright {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        gap: 590px;
+        right: 20%;
+    }
+    .strategy__content-qleft {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        left: 33%;
+        margin-top: 315px;
+        gap: 590px;
+    }
+    .q3, .q2025 {
+        color: #ac7878;
+    }
+    .q2025 {
+        left: -5px;
+    }
+    .list__one {
+        margin-left: -5px;
+    }
+    .list__two {
+        margin-left: 100px;
+        max-width: 150px;
+    }
+    .list__three {
+        position: relative;
+        right: 5px;
+        top: 57px;
+    }
+    .list__one-down, .list__two-down {
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+
+}
+@media (min-width: 650px) and (max-width: 767px) {
+    .mobile-none {
+        display: none;
+    }
+    .desktop-none {
+        display: block;
+    }
+    .container {
+        padding-inline: 20px;
+    }
+    .header {
+        min-height: 400px;
+    }
+    .header__content {
+        margin-top: 0;
+        padding-inline: 50px;
+    }
+    .header__title {
+        font-size: 50px;
+    }
+    .header__parag {
+        font-size: 17px;
+        max-width: 500px;
+        padding-top: 10px;
+    }
+    .header__content-buttons {
+        display: none;
+    }
+    .header__button-bottom {
+        width: 170px;
+        height: 50px;
+        font-size: 16px;
+    }
+    h2 {
+        font-size: 80px;
+        line-height: 90%;
+    }
+    .about__content {
+        gap: 50px;
+    }
+    .about__title {
+        font-size: 120px;
+        text-align: left;
+    }
+    .about__text-button > h3 {
+        font-size: 40px;
+        max-width: 800px;
+        text-align: center;
+    }
+    .about__text-button > p {
+        font-size: 24px;
+        max-width: 800px;
+        text-align: center;
+    }
+    .about__button {
+        max-width: 85vw;
+    }
+    .purshared {
+        margin-top: 50px;
+    }
+    .purshared__lines {
+        margin-top: 60px;
+        display: flex;
+    }
+    .purshared__lines-block {
+        width: 90vw;
+    }
+    .lines__block-dark {
+        width: 15%;
+    }
+    .lines__block-light > span {
+        font-size: 30px;
+    }
+    .lines__block-light {
+        width: 85%;
+    }
+    .economics {
+        margin: 100px 0;
+    }
+    .economic__red-laptop {
+        display: flex;
+    }
+    .economics__laptop-line {
+        display: none;
+    }
+    .economics__laptop-span {
+        font-size: 20px;
+    }
+    .economics__title {
+        text-align: right;
+    }
+    .economics__content {
+        margin-top: 50px;
+        justify-content: center;
+        gap: 0;
+    }
+    .economics__content-circle {
+        display: none;
+    }
+    .economics__content-text {
+        gap: 0;
+        align-items: center;
+    }
+    .economics__content-text > p, .economics__content-text > h3 {
+        text-align: center;
+    }
+    .economics__title {
+        padding: 0;
+    }
+
+    .strategy__content {
+        display: none;
+    }
+    .strategy__content-laptop {
+        display: flex;
+        justify-content: center;
+        margin-top: 100px;
+    }
+    .strategy__lis {
+        max-width: 305px;
+    }
+    .strategy__content-listleft {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-right: 30px;
+    }
+    .strategy__content-listright {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-left: 30px;
+    }
+    .content__lists-list {
+        position: static;
+    }
+    .strategy__content-listline {
+        min-height: 1200px;
+        width: 3px;
+        background-color: #dc052d;
+    }
+    .strategy__content-circles {
+        display: flex;
+        flex-direction: column;
+        gap: 280px;
+        position: relative;
+        right: 13px;
+    }
+    .circle {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        position: static !important;
+        margin: 0 !important;
+    }
+    .strategy__content-qright {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        gap: 590px;
+        right: 28%;
+    }
+    .strategy__content-qleft {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        left: 38%;
+        margin-top: 315px;
+        gap: 590px;
+    }
+    .q3, .q2025 {
+        color: #ac7878;
+    }
+    .list__one {
+        margin-left: 40px;
+    }
+    .list__two {
+        margin-left: 135px;
+    }
+    .list__three {
+        position: relative;
+        right: -20px;
+        top: 57px;
+    }
+    .list__one-down, .list__two-down {
+        margin-left: -20px;
+        margin-top: 10px;
+    }
+    .list__two-down {
+        position: relative;
+        right: 0;
+        top: -12px;
+    }
+}
 @media (min-width: 768px) and (max-width: 1023px) {
     .mobile-none {
         display: none;
@@ -1087,7 +1689,6 @@ h2 {
     }
 }
 @media (min-width: 1201px) and (max-width: 1438px) {
-
     .mobile-none {
         display: none;
     }
@@ -1552,7 +2153,7 @@ h2 {
         left: -16%;
     }
     .list__one-down {
-        left: -20%;
+        left: -19%;
     }
     .list__two-down {
         right: 0;

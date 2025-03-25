@@ -60,3 +60,112 @@
         gap: 40px;
     }
 }
+@media (min-width: 610px) and (max-width: 767px) {
+    .footer__token-text {
+        font-size: 50px !important;
+    }
+    .footer__links > ul {
+        gap: 30px;
+    }
+    .footer__links > ul > li > a {
+        font-size: 15px;
+    }
+}
+@media (min-width: 558px) and (max-width: 609px) {
+    .footer__token-text {
+        font-size: 45px !important;
+    }
+    .footer__links > ul {
+        gap: 20px;
+    }
+}
+@media (min-width: 500px) and (max-width: 608px) {
+    .footer__token-text {
+        font-size: 40px !important;
+        bottom: 15px;
+    }
+    .footer__links > ul {
+        gap: 15px;
+    }
+    .footer__links > ul > li > a {
+        font-size: 14px;
+    }
+    ul {
+        padding-left: 0;
+    }
+    .footer__logo > img{
+        width: 150px;
+    }
+}
+@media (min-width: 450px) and (max-width: 499px) {
+    .footer__token-text {
+        font-size: 36px !important;
+        bottom: 15px;
+    }
+    .footer__images-links > a > img {
+        width: 50px;
+    }
+    .footer__links > ul {
+        gap: 10px;
+    }
+    .footer__links > ul > li > a {
+        font-size: 13px;
+    }
+    ul {
+        padding-left: 0;
+    }
+    .copyright__footer-text {
+        font-size: 16px;
+    }
+    .footer__logo > img{
+        width: 150px;
+    }
+}
+@media (min-width: 400px) and (max-width: 449px) {
+    .footer__token-text {
+        font-size: 32px !important;
+        bottom: 12px;
+    }
+    .footer__images-links > a > img {
+        width: 50px;
+    }
+    .footer__links > ul {
+        gap: 10px;
+    }
+    .footer__links > ul > li > a {
+        font-size: 12px;
+    }
+    ul {
+        padding-left: 0;
+    }
+    .copyright__footer-text {
+        font-size: 14px;
+    }
+    .footer__logo > img{
+        width: 125px;
+    }
+}
+@media (min-width: 350px) and (max-width: 399px) {
+    .footer__token-text {
+        font-size: 28px !important;
+        bottom: 10px;
+    }
+    .footer__images-links > a > img {
+        width: 50px;
+    }
+    .footer__links > ul {
+        gap: 10px;
+    }
+    .footer__links > ul > li > a {
+        font-size: 11px;
+    }
+    ul {
+        padding-left: 0;
+    }
+    .copyright__footer-text {
+        font-size: 12px;
+    }
+    .footer__logo > img{
+        width: 125px;
+    }
+}

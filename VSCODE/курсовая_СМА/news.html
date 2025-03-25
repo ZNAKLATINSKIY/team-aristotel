@@ -30,6 +30,39 @@
                 <button class="signup header__button">РЕГИСТРАЦИЯ</button>
             </nav>
         </div>
+        <div class="navbar__mobile">
+            <div class="logotype">
+                <img src="./images/header_logotype.svg" alt="логотип">
+            </div>
+            <span class="navbar__mobile-title">FC BAYERN</span>
+            <nav class="nav">
+                <div id="modal__open">
+                    <div class="nav__line"></div>
+                    <div class="nav__line"></div>
+                    <div class="nav__line"></div>
+                </div>
+                <div class="nav__mobile" id="modal">
+                    <div class="mobile__ul-krest">
+                        <ul class="mobile__list">
+                            <li><a href="./index.html" class="home">Главная</a></li>
+                            <li><a href="./about.html" class="about">О клубе</a></li>
+                            <li><a href="./faq.html" class="FAQ">FAQ</a></li>
+                            <li><a href="./news.html" class="news">Новости</a></li>
+                            <li><a href="" class="rules">Правила</a></li>
+                            <li><a href="" class="contacts">Контакты</a></li>
+                        </ul>
+                        <div class="krest" id="modal__close">
+                            <div class="line"></div>
+                            <div class="line-two"></div>
+                        </div>
+                    </div>
+                    <div class="nav__mobile-buttons">
+                        <button class="login-mobile header__button-mobile">ВХОД</button>
+                        <button class="signup-mobile header__button-mobile">РЕГИСТРАЦИЯ</button>
+                    </div>
+                </div>
+            </nav>
+        </div>
         <div class="header__content">
             <div class="content__left">
                 <div class="header__content-text">
@@ -143,5 +176,8 @@
             </div>
         </div>
     </footer>
+    <div class="back__overlay" id="overlay"></div>
+
+    <script src="./scripts/modal.js"></script>
 </body>
 </html>

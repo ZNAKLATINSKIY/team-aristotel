@@ -76,19 +76,334 @@ ul > li > a {
 
 /*АДАПТИВ*/
 
-@media (min-width: 768px) and (max-width: 1023px) {
+.logotype {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.logotype > img{
+    width: 100px !important;
+}
+.navbar__mobile-title {
+    font-family: var(--font-family), sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 167%;
+    color: #fff;
+    text-shadow: black 1px 1px 3px;
+}
+.navbar__mobile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 100px 15px 50px;
+}
+#modal__open {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    background: #dc052d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: fixed;
+    z-index: 1000;
+    right: 50px;
+}
+.nav__line {
+    width: 35px;
+    height: 4px;
+    background: white;
+}
+.nav__mobile {
+    width: 60%;
+    height: 100vh;
+    background: #31000f;
+    position: fixed;
+    z-index: 2000;
+    right: -1000px;
+    top: 0;
+    visibility: hidden;
+    transition: 0.4s;
+    display: flex;
+    flex-direction: column;
+}
+.nav__mobile.active {
+    display: block;
+}
+.nav__mobile-up {
+    display: flex;
+}
+.mobile__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 50px 0 0 50px;
+}
+.mobile__list > li > a {
+    font-family: var(--font-family), sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 167%;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+.krest {
+    position: absolute;
+    z-index: 3000;
+    right: 25px;
+    top: 60px;
+    width: 50px;
+    height: 50px;
+}
+.line, .line-two {
+    width: 35px;
+    height: 2px;
+    background: white;
+    position: absolute;
+}
+.line {
+    transform: rotate(45deg);
+}
+.line-two {
+    transform: rotate(-45deg);
+}
+.nav__mobile-buttons {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.header__button-mobile {
+    width: 150px;
+    height: 50px;
+    border-radius: 30px;
+    font-family: var(--font-family), sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 167%;
+    color: #fff;
+    border: 2px solid #fff;
+    background: none;
+    transition: 0.4s;
+}
+.signup-mobile {
+    width: 200px;
+}
+.navbar__mobile {
+    display: none;
+}
+.no__scroll {
+    overflow: hidden;
+}
+.back__overlay {
+    position: fixed;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease-in-out;
+    display: none;
+}
+@media (min-width: 360px) and (max-width: 419px) {
+    .navbar {
+        display: none;
+    }
+    .navbar__mobile {
+        padding: 25px 50px 25px 50px;
+        display: flex;
+    }
+    .logotype {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .logotype > img{
+        width: 60px !important;
+    }
+    .navbar__mobile-title {
+        font-size: 25px;
+        padding-right: 50px;
+    }
+    #modal__open {
+        width: 55px;
+        height: 55px;
+    }
+    .nav__line {
+        width: 27px;
+        height: 3px;
+    }
+    .mobile__list {
+        margin-top: 50px;
+    }
+    .mobile__list > li > a {
+        font-size: 18px;
+    }
+    .header__button-mobile {
+        width: 130px;
+        font-size: 18px;
+        margin: 0;
+    }
+    .signup-mobile {
+        width: 170px;
+    }
+}
+@media (min-width: 420px) and (max-width: 469px) {
+    .navbar {
+        display: none;
+    }
+    .navbar__mobile {
+        display: flex;
+    }
+    .logotype {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .logotype > img{
+        width: 70px !important;
+    }
+    .navbar__mobile-title {
+        font-size: 25px;
+    }
+    #modal__open {
+        width: 60px;
+        height: 60px;
+    }
+    .nav__mobile-buttons {
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+    .nav__line {
+        width: 30px;
+        height: 3px;
+    }
+    .mobile__list {
+        margin-top: 50px;
+    }
+    .mobile__list > li > a {
+        font-size: 18px;
+    }
+    .header__button-mobile {
+        width: 130px;
+        font-size: 18px;
+        margin: 0;
+    }
+    .signup-mobile {
+        width: 170px;
+    }
+}
+@media (min-width: 470px) and (max-width: 599px) {
+    .navbar {
+        display: none;
+    }
+    .navbar__mobile {
+        display: flex;
+    }
+    .logotype {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .logotype > img{
+        width: 70px !important;
+    }
+    .navbar__mobile-title {
+        font-size: 30px;
+    }
+    #modal__open {
+        width: 60px;
+        height: 60px;
+    }
+    .nav__line {
+        width: 30px;
+        height: 3px;
+    }
+    .mobile__list > li > a {
+        font-size: 18px;
+    }
+    .header__button-mobile {
+        width: 130px;
+        font-size: 18px;
+    }
+    .signup-mobile {
+        width: 170px;
+    }
+}
+@media (min-width: 600px) and (max-width: 810px) {
+    .navbar {
+        display: none;
+    }
+    .navbar__mobile {
+        display: flex;
+    }
+    .logotype {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .logotype > img{
+        width: 100px !important;
+    }
+    .nav__mobile-buttons {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 35px;
+    }
+}
+@media (min-width: 811px) and (max-width: 964px) {
+    .logotype {
+        display: none;
+    }
     .navbar {
         justify-content: center;
+        padding-inline: 50px;
     }
     .nav {
         display: block;
     }
     .header__button {
         margin-top: 25px;
-        margin-left: 120px;
+        margin-left: 150px;
+    }
+    ul > li > a {
+        font-size: 18px;
     }
 }
-@media (max-width: 1260px) {
+@media (min-width: 965px) and (max-width: 1023px) {
+    .logotype {
+        display: none;
+    }
+    .navbar {
+        justify-content: center;
+        padding-inline: 130px;
+    }
+    .header__button {
+        margin-top: 25px;
+        margin-left: 150px;
+    }
+    ul > li > a {
+        font-size: 18px;
+    }
+}
+@media (min-width: 1024px) and (max-width: 1260px) {
     .navbar {
         justify-content: space-around;
         padding-inline: 5px;
