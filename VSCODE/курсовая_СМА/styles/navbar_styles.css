@@ -111,7 +111,7 @@ ul > li > a {
     gap: 10px;
     position: fixed;
     z-index: 1000;
-    right: 50px;
+    right: 20px;
 }
 .nav__line {
     width: 35px;
@@ -395,6 +395,9 @@ ul > li > a {
         justify-content: center;
         padding-inline: 130px;
     }
+    .nav {
+        display: block;
+    }
     .header__button {
         margin-top: 25px;
         margin-left: 150px;
@@ -455,10 +458,7 @@ ul > li > a {
         width: 75px;
     }
     .header__button {
-        width: 100px;
-    }
-    .header__button {
-        width: 100px;
+        width: 130px;
     }
     .signup {
         width: 170px;

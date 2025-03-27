@@ -636,7 +636,7 @@ h2 {
 .card__text > span {
     font-family: var(--font-family), sans-serif;
     font-weight: 400;
-    font-size: 17px;
+    font-size: 18px;
     line-height: 175%;
     color: #fff;
     max-width: 490px;
@@ -696,6 +696,219 @@ h2 {
     width: 1px;
 }
 
+@media (min-width: 375px) and (max-width: 449px) {
+    .mobile-none {
+        display: none;
+    }
+    .desktop-none {
+        display: block;
+    }
+    .container {
+        padding-inline: 20px;
+    }
+    .header {
+        min-height: 350px;
+    }
+    .header__content {
+        margin-top: 100px;
+        padding-inline: 50px;
+        padding-bottom: 40px;
+        border-bottom: 2px solid #dc052d;
+        gap: 20px;
+        flex-direction: column;
+    }
+    .content__right {
+        flex-direction: row;
+    }
+    .content__right > a > img {
+        width: 35px;
+    }
+    .navbar__mobile {
+        padding-top: 70px;
+    }
+    .header__title {
+        display: none;
+    }
+    .header__parag {
+        font-size: 14px;
+        max-width: 350px;
+        padding-top: 10px;
+        text-align: center;
+    }
+    .header__content-buttons {
+        display: none;
+    }
+    h2 {
+        font-size: 45px;
+        line-height: 90%;
+    }
+    .about__content {
+        gap: 50px;
+    }
+    .about__title {
+        font-size: 70px;
+        text-align: left;
+    }
+    .about__text-button > h3 {
+        font-size: 40px;
+        max-width: 800px;
+        text-align: center;
+    }
+    .about__text-button > p {
+        font-size: 24px;
+        max-width: 800px;
+        text-align: center;
+    }
+    .about__button {
+        max-width: 85vw;
+    }
+    .token__content {
+        margin-top: 25px;
+    }
+    #tokenTextCopy {
+        font-size: 11px;
+    }
+    .purshared {
+        margin-top: 25px;
+    }
+    .purshared__lines {
+        margin-top: 40px;
+        display: flex;
+    }
+    .purshared__lines-block {
+        width: 90vw;
+    }
+    .lines__block-dark {
+        width: 15%;
+    }
+    .lines__block-light > span {
+        font-size: 30px;
+    }
+    .lines__block-light {
+        width: 85%;
+    }
+    .economics__content-circle {
+        display: none;
+    }
+    .economics {
+        margin: 100px 0;
+    }
+    .economic__red-laptop {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .economics__laptop-line {
+        display: none;
+    }
+    .economics__content {
+        margin-top: 50px;
+    }
+    .economics__content-text {
+        align-items: center;
+    }
+    .economics__content-text > h3, .economics__content-text > p {
+        text-align: center;
+    }
+    .strategy__content {
+        display: none;
+    }
+    .strategy__content-laptop {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+    }
+    .strategy__lis {
+        max-width: 305px;
+    }
+    .strategy__content-listleft {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-right: -15px;
+    }
+    .strategy__content-listright {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-left: 0;
+    }
+    .content__lists-list {
+        position: static;
+    }
+    .content__lists-list > li {
+        font-size: 15px;
+    }
+    .strategy__content-listline {
+        min-height: 1200px;
+        width: 3px;
+        background-color: #dc052d;
+    }
+    .strategy__content-circles {
+        display: flex;
+        flex-direction: column;
+        gap: 280px;
+        position: relative;
+        right: 13px;
+    }
+    .circle {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        position: static !important;
+        margin: 0 !important;
+    }
+    .strategy__content-qright {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        gap: 590px;
+        right: 18%;
+    }
+    .strategy__content-qleft {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        left: 22%;
+        margin-top: 315px;
+        gap: 590px;
+    }
+    .q3, .q2025 {
+        color: #ac7878;
+    }
+    .q2025 {
+        left: 0;
+    }
+    .content__lists-list > li {
+        font-size: 15px;
+    }
+    .list__one {
+        margin-left: 10px;
+        max-width: 170px;
+    }
+    .list__two {
+        margin-left: 35px;
+        max-width: 150px;
+    }
+    .list__three {
+        position: relative;
+        right: 5px;
+        top: 57px;
+        max-width: 220px;
+    }
+    .list__one-down, .list__two-down {
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+    .news__content {
+        margin-top: -40px;
+    }
+    .card__text > h3 {
+        font-size: 25px;
+    }
+    .card__text > span {
+        font-size: 15px;
+    }
+}
 @media (min-width: 450px) and (max-width: 549px) {
     .mobile-none {
         display: none;
