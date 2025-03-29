@@ -1,4 +1,8 @@
+import showCustomAlert  from "./custom-alert";
+
 // Копирование токена
+const copyButton = document.getElementById("tokenCopy");
+
 function CopyFunction() {
     const copyText = document.getElementById("tokenTextCopy");
     copyText.select();
@@ -9,20 +13,4 @@ function CopyFunction() {
         showCustomAlert("Ошибка при копировании: " + err);
     });
 }
-// Окно о копировании
-function showCustomAlert(message) {
-    const alertBox = document.getElementById("customAlert");
-    alertBox.textContent = message;  // Устанавливаем текст уведомления
-    alertBox.style.display = "block"; // Показываем уведомление
-
-    // Прячем окно через 3 секунды
-    setTimeout(function() {
-        alertBox.style.display = "none";},
-        3000);
-}
-const tokenCopyButton = document.getElementById("tokenCopy");
-tokenCopyButton.onclick = CopyFunction;
-
-
-
-
+copyButton.onclick = CopyFunction;

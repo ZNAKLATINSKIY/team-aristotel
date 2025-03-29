@@ -15,7 +15,7 @@
 body {
     background-color: black;
     background-image: url("/images/background_body.png");
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 .header {

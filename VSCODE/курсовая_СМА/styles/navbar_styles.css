@@ -57,6 +57,11 @@ ul > li > a {
     color: #fff;
     border: none;
     transition: 0.4s;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 
     &:hover {
         background: white;
@@ -180,6 +185,8 @@ ul > li > a {
     justify-content: center;
     align-items: center;
     gap: 30px;
+    text-decoration: none;
+    cursor: pointer;
 }
 .header__button-mobile {
     width: 150px;
@@ -193,6 +200,11 @@ ul > li > a {
     border: 2px solid #fff;
     background: none;
     transition: 0.4s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    cursor: pointer;
 }
 .signup-mobile {
     width: 200px;
@@ -376,9 +388,6 @@ ul > li > a {
         justify-content: center;
         padding-inline: 50px;
     }
-    .nav {
-        display: block;
-    }
     .header__button {
         margin-top: 25px;
         margin-left: 150px;
@@ -394,9 +403,6 @@ ul > li > a {
     .navbar {
         justify-content: center;
         padding-inline: 130px;
-    }
-    .nav {
-        display: block;
     }
     .header__button {
         margin-top: 25px;
