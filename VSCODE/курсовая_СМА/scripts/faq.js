@@ -40,7 +40,6 @@ accountFaq.onclick = showAccountFaq;
 // Кликабельность элементов FAQ
 const questions = document.getElementsByClassName("question");
 const answerSmall = document.getElementsByClassName("answer__small");
-const arrow = document.getElementsByClassName("arrow");
 
 // Функция для блоков с большим количеством текста
 function showActiveQuestion() {
@@ -215,6 +214,7 @@ function showActiveQuestionSmall() {
     }
 }
 
+// Даём кнопкам возможность менять цвет и размер
 for(let i = 0; i < questions.length; i++) {
     questions[i].onclick = showActiveQuestion;
 }
