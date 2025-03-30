@@ -1,4 +1,13 @@
-
+.home {
+    text-decoration: none;
+    color: #fff;
+}
+.FAQ {
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    text-underline-offset: 4px;
+    color: #dc052d;
+}
 .header {
     background-image: url("/images/faq_background.png");
     min-height: 600px;
@@ -144,16 +153,7 @@
         color: black;
     }
 }
-.home {
-    text-decoration: none;
-    color: #fff;
-}
-.FAQ {
-    text-decoration: underline;
-    text-decoration-skip-ink: none;
-    text-underline-offset: 4px;
-    color: #dc052d;
-}
+
 
 /*АДАПТИВНОСТЬ*/
 @media (min-width: 1441px) and (max-width: 1600px) {
@@ -573,7 +573,7 @@
         font-size: 12px;
     }
     .account__title, .general__title {
-        font-size: 18px;
+        font-size: 17px;
     }
     .faq__general, .faq__account {
         margin-top: 35px;

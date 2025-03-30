@@ -190,7 +190,7 @@
 }
 @media (max-width: 460px) {
     .header {
-        min-height: 350px;
+        min-height: 270px;
     }
     .header__title {
         font-size: 35px;
@@ -202,5 +202,9 @@
     .content__right {
         flex-direction: row;
     }
-
+}
+@media (max-width: 450px) {
+    .header {
+        min-height: 350px;
+    }
 }

@@ -116,7 +116,7 @@ ul > li > a {
     gap: 10px;
     position: fixed;
     z-index: 1000;
-    right: 20px;
+    right: 35px;
 }
 .nav__line {
     width: 35px;
@@ -380,13 +380,45 @@ ul > li > a {
         gap: 35px;
     }
 }
-@media (min-width: 811px) and (max-width: 964px) {
+@media (min-width: 811px) and (max-width: 850px) {
     .logotype {
         display: none;
     }
     .navbar {
         justify-content: center;
-        padding-inline: 60px;
+        padding-inline: 40px;
+    }
+    .header__button {
+        margin-top: 25px;
+        margin-left: 150px;
+    }
+    ul > li > a {
+        font-size: 18px;
+    }
+}
+@media (min-width: 851px) and (max-width: 910px) {
+    .logotype {
+        display: none;
+    }
+    .navbar {
+        justify-content: center;
+        padding-inline: 65px;
+    }
+    .header__button {
+        margin-top: 25px;
+        margin-left: 150px;
+    }
+    ul > li > a {
+        font-size: 18px;
+    }
+}
+@media (min-width: 911px) and (max-width: 964px) {
+    .logotype {
+        display: none;
+    }
+    .navbar {
+        justify-content: center;
+        padding-inline: 100px;
     }
     .header__button {
         margin-top: 25px;
@@ -447,7 +479,7 @@ ul > li > a {
 }
 @media (min-width: 1310px) and (max-width: 1442px) {
     .logotype {
-        width: 70px;
+        display: none;
     }
     .header__button {
         width: 100px;

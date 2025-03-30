@@ -33,7 +33,7 @@ a {
 .log_in {
     margin-top: 100px;
     width: 100%;
-    min-height: 80vh;
+    min-height: 79vh;
     background-image: url("/images/login_background-form.png");
     background-size: 50%;
     background-repeat: no-repeat;
@@ -80,6 +80,7 @@ a {
     line-height: 150%;
     color: #fff;
     margin-bottom: 40px;
+
     &:focus {
         background: none;
         color: #dc052d;
@@ -97,6 +98,7 @@ a {
     color: #fff;
 }
 .form__button {
+    margin-bottom: 50px;
     margin-top: 20px;
     border-radius: 30px;
     width: 220px;
