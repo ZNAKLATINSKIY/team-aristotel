@@ -15,6 +15,10 @@
 .header__title {
     font-size: 120px;
 }
+.why__need-rules {
+    border-bottom: 4px solid #dc052d;
+    padding-bottom: 20px;
+}
 .why__need-title {
     font-family: var(--font-family), sans-serif;
     font-weight: 600;
@@ -25,7 +29,6 @@
     padding-bottom: 50px;
     text-shadow: 0 0 20px #000;
 }
-
 .why__need-text {
     font-family: var(--font-family), sans-serif;
     font-weight: 400;
@@ -37,6 +40,8 @@
 .rules__content-block {
     margin-top: 50px;
     margin-bottom: 50px;
+    padding-bottom: 20px;
+    border-bottom: 5px dotted #dc052d;
 }
 
 .rules__block-title {
@@ -55,11 +60,7 @@
     color: #fff;
     text-shadow: 0 0 20px #000;
 }
-.red__line {
-    width: 100%;
-    height: 2px;
-    background: #dc052d;
-}
+
 @media (min-width: 1200px) and (max-width: 1440px) {
     .header {
         min-height: 480px;

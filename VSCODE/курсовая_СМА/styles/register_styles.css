@@ -1,3 +1,7 @@
 .form__button {
     width: 240px;
 }
+.password__stroke-confirmation {
+    display: flex;
+    flex-direction: column;
+}

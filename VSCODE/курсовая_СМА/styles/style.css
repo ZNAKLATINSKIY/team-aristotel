@@ -19,7 +19,7 @@ body {
     background-repeat: no-repeat;
 }
 .header {
-    background-image: url(/images/header_background.svg);
+    background-image: url("/images/header_background.svg");
     background-size: 100%;
     background-repeat: no-repeat;
 }

@@ -53,12 +53,16 @@ a {
 .login__form {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
-.form__stroke {
+.login__stroke {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+}
+.password__stroke {
+    display: flex;
+    flex-direction: column;
 }
 .form-label {
     font-family: var(--font-family), sans-serif;
@@ -96,6 +100,11 @@ a {
     text-decoration-skip-ink: none;
     text-underline-offset: 3px;
     color: #fff;
+    transition: 0.4s;
+
+    &:hover {
+        color: #dc052d;
+    }
 }
 .form__button {
     margin-bottom: 50px;
@@ -114,6 +123,12 @@ a {
     font-size: 18px;
     line-height: 167%;
     color: #fff;
+    transition: 0.4s;
+
+    &:hover {
+        background: gray;
+        color: black;
+    }
 }
 
 @media (max-width: 1200px) {
