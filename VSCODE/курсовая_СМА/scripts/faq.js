@@ -43,7 +43,18 @@ const answerSmall = document.getElementsByClassName("answer__small");
 
 // Функция для блоков с большим количеством текста
 function showActiveQuestion() {
-    if ((window.innerWidth >= 1200) && window.innerWidth <= 1440) {
+    if ((window.innerWidth >= 1440) && (window.innerWidth <= 1650)) {
+        if(this.style.minHeight === "170px") {
+            this.style.minHeight = "50px";
+            this.style.background = "rgba(61, 0, 18, 0)";
+            this.querySelector(".arrow").style.transform = "rotate(0deg)";
+        } else {
+            this.style.minHeight = "170px";
+            this.style.background = "rgba(61, 0, 18, 0.6)";
+            this.querySelector(".arrow").style.transform = "rotate(90deg)";
+        }
+    }
+    else if ((window.innerWidth >= 1200) && window.innerWidth <= 1440) {
         if(this.style.minHeight === "180px") {
             this.style.minHeight = "50px";
             this.style.background = "rgba(61, 0, 18, 0)";
@@ -135,7 +146,18 @@ function showActiveQuestion() {
 
 // Функция для клика на блоки с маленьким количеством текста
 function showActiveQuestionSmall() {
-    if ((window.innerWidth >= 856) && (window.innerWidth <= 1199)) {
+    if ((window.innerWidth >= 1440) && (window.innerWidth <= 1650)) {
+        if(this.style.minHeight === "140px") {
+            this.style.minHeight = "50px";
+            this.style.background = "rgba(61, 0, 18, 0)";
+            this.querySelector(".arrow").style.transform = "rotate(0deg)";
+        } else {
+            this.style.minHeight = "140px";
+            this.style.background = "rgba(61, 0, 18, 0.6)";
+            this.querySelector(".arrow").style.transform = "rotate(90deg)";
+        }
+    }
+    else if ((window.innerWidth >= 856) && (window.innerWidth <= 1199)) {
         if(this.style.minHeight === "160px") {
             this.style.minHeight = "50px";
             this.style.background = "rgba(61, 0, 18, 0)";
