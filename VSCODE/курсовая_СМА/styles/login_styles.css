@@ -1,10 +1,13 @@
+.home {
+    text-decoration: none;
+    color: #fff;
+}
 .header {
     background: none;
     min-height: 0;
 }
 body {
-    background-image: url("/images/login_background.jpg");
-    background-size: cover;
+    background-image: none;
 }
 a {
     text-decoration: none;
@@ -33,11 +36,6 @@ a {
 .log_in {
     margin-top: 100px;
     width: 100%;
-    min-height: 79vh;
-    background-image: url("/images/login_background-form.png");
-    background-size: 50%;
-    background-repeat: no-repeat;
-    background-position: top center;
 }
 .login__title {
     font-family: var(--font-family), sans-serif;
@@ -131,6 +129,7 @@ a {
     }
 }
 
+
 @media (max-width: 1200px) {
     .nav {
         padding-inline: 30px;
@@ -146,27 +145,7 @@ a {
     }
 }
 @media (max-width: 750px) {
-    .log_in {
-        background-size: 60%;
-        min-height: 75vh;
-    }
-
     .nav {
         padding-inline: 20px;
-    }
-}
-@media (max-width: 550px) {
-    .log_in {
-        background-size: 70%;
-    }
-}
-@media (max-width: 500px) {
-    .log_in {
-        background-size: 80%;
-    }
-}
-@media (max-width: 450px) {
-    .log_in {
-        background-size: 90%;
     }
 }
