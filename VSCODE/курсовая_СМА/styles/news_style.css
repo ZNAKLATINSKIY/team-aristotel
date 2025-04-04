@@ -83,7 +83,7 @@
         margin-bottom: 40px;
     }
     .header__button {
-        margin-top: 65px !important;
+        margin-top: 65px;
     }
     .content__right {
         flex-direction: row;
