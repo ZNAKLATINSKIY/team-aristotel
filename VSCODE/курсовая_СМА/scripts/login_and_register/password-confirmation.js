@@ -1,4 +1,4 @@
-import showCustomAlert from "./custom-alert.js";
+import showCustomAlert from "../modules/custom-alert.js";
 
 document.querySelector('.register__form').addEventListener('submit', function(event) {
     const userName = document.getElementById("username").value;

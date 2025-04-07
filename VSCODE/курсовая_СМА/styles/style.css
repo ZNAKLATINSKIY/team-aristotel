@@ -83,6 +83,11 @@ body {
     line-height: 167%;
     color: #fff;
     border: none;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
     transition: 0.4s;
 
     &:hover {

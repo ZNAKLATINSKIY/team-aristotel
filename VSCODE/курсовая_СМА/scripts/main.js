@@ -1,4 +1,4 @@
-import showCustomAlert  from "./custom-alert.js";
+import showCustomAlert  from "./modules/custom-alert.js";
 
 // Копирование токена
 const copyButton = document.getElementById("tokenCopy");
