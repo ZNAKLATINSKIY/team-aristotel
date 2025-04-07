@@ -83,7 +83,7 @@
         transform: translateY(-1em);
     }
 }
-.one, .two {
+.one, .two, .three {
     height: 600px;
 }
 .why__card-text {
