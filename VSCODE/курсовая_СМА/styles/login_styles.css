@@ -99,10 +99,6 @@ a {
     text-underline-offset: 3px;
     color: #fff;
     transition: 0.4s;
-
-    &:hover {
-        color: #dc052d;
-    }
 }
 .form__button {
     margin-bottom: 50px;
@@ -122,14 +118,20 @@ a {
     line-height: 167%;
     color: #fff;
     transition: 0.4s;
+}
 
-    &:hover {
+/*ХОВЕРЫ*/
+@media (hover:hover) and (pointer:fine) {
+    .form__button:hover {
         background: gray;
         color: black;
     }
+    .forgot-password:hover {
+        color: #dc052d;
+    }
 }
 
-
+/*АДАПТИВ*/
 @media (max-width: 1200px) {
     .nav {
         padding-inline: 30px;

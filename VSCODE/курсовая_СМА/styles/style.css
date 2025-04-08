@@ -89,12 +89,6 @@ body {
     align-items: center;
     cursor: pointer;
     transition: 0.4s;
-
-    &:hover {
-        background: white;
-        color: black;
-        border: 1px solid black;
-    }
 }
 .button__login {
     background: #dc052d;
@@ -296,11 +290,6 @@ h2 {
     align-items: center;
     border: none;
     transition: 0.4s;
-
-    &:hover {
-        background: gray;
-        color: black;
-    }
 }
 .about__content {
     display: flex;
@@ -377,11 +366,6 @@ h2 {
     border: none;
     margin-top: 40px;
     transition: 0.4s;
-
-    &:hover {
-        background: gray;
-        color: black;
-    }
 }
 .strategy {
     margin: 150px 0;
@@ -596,20 +580,6 @@ h2 {
     text-decoration: none;
     border-radius: 35px;
     cursor: pointer;
-
-    &:hover {
-        .card__img {
-            filter: grayscale(1);
-        }
-        .card__text > h3 {
-            top: 125px;
-            text-shadow: black 1px 1px 5px;
-        }
-        .card__text > span {
-            top: 120px;
-            text-shadow: black 1px 1px 5px;
-        }
-    }
 }
 .card__text {
     padding: 20px 20px 20px 20px;
@@ -670,12 +640,6 @@ h2 {
     line-height: 167%;
     color: #fff;
     transition: 0.4s;
-
-    &:hover {
-        background: gray;
-        color: black;
-        border: 1px solid black;
-    }
 }
 
 
@@ -705,7 +669,33 @@ h2 {
     width: 1px;
 }
 
-@media (min-width: 375px) and (max-width: 449px) {
+/*ХОВЕРЫ*/
+@media (hover: hover) and (pointer: fine) {
+    .news__content-button:hover, .about__button:hover, .token__button:hover {
+        background: gray;
+        color: black;
+    }
+    .content__news-card:hover {
+        .card__img {
+            filter: grayscale(1);
+        }
+        .card__text > h3 {
+            top: 125px;
+            text-shadow: black 1px 1px 5px;
+        }
+        .card__text > span {
+            top: 120px;
+            text-shadow: black 1px 1px 5px;
+        }
+    }
+    .header__button-bottom:hover {
+        background: white;
+        color: black;
+        border: 1px solid black;
+    }
+}
+
+@media (min-width: 375px) and (max-width: 484px) {
     .mobile-none {
         display: none;
     }
@@ -915,7 +905,7 @@ h2 {
         font-size: 15px;
     }
 }
-@media (min-width: 450px) and (max-width: 549px) {
+@media (min-width: 485px) and (max-width: 549px) {
     .mobile-none {
         display: none;
     }

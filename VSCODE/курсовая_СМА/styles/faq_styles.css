@@ -147,14 +147,15 @@
     justify-content: center;
     align-items: center;
     transition: 0.3s;
+}
 
-    &:hover {
+/*ХОВЕРЫ*/
+@media (hover:hover) and (pointer:fine) {
+    .contact__button:hover {
         background: gray;
         color: black;
     }
 }
-
-
 /*АДАПТИВНОСТЬ*/
 @media (min-width: 1441px) and (max-width: 1600px) {
     .header__content {

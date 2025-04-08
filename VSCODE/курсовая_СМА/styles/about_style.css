@@ -76,14 +76,9 @@
     align-items: center;
     justify-content: center;
     gap: 20px;
-
     transition: 0.4s;
-    &:hover {
-        box-shadow: 0 0 15px 5px red;
-        transform: translateY(-1em);
-    }
 }
-.one, .two, .three {
+.one, .two {
     height: 600px;
 }
 .why__card-text {
@@ -126,14 +121,24 @@ h3 {
     font-size: 20px;
     line-height: 167%;
     color: #fff;
-
     transition: 0.4s;
-    &:hover {
+}
+
+
+/*ХОВЕРЫ*/
+@media (hover:hover) and (pointer:fine) {
+    .why__content-register:hover {
         background: white;
         color: black;
         border: 1px solid black;
     }
+    .why__card:hover {
+        box-shadow: 0 0 15px 5px red;
+        transform: translateY(-1em);
+    }
 }
+
+/*АДАПТИВ*/
 @media (min-width: 1440px) {
     .header {
         min-height: 500px;

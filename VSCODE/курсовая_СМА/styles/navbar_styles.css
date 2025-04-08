@@ -25,13 +25,6 @@ ul > li > a {
     text-decoration: none;
     text-transform: uppercase;
     transition: 0.3s;
-
-    &:hover {
-        text-decoration: underline;
-        text-decoration-skip-ink: none;
-        text-underline-offset: 4px;
-        color: #dc052d;
-    }
 }
 
 .home {
@@ -62,12 +55,6 @@ ul > li > a {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-
-    &:hover {
-        background: white;
-        color: black;
-        border: 1px solid black;
-    }
 }
 .login {
     background: #dc052d;
@@ -79,6 +66,20 @@ ul > li > a {
     width: 200px;
 }
 
+/*ХОВЕРЫ*/
+@media (hover:hover) and (pointer:fine) {
+    ul > li > a:hover {
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+        text-underline-offset: 4px;
+        color: #dc052d;
+    }
+    .header__button:hover {
+        background: white;
+        color: black;
+        border: 1px solid black;
+    }
+}
 /*АДАПТИВ*/
 
 .logotype {
