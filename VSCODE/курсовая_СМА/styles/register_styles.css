@@ -1,5 +1,6 @@
 .form__button {
     width: 240px;
+    background: #0066b2;
 }
 .password__stroke-confirmation {
     display: flex;

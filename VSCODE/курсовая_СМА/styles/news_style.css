@@ -26,7 +26,17 @@
     .header__content {
         margin-top: 30px;
     }
-
+    .card__img {
+        filter: grayscale(1);
+    }
+    .card__text > h3 {
+        top: 125px;
+        text-shadow: black 1px 1px 5px;
+    }
+    .card__text > span {
+        top: 120px;
+        text-shadow: black 1px 1px 5px;
+    }
 }
 @media (max-width: 1200px) {
     .content__news-card {

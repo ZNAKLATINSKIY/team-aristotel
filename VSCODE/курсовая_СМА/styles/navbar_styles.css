@@ -26,7 +26,6 @@ ul > li > a {
     text-transform: uppercase;
     transition: 0.3s;
 }
-
 .home {
     text-decoration: underline;
     text-decoration-skip-ink: none;
@@ -413,7 +412,7 @@ ul > li > a {
         font-size: 18px;
     }
 }
-@media (min-width: 911px) and (max-width: 964px) {
+@media (min-width: 911px) and (max-width: 970px) {
     .logotype {
         display: none;
     }
@@ -429,7 +428,7 @@ ul > li > a {
         font-size: 18px;
     }
 }
-@media (min-width: 965px) and (max-width: 1023px) {
+@media (min-width: 971px) and (max-width: 1023px) {
     .logotype {
         display: none;
     }
@@ -506,7 +505,7 @@ ul > li > a {
         padding-inline: 100px;
     }
 }
-@media (min-width: 1361px) and (max-width: 1442px) {
+@media (min-width: 1361px) and (max-width: 1451px) {
     .logotype {
         display: none;
     }

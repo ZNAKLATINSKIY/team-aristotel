@@ -78,7 +78,7 @@
     gap: 20px;
     transition: 0.4s;
 }
-.one, .two {
+.one, .two, .three {
     height: 600px;
 }
 .why__card-text {
@@ -139,6 +139,11 @@ h3 {
 }
 
 /*АДАПТИВ*/
+@media (max-width: 1750px) {
+    .three {
+        height: 450px;
+    }
+}
 @media (min-width: 1440px) {
     .header {
         min-height: 500px;
