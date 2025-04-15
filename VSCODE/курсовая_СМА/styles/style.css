@@ -26,6 +26,7 @@ body {
     background-image: url("/images/header_background.svg");
     background-size: 100%;
     background-repeat: no-repeat;
+    overflow: hidden;
 }
 
 .header__content {
