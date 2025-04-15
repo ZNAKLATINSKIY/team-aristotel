@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+.container {
+    margin: 0 auto;
+    max-width: 1160px;
+}
+.death {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.hardware {
+    margin: 0 auto  ;
+    background-color: white;
+    width: 600px;
+    height: 1000px;
+    position: relative;
+}
+.hardware__image {
+    z-index: -1;
+}

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<script>
+    document.querySelector("body").innerHTML = "<main>\n" +
+        "        <div class=\"container\">\n" +
+        "            <div class=\"block\">\n" +
+        "                <div class=\"block-content\">\n" +
+        "                    <div class=\"fild-result\">\n" +
+        "\n" +
+        "                    </div>\n" +
+        "                    <div class=\"colc-dev\">\n" +
+        "                        <div class=\"colc-numbers\">\n" +
+        "                            <div class=\"colc-row\">\n" +
+        "                                <button class=\"number-7 button button-num\">7</button>\n" +
+        "                                <button class=\"number-8 button button-num\">8</button>\n" +
+        "                                <button class=\"number-9 button button-num\">9</button>\n" +
+        "                            </div>\n" +
+        "                            <div class=\"colc-row\">\n" +
+        "                                <button class=\"number-4 button button-num\">4</button>\n" +
+        "                                <button class=\"number-5 button button-num\">5</button>\n" +
+        "                                <button class=\"number-6 button button-num\">6</button>\n" +
+        "                            </div>\n" +
+        "                            <div class=\"colc-row\">\n" +
+        "                                <button class=\"number-1 button button-num\">1</button>\n" +
+        "                                <button class=\"number-2 button button-num\">2</button>\n" +
+        "                                <button class=\"number-3 button button-num\">3</button>\n" +
+        "                            </div>\n" +
+        "                            <button class=\"number-0 button button-num\">0</button>\n" +
+        "                        </div>\n" +
+        "                        <div class=\"colc-numbers\">\n" +
+        "                            <button class=\"number_+ button button-num\">+</button>\n" +
+        "                            <button class=\"number_- button button-num\">-</button>\n" +
+        "                            <button class=\"number_/ button button-num\">/</button>\n" +
+        "                            <button class=\"number_* button button-num\">*</button>\n" +
+        "                        </div>\n" +
+        "                    </div>\n" +
+        "                    <button class=\"number_= button number_rovno\">=</button>\n" +
+        "                    <button class=\"number_с button number_с\">С</button>\n" +
+        "\n" +
+        "                </div>\n" +
+        "            </div>\n" +
+        "        </div>\n" +
+        "    </main>";
+
+    const NumOne = document.querySelector(".number-1");
+    const NumTwo = document.querySelector(".number-2");
+    const NumThree = document.querySelector(".number-3");
+    const NumFour = document.querySelector(".number-4");
+    const NumFive = document.querySelector(".number-5");
+    const NumSix = document.querySelector(".number-6");
+    const NumSeven = document.querySelector(".number-7");
+    const NumEight = document.querySelector(".number-8");
+    const NumNine = document.querySelector(".number-9");
+    const NumZero = document.querySelector(".number-0");
+
+    const fildResult = document.querySelector('.fild-result');
+
+    let result = 0;
+    let FildResult = '';
+    let StrResult = '';
+    let NumResult = [];
+    let ColDev = [];
+
+    function one () {
+        StrResult += '1'
+        FildResult += '1'
+        fildResult.textContent = FildResult;
+    }
+    function two () {
+        StrResult += '2';
+        FildResult += '2'
+        fildResult.textContent = FildResult;
+    }
+    function three () {
+        StrResult += '3';
+        FildResult += '3'
+        fildResult.textContent = FildResult;
+    }
+    function four () {
+        StrResult += '4';
+        FildResult += '4'
+        fildResult.textContent = FildResult;
+    }
+    function five () {
+        StrResult += '5'
+        FildResult += '5'
+        fildResult.textContent = FildResult;
+    }
+    function six () {
+        StrResult += '6';
+        FildResult += '6'
+        fildResult.textContent = FildResult;
+    }
+    function seven () {
+        StrResult += '7';
+        FildResult += '7'
+        fildResult.textContent = FildResult;
+    }
+    function eight () {
+        StrResult += '8';
+        FildResult += '8'
+        fildResult.textContent = FildResult;
+    }
+    function nine () {
+        StrResult += '9';
+        FildResult += '9'
+        fildResult.textContent = FildResult;
+    }
+
+    function plus () {
+        NumResult.push(+StrResult);    // Добавляем число в массив
+        ColDev.push('+');             // Добавляем оператор как строку
+        FildResult += ' + ';
+        fildResult.textContent = FildResult;
+        StrResult = '';               // Сбрасываем текущее число
+    }
+    function minus () {
+        NumResult.push(+StrResult);
+        ColDev.push('+');
+        FildResult += ' + ';
+        fildResult.textContent = FildResult;
+        StrResult = '';
+    }
+    function share () {
+        NumResult.push(+StrResult);
+        ColDev.push('+');
+        FildResult += ' + ';
+        fildResult.textContent = FildResult;
+        StrResult = '';
+    }
+    function multiply () {
+        NumResult.push(+StrResult);
+        ColDev.push('+');
+        FildResult += ' + ';
+        fildResult.textContent = FildResult;
+        StrResult = '';
+    }
+    function rovno () {
+        NumResult.push(+StrResult);
+        result = NumResult[0];
+        for (let i = 0; i < ColDev.length; i++) {
+            const num = NumResult[i + 1];
+            const op = ColDev[i];
+
+            switch(op) {
+                case '+': result += num; break;
+                case '-': result -= num; break;
+                case '*': result *= num; break;
+                case '/': result /= num; break;
+            }
+        }
+        fildResult.textContent = FildResult + ' = ' + result;
+    }
+
+    function clearing () {
+        FildResult += 'dwqdqw';
+        fildResult.textContent = FildResult;
+    }
+
+
+    document.getElementsByClassName("number-1")[0].addEventListener("click", one);
+    document.getElementsByClassName("number-2")[0].addEventListener("click", two);
+    document.getElementsByClassName("number-3")[0].addEventListener("click", three);
+    document.getElementsByClassName("number-4")[0].addEventListener("click", four);
+    document.getElementsByClassName("number-5")[0].addEventListener("click", five);
+    document.getElementsByClassName("number-6")[0].addEventListener("click", six);
+    document.getElementsByClassName("number-7")[0].addEventListener("click", seven);
+    document.getElementsByClassName("number-8")[0].addEventListener("click", eight);
+    document.getElementsByClassName("number-9")[0].addEventListener("click", nine);
+    document.getElementsByClassName("number_+")[0].addEventListener("click", plus);
+    document.getElementsByClassName("number_-")[0].addEventListener("click", minus);
+    document.getElementsByClassName("number_/")[0].addEventListener("click", share);
+    document.getElementsByClassName("number_*")[0].addEventListener("click", multiply);
+    document.getElementsByClassName("number_c")[0].addEventListener("click", clearing);
+    document.getElementsByClassName("number_rovno")[0].addEventListener("click", rovno);
+
+
+
+
+</script>
+</body>
+</html>

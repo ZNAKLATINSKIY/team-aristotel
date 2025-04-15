@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="box">
+    <table>
+    <tr>
+      <td>Слово один</td>
+      <td>Слово один</td>
+      <td>Слово один</td>
+    </tr>
+    <tr>
+      <td>Слово два</td>
+      <td>Слово два</td>
+      <td>Слово два</td>
+    </tr>
+    <tr>
+      <td>Слово три</td>
+      <td>Слово три</td>
+      <td>Слово три</td>
+    </tr>
+    </table>
+  </div>
+</div>
+<script>
+  function getRandomColor() {
+    return `rgb(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)})`;
+  }
+  let block = document.querySelectorAll('td');
+  block.forEach((item) => {
+
+    item.style.transition = '0.5s';
+    item.addEventListener('mouseover', function () {
+      this.style.backgroundColor = getRandomColor();
+    });
+    item.addEventListener('mouseout', function () {
+      this.style.backgroundColor = '';
+    });
+  });
+</script>
+</body>
+</html>

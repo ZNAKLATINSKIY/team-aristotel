@@ -10,7 +10,7 @@ int main() {
     for (int i = 0; i < razmer; i++) {
         cout << "Введите " << i << " элемент массива: ";
         cin >> arr[i];
-    }
+    }       
     for (int i = 0; i < razmer; i++) {
         if (arr[i] <= 0) {
             neg[i] = arr[i];

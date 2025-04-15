@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        @font-face {
+            font-family: 'Steshok';
+            src: url('behance-64efa07836cc4.otf') format('opentype');
+        }
+    </style>
+</head>
+<body>
+    <script>
+        document.querySelector("body").innerHTML = "<div class='container'></div>";
+        document.querySelector(".container").insertAdjacentHTML("beforeend", "<div class='info'></div>");
+        document.querySelector(".container").insertAdjacentHTML("beforeend", "<audio autoplay src='Каникулы%20на%20Марсе%20-%20Дедушка%20(official).mp3'></audio>");
+        document.querySelector(".info").insertAdjacentHTML("beforeend", "<img class='info__gif-1' src='image_862507150746485389293.gif'>");
+        document.querySelector(".info").insertAdjacentHTML ("beforeend","<div class='card' id='card'></div>");
+        document.querySelector(".info").insertAdjacentHTML("beforeend", "<img class='info__gif-2' src='image_862507150746485389293.gif'>");
+        document.querySelector(".card").insertAdjacentHTML("beforeend", "<div class='info__content'></div>");
+        document.querySelector(".info__content").insertAdjacentHTML("beforeend", "<div class='info__content-header'></div>");
+        document.querySelector(".info__content-header").insertAdjacentHTML("beforeend", "<div class='info__portrait'></div>");
+        document.querySelector(".info__portrait").insertAdjacentHTML("beforeend", "<img class='info__portrait-1' src='5370938302972161137.jpg'>");
+        document.querySelector(".info__portrait").insertAdjacentHTML("beforeend", "<img class='info__portrait-2' src='5370938302972161113.jpg'>");
+        document.querySelector(".info__content-header").insertAdjacentHTML("beforeend", "<div class='info__name'>АРЛАН ГАБДЫЛХАК</div>");
+        document.querySelector(".info__content").insertAdjacentHTML("beforeend", "<div class='info__details'>Возраст; 17 лет <br> Очень хороший и веселый человек <br> Характер общительный <br> НЕ ЖЕНАТ</div>");
+        let body = document.body;
+        let container = document.querySelector(".container");
+        let info = document.querySelector(".info");
+        let card = document.querySelector(".card");
+        let gifOne = document.querySelector(".info__gif-1");
+        let gifTwo = document.querySelector(".info__gif-2");
+        let portrait = document.querySelector(".info__portrait");
+        let content = document.querySelector(".info__content");
+        let imageOne = document.querySelector(".info__portrait-2");
+        let imageTwo = document.querySelector(".info__portrait-1");
+        let name = document.querySelector(".info__name");
+        let details = document.querySelector(".info__details");
+        let contentHeader = content.querySelector(".info__content-header");
+        //BODY
+        body.style.backgroundColor = "#000";
+        body.style.margin = " 0 auto";
+        body.style.pading = " 0 auto";
+        body.style.overflow = " hidden";
+        body.style.backgroundRepeat = "no-repeat";
+        body.style.backgroundSize = "cover";
+        //CONTAINER
+        container.style.maxWidth = " 1060px";
+        container.style.maxWidth = " 1060px";
+        container.style.margin = " 0 auto";
+        //INFORMATION
+        info.style.display = "flex";
+        info.style.justifyContent = "center";
+        info.style.alignItems = "center";
+        info.style.minHeight = "100vh"
+        info.style.maxWidthheight = "100%"
+        info.style.position = "relative";
+        //FIRST CITY
+        gifOne.style.position = "absolute";
+        gifOne.style.left = "850px";
+        gifOne.style.top = "80px";
+        gifOne.style.zIndex = "-1";
+        //SECOND CITY
+        gifTwo.style.position = "absolute";
+        gifTwo.style.right = "1050px";
+        gifTwo.style.top = "80px";
+        gifTwo.style.zIndex = "-1";
+        //CARD
+        card.style.backgroundColor = "#fff";
+        card.style.margin = "0 0 0 300px"
+        card.style.padding = "50px"
+        card.style.width = "700px"
+        card.style.height = "250px"
+        card.style.borderRadius = "40px"
+        card.style.border = "solid 2px black"
+        card.style.transform = "perspective(500px) rotateY(35deg) rotateX(0deg)"
+        card.style.borderRadius = "Math.random 100px"
+        card.style.overflow = " hidden";
+        //THE CONTENT OF THE CARD ITSELF
+        content.style.display = "flex";
+        content.style.justifyContent = "center";
+        content.style.alignItems = "center";
+        content.style.gap = "50px";
+        content.style.backgroundColor = "#000";
+        content.style.transform = "perspective(500px) rotateY(-90deg) rotateX(180deg)"
+        content.style.borderRadius = "20px"
+        content.style.transformOrigin = "right"
+        content.style.width = "100%"
+        content.style.height = "100%"
+        content.style.display = "flex";
+        content.style.padding = "10px"
+        content.style.justifyContent = "end";
+        content.style.overflow = " hidden";
+        // IMAGE AND NAME
+        contentHeader.style.textAlign = "center";
+        // PORTRAIT
+        portrait.style.display = "flex";
+        // NAME
+        name.style.color = "#fff";
+        name.style.fontFamily = "Steshok";
+        name.style.padding = "20px 0 0 0";
+        // DESCRIPTION
+        details.style.color = "#fff";
+        details.style.fontFamily = "Steshok";
+        details.style.fontSize = "30px";
+        // FACE SIDEWAYS
+        imageOne.style.width = "100px"
+        imageOne.style.height = "100px"
+        // FACE FORWARD
+        imageTwo.style.width = "100px"
+        imageTwo.style.padding = "0 20px 0 0"
+        imageTwo.style.height = "100px"
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script src="GSAP.js"></script>
+</body>
+</html>

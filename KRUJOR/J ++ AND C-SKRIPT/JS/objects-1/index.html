@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div class="container">
+    <div class="buttons">
+        <input type="checkbox" id="button-laigth" class="laigth">
+        </input>
+        <div class="button__row">
+            <button id="myButton-one" class="button__click">
+                ЗАДАНИЕ <br> 1 - 1
+            </button>
+            <button id="myButton-two" class="button__click">
+                ЗАДАНИЕ <br> 1 - 2
+            </button>
+            <button id="myButton-three" class="button__click">
+                ЗАДАНИЕ <br> 1 - 3
+            </button>
+        </div>
+        <div class="button__row">
+            <botton id="myButton-four" class="button__click">
+                ЗАДАНИЕ <br> 2 - 1
+            </botton>
+            <botton id="myButton-five" class="button__click">
+                ЗАДАНИЕ <br> 2 - 2
+            </botton>
+            <botton id="myButton-six" class="button__click">
+                ЗАДАНИЕ <br> 2 - 3
+            </botton>
+        </div>
+        <div class="button__row">
+            <botton id="myButton-seven" class="button__click">
+                ЗАДАНИЕ <br> 2 - 4
+            </botton>
+            <botton id="myButton-eight" class="button__click">
+                ЗАДАНИЕ <br> 2 - 5
+            </botton>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+<script src="./main.js"></script>
+<script>
+
+    // Создать массив «Список покупок».
+    // Каждый элемент массива является объектом, который содержит название продукта,
+    // необходимое количество и куплен или нет.
+    // Написать несколько функций для работы с таким массивом.
+
+    // 1. Вывод всего списка на экран таким образом,
+    //чтобы сначала шли не купленные продукты, а потом – купленные.
+
+    class User {
+        constructor (name, age, role) {
+            this.name = name;
+            this.age = age;
+            this.role = role;
+            return this;
+        }
+        describe () {
+            console.log(`Имя: ${this.name}, Возраст: ${this.age}, Роль: ${this.role}`)
+        }
+    }
+    function oneOne(test) {
+        let profile = new User("John", 25, "admin");
+        profile.describe();
+    }
+
+    class Admin extends User{
+        constructor (name, age, role, func, pass, session) {
+            super(name, age, role);
+            this.func = func;
+            this.pass = pass;
+            this.session = session;
+        }
+        deleteUser () {
+            console.log("Пользователь удален")
+        }
+    }
+    function oneTwo (test) {
+        let pro_profile = new Admin("John", 25, "admin", "massive" , "123456", "session");
+        pro_profile.describe();
+    }
+
+    function oneThree  (test, productName = prompt("Как называется продукт который вы купили?")) {
+        let list = [
+            {
+                name: "Milk",
+                required: 2,
+                purchased: true,
+            },
+            {
+                name: "Egg",
+                required: 5,
+                purchased: false,
+            },
+            {
+                name: "Pizza",
+                required: 1,
+                purchased: false,
+            }
+        ];
+
+        for (let i = 0; i < list.length; i++) {
+            if (list[i].name === productName) {
+                list[i].purchased = true;
+            }
+        }
+        console.log(list)
+    }
+    function twoOne  (test) {
+        let list = [
+            {
+                number: 1,
+                required: 10,
+                faculty: "Gryffindor",
+            },
+            {
+                number: 2,
+                required: 20,
+                purchased: "Slytherin",
+            },
+            {
+                number: 3,
+                required: 15,
+                purchased: "Slytherin",
+            },
+            {
+                number: 4,
+                required: 12,
+                faculty: "Gryffindor",
+            },
+            {
+                number: 5,
+                required: 17,
+                purchased: "Slytherin",
+            },
+            {
+                number: 6,
+                required: 14,
+                purchased: "Gryffindor",
+            }
+        ];
+
+        for (key in list) {
+            console.log(list[key])
+        }
+        console.log(list)
+    }
+    function twoTwo  (test, requiredFaculty = prompt("Для какого факультатива ищете аудитории?")) {
+        let list = [
+            {
+                number: 1,
+                required: 10,
+                faculty: "Гриффиндор",
+            },
+            {
+                number: 2,
+                required: 20,
+                faculty: "Слизерин",
+            },
+            {
+                number: 3,
+                required: 15,
+                faculty: "Слизерин",
+            },
+            {
+                number: 4,
+                required: 12,
+                faculty: "Гриффиндор",
+            },
+            {
+                number: 5,
+                required: 17,
+                faculty: "Слизерин",
+            },
+            {
+                number: 6,
+                required: 14,
+                faculty: "Гриффиндор",
+            }
+        ];
+
+        for (let i = 0; i < list.length; i++) {
+            if (list[i].faculty === requiredFaculty) {
+                console.log(list[i])
+            }
+        }
+        console.log(list)
+    }
+    function twoThree  (test, numberGroup = +prompt("Какой номер у аудитории?"), requiredGroup = +prompt("Какое количества студентов?"), facultyGroup = prompt("Какому факультету принадлежит?")) {
+        let list = [
+            {
+                number: 1,
+                required: 10,
+                faculty: "Гриффиндор",
+            },
+            {
+                number: 2,
+                required: 20,
+                faculty: "Слизерин",
+            },
+            {
+                number: 3,
+                required: 15,
+                faculty: "Слизерин",
+            },
+            {
+                number: 4,
+                required: 12,
+                faculty: "Гриффиндор",
+            },
+            {
+                number: 5,
+                required: 17,
+                faculty: "Слизерин",
+            },
+            {
+                number: 6,
+                required: 14,
+                faculty: "Гриффиндор",
+            }
+        ];
+
+        let group = {
+            number: numberGroup,
+            required: requiredGroup,
+            faculty: facultyGroup,
+        }
+
+        for (let i = 0; i < list.length; i++) {
+            if (list[i].number === group.number && list[i].required === group.required && list[i].faculty === group.faculty) {
+                console.log(list[i])
+            }
+        }
+        console.log(list)
+    }
+    function twoFour  (test) {
+        let list = [
+            {
+                number: 1,
+                required: 10,
+                faculty: "Гриффиндор",
+            },
+            {
+                number: 2,
+                required: 20,
+                faculty: "Слизерин",
+            },
+            {
+                number: 3,
+                required: 15,
+                faculty: "Слизерин",
+            },
+            {
+                number: 4,
+                required: 12,
+                faculty: "Гриффиндор",
+            },
+            {
+                number: 5,
+                required: 17,
+                faculty: "Слизерин",
+            },
+            {
+                number: 6,
+                required: 14,
+                faculty: "Гриффиндор",
+            }
+        ];
+
+        for (let i = 0; i < list.length - 1; i++) {
+            let min = i;
+
+            for (let j = i + 1; j < list.length; j++) {
+                if (list[j].required < list[min].required) {
+                    min = j;
+                }
+            }
+            if (min !== i) {
+                let previous = list[i];
+                list[i] = list[min];
+                list[min] = previous;
+            }
+        }
+        console.log(list)
+    }
+    function twoFive  (test) {
+        let list = [
+            {
+                number: "Алабай",
+                required: 10,
+                faculty: "Гриффиндор",
+            },
+            {
+                number: "Гринготс",
+                required: 20,
+                faculty: "Слизерин",
+            },
+            {
+                number: "Дракон",
+                required: 15,
+                faculty: "Слизерин",
+            },
+            {
+                number: "Сильмариллион",
+                required: 12,
+                faculty: "Гриффиндор",
+            },
+            {
+                number: "Феанор",
+                required: 17,
+                faculty: "Слизерин",
+            },
+            {
+                number: "Глиндор",
+                required: 14,
+                faculty: "Гриффиндор",
+            }
+        ]
+
+        for (let i = 0; i < list.length - 1; ++i) {
+            for (let j = 0; j < list.length - i - 1; ++j) {
+                if (list[j + 1].required < list[j].required) {
+                    let temp = list[j];
+                    list[j] = list[j + 1];
+                    list[j + 1] = temp;
+                }
+            }
+        }
+        console.log(list)
+    }
+
+    document.getElementById("myButton-one").addEventListener("click", oneOne);
+    document.getElementById("myButton-two").addEventListener("click", oneTwo);
+    document.getElementById("myButton-three").addEventListener("click", oneThree);
+    document.getElementById("myButton-four").addEventListener("click", twoOne);
+    document.getElementById("myButton-five").addEventListener("click", twoTwo);
+    document.getElementById("myButton-six").addEventListener("click", twoThree);
+    document.getElementById("myButton-seven").addEventListener("click", twoFour);
+    document.getElementById("myButton-eight").addEventListener("click", twoFive);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 1360px;
+    margin: 0 auto;
+}
+.block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.block-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 300px;
+    height: 300px;
+    background-color: rgba(255, 72, 35, 0.87);
+}
+.button {
+    width: 30px;
+    height: 30px;
+}
+.colc-dev {
+    display: flex;
+    gap: 10px;
+}
+.colc-numbers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.fild-result {
+    width: 140px;
+    height: 30px;
+    background: white;
+}
