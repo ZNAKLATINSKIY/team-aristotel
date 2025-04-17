@@ -564,10 +564,11 @@ h2 {
     max-width: 531px;
     min-height: 300px;
     position: relative;
-    background-image: url("/images/kartinka_futbol.jpg");
+    background-image: url("/images/levandosky.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
+    border: 1px solid #dc052d;
 }
 .card__img > img {
     max-width: 531px;
@@ -599,7 +600,7 @@ h2 {
     left: 0;
     z-index: 1;
     transition: 0.4s;
-    background: rgba(52, 0, 15, 0);
+    background: red;
 }
 .card__text > h3 {
     font-family: var(--font-family), sans-serif;
@@ -673,8 +674,8 @@ h2 {
 /*ХОВЕРЫ*/
 @media (hover: hover) and (pointer: fine) {
     .news__content-button:hover, .about__button:hover, .token__button:hover {
-        background: gray;
-        color: black;
+        background: #31000f;
+        color: #dc052d;
     }
     .content__news-card:hover {
         .card__img {

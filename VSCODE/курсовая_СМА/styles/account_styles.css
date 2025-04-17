@@ -1,0 +1,21 @@
+.header {
+    background-image: url("/images/account_background.png");
+    min-height: 660px;
+}
+.section__title {
+    text-align: left;
+    font-size: 100px;
+}
+.section__content {
+    margin: 75px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.account__cancel {
+    font-family: var(--font-family), sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 167%;
+    color: #fff;
+}
