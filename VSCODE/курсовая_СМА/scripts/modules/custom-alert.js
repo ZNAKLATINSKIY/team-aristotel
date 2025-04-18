@@ -4,7 +4,7 @@ function showCustomAlert(message) {
     alertBox.style.display = "block"; // Показываем уведомление
 
     // Прячем окно через 3 секунды
-    setTimeout(function() {
+    setTimeout(() =>{
             alertBox.style.display = "none";},
         3000);
 }

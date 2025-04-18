@@ -94,10 +94,12 @@
                 <h2 class="section__title">Личный кабинет</h2>
                 <div class="section__content">
                     <span class="account__cancel">Вы не вошли в аккаунт. Зарегистрируйте новый или войдите в уже имеющийся.</span>
+
                     <form class="login__form register__form">
+
                         <div class="login__stroke form__stroke">
                             <label for="username" class="form-label">Логин:</label>
-                            <input type="text" class="form-input" id="username" placeholder="Введите логин" autocomplete="off">
+                            <input type="text" class="form-input" id="username" placeholder="Логин" autocomplete="off">
                         </div>
                         <div class="password__stroke form__stroke">
                             <label for="password" class="form-label">Пароль:</label>
@@ -108,11 +110,13 @@
                             <input type="password" class="form-input" id="password-confirmation" placeholder="Введите пароль" autocomplete="off">
                         </div>
 
-                        <button class="form__button">Зарегистрироваться</button>
                     </form>
                 </div>
             </div>
         </div>
     </main>
+
+
+    <script type="module" src="./scripts/account/account.js"></script>
 </body>
 </html>

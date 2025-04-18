@@ -71,13 +71,14 @@
 }
 .question {
     width: 100%;
-    min-height: 50px;
+    height: auto;
     border: 1px solid #fff;
     position: relative;
     display: flex;
     flex-direction: column;
     padding: 20px;
     cursor: pointer;
+    transition: 0.3s;
 }
 .question__title {
     display: flex;
@@ -94,7 +95,8 @@
 .question__answer {
     margin-top: 15px;
     max-width: 93%;
-    display: none;
+    visibility: hidden;
+    transition: all 0.3s;
 }
 .question__answer > span {
     font-family: var(--font-family), sans-serif;

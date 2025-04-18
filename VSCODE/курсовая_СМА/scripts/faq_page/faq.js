@@ -41,13 +41,15 @@ accountFaq.onclick = showAccountFaq;
 // Кликабельность элементов FAQ
 // Функция для блоков с большим количеством текста
 function showActiveQuestion() {
-    if (this.querySelector('.question__answer').style.display === "block") {
+    if (this.querySelector('.question__answer').style.visibility === "visible") {
         this.style.background = "none";
+        this.querySelector('.question__answer').style.visibility = "hidden";
         this.querySelector('.question__answer').style.display = "none";
     }
     else {
         this.style.background = "#3d0011";
-        this.querySelector(".question__answer").style.display = "block";
+        this.querySelector(".question__answer").style.visibility = "visible";
+        this.querySelector('.question__answer').style.display = "block";
     }
 }
 
