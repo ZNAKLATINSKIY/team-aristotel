@@ -1,6 +1,19 @@
+.home {
+    text-decoration: none;
+    color: #fff;
+}
+.account_page {
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    text-underline-offset: 4px;
+    color: #dc052d;
+}
 .header {
     background-image: url("/images/account_background.png");
     min-height: 660px;
+}
+.header__title {
+    font-size: 120px;
 }
 .section__title {
     text-align: left;
@@ -18,4 +31,89 @@
     font-size: 20px;
     line-height: 167%;
     color: #fff;
+    display: none;
+}
+.account__content-info {
+    max-width: 1650px;
+    min-height: 373px;
+    background: rgba(51, 0, 15, 0.7);
+    border: 2px solid gray;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline: 50px;
+}
+.account__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.account__form-inputs {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+.form__stroke, .password__stroke {
+    display: flex;
+    flex-direction: column;
+}
+.form-label {
+    font-family: var(--font-family), sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 150%;
+    color: #fff;
+}
+.form-input {
+    width: 480px;
+    min-height: 60px;
+    background: none;
+    padding: 20px;
+    border-radius: 30px;
+    border: 2px solid #6b6b6b;
+    font-family: var(--font-family), sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 150%;
+    color: #fff;
+    margin-bottom: 40px;
+
+    &:focus {
+        background: none;
+        color: #dc052d;
+        border: 2px solid #fff;
+    }
+}
+.forgot-password {
+    font-family: var(--font-family), sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 150%;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    text-underline-offset: 3px;
+    color: #fff;
+    transition: 0.4s;
+}
+.form__button-save, .form__button-change {
+    margin-top: 20px;
+    border-radius: 30px;
+    width: 220px;
+    height: 50px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+    background: #dc052d;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-family), sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 167%;
+    color: #fff;
+    transition: 0.4s;
+}
+.password__stroke-confirmation, .form__button-save {
+    display: none;
 }
