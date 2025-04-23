@@ -95,7 +95,7 @@
 .question__answer {
     margin-top: 15px;
     max-width: 93%;
-    visibility: hidden;
+    display: none;
     transition: all 0.3s;
 }
 .question__answer > span {
