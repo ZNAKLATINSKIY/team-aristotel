@@ -2,7 +2,7 @@
 
 .news_nav {
     text-decoration: none;
-    color: #fff;
+    color: #f5f5f5;
 }
 * {
     margin: 0;
@@ -17,7 +17,7 @@
     --font-family: "Inter", sans-serif;
 }
 body {
-    background-color: black;
+    background-color: #001010;
     background-image: url("/images/background_body.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -54,7 +54,7 @@ body {
     font-weight: 600;
     font-size: 100px;
     line-height: 110%;
-    color: #fff;
+    color: #f5f5f5;
     max-width: 571px;
     text-shadow: black 1px 1px 3px;
 }
@@ -63,7 +63,7 @@ body {
     font-weight: 600;
     font-size: 22px;
     line-height: 136%;
-    color: #fff;
+    color: #f5f5f5;
     max-width: 670px;
     padding-top: 40px;
     text-shadow: black 1px 1px 3px;
@@ -82,7 +82,7 @@ body {
     font-weight: 600;
     font-size: 18px;
     line-height: 167%;
-    color: #fff;
+    color: #f5f5f5;
     border: none;
     text-decoration: none;
     display: flex;
@@ -105,7 +105,7 @@ h2 {
     font-weight: 600;
     font-size: 150px;
     line-height: 73%;
-    color: rgba(160, 0, 48, 1);
+    color: #dc052d;
     text-align: center;
 }
 .purshared__lines {
@@ -118,7 +118,7 @@ h2 {
     width: 660px;
     height: 100%;
     display: flex;
-    border: 2px solid #fff;
+    border: 2px solid #f5f5f5;
     position: relative;
     z-index: 1;
 }
@@ -135,12 +135,12 @@ h2 {
     font-weight: 600;
     font-size: 35px;
     line-height: 86%;
-    color: #fff;
+    color: #f5f5f5;
 }
 .lines__block-dark {
     width: 110px;
     height: 71px;
-    background: #31000f;
+    background: #f5f5f5;
 }
 .purshared__lines-img {
     position: relative;
@@ -163,6 +163,33 @@ h2 {
 .economics__content-circle {
     position: relative;
 }
+.circle_50, .circle_5, .circle_20, .circle_15, .circle_10 {
+    position: absolute;
+    right: 10.5%;
+    bottom: 17%;
+}
+.circle_5 {
+    right: 53%;
+    top: 8%;
+    z-index: 999;
+}
+.circle_20 {
+    right: 53%;
+    top: 10%;
+}
+.circle_15 {
+    right: 53%;
+    top: 45.5%;
+    z-index: 2001;
+}
+.circle_10 {
+    right: 53%;
+    top: 45.5%;
+    z-index: 2000;
+}
+.circle_element {
+    transition: 0.4s;
+}
 .economics__content-text {
     display: flex;
     flex-direction: column;
@@ -174,7 +201,7 @@ h2 {
     font-weight: 600;
     font-size: 35px;
     line-height: 114%;
-    color: #fff;
+    color: #f5f5f5;
 }
 .economics__content-text > p {
     max-width: 700px;
@@ -182,13 +209,13 @@ h2 {
     font-weight: 400;
     font-size: 20px;
     line-height: 175%;
-    color: #fff;
+    color: #f5f5f5;
 }
 .circle__text {
     font-family: var(--font-family), sans-serif;
     font-weight: 500;
     font-size: 20px;
-    color: #fff;
+    color: #f5f5f5;
     position: absolute;
 }
 .circle__red-text {
@@ -223,7 +250,7 @@ h2 {
     font-size: 20px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: #fff;
+    color: #f5f5f5;
     bottom: 0;
     right: -150px;
     display: flex;
@@ -250,7 +277,7 @@ h2 {
     font-weight: 600;
     font-size: 35px;
     line-height: 114%;
-    color: #fff;
+    color: #f5f5f5;
     max-width: 486px;
     padding-bottom: 40px;
 }
@@ -259,7 +286,7 @@ h2 {
     font-weight: 400;
     font-size: 20px;
     line-height: 175%;
-    color: #fff;
+    color: #f5f5f5;
     max-width: 670px;
 }
 .about__content {
@@ -285,12 +312,13 @@ h2 {
     background: #dc052d;
     font-family: var(--font-family), sans-serif;
     font-weight: 600;
-    color: #fff;
+    color: #f5f5f5;
     display: flex;
     justify-content: center;
     align-items: center;
     border: none;
     transition: 0.4s;
+    text-decoration: none;
 }
 .about__content {
     display: flex;
@@ -312,7 +340,7 @@ h2 {
     max-width: 100vw;
     min-height: 71px;
     background: #31000f;
-    border: 1px solid #fff;
+    border: 1px solid #f5f5f5;
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -324,7 +352,7 @@ h2 {
     font-size: 20px;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    color: #fff;
+    color: #f5f5f5;
     text-align: center;
     background: none;
     border: none;
@@ -338,7 +366,7 @@ h2 {
     transform: translateX(-50%);
     padding: 10px 20px;
     background-color: #0066b2; /* Зеленый цвет */
-    color: white;
+    color: #f5f5f5;
     text-align: center;
     border-radius: 5px;
     font-size: 16px;
@@ -360,7 +388,7 @@ h2 {
     font-weight: 600;
     font-size: 20px;
     line-height: 167%;
-    color: #fff;
+    color: #f5f5f5;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -381,7 +409,7 @@ h2 {
     font-weight: 600;
     font-size: 25px;
     line-height: 86%;
-    color: #fff;
+    color: #f5f5f5;
     font-style: italic;
 }
 .strategy__content {
@@ -406,19 +434,12 @@ h2 {
 .list__three {
     right: -155px;
 }
-.list__one > li {
+.list__one > li, .list__two > li, .list__three > li {
     font-family: var(--font-family), sans-serif;
     font-weight: 400;
     font-size: 20px;
     letter-spacing: 0.02em;
-    color: #fff;
-}
-.list__two > li, .list__three > li {
-    font-family: var(--font-family), sans-serif;
-    font-weight: 400;
-    font-size: 20px;
-    letter-spacing: 0.02em;
-    color: #bb8383;
+    color: #f5f5f5;
 }
 .strategy__lis {
     list-style-type: none;
@@ -435,8 +456,9 @@ h2 {
     background-color: #dc052d;
     box-shadow: 0 0 5px 1px #dc052d;
 }
-.lis__dark::before {
-    background-color: #bb8383;
+.test__blue::before {
+    background-color: #0066b2;
+    box-shadow: 0 0 5px 1px #0066b2;
 }
 .strategy__content-upline {
     margin-top: 22px;
@@ -446,10 +468,10 @@ h2 {
     gap: 235px;
 }
 .one__line, .four__line {
-    border-left: 1px dashed #dc052d;
+    border-left: 1px dashed #0066b2;
 }
 .two__line, .three__line, .five__line {
-    border-left: 1px dashed #bb8383;
+    border-left: 1px dashed #dc052d;
 }
 .strategy__small-line {
     width: 1px;
@@ -461,9 +483,7 @@ h2 {
     font-size: 20px;
     color: #dc052d;
 }
-.q4 {
-    color: #ac7878;
-}
+
 .strategy__content-line {
     max-width: 100%;
     height: 2px;
@@ -589,25 +609,13 @@ h2 {
     position: relative;
     z-index: 1;
 }
-.filter {
-    width: 100%;
-    min-height: 354px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    transition: 0.4s;
-    background: red;
-}
+
 .card__text > h3 {
     font-family: var(--font-family), sans-serif;
     font-weight: 600;
     font-size: 25px;
     line-height: 100%;
-    color: #fff;
+    color: #f5f5f5;
     max-width: 450px;
     font-style: italic;
     position: relative;
@@ -619,7 +627,7 @@ h2 {
     font-weight: 400;
     font-size: 18px;
     line-height: 175%;
-    color: #fff;
+    color: #f5f5f5;
     max-width: 490px;
     padding-top: 20px;
     position: relative;
@@ -640,7 +648,7 @@ h2 {
     font-weight: 600;
     font-size: 20px;
     line-height: 167%;
-    color: #fff;
+    color: #f5f5f5;
     transition: 0.4s;
 }
 
@@ -663,7 +671,7 @@ h2 {
 .economics__laptop-span {
     font-size: 25px;
     text-align: center;
-    color: #fff;
+    color: #f5f5f5;
 }
 .economics__laptop-line {
     height: 200px;
@@ -694,6 +702,10 @@ h2 {
         background: white;
         color: black;
         border: 1px solid black;
+    }
+    .circle_element:hover {
+        transform: scale(1.1);
+        z-index: 1000;
     }
 }
 
@@ -1630,7 +1642,7 @@ h2 {
     .economics__laptop-span {
         font-size: 23px;
         text-align: center;
-        color: #fff;
+        color: #f5f5f5;
     }
     .strategy__content {
         display: none;
@@ -2001,7 +2013,6 @@ h2 {
     .strategy__content {
         display: none;
     }
-
     .strategy__content-laptop {
         display: flex;
         justify-content: center;

@@ -1,6 +1,6 @@
 .home {
     text-decoration: none;
-    color: #fff;
+    color: #f5f5f5;
 }
 .header {
     background: none;
@@ -31,7 +31,7 @@ a {
     font-weight: 600;
     font-size: 20px;
     line-height: 150%;
-    color: #fff;
+    color: #f5f5f5;
 }
 .log_in {
     margin-top: 100px;
@@ -42,7 +42,7 @@ a {
     font-weight: 600;
     font-size: 35px;
     line-height: 86%;
-    color: #fff;
+    color: #f5f5f5;
     text-align: center;
 }
 .login__content {
@@ -67,7 +67,7 @@ a {
     font-weight: 600;
     font-size: 20px;
     line-height: 150%;
-    color: #fff;
+    color: #f5f5f5;
 }
 .form-input {
     width: 70vw;
@@ -80,13 +80,13 @@ a {
     font-weight: 600;
     font-size: 20px;
     line-height: 150%;
-    color: #fff;
+    color: #f5f5f5;
     margin-bottom: 40px;
 
     &:focus {
         background: none;
         color: #dc052d;
-        border: 2px solid #fff;
+        border: 2px solid #f5f5f5;
     }
 }
 .forgot-password {
@@ -97,7 +97,7 @@ a {
     text-decoration: underline;
     text-decoration-skip-ink: none;
     text-underline-offset: 3px;
-    color: #fff;
+    color: #f5f5f5;
     transition: 0.4s;
 }
 .form__button {
@@ -116,7 +116,7 @@ a {
     font-weight: 600;
     font-size: 18px;
     line-height: 167%;
-    color: #fff;
+    color: #f5f5f5;
     transition: 0.4s;
 }
 
@@ -124,7 +124,7 @@ a {
 @media (hover:hover) and (pointer:fine) {
     .form__button:hover {
         background: gray;
-        color: black;
+        color: #001010;
     }
     .forgot-password:hover {
         color: #dc052d;

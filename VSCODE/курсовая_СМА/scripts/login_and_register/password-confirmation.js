@@ -1,10 +1,15 @@
 import showCustomAlert from "../modules/custom-alert.js";
 
-document.querySelector('.register__form').addEventListener('submit', function(event) {
+function ConfirmRegister(event) {
     const userName = document.getElementById("username").value;
     const password = document.getElementById("password").value;
+    const userData = {
+        userName: userName,
+        password: password,
+    };
     const passwordConfirm = document.getElementById("password-confirmation").value;
     const userNameTest = /^[a-zA-Zа-яА-ЯёЁ]+$/;
+
 
     if (!(userNameTest.test(userName))) {
         showCustomAlert("Имя пользователя должно содержать только буквы.");
@@ -25,10 +30,12 @@ document.querySelector('.register__form').addEventListener('submit', function(ev
     else if (password !== passwordConfirm) {
         showCustomAlert("Пароли не совпадают.");
         event.preventDefault();
+
     }
     else if (password.length < 8) {
         showCustomAlert("Пароль должен содержать не менее 8 символов.");
         event.preventDefault();
+
     }
     else {
         showCustomAlert("Регистрация прошла успешно!");
@@ -36,7 +43,10 @@ document.querySelector('.register__form').addEventListener('submit', function(ev
             location.reload();
         }, 1000);
         event.preventDefault();
+
+        localStorage.setItem("user", JSON.stringify(userData));
     }
-});
+}
+document.querySelector('.register__form').addEventListener('submit', ConfirmRegister);
 
-
+export default ConfirmRegister;

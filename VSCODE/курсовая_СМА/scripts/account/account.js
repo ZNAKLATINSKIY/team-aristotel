@@ -1,17 +1,17 @@
+import customAlert from "../modules/custom-alert.js";
 
 const userData = JSON.parse(localStorage.getItem("user") || "{}");
-if (userData.name) {
 
+if (userData.userNameAccess) {
     const userName = document.getElementById("accountUsername");
     const userPassword = document.getElementById("accountPassword");
     const userPasswordConfirmationBlock = document.getElementById("passwordConfirmation");
 
-    userName.value = userData.name || "Введите логин";
-    userPassword.value = userData.password || "Введите пароль";
+    userName.value = userData.userNameAccess || "Введите логин";
+    userPassword.value = userData.passwordAccess || "Введите пароль";
 
     const buttonSave = document.getElementById("buttonSave");
     const buttonChange = document.getElementById("buttonChange");
-
 
     function changeDate(event) {
         event.preventDefault();
@@ -21,12 +21,10 @@ if (userData.name) {
         userName.removeAttribute("disabled");
         userPassword.removeAttribute("disabled");
         userPasswordConfirmationBlock.style.display = "block";
-
     }
 
     function saveDate() {
-
-        const name = userName.value;
+        const userNameConfirm = userName.value;
         const password= userPassword.value;
         const userPasswordConfirmation = document.getElementById("password-confirmation");
         const passwordConfirmation = userPasswordConfirmation.value;
@@ -36,9 +34,17 @@ if (userData.name) {
             return;
         }
 
-        const userData = { name, password };
+        const userData =
+            {
+            userNameAccess: userNameConfirm,
+            passwordAccess: password,
+            };
         localStorage.setItem("user", JSON.stringify(userData));
-        alert("Данные успешно сохранены!");
+
+        customAlert("Данные успешно сохранены!");
+        setTimeout(function() {
+            location.reload();
+        }, 1000);
 
         userName.setAttribute("disabled", "true");
         userPassword.setAttribute("disabled", "true");
