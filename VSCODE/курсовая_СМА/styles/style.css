@@ -1880,10 +1880,10 @@ h2 {
     .strategy__content-qright {
         position: absolute;
         display: flex;
-        flex-direction: column;
         gap: 590px;
         right: 338px;
     }
+        flex-direction: column;
     .strategy__content-qleft {
         position: absolute;
         display: flex;
@@ -2211,6 +2211,19 @@ h2 {
     }
     .news__content-button > button {
         width: 100%;
+    }
+}
+@media (max-width: 1600px) {
+    .card__text > h3 {
+        top: 110px;
+        text-shadow: black 1px 1px 5px;
+    }
+    .card__text > span {
+        top: 110px;
+        text-shadow: black 1px 1px 5px;
+    }
+    .card__img {
+        filter: grayscale(1);
     }
 }
 @media (min-width: 1601px) {

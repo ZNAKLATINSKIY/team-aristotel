@@ -20,7 +20,7 @@ if (userData.userNameAccess) {
 
         userName.removeAttribute("disabled");
         userPassword.removeAttribute("disabled");
-        userPasswordConfirmationBlock.style.display = "block";
+        userPasswordConfirmationBlock.style.display = "flex";
     }
 
     function saveDate() {

@@ -114,3 +114,138 @@
 .password__stroke-confirmation, .form__button-save {
     display: none;
 }
+/*АДАПТИВ*/
+@media (min-width: 1980px) {
+    .header {
+        min-height: 750px;
+    }
+}
+@media (max-width: 1680px) {
+    .account__form-inputs {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 25px;
+    }
+    .form__button-save, .form__button-change {
+        margin-top: 0;
+        margin-bottom: 50px;
+    }
+}
+@media (max-width: 1500px) {
+    .header {
+        min-height: 500px;
+    }
+    .header__content {
+        margin-top: 50px;
+    }
+}
+@media (max-width: 1263px) {
+    .account__content-info {
+        max-width: 80vw;
+    }
+}
+@media (max-width: 1090px) {
+    .content__right {
+        flex-direction: row;
+        gap: 20px;
+    }
+    .content__right > a > img {
+        width: 45px;
+    }
+}
+@media (max-width: 1023px) {
+    .header__title {
+        font-size: 80px;
+    }
+    .header__content {
+        padding-bottom: 50px;
+        margin-top: 175px;
+        border-bottom: 2px solid #dc052d;
+    }
+    .account__form-inputs {
+        gap: 25px;
+    }
+}
+@media (max-width: 900px) {
+    .section__title {
+        font-size: 85px;
+    }
+}
+@media (max-width: 750px) {
+    .header__content {
+        margin-top: 100px;
+    }
+}
+@media (max-width: 710px) {
+    .section__title {
+        font-size: 75px;
+    }
+}
+@media (max-width: 660px) {
+    .header__content {
+        flex-direction: column;
+        gap: 35px;
+        margin-top: 75px;
+    }
+    .header__title {
+        display: block;
+    }
+    .account__content {
+         margin-top: 75px;
+    }
+    .form-input {
+        width: 350px;
+    }
+    .account__content {
+        margin-top: 25px;
+    }
+}
+@media (max-width: 630px) {
+    .section__title {
+        font-size: 65px;
+        text-align: center;
+    }
+    .account__content {
+        margin-top: 0;
+    }
+    .header {
+        min-height: 480px;
+    }
+}
+@media (max-width: 550px) {
+    .section__title {
+        font-size: 60px;
+    }
+    .header {
+        min-height: 470px;
+    }
+    .section__content {
+        margin: 30px 0 0 0;
+    }
+}
+@media (max-width: 510px) {
+    .section__title {
+        font-size: 55px;
+    }
+}
+@media (max-width: 500px) {
+    .navbar__mobile {
+        padding-top: 25px;
+    }
+    .form-label, .form-input {
+        font-size: 17px;
+    }
+    .form-input {
+        width: 320px;
+    }
+}
+@media (max-width: 440px) {
+    .form-input {
+        width: 280px;
+    }
+}
+@media (max-width: 400px) {
+    .form-input {
+        width: 250px;
+    }
+}

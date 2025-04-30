@@ -49,9 +49,3 @@ inView(".button__register", () => {
     });
 });
 
-inView(".economics__title", () => {
-    animate('.economics__title', {x: ['-550px', '0px'], opacity: ['0%', '100%']}, {
-        duration: 2.2, delay: stagger(2)
-    });
-});
-
