@@ -163,7 +163,7 @@
         border-bottom: 2px solid #dc052d;
     }
     .account__form-inputs {
-        gap: 25px;
+        gap: 0;
     }
 }
 @media (max-width: 900px) {

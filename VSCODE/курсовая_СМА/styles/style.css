@@ -148,7 +148,8 @@ h2 {
     bottom: 10px;
 }
 .economics {
-    margin: 200px 0;
+    padding: 50px 0;
+    overflow: hidden;
 }
 .economics__title {
     text-align: right;
@@ -265,6 +266,10 @@ h2 {
     text-transform: uppercase;
     color: #dc052d;
 }
+.about {
+    overflow: hidden;
+    padding: 100px 0;
+}
 .about__title {
     font-family: var(--font-family), sans-serif;
     font-weight: 600;
@@ -328,7 +333,7 @@ h2 {
     max-width: 910px;
 }
 .token {
-    margin: 150px 0;
+    padding: 50px 0;
 }
 .token__title {
     margin-top: 100px;
@@ -882,9 +887,6 @@ h2 {
         margin-top: 315px;
         gap: 590px;
     }
-    .q3, .q2025 {
-        color: #ac7878;
-    }
     .q2025 {
         left: 0;
     }
@@ -1092,9 +1094,6 @@ h2 {
         left: 23%;
         margin-top: 315px;
         gap: 590px;
-    }
-    .q3, .q2025 {
-        color: #ac7878;
     }
     .q2025 {
         left: -5px;
@@ -1304,9 +1303,6 @@ h2 {
         margin-top: 315px;
         gap: 590px;
     }
-    .q3, .q2025 {
-        color: #ac7878;
-    }
     .q2025 {
         left: -5px;
     }
@@ -1497,9 +1493,6 @@ h2 {
         left: 38%;
         margin-top: 315px;
         gap: 590px;
-    }
-    .q3, .q2025 {
-        color: #ac7878;
     }
     .list__one > li, .list__two > li, .list__three > li {
         font-size: 17px;
@@ -1710,9 +1703,6 @@ h2 {
         margin-top: 315px;
         gap: 590px;
     }
-    .q3, .q2025 {
-        color: #ac7878;
-    }
     .list__one {
         margin-left: 40px;
     }
@@ -1880,10 +1870,10 @@ h2 {
     .strategy__content-qright {
         position: absolute;
         display: flex;
+        flex-direction: column;
         gap: 590px;
         right: 338px;
     }
-        flex-direction: column;
     .strategy__content-qleft {
         position: absolute;
         display: flex;
@@ -1891,9 +1881,6 @@ h2 {
         left: 425px;
         margin-top: 315px;
         gap: 590px;
-    }
-    .q3, .q2025 {
-        color: #ac7878;
     }
     .list__one {
         margin-left: 40px;
@@ -2070,9 +2057,6 @@ h2 {
         margin-top: 315px;
         gap: 590px;
     }
-    .q3, .q2025 {
-        color: #ac7878;
-    }
     .list__one {
         margin-left: 40px;
     }
@@ -2099,7 +2083,6 @@ h2 {
 
 }
 @media (min-width: 1439px) and (max-width: 1600px) {
-
     .container {
         padding-inline: 50px;
     }
@@ -2181,12 +2164,15 @@ h2 {
         max-width: 250px;
     }
     .circle__ido {
-        left: -120px;
-        top: 340px;
+        left: -137px;
+        top: 315px;
         max-width: 100px;
     }
     .circle__staking {
         top: 190px;
+    }
+    .circle__dev {
+        left: -80px;
     }
     .about__button {
         width: 95vw;

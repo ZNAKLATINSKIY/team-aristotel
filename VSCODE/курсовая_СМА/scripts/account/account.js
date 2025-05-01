@@ -7,8 +7,8 @@ if (userData.userNameAccess) {
     const userPassword = document.getElementById("accountPassword");
     const userPasswordConfirmationBlock = document.getElementById("passwordConfirmation");
 
-    userName.value = userData.userNameAccess || "Введите логин";
-    userPassword.value = userData.passwordAccess || "Введите пароль";
+    userName.value = userData.userNameAccess;
+    userPassword.value = userData.passwordAccess;
 
     const buttonSave = document.getElementById("buttonSave");
     const buttonChange = document.getElementById("buttonChange");

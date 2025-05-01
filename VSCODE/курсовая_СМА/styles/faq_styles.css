@@ -15,6 +15,9 @@
 .header__title {
     font-size: 200px;
 }
+.faq__head {
+    overflow: hidden;
+}
 .faq__head-content {
     display: flex;
     align-items: center;
