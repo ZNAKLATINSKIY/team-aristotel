@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            padding: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .block__list {
+            padding: 50px;
+            background: antiquewhite;
+            width: 900px;
+            height: 500px;
+            border: 1px solid black;
+        }
+        .news__title-button {
+            margin-top: 25px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .block__list-news {
+            border-bottom: 1px solid black;
+        }
+        .last {
+            border: none;
+        }
+        span {
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="block__list">
+        <h1 style="text-align: center; font-size: 40px">News</h1>
+        <div class="block__list-news" id="news_one">
+
+            <div class="news__title-button">
+                <span>Lorem Ipsum</span>
+                <button id="button1" class="buttons">Удалить новость</button>
+            </div>
+            <div class="news__text">
+                <p>
+                    Вы, вероятно, слышали о Lorem Ipsum раньше – это наиболее используемый фиктивный текстовый отрывок . Люди используют его, потому что в нем довольно нормальное распределение букв и слов (что делает его похожим на обычный английский), но он также латинский, что означает, что ваш среднестатистический читатель не будет отвлекаться, пытаясь его прочитать.
+                </p>
+            </div>
+
+        </div>
+        <div class="block__list-news" id="news_two">
+
+            <div class="news__title-button">
+                <span>Зачем Лорем?</span>
+                <button id="button2" class="buttons">Удалить новость</button>
+            </div>
+            <div class="news__text">
+                <p>
+                    Вы, вероятно, слышали о Lorem Ipsum раньше – это наиболее используемый фиктивный текстовый отрывок . Люди используют его, потому что в нем довольно нормальное распределение букв и слов (что делает его похожим на обычный английский), но он также латинский, что означает, что ваш среднестатистический читатель не будет отвлекаться, пытаясь его прочитать.
+                </p>
+            </div>
+
+        </div>
+        <div class="block__list-news last" id="news_three">
+
+            <div class="news__title-button">
+                <span>За что Лорем?</span>
+                <button id="button3" class="buttons">Удалить новость</button>
+            </div>
+            <div class="news__text">
+                <p>
+                    Вы, вероятно, слышали о Lorem Ipsum раньше – это наиболее используемый фиктивный текстовый отрывок . Люди используют его, потому что в нем довольно нормальное распределение букв и слов (что делает его похожим на обычный английский), но он также латинский, что означает, что ваш среднестатистический читатель не будет отвлекаться, пытаясь его прочитать.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+</html>
