@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            background: aquamarine;
+            padding: 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+        .progress__bar {
+            border: 1px solid black;
+            width: 300px;
+            height: 50px;
+        }
+        #progress__bar-line {
+            background: blue;
+            width: 0;
+            height: 100%;
+        }
+        button {
+            width: 300px;
+            height: 50px;
+            font-size: 25px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="progress__bar">
+        <div id="progress__bar-line"></div>
+    </div>
+    <button id="btn">Добавить 5%</button>
+
+    <script src="./main.js"></script>
+</body>
+</html>
