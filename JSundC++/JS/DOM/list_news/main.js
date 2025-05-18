@@ -1,9 +1,8 @@
-const buttons = document.getElementsByClassName('buttons');
-const texts = document.getElementsByClassName('news__text');
+const buttons = document.querySelectorAll('.buttons');
 
-for (let i = 0; i < buttons.length; i++) {
-    buttons[i].addEventListener('click', function () {
-        const newsItem = this.parentElement;
-        newsItem.remove();
+buttons.forEach(button => {
+    button.addEventListener('click', function () {
+        const newsBlock = this.closest('.block__list-news');
+        newsBlock.remove();
     });
-}
+});
