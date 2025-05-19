@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <div class="block-paragraph">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error et maiores natus quos saepe. Facilis hic itaque iure odio quos sed voluptate? Alias dignissimos fugit laboriosam nisi quidem quis vero. Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aut beatae cum deleniti distinctio dolorem fugit ipsa laudantium minima, molestias necessitatibus nostrum optio possimus quam quis, reiciendis repellat sapiente veniam! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aut distinctio doloremque doloribus eligendi eveniet impedit labore maiores molestias neque nesciunt perferendis perspiciatis, quod sint sit soluta totam unde vel? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut beatae commodi culpa dolorem, dolores itaque laboriosam natus necessitatibus nisi obcaecati quaerat recusandae, vel voluptatibus. Amet asperiores facilis incidunt ut. Rerum.</p>
+    </div>
+    <div class="block-paragraph">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error et maiores natus quos saepe. Facilis hic itaque iure odio quos sed voluptate? Alias dignissimos fugit laboriosam nisi quidem quis vero. Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aut beatae cum deleniti distinctio dolorem fugit ipsa laudantium minima, molestias necessitatibus nostrum optio possimus quam quis, reiciendis repellat sapiente veniam! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aut distinctio doloremque doloribus eligendi eveniet impedit labore maiores molestias neque nesciunt perferendis perspiciatis, quod sint sit soluta totam unde vel? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut beatae commodi culpa dolorem, dolores itaque laboriosam natus necessitatibus nisi obcaecati quaerat recusandae, vel voluptatibus. Amet asperiores facilis incidunt ut. Rerum.</p>
+    </div>
+    <div class="block-paragraph">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error et maiores natus quos saepe. Facilis hic itaque iure odio quos sed voluptate? Alias dignissimos fugit laboriosam nisi quidem quis vero. Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aut beatae cum deleniti distinctio dolorem fugit ipsa laudantium minima, molestias necessitatibus nostrum optio possimus quam quis, reiciendis repellat sapiente veniam! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aut distinctio doloremque doloribus eligendi eveniet impedit labore maiores molestias neque nesciunt perferendis perspiciatis, quod sint sit soluta totam unde vel? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut beatae commodi culpa dolorem, dolores itaque laboriosam natus necessitatibus nisi obcaecati quaerat recusandae, vel voluptatibus. Amet asperiores facilis incidunt ut. Rerum.</p>
+    </div>
+    <div class="block-paragraph">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error et maiores natus quos saepe. Facilis hic itaque iure odio quos sed voluptate? Alias dignissimos fugit laboriosam nisi quidem quis vero. Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aut beatae cum deleniti distinctio dolorem fugit ipsa laudantium minima, molestias necessitatibus nostrum optio possimus quam quis, reiciendis repellat sapiente veniam! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aut distinctio doloremque doloribus eligendi eveniet impedit labore maiores molestias neque nesciunt perferendis perspiciatis, quod sint sit soluta totam unde vel? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut beatae commodi culpa dolorem, dolores itaque laboriosam natus necessitatibus nisi obcaecati quaerat recusandae, vel voluptatibus. Amet asperiores facilis incidunt ut. Rerum.</p>
+    </div>
+    <div class="button-up">
+        <img src="images.png" alt="up" id="button-id">
+    </div>
+ </div>
+</body>
+<script>
+    const button = document.getElementById('button-id');
+
+    document.addEventListener('scroll', function() {
+        if (window.scrollY > 100) {
+            button.style.visibility = 'visible';
+
+        } else if (window.scrollY < 100) {
+            button.style.visibility = 'hidden';
+        }
+    });
+    document.getElementById('button-id').addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+</script>
+</html>

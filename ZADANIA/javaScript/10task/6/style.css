@@ -1,0 +1,29 @@
+.container {
+    max-width: 1160px;
+    margin: 0 auto;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+.block-paragraph {
+    border-bottom: white solid 1px;
+}
+.block-paragraph > p {
+    color: white;
+    font-family: Agave, sans-serif;
+    font-size: 30px;
+}
+.button-up {
+    transition: 0.5s ease-in-out;
+    visibility: hidden;
+    cursor: pointer;
+    position: fixed;
+    top: 80%;
+    left: 90%;
+}
+#button-id {
+    width: 100px;
+    height: 100px;
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div class="block" id="block">
+        <div class="block-content" id="block-content">
+            <p id="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi incidunt minus nobis reiciendis suscipit unde? Accusantium, ducimus illum, itaque iure magnam nam necessitatibus neque porro possimus quo ratione similique voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus amet aperiam, atque consectetur dolorum ducimus eos est in inventore minus nihil obcaecati officia provident qui quidem quisquam repellendus soluta voluptate? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aspernatur et ipsam iste iure optio quos, ullam veniam. Dicta dolores eum facilis labore laudantium magni odio totam ut velit, voluptates?</p>
+            <button id="button">СКРЫТЬ/РАСКРЫТЬ</button>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    const paragraph = document.getElementById("paragraph");
+
+    document.getElementById("button").addEventListener("click", function () {
+        paragraph.style.visibility = (paragraph.style.visibility === "hidden") ? "visible" : "hidden";
+    });
+</script>
+</html>

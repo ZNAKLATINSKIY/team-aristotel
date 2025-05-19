@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <div class="block-content">
+            <div class="block-coordinates">
+                <h2 class="block-header">X = <span class="coordinates" id="coordinates-X">0</span></h2>
+                <h2 class="block-header">Y = <span class="coordinates" id="coordinates-Y">0</span></h2>
+            </div>
+            <div class="block-click">
+                <h2 class="block-header">Какой кнопкой был клик = <span class="coordinates" id="click">???</span></h2>
+            </div>
+        </div>
+</body>
+<script>
+    document.addEventListener("mousemove", function (e) {
+        let x = e.clientX;
+        let y = e.clientY;
+        let coordinatesX = document.getElementById("coordinates-X");
+        let coordinatesY = document.getElementById("coordinates-Y");
+        coordinatesX.innerHTML = x;
+        coordinatesY.innerHTML = y;
+    });
+    document.addEventListener("mousedown", function (e) {
+        let click = e.button;
+        let clickButton = document.getElementById("click");
+        if (click === 0) {
+            clickButton.innerHTML = "Левая кнопка мыши";
+        } else if (click === 1) {
+            clickButton.innerHTML = "Средняя кнопка мыши";
+        } else if (click === 2) {
+            clickButton.innerHTML = "Правая кнопка мыши";
+        }
+    });
+
+
+</script>
+</html>

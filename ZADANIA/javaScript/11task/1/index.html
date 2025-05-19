@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="body">
+<div class="container">
+    <div class="block" id="block">
+        <div class="block-content" id="block-content">
+            <h1 class="block-header">Случайное число</h1>
+            <span id="random-numbers">Нажмите на кнопку</span>
+            <button id="random-button">Получит случайное число от 1 до 100</button>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    const random = document.getElementById('random-numbers');
+    document.getElementById('random-button').addEventListener('click', function () {
+        function getRandomArbitrary(max) {
+            return Math.floor(Math.random() * max);
+        }
+        random.textContent = (getRandomArbitrary(100));
+
+    });
+</script>
+</html>

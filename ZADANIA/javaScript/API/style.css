@@ -1,0 +1,20 @@
+.container {
+  max-width: 1360px;
+  margin: 0 auto;
+}
+body {
+  background: black;
+}
+.block {
+    margin: auto;
+  width: 100px;
+  height: 100px;
+  border: white solid 1px;
+}
+.block-taglline {
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    line-height: 100px;
+    font-family: Arial, sans-serif;
+}
