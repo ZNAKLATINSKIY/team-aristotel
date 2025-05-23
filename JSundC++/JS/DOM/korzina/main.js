@@ -1,0 +1,44 @@
+const russianAlphabetLower = {
+    1: "а",
+    2: "б",
+    3: "в",
+    4: "г",
+    5: "д",
+    6: "е",
+    7: "ё",
+    8: "ж",
+    9: "з",
+    10: "и",
+    11: "й",
+    12: "к",
+    13: "л",
+    14: "м",
+    15: "н",
+    16: "о",
+    17: "п",
+    18: "р",
+    19: "с",
+    20: "т",
+    21: "у",
+    22: "ф",
+    23: "х",
+    24: "ц",
+    25: "ч",
+    26: "ш",
+    27: "щ",
+    28: "ъ",
+    29: "ы",
+    30: "ь",
+    31: "э",
+    32: "ю",
+    33: "я"
+};
+
+let word = document.getElementById("word").value;
+const shift = document.getElementById("shift").value;
+const cryptButton = document.getElementById("encryption-but");
+const startCrypt = document.getElementById("startEncryptionCode");
+const finishCrypt = document.getElementById("finishEncryptionCode");
+const finishCryptWord = document.getElementById("finishEncryptionWord");
+
+word = word.toLowerCase();

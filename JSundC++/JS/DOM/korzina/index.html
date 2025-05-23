@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 100px;
+            color: white;
+            background: black;
+        }
+        .first__content {
+            width: 400px;
+            height: 500px;
+            border: 1px solid white;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 75px;
+        }
+        .encryption {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .enter__word, .enter__word-input {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 5px;
+        }
+        .enter__word-input {
+            flex-direction: row;
+        }
+        .enc {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <div class="first__content">
+        <div class="encryption">
+            <div class="enter__word">
+                <span>Введите слово:</span>
+                <input type="text" id="word">
+            </div>
+            <div class="enter__word-input">
+                <span>Введите сдвиг:</span>
+                <input type="text" id="shift">
+                <button id="encryption-but">Зашифровать</button>
+            </div>
+        </div>
+        <div class="enc start__encryption">
+            <span>Исходный шифр:</span>
+            <span id="startEncryption-code">Исходный шифр</span>
+        </div>
+        <div class="enc finish__encryption">
+            <span>Зашифрованный код:</span>
+            <span id="finishEncryption-code">Зашифрованный код</span>
+        </div>
+        <div class="enc finish__encryption-word">
+            <span>Зашифрованный текст:</span>
+            <span id="finishEncryptionWord">Зашифрованный текст</span>
+        </div>
+    </div>
+
+
+    <script src="./main.js"></script>
+</body>
+</html>
