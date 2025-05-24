@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        body {
+            background: black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 50px;
+            color: white;
+            font-size: 30px;
+        }
+        input {
+            width: 300px;
+            height: 30px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            padding: 5px;
+            font-size: 16px;
+            background: none;
+            color: white;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding-top: 100px;
+        }
+        #progress-bar {
+            width: 80%;
+            height: 50px;
+            border: 2px solid #ccc;
+            border-radius: 50px;
+        }
+        #progress-bar-line {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: blue;
+            width: 0;
+            height: 100%;
+            border-radius: 50px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <label for="name">
+            <input type="text" id="name" placeholder="Введите имя">
+        </label>
+        <label for="second-name">
+            <input type="text" id="second-name" placeholder="Введите фамилию">
+        </label>
+        <label for="date">
+            <input type="text" id="date" placeholder="Введите дату рождения">
+        </label>
+        <label for="mail">
+            <input type="text" id="mail" placeholder="Введите mail-адрес">
+        </label>
+    </form>
+
+    <span id="procent">0%</span>
+
+    <div id="progress-bar">
+        <div id="progress-bar-line"></div>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+</html>
