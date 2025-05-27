@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+
+    document.addEventListener('DOMContentLoaded', function() {
+        document.body.innerHTML = '<div class="content">Нельзя вызвать контекстное меню</div>';
+
+        document.body.style.userSelect = 'none';
+        document.body.style.webkitUserSelect = 'none';
+        document.body.style.msUserSelect = 'none';
+        document.body.style.mozUserSelect = 'none';
+
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+
+        document.addEventListener('mousedown', function(e) {
+            e.preventDefault();
+        });
+
+
+        document.addEventListener('selectstart', function(e) {
+            e.preventDefault();
+        });
+
+        const content = document.querySelector('.content');
+
+        content.style.padding = '20px';
+        content.style.fontSize = '24px';
+        content.style.textAlign = 'center';
+        content.style.marginTop = '50px';
+    });
+</script>

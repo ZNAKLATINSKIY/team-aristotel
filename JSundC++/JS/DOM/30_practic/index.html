@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM + JS</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <style>
+    .card {
+        height: 596px;
+        overflow: hidden;
+    }
+    .card .card-img-top {
+      width: 260px !important;
+      height: 341px !important;
+      object-fit: cover;
+    }
+    .select-book-btn {
+        position: absolute;
+        bottom: 10px;
+    }
+
+    .teacher-log__select-form {
+        padding: .5rem 0;
+        border-bottom:  1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+
+<!-- 1 Задание, магазин книг -->
+<div class="container mt-5">
+  <h1>1 Задание</h1>
+  <p>Магазин книг</p>
+
+  <div class="shop row">
+<!--  Каталог книг  -->
+    <div class="shop__catalog col-md-8 row">
+      <div class="col-4">
+        <div class="card mb-3">
+          <img src="https://m.media-amazon.com/images/I/91dOB9d+zsL._SY385_.jpg" class="card-img-top" alt="Книга 1">
+          <div class="card-body">
+            <h5 class="card-title">Learning JavaScript: JavaScript Essentials for Modern Application Development</h5>
+            <p class="card-text">Ethan Brown</p>
+            <p class="card-text text-end"><strong>16$</strong></p>
+            <button class="btn btn-primary select-book-btn">Выбрать</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-4">
+        <div class="card mb-3">
+          <img src="https://cdn1.ozone.ru/s3/multimedia-7/6391221331.jpg" class="card-img-top" alt="Книга 1">
+          <div class="card-body">
+            <h5 class="card-title">You Don't Know JS: Scope & Closures</h5>
+            <p class="card-text">Kyle Simpson</p>
+            <p class="card-text text-end"><strong>20$</strong></p>
+            <button class="btn btn-primary select-book-btn">Выбрать</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-4">
+        <div class="card mb-3">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIUv3PbtKKxRyx0Z04AtiTIDQTSydZP4q75w&s" class="card-img-top" alt="Книга 1">
+          <div class="card-body">
+            <h5 class="card-title">Web Design with HTML, CSS, JavaScript and jQuery Set</h5>
+            <p class="card-text">Jon Duckett</p>
+            <p class="card-text text-end"><strong>22$</strong></p>
+            <button class="btn btn-primary select-book-btn">Выбрать</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!--  Корзина заказа  -->
+    <div class="shop__cart col-md-4">
+      <div class="right-form col-12">
+        <h2>Оформление заказа</h2>
+
+        <form>
+          <div class="mb-3">
+            <button id="selectedBookButton" class="btn btn-info w-100" disabled>Выберите книгу</button>
+          </div>
+          <div class="mb-3">
+            <label for="quantity" class="form-label">Количество</label>
+            <input type="number" class="form-control" id="quantity" placeholder="Введите количество книг" min="1" value="1" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="name" class="form-label">Имя</label>
+            <input type="text" class="form-control" id="name" placeholder="Введите ваше имя" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="address" class="form-label">Адрес доставки</label>
+            <input type="text" class="form-control" id="address" placeholder="Введите адрес доставки" required>
+          </div>
+          <div class="mb-3">
+            <label for="date" class="form-label">Время доставки</label>
+            <input type="date" class="form-control" id="date" placeholder="Укажите время доставки" required>
+          </div>
+          <div class="mb-3">
+            <label for="comment" class="form-label">Комментарий</label>
+            <textarea class="form-control" id="comment" placeholder="Комментарий к заказу"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Оформить заказ</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- 2 Задание, Журнал для преподавателя -->
+<div class="container mt-5">
+  <h1>2 Задание</h1>
+  <p>Журнал для преподавателя</p>
+
+  <div class="teacher-log">
+    <form class="teacher-log__select-form row g-3">
+      <div class="col-4">
+        <label for="group-select" class="form-label">Выберите группу:</label>
+        <select name="group-select" id="group-select" class="form-select">
+          <option value="1">ТИС-1</option>
+          <option value="2">ТИС-21</option>
+          <option value="3">ТИС-22</option>
+        </select>
+      </div>
+
+      <div class="col-4">
+        <label for="lesson-select" class="form-label">Выберите урок:</label>
+        <select name="group-select" id="lesson-select" class="form-select">
+          <option value="JS.DOM">JS.DOM</option>
+          <option value="JS.Events">JS.Events</option>
+          <option value="React Basics">React Basics</option>
+        </select>
+      </div>
+
+      <div class="col-4 col-md-3 offset-md-1 align-self-end">
+        <button type="submit" class="btn btn-primary w-100">Выбрать</button>
+      </div>
+    </form>
+
+    <div class="teacher-log__table py-4">
+      <h3 class="log-table__topic mb-3">Тема: JS.DOM</h3>
+
+      <table class="teacher-log__log-table table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">ФИО</th>
+            <th scope="col">Присутствовал?</th>
+            <th scope="col">Оценка</th>
+            <th scope="col">Комментарий</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="log-table__student">Иванов Иван Иванович</td>
+            <td class="log-table__is-present">Присутствовал</td>
+            <td class="log-table__assessment text-success">100</td>
+            <td class="log-table__comment">-</td>
+          </tr>
+          <tr>
+            <td class="log-table__student">Петров Петр Петрович</td>
+            <td class="log-table__is-present">Присутствовал</td>
+            <td class="log-table__assessment text-warning">49</td>
+            <td class="log-table__comment">Сидел без дела</td>
+          </tr>
+          <tr>
+            <td class="log-table__student">Сидоров Сидор Сидорович</td>
+            <td class="log-table__is-present">Присутствовал</td>
+            <td class="log-table__assessment text-success">75</td>
+            <td class="log-table__comment">-</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <button id="editMode" class="btn btn-warning w-100 mt-4">Изменить</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// 1 Задание, магазин книг
+const bookButtons = document.querySelectorAll('.shop__catalog .btn');
+const selectedBookButton = document.getElementById('selectedBookButton');
+let selectedBook = null;
+
+bookButtons.forEach(button => {
+  button.addEventListener('click', function() {
+    selectedBook = this.parentElement.querySelector('.card-title').textContent;
+    selectedBookButton.textContent = `Выбрана книга: ${selectedBook}`;
+  });
+});
+
+const form = document.querySelector('.right-form form');
+const nameInput = document.getElementById('name');
+const addressInput = document.getElementById('address');
+const dateInput = document.getElementById('date');
+form.addEventListener('submit', function(event) {
+  event.preventDefault();
+  if (!selectedBook) {
+    alert('Пожалуйста, выберите книгу перед оформлением заказа.');
+    return;
+  }
+  alert(`${nameInput.value}, ваш заказ оформлен!\n\nКнига ${selectedBook} будет доставлена в ${dateInput.value} по адресу: ${addressInput.value}`);
+});
+
+// 2 Задание, Журнал для преподавателя
+let teacherLogData = {
+    groups: [
+        {
+            groupId: 1,
+            name: 'ТИС-1',
+            students: [
+                { studentId: 1, name: 'Иванов Иван Иванович' },
+                { studentId: 2, name: 'Петров Петр Петрович' },
+                { studentId: 3, name: 'Сидоров Сидор Сидорович' }
+            ]
+        },
+        {
+            groupId: 2,
+            name: 'ТИС-21',
+            students: [
+                { studentId: 4, name: 'Олег Тинькофф Константинович' },
+                { studentId: 5, name: 'Арлан Габдулхак Габдулхакович' },
+                { studentId: 6, name: 'Михаил Габдулхак Адалетович' }
+            ]
+        },
+        {
+            groupId: 3,
+            name: 'ТИС-22',
+            students: [
+                { studentId: 7, name: 'Адлет Абильдинов Адалетович' },
+                { studentId: 8, name: 'Бекзат Угли Древесный' },
+                { studentId: 9, name: 'Пидиди' },
+                { studentId: 10, name: 'Уолтер Уайт' }
+            ]
+        }
+    ],
+    lessons: [
+        {
+          topic: 'JS.DOM',
+          studentsAssessments: [
+            { studentId: 1, isPresent: true, assessment: 100, comment: '-' },
+            { studentId: 2, isPresent: true, assessment: 49, comment: 'Сидел без дела' },
+            { studentId: 3, isPresent: true, assessment: 75, comment: '-' },
+            { studentId: 4, isPresent: true, assessment: 85, comment: '-' },
+            { studentId: 5, isPresent: true, assessment: 60, comment: 'Нужна дополнительная помощь' },
+            { studentId: 6, isPresent: false, assessment: 50, comment: '-' },
+            { studentId: 7, isPresent: false, assessment: 55, comment: '-' },
+            { studentId: 8, isPresent: false, assessment: 70, comment: '-' },
+            { studentId: 9, isPresent: true, assessment: 1, comment: '-' },
+            { studentId: 10, isPresent: true, assessment: 95, comment: '-' }
+          ]
+        },
+        {
+          topic: 'JS.Events',
+          studentsAssessments: [
+            { studentId: 1, isPresent: true, assessment: 90, comment: '-' },
+            { studentId: 2, isPresent: true, assessment: 80, comment: '-' },
+            { studentId: 3, isPresent: true, assessment: 70, comment: '-' },
+            { studentId: 4, isPresent: true, assessment: 60, comment: '-' },
+            { studentId: 5, isPresent: false, assessment: 50, comment: '-' },
+            { studentId: 6, isPresent: false, assessment: 40, comment: '-' },
+            { studentId: 7, isPresent: true, assessment: 30, comment: '-' },
+            { studentId: 8, isPresent: true, assessment: 20, comment: '-' },
+            { studentId: 9, isPresent: true, assessment: 10, comment: '-' },
+            { studentId: 10, isPresent: true, assessment: 0, comment: '-' }
+          ]
+        },
+        {
+          topic: 'React Basics',
+          studentsAssessments: [
+            { studentId: 1, isPresent: true, assessment: 100, comment: '-' },
+            { studentId: 2, isPresent: true, assessment: 90, comment: '-' },
+            { studentId: 3, isPresent: true, assessment: 80, comment: '-' },
+            { studentId: 4, isPresent: true, assessment: 70, comment: '-' },
+            { studentId: 5, isPresent: false, assessment: 60, comment: '-' },
+            { studentId: 6, isPresent: false, assessment: 50, comment: '-' },
+            { studentId: 7, isPresent: true, assessment: 40, comment: '-' },
+            { studentId: 8, isPresent: true, assessment: 30, comment: '-' },
+            { studentId: 9, isPresent: true, assessment: 20, comment: '-' },
+            { studentId: 10, isPresent: true, assessment: 10, comment: '-' }
+          ]
+        }
+    ]
+}
+
+class TeacherLog {
+    constructor(data) {
+        this.data = data || {};
+        this.groups = this.data.groups || [];
+        this.lessons = this.data.lessons || [];
+        this.currentGroup = null;
+        this.currentLesson = null;
+    }
+
+    getGroupById(groupId) {
+        return this.groups.find(group => group.groupId === parseInt(groupId));
+    }
+
+    getStudentById(studentId) {
+        return this.groups.find(group => group.studentId === studentId);
+    }
+
+    getLessonByTopic(topic) {
+        return this.lessons.find(lesson => lesson.topic === topic);
+    }
+    getStudentAssessmentByLesson(topic, studentId) {
+        const lesson = this.getLessonByTopic(topic);
+        if (!lesson) return null;
+        return lesson.studentsAssessments.find(assessment => assessment.studentId === studentId);
+    }
+
+    updateLogTable(groupId = this.currentGroup.groupId, lessonTopic = this.currentLesson.topic) {
+        const editButton = document.querySelector('#editMode');
+        if (editButton.textContent === 'Сохранить') {
+            let isSaveChanges = confirm("Вы уверены, что хотите сохранить изменения?");
+
+            if (!isSaveChanges) {
+                editButton.textContent = 'Изменить';
+                editButton.classList.remove('btn-success');
+                editButton.classList.add('btn-warning');
+                editButton.removeEventListener('click', this.saveChanges);
+                editButton.addEventListener('click', this.editMode.bind(this));
+            }
+        }
+
+        this.currentGroup = this.getGroupById(groupId);
+        this.currentLesson = this.getLessonByTopic(lessonTopic);
+
+        if (!this.currentGroup || !this.currentLesson) {
+            alert('Группа или урок не найдены');
+            return;
+        }
+
+        const logTableTopic = document.querySelector('.log-table__topic');
+        logTableTopic.innerText = `Тема: ${this.currentLesson.topic}`;
+
+        const tableBody = document.querySelector('.teacher-log__log-table tbody');
+        tableBody.innerHTML = '';
+
+        this.currentGroup.students.forEach(student => {
+            const assessmentData = this.currentLesson.studentsAssessments.find(a => a.studentId === student.studentId);
+            const isPresent = assessmentData ? assessmentData.isPresent : false;
+            const assessment = assessmentData ? assessmentData.assessment : 0;
+            const comment = assessmentData ? assessmentData.comment : 'Нет комментария';
+
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td class="log-table__student">${student.name}</td>
+                <td class="log-table__is-present">${isPresent ? 'Присутствовал' : 'Отсутствовал'}</td>
+                <td class="log-table__assessment ${assessment >= 70 ? 'text-success' : (assessment >= 50 ? 'text-warning' : 'text-danger')}">${assessment}</td>
+                <td class="log-table__comment">${comment}</td>
+            `;
+            tableBody.appendChild(row);
+        });
+    }
+
+    editMode() {
+        const rows = document.querySelectorAll('.teacher-log__log-table tbody tr');
+        rows.forEach(row => {
+            const isPresentCell = row.querySelector('.log-table__is-present');
+            const assessmentInput = row.querySelector('.log-table__assessment');
+            const commentInput = row.querySelector('.log-table__comment');
+
+            isPresentCell.innerHTML = `<input type="checkbox" class="form-check-input" ${isPresentCell.textContent === 'Присутствовал' ? 'checked' : ''}>`;
+            assessmentInput.innerHTML = `<input type="number" class="form-control" value="${assessmentInput.textContent}" min="0" max="100">`;
+            commentInput.innerHTML = `<input type="text" class="form-control" value="${commentInput.textContent}">`;
+        });
+
+        const editButton = document.querySelector('#editMode');
+        editButton.textContent = 'Сохранить';
+        editButton.classList.remove('btn-warning');
+        editButton.classList.add('btn-success');
+        editButton.removeEventListener('click', this.editMode);
+        editButton.addEventListener('click', this.saveChanges.bind(this));
+    }
+
+    // FIXME: При вызове функции все поля в таблице оказываются пустыми
+    saveChanges() {
+        const rows = document.querySelectorAll('.teacher-log__log-table tbody tr');
+        rows.forEach(row => {
+            const studentName = row.querySelector('.log-table__student').textContent;
+            const isPresentInput = row.querySelector('.log-table__is-present input[type="checkbox"]');
+            const assessmentInput = row.querySelector('.log-table__assessment input[type="number"]');
+            const commentInput = row.querySelector('.log-table__comment input[type="text"]');
+            console.dir(studentName);
+            console.log(isPresentInput);
+            console.log(assessmentInput);
+            console.log(commentInput);
+
+            if (!isPresentInput || !assessmentInput || !commentInput) {
+                console.error('Не удалось найти поля ввода для:', studentName);
+                return;
+            }
+
+            const student = this.groups.flatMap(group => group.students).find(s => s.name === studentName);
+            if (!student) {
+                console.error('Студент не найден:', studentName);
+                return;
+            }
+
+            const assessmentData = this.getStudentAssessmentByLesson(this.currentLesson.topic, student.studentId);
+            if (assessmentData) {
+                assessmentData.isPresent = isPresentInput.checked;
+                assessmentData.assessment = parseInt(assessmentInput.value) || 0;
+                assessmentData.comment = commentInput.value || '-';
+            } else {
+                console.error('Данные оценки не найдены для:', studentName);
+            }
+            console.log(assessmentData);
+        });
+
+        const editButton = document.querySelector('#editMode');
+        editButton.textContent = 'Изменить';
+        editButton.classList.remove('btn-success');
+        editButton.classList.add('btn-warning');
+        editButton.removeEventListener('click', this.saveChanges);
+        editButton.addEventListener('click', this.editMode.bind(this));
+
+        this.updateLogTable();
+        alert('Изменения сохранены!');
+    }
+}
+
+const teacherLog = new TeacherLog(teacherLogData);
+teacherLog.updateLogTable(1, 'JS.DOM');
+
+const groupSelect = document.getElementById('group-select');
+const lessonSelect = document.getElementById('lesson-select');
+const selectForm = document.querySelector('.teacher-log__select-form')
+const editButton = document.getElementById('editMode');
+
+selectForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+    const group = groupSelect.value;
+    const lesson = lessonSelect.value;
+    alert(`Вы выбрали группу: ${group}, урок: ${lesson}`);
+    teacherLog.updateLogTable(group, lesson);
+});
+editButton.addEventListener('click', () => {
+    teacherLog.editMode();
+});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table style="margin:auto;">
+        <tr>
+            <td>F</td>
+            <td>F</td>
+            <td>F</td>
+        </tr>
+        <tr>
+            <td>F</td>
+            <td>F</td>
+            <td>F</td>
+        </tr>
+        <tr>
+            <td>F</td>
+            <td>F</td>
+            <td>F</td>
+        </tr>
+    </table>
+
+    <script>
+        let table = document.querySelector('table');
+        table.style.borderCollapse = 'collapse';
+        table.style.border = '1px solid black';
+        table.style.width = '500px';
+        table.style.height = '500px';
+        table.style.textAlign = 'center';
+        table.style.marginTop = '50px';
+
+
+        let td = document.querySelectorAll('td');
+        td.forEach((item) => {
+            item.style.border = '1px solid black';
+            item.style.width = '100px';
+            item.style.height = '100px';
+            item.style.fontSize = '30px';
+            item.style.transition = '0.5s';
+
+            item.addEventListener('mouseover', function() {
+                this.style.backgroundColor = 'black';
+                this.style.color = 'white';
+            });
+
+            item.addEventListener('mouseout', function() {
+                this.style.backgroundColor = '';
+                this.style.color = 'black';
+            });
+        });
+    </script>
+</body>
+</html>

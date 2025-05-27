@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Калькулятор</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #e0e0e0;
+        }
+
+        .calculator {
+            background-color: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            width: 320px;
+        }
+
+        .display {
+            background-color: #f8f8f8;
+            border: none;
+            border-radius: 12px;
+            font-size: 28px;
+            font-weight: 500;
+            height: 70px;
+            margin-bottom: 20px;
+            padding: 0 20px;
+            text-align: right;
+            width: calc(100% - 40px);
+            color: #333;
+            box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
+
+        button {
+            background-color: #f0f0f0;
+            border: none;
+            border-radius: 12px;
+            color: #333;
+            cursor: pointer;
+            font-size: 20px;
+            font-weight: 500;
+            height: 60px;
+            transition: all 0.2s ease;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        button:hover {
+            background-color: #e6e6e6;
+            transform: translateY(-2px);
+        }
+
+        button:active {
+            transform: translateY(1px);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        .operation {
+            background-color: #4d90fe;
+            color: white;
+        }
+
+        .operation:hover {
+            background-color: #4080eb;
+        }
+
+        .equal {
+            background-color: #4d90fe;
+            color: white;
+            grid-column: span 2;
+        }
+
+        .equal:hover {
+            background-color: #4080eb;
+        }
+
+        .clear {
+            background-color: #ff6161;
+            color: white;
+        }
+
+        .clear:hover {
+            background-color: #ff4747;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" class="display" id="display" readonly>
+        <div class="buttons">
+            <button class="clear" onclick="clearDisplay()">C</button>
+            <button onclick="backspace()">←</button>
+            <button onclick="percent()">%</button>
+            <button class="operation" onclick="addOperation('/')">÷</button>
+
+            <button onclick="addNumber(7)">7</button>
+            <button onclick="addNumber(8)">8</button>
+            <button onclick="addNumber(9)">9</button>
+            <button class="operation" onclick="addOperation('*')">×</button>
+
+            <button onclick="addNumber(4)">4</button>
+            <button onclick="addNumber(5)">5</button>
+            <button onclick="addNumber(6)">6</button>
+            <button class="operation" onclick="addOperation('-')">-</button>
+
+            <button onclick="addNumber(1)">1</button>
+            <button onclick="addNumber(2)">2</button>
+            <button onclick="addNumber(3)">3</button>
+            <button class="operation" onclick="addOperation('+')">+</button>
+
+            <button onclick="toggleSign()">±</button>
+            <button onclick="addNumber(0)">0</button>
+            <button onclick="addDecimal()">.</button>
+            <button class="equal" onclick="calculate()">=</button>
+        </div>
+    </div>
+
+    <script>
+        const display = document.getElementById('display');
+        let currentInput = '';
+        let currentOperation = null;
+        let previousInput = '';
+        let justCalculated = false;
+        function updateDisplay() {
+            display.value = currentInput;
+        }
+
+        function addNumber(num) {
+            if (justCalculated) {
+                clearDisplay();
+                justCalculated = false;
+            }
+            currentInput += num;
+            updateDisplay();
+        }
+
+        function addOperation(op) {
+            if (currentInput === '' && previousInput === '') return;
+
+            if (currentInput === '') {
+                currentOperation = op;
+                return;
+            }
+
+            if (previousInput !== '') {
+                calculate(false);
+            }
+
+            previousInput = currentInput;
+            currentOperation = op;
+            currentInput = '';
+        }
+
+        function calculate(updateInput = true) {
+            if (previousInput === '' || currentInput === '' || !currentOperation) return;
+
+            const prev = parseFloat(previousInput);
+            const current = parseFloat(currentInput);
+            let result = 0;
+
+            switch (currentOperation) {
+                case '+':
+                    result = prev + current;
+                    break;
+                case '-':
+                    result = prev - current;
+                    break;
+                case '*':
+                    result = prev * current;
+                    break;
+                case '/':
+                    if (current === 0) {
+                        alert('Деление на ноль невозможно');
+                        clearDisplay();
+                        return;
+                    }
+                    result = prev / current;
+                    break;
+            }
+
+            result = roundResult(result);
+
+            if (updateInput) {
+                currentInput = result.toString();
+                previousInput = '';
+                currentOperation = null;
+                justCalculated = true;
+                updateDisplay();
+            } else {
+                previousInput = result.toString();
+                currentInput = '';
+                justCalculated = false;
+            }
+        }
+
+        function roundResult(num) {
+            // Округляем до 10 знаков, чтобы избежать проблем с плавающей точкой
+            return Math.round(num * 10000000000) / 10000000000;
+        }
+
+        function clearDisplay() {
+            currentInput = '';
+            previousInput = '';
+            currentOperation = null;
+            updateDisplay();
+        }
+
+        function backspace() {
+            currentInput = currentInput.slice(0, -1);
+            updateDisplay();
+        }
+
+        function addDecimal() {
+            if (justCalculated) {
+                clearDisplay();
+                justCalculated = false;
+            }
+            if (!currentInput.includes('.')) {
+                currentInput = currentInput === '' ? '0.' : currentInput + '.';
+                updateDisplay();
+            }
+        }
+
+        function toggleSign() {
+            if (currentInput !== '') {
+                currentInput = (parseFloat(currentInput) * -1).toString();
+                updateDisplay();
+            }
+        }
+
+        function percent() {
+            if (currentInput !== '') {
+                currentInput = (parseFloat(currentInput) / 100).toString();
+                updateDisplay();
+            }
+        }
+
+        // Добавляем поддержку клавиатуры
+        document.addEventListener('keydown', (e) => {
+            if (e.key >= '0' && e.key <= '9') {
+                addNumber(parseInt(e.key));
+            } else if (e.key === '.') {
+                addDecimal();
+            } else if (e.key === '+' || e.key === '-' || e.key === '*' || e.key === '/') {
+                addOperation(e.key);
+            } else if (e.key === 'Enter' || e.key === '=') {
+                calculate();
+            } else if (e.key === 'Escape') {
+                clearDisplay();
+            } else if (e.key === 'Backspace') {
+                backspace();
+            }
+        });
+    </script>
+</body>
+</html>
