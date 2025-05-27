@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="container">
+        <div class="block-navigation">
+            <div class="block-nav-box-">Home</div>
+            <div class="block-nav-box-" id="block-nav-id">Categories</div>
+            <div class="block-nav-up" id="block-up-id">
+                <div class="block-up-blocks">Dress</div>
+                <div class="block-up-blocks">Shirt</div>
+                <div class="block-up-blocks">Jeans</div>
+                <div class="block-up-blocks">Shoes</div>
+            </div>
+            <div class="block-nav-box-">About</div>
+            <div class="block-nav-box-">Contact</div>
+        </div>
+      </div>
+    </nav>
+  </header>
+</body>
+<script>
+    const blockNav = document.querySelector(".block-nav-up");
+
+
+    document.getElementById("block-nav-id").onclick = function () {
+        blockNav.style.top = "70px";
+    }
+    document.addEventListener('click', function (event) {
+        const isClickInsideModal = blockNav.contains(event.target);
+        const isClickOnOpenButton = event.target.closest("#block-nav-id");
+
+        if (!isClickOnOpenButton && !isClickInsideModal) {
+            blockNav.style.top = "-290px";
+
+        }
+    });
+</script>
+</html>

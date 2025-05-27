@@ -41,20 +41,20 @@
 // cardContentInfo[1].style.position = "relative";
 // cardContentInfo[1].style.top = "10px";
 //
-// cardContentInfo[2].style.fontSize = "1.3rem";
-// cardContentInfo[2].style.color = "white";
-// cardContentInfo[2].maxWidth = "200px";
-// cardContentInfo[2].style.position = "relative";
-// cardContentInfo[2].style.top = "50px";
-// cardContentInfo[2].style.fontStyle = "italic";
+// cardContentInfo[addColor_block].style.fontSize = "1.3rem";
+// cardContentInfo[addColor_block].style.color = "white";
+// cardContentInfo[addColor_block].maxWidth = "200px";
+// cardContentInfo[addColor_block].style.position = "relative";
+// cardContentInfo[addColor_block].style.top = "50px";
+// cardContentInfo[addColor_block].style.fontStyle = "italic";
 //
-// cardContentInfo[3].style.fontStyle = "italic";
-// cardContentInfo[3].style.fontSize = "3rem";
-// cardContentInfo[3].style.color = "white";
-// cardContentInfo[3].style.fontStyle = "italic";
-// cardContentInfo[3].style.position = "relative";
-// cardContentInfo[3].style.top = "120px";
-// cardContentInfo[3].style.right = "50px";
+// cardContentInfo[color-palitre].style.fontStyle = "italic";
+// cardContentInfo[color-palitre].style.fontSize = "3rem";
+// cardContentInfo[color-palitre].style.color = "white";
+// cardContentInfo[color-palitre].style.fontStyle = "italic";
+// cardContentInfo[color-palitre].style.position = "relative";
+// cardContentInfo[color-palitre].style.top = "120px";
+// cardContentInfo[color-palitre].style.right = "50px";
 let body = document.querySelector("body");
 body.style.backgroundColor = "black";
 

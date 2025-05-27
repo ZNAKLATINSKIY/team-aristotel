@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="block">
+            <div class="block-content">
+                <div class="block-article">
+                    <h1>Lorem ipsum dolor sit amet</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dolorem dolorum eligendi excepturi fuga, harum illum ipsam ipsum laudantium nam numquam provident quam quia repudiandae similique suscipit tempora, temporibus voluptatum? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias amet aperiam at cupiditate deleniti doloribus ducimus expedita, hic ipsa ipsam minima modi, molestias, mollitia nesciunt odio qui quis quos recusandae?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci ea hic maiores repellat, sequi vel veritatis. Assumenda eius error est explicabo fugit, harum iste iusto, quasi rem sed voluptas.</p>
+                </div>
+                <div class="block-comments">
+                    <div class="block-comment">
+                        <h2>ARGBX</h2>
+                        <span>2025-05-21</span>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur blanditiis illum ipsam ipsum iste laboriosam magnam provident quia recusandae vitae. Aperiam beatae cum cupiditate est minima nesciunt odio quos vero.</p>
+                    </div>
+                </div>
+                <div class="block-form">
+                    <h2>Вы можете оставить и свой коментарий</h2>
+                    <form>
+                        <label for="comment-name" class="form-label">
+                            Ваш никнейм:
+                            <input id="comment-name" name="name" type="text" placeholder="Никнейм">
+                        </label>
+                        <label for="comment-name" class="form-label">
+                            Ваш комментарий:
+                            <textarea id="comment" name="story" rows="8" cols="53" placeholder="Комментарий"></textarea>
+                        </label>
+                    </form>
+                    <button id="button">Оставить комментарий</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+
+    const button = document.getElementById('button');
+    const name = document.getElementById('comment-name');
+    const comment = document.getElementById('comment');
+    const container = document.querySelector('.block-comments');
+
+    console.log(name.value)
+
+
+
+
+    function getCurrentDate() {
+        const now = new Date();
+        const year = now.getFullYear();
+        const month = String(now.getMonth() + 1).padStart(2, '0');
+        const day = String(now.getDate()).padStart(2, '0');
+        return `${year}-${month}-${day}`;
+    }
+
+    button.addEventListener('click', () => {
+            container.insertAdjacentHTML('beforeend', `
+                    <div class="block-comment">
+                        <h2>${name.value}</h2>
+                        <span>${getCurrentDate()}</span>
+                        <p>${comment.value}</p>
+                    </div>
+            `);
+    })
+
+</script>
+</html>

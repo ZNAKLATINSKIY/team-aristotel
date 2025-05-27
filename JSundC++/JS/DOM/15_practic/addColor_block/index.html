@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="block">
+            <div class="block-content">
+                <div class="block-box-container">
+                </div>
+                <button id="button">ДОБАВИТЬ ЦВЕТ</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const container = document.querySelector('.block-box-container');
+    const button = document.getElementById('button');
+
+
+    function getRandomColor() {
+        return `rgb(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)})`;
+    }
+
+    let count = 0;
+
+    button.addEventListener('click', () => {
+        if (count < 24) {
+            count++;
+            container.insertAdjacentHTML('beforeend', `<div class="block-color" id="block-color" style="background: ${getRandomColor()}" ></div>`);
+        } else {
+        }
+    })
+
+    container.addEventListener('click', (e) => {
+        const card = e.target.closest('.block-color');
+        if (card) {
+            card.remove(); // Удаляем кликнутый блок
+            count--;
+        }
+    });
+
+
+
+</script>
+</html>

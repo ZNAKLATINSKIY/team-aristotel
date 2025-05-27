@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="block">
+            <div class="block-content">
+                <label for="city">Город:</label>
+                <input list="cities" id="city" name="city" placeholder="Введите город">
+
+                <datalist id="cities">
+                    <option value="Москва">
+                    <option value="Санкт-Петербург">
+                    <option value="Новосибирск">
+                    <option value="Екатеринбург">
+                </datalist>
+
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+
+    const button = document.getElementById('button');
+    const name = document.getElementById('comment-name');
+    const comment = document.getElementById('comment');
+    const container = document.querySelector('.block-comments');
+
+    console.log(name.value)
+
+
+
+
+    function getCurrentDate() {
+        const now = new Date();
+        const year = now.getFullYear();
+        const month = String(now.getMonth() + 1).padStart(2, '0');
+        const day = String(now.getDate()).padStart(2, '0');
+        return `${year}-${month}-${day}`;
+    }
+
+    button.addEventListener('click', () => {
+            container.insertAdjacentHTML('beforeend', `
+                    <div class="block-comment">
+                        <h2>${name.value}</h2>
+                        <span>${getCurrentDate()}</span>
+                        <p>${comment.value}</p>
+                    </div>
+            `);
+    })
+
+</script>
+</html>

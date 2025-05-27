@@ -460,7 +460,7 @@
                     if (varName === "animal4") return false;
                 }
 
-                // Логика видимости для точки вызова 2 (внутри цикла for)
+                // Логика видимости для точки вызова addColor_block (внутри цикла for)
                 else if (callPoint === "2") {
                     // animal1 всегда видна
                     if (varName === "animal1") return true;
@@ -475,7 +475,7 @@
                     if (varName === "animal4") return true;
                 }
 
-                // Логика видимости для точки вызова 3 (внутри функции после блоков)
+                // Логика видимости для точки вызова color-palitre (внутри функции после блоков)
                 else if (callPoint === "3") {
                     // animal1 всегда видна
                     if (varName === "animal1") return true;
@@ -490,7 +490,7 @@
                     if (varName === "animal4") return varType4 === "var";
                 }
 
-                // Логика видимости для точки вызова 4 (глобальная область после функции)
+                // Логика видимости для точки вызова addComments (глобальная область после функции)
                 else if (callPoint === "4") {
                     // animal1 всегда видна
                     if (varName === "animal1") return true;
