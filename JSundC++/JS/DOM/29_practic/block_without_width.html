@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Блоки с изменяемыми размерами</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+            height: 100%;
+        }
+
+        .left-block {
+            width: 250px;
+            background-color: #860000;
+            transition: width 0.3s ease;
+            position: relative;
+            min-width: 50px;
+        }
+
+        .left-block.collapsed {
+            width: 0;
+            min-width: 0;
+        }
+
+        .middle-block-1 {
+            flex: 1;
+            background-color: #00029f;
+            min-width: 100px;
+        }
+
+        .middle-block-2 {
+            flex: 1;
+            background-color: #00c402;
+            min-width: 100px;
+        }
+
+        .right-block {
+            width: 200px;
+            background-color: #7a4596;
+            min-width: 50px;
+        }
+
+        .toggle-button {
+            position: absolute;
+            top: 50%;
+            right: -15px;
+            width: 30px;
+            height: 30px;
+            background-color: #aaa;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 10;
+            transform: translateY(-50%);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .toggle-button:hover {
+            background-color: #999;
+        }
+
+        .arrow {
+            width: 0;
+            height: 0;
+            border-top: 6px solid transparent;
+            border-bottom: 6px solid transparent;
+            border-right: 6px solid white;
+            transition: transform 0.3s ease;
+            margin-left: -2px;
+        }
+
+        .collapsed .arrow {
+            transform: rotate(180deg);
+            margin-left: 2px;
+        }
+
+
+        .block-content {
+            padding: 20px;
+            color: #333;
+            font-family: Arial, sans-serif;
+            overflow: auto;
+            height: 100%;
+        }
+
+        .resizer {
+            width: 8px;
+            background-color: #999;
+            cursor: col-resize;
+            opacity: 0.5;
+            transition: opacity 0.3s;
+        }
+
+        .resizer:hover {
+            opacity: 0.8;
+        }
+
+        .resizer-active {
+            opacity: 1;
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-block" id="leftBlock">
+            <div class="toggle-button" id="toggleButton">
+                <div class="arrow"></div>
+            </div>
+        </div>
+
+        <div class="resizer" id="resizer1"></div>
+
+        <div class="middle-block-1" id="middleBlock1">
+        </div>
+
+        <div class="resizer" id="resizer2"></div>
+
+        <div class="middle-block-2" id="middleBlock2">
+
+        </div>
+
+        <div class="resizer" id="resizer3"></div>
+
+        <div class="right-block" id="rightBlock">
+
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const leftBlock = document.getElementById('leftBlock');
+            const middleBlock1 = document.getElementById('middleBlock1');
+            const middleBlock2 = document.getElementById('middleBlock2');
+            const rightBlock = document.getElementById('rightBlock');
+            const toggleButton = document.getElementById('toggleButton');
+            const resizer1 = document.getElementById('resizer1');
+            const resizer2 = document.getElementById('resizer2');
+            const resizer3 = document.getElementById('resizer3');
+
+            toggleButton.addEventListener('click', function() {
+                leftBlock.classList.toggle('collapsed');
+            });
+
+            function makeResizable(resizer, leftElement, rightElement) {
+                let x = 0;
+                let leftWidth = 0;
+                let rightWidth = 0;
+
+                const mouseDownHandler = function(e) {
+                    x = e.clientX;
+
+                    const leftRect = leftElement.getBoundingClientRect();
+                    const rightRect = rightElement.getBoundingClientRect();
+
+                    leftWidth = leftRect.width;
+                    rightWidth = rightRect.width;
+
+                    resizer.classList.add('resizer-active');
+                    document.addEventListener('mousemove', mouseMoveHandler);
+                    document.addEventListener('mouseup', mouseUpHandler);
+
+                    e.preventDefault();
+                };
+
+                const mouseMoveHandler = function(e) {
+                    const dx = e.clientX - x;
+
+                    if (leftElement.id === 'leftBlock') {
+                        leftElement.style.width = `${leftWidth + dx}px`;
+                        leftElement.style.flexGrow = 0;
+                    } else {
+                        leftElement.style.width = `${leftWidth + dx}px`;
+                        leftElement.style.flexGrow = 0;
+                    }
+
+                    if (rightElement.id === 'rightBlock') {
+                        rightElement.style.width = `${rightWidth - dx}px`;
+                        rightElement.style.flexGrow = 0;
+                    } else {
+                        rightElement.style.width = `${rightWidth - dx}px`;
+                        rightElement.style.flexGrow = 0;
+                    }
+
+                    document.body.style.cursor = 'col-resize';
+
+                    leftElement.style.userSelect = 'none';
+                    leftElement.style.pointerEvents = 'none';
+                    rightElement.style.userSelect = 'none';
+                    rightElement.style.pointerEvents = 'none';
+                };
+
+                const mouseUpHandler = function() {
+                    resizer.classList.remove('resizer-active');
+                    document.removeEventListener('mousemove', mouseMoveHandler);
+                    document.removeEventListener('mouseup', mouseUpHandler);
+
+                    document.body.style.cursor = 'default';
+
+                    leftElement.style.userSelect = 'auto';
+                    leftElement.style.pointerEvents = 'auto';
+                    rightElement.style.userSelect = 'auto';
+                    rightElement.style.pointerEvents = 'auto';
+                };
+
+                resizer.addEventListener('mousedown', mouseDownHandler);
+            }
+
+            makeResizable(resizer1, leftBlock, middleBlock1);
+            makeResizable(resizer2, middleBlock1, middleBlock2);
+            makeResizable(resizer3, middleBlock2, rightBlock);
+        });
+    </script>
+</body>
+</html>

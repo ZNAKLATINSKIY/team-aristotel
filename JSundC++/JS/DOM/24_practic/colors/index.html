@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="block">
+            <div class="block-content">
+                <div class="block-form">
+                    <form id="form">
+                        <label for="name">Название цвета: </label>
+                        <span class="error" id="error-name">Такое название уже есть</span>
+                        <input type="text" name="name" id="name" required />
+                        <label for="colorType">Выберите цветовую модеь: </label>
+                        <select id="colorType" name="colorType" required>
+                            <option value="RGB">RGB</option>
+                            <option value="RGBA">RGBA</option>
+                            <option value="HEX">HEX</option>
+                        </select>
+                        <label for="color">Код цвета: </label>
+                        <span class="error" id="error-code">Ошибка в коде</span>
+                        <input type="text" name="color" id="color" required />
+
+                        <button id="button">Добавить такой цвет</button>
+                    </form>
+                </div>
+                <div class="block-colors">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const name = document.getElementById('name');
+    const type = document.getElementById('colorType');
+    const code = document.getElementById('color');
+    const form = document.getElementById('form');
+    const error = document.getElementById('error-code');
+    const errorName = document.getElementById('error-name');
+    const container = document.querySelector('.block-colors');
+
+    function updateHint() {
+        const selectedType = type.value;
+        code.value = '';
+
+        if (selectedType === 'RGB') {
+            code.placeholder = 'например: 255, 0, 127';
+        } else if (selectedType === 'RGBA') {
+            code.placeholder = 'например: 255, 255, 255, 0.5';
+        } else if (selectedType === 'HEX') {
+            code.placeholder = 'например: #FF00AA';
+        }
+    }
+    type.addEventListener('change', updateHint);
+    window.addEventListener('DOMContentLoaded', updateHint);
+
+    function saveColorCard(cardData) {
+        const cards = JSON.parse(localStorage.getItem('colorCards')) || [];
+        cards.push(cardData);
+        localStorage.setItem('colorCards', JSON.stringify(cards));
+    }
+    function renderSavedCards() {
+        const cards = JSON.parse(localStorage.getItem('colorCards')) || [];
+        container.innerHTML = '';
+
+        cards.forEach(({name, type, code}) => {
+            let bgColor = '';
+            if (type === 'RGB') bgColor = `rgb(${code})`;
+            else if (type === 'RGBA') bgColor = `rgba(${code})`;
+            else if (type === 'HEX') bgColor = code;
+
+            container.insertAdjacentHTML('beforeend', `
+            <div class="color-card" style="background-color: ${bgColor}">
+                <div class="card-content">
+                    <h2 class="name-card">${name}</h2>
+                    <span class="type">${type}</span>
+                    <span class="code">${code}</span>
+                </div>
+            </div>
+        `);
+        });
+    }
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const t = type.value;
+        const c = code.value.trim();
+        let valid = false;
+
+        if (t === 'RGB') {
+            const parts = c.split(',').map(n => +n);
+            valid = parts.length === 3 && parts.every(n => n >= 0 && n <= 255 && !isNaN(n));
+        }
+
+        else if (t === 'RGBA') {
+            const parts = c.split(',').map(n => +n);
+            valid = parts.length === 4 &&
+                parts.slice(0, 3).every(n => n >= 0 && n <= 255 && !isNaN(n)) &&
+                parts[3] >= 0 && parts[3] <= 1 && !isNaN(parts[3]);
+        }
+
+        else if (t === 'HEX') {
+            valid = /^#[0-9A-Fa-f]{6}$/.test(c);
+        }
+
+        error.style.display = valid ? 'none' : 'block';
+
+        const cards = JSON.parse(localStorage.getItem('colorCards')) || [];
+        const value = name.value.trim().toLowerCase();
+        const isDuplicate = cards.some(card => card.name.toLowerCase() === value);
+
+        if (isDuplicate) {
+            errorName.style.display = 'block';
+        } else {
+            errorName.style.display = 'none';
+        }
+
+        if (valid && !isDuplicate) {
+            let bgColor = '';
+            if (t === 'RGB') {
+                bgColor = `rgb(${c})`;
+            } else if (t === 'RGBA') {
+                bgColor = `rgba(${c})`;
+            } else if (t === 'HEX') {
+                bgColor = c;
+            }
+
+            container.insertAdjacentHTML('beforeend', `
+                    <div class="color-card" style="background-color: ${bgColor}">
+                        <div class="card-content" >
+                            <h2 class="name-card">${name.value}</h2>
+                            <span class="type">${type.value}</span>
+                            <span class="code">${code.value}</span>
+                        </div>
+                    </div>
+            `);
+            saveColorCard({
+                name: name.value.trim(),
+                type: t,
+                code: c
+            });
+        }
+
+    });
+
+    window.addEventListener('DOMContentLoaded', renderSavedCards);
+</script>
+</html>

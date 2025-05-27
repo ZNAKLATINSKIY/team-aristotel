@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div class="block">
+
+        <div class="block-form">
+            <form action="" class="form">
+                <label for="square"><img src="square.png" alt="image" class="image"></label>
+                <input type="checkbox" id="square" name="form-square">
+                <label for="triangle"><img src="triangle.png" alt="image" class="image"></label>
+                <input type="checkbox" id="triangle" name="color">
+                <label for="circle"><img src="circle.png" alt="image" class="image"></label>
+                <input type="checkbox" id="circle" name="color">
+                <label for="rectangle"><img src="rectangle.jpg" alt="image" class="image"></label>
+                <input type="checkbox" id="rectangle" name="color">
+                <label for="color"></label>
+                <input type="color" id="color" name="color">
+            </form>
+        </div>
+
+        <div class="block-content">
+            <canvas id="canvas" width="1000" height="500"></canvas>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    const canvas = document.getElementById('canvas');
+    const canvasContainer = document.querySelector('.block-content');
+    const ctx = canvas.getContext('2d');
+    const square = document.getElementById('square');
+    const triangle = document.getElementById('triangle');
+    const circle = document.getElementById('circle');
+    const rectangle = document.getElementById('rectangle');
+    const color = document.getElementById('color');
+
+    document.querySelectorAll('input[type="checkbox"]').forEach(cb => {
+        cb.addEventListener('change', function () {
+            if (this.checked) {
+                document.querySelectorAll('input[type="checkbox"]').forEach(other => {
+                    if (other !== this) other.checked = false;
+                });
+            }
+        });
+    });
+
+
+    canvasContainer.addEventListener('mousedown', function (e) {
+        const rect = canvas.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        ctx.fillStyle = color.value;
+
+        if (square.checked) {
+            ctx.fillRect(x, y, 50, 50);
+        } else if (triangle.checked) {
+            ctx.beginPath();
+            ctx.moveTo(x, y - 30);
+            ctx.lineTo(x - 30, y + 30);
+            ctx.lineTo(x + 30, y + 30);
+            ctx.closePath();
+            ctx.fill();
+        } else if (circle.checked) {
+            ctx.beginPath();
+            ctx.arc(x, y, 30, 0, 2 * Math.PI);
+            ctx.fill();
+        } else if (rectangle.checked) {
+            ctx.fillRect(x, y, 50, 50);
+        }
+    })
+</script>
+</html>

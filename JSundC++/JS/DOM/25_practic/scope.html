@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #f5f7fa;
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .block__code {
+            flex: 1;
+            padding: 25px;
+            background-color: #f8f9fa;
+            border-right: 1px solid #e9ecef;
+        }
+        .result-section {
+            flex: 1;
+            padding: 25px;
+        }
+
+        h1 {
+            color: #343a40;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .code-block {
+            background-color: #282c34;
+            color: #abb2bf;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: Consolas, Monaco, 'Andale Mono', monospace;
+            margin-bottom: 20px;
+            line-height: 1.5;
+            position: relative;
+        }
+
+        .code-line {
+            margin-bottom: 5px;
+        }
+
+        .indent {
+            margin-left: 20px;
+        }
+
+        .double-indent {
+            margin-left: 40px;
+        }
+
+        .code-comment {
+            color: #98c379;
+        }
+
+        .variable-type-selector, .variable-name-selector {
+            display: inline-block;
+            background-color: #4a6cf7;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            padding: 2px 5px;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        .apply-button {
+            display: block;
+            background-color: #4a6cf7;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            margin: 20px auto;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .apply-button:hover {
+            background-color: #3a5bd9;
+        }
+
+        .scope-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .scope-cell {
+            height: 100px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 1px solid #e9ecef;
+        }
+
+        .scope-label {
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            font-size: 12px;
+            color: #6c757d;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+
+        .question-mark {
+            font-size: 36px;
+            color: #6c757d;
+        }
+
+        .animal {
+            max-width: 70%;
+            max-height: 70%;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .animal.visible {
+            opacity: 1;
+        }
+
+        .empty-hole {
+            width: 50px;
+            height: 20px;
+            background-color: #6c757d;
+            border-radius: 50%;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .empty-hole.visible {
+            opacity: 1;
+        }
+
+        .code-highlight {
+            color: #e5c07b;
+        }
+
+        .select-box {
+            display: inline-block;
+            position: relative;
+        }
+
+        select {
+            background-color: #3a5bd9;
+            color: white;
+            border: none;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: Consolas, Monaco, 'Andale Mono', monospace;
+        }
+
+        .explanation {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f0f7ff;
+            border-left: 4px solid #4a6cf7;
+            border-radius: 0 5px 5px 0;
+            display: none;
+        }
+
+        .explanation.visible {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="block__code">
+            <h1>Области видимости переменных в JavaScript</h1>
+
+            <div class="code-block">
+                <div class="code-line"><span class="code-comment">// Глобальная область</span></div>
+                <div class="code-line">
+                    <span class="select-box">
+                        <select id="varType1">
+                            <option value="var">var</option>
+                            <option value="let">let</option>
+                        </select>
+                    </span>
+                    animal1 = "Кот";
+                </div>
+                <div class="code-line">&nbsp;</div>
+                <div class="code-line">function outerFunction() {</div>
+                <div class="code-line indent"><span class="code-comment">// Функциональная область</span></div>
+                <div class="code-line indent">
+                    <span class="select-box">
+                        <select id="varType2">
+                            <option value="var">var</option>
+                            <option value="let">let</option>
+                        </select>
+                    </span>
+                    animal2 = "Лиса";
+                </div>
+                <div class="code-line indent">&nbsp;</div>
+                <div class="code-line indent">if (true) {</div>
+                <div class="code-line double-indent"><span class="code-comment">// Блочная область 1</span></div>
+                <div class="code-line double-indent">
+                    <span class="select-box">
+                        <select id="varType3">
+                            <option value="var">var</option>
+                            <option value="let">let</option>
+                        </select>
+                    </span>
+                    animal3 = "Волк";
+                </div>
+                <div class="code-line double-indent">console.log(<span class="select-box">
+                    <select id="callVar1">
+                        <option value="animal1">animal1</option>
+                        <option value="animal2">animal2</option>
+                        <option value="animal3">animal3</option>
+                    </select>
+                </span>); <span class="code-comment">// Точка вызова 1</span></div>
+                <div class="code-line indent">}</div>
+                <div class="code-line indent">&nbsp;</div>
+                <div class="code-line indent">for (let i = 0; i < 1; i++) {</div>
+                <div class="code-line double-indent"><span class="code-comment">// Блочная область 2</span></div>
+                <div class="code-line double-indent">
+                    <span class="select-box">
+                        <select id="varType4">
+                            <option value="var">var</option>
+                            <option value="let">let</option>
+                        </select>
+                    </span>
+                    animal4 = "Заяц";
+                </div>
+                <div class="code-line double-indent">console.log(<span class="select-box">
+                    <select id="callVar2">
+                        <option value="animal1">animal1</option>
+                        <option value="animal2">animal2</option>
+                        <option value="animal3">animal3</option>
+                        <option value="animal4">animal4</option>
+                    </select>
+                </span>); <span class="code-comment">// Точка вызова 2</span></div>
+                <div class="code-line indent">}</div>
+                <div class="code-line indent">&nbsp;</div>
+                <div class="code-line indent">console.log(<span class="select-box">
+                    <select id="callVar3">
+                        <option value="animal1">animal1</option>
+                        <option value="animal2">animal2</option>
+                        <option value="animal3">animal3</option>
+                        <option value="animal4">animal4</option>
+                    </select>
+                </span>); <span class="code-comment">// Точка вызова 3</span></div>
+                <div class="code-line">}</div>
+                <div class="code-line">&nbsp;</div>
+                <div class="code-line">outerFunction();</div>
+                <div class="code-line">&nbsp;</div>
+                <div class="code-line">console.log(<span class="select-box">
+                    <select id="callVar4">
+                        <option value="animal1">animal1</option>
+                        <option value="animal2">animal2</option>
+                        <option value="animal3">animal3</option>
+                        <option value="animal4">animal4</option>
+                    </select>
+                </span>); <span class="code-comment">// Точка вызова 4</span></div>
+            </div>
+
+            <button class="apply-button" id="applyButton">Применить</button>
+
+            <div class="explanation" id="explanation">
+                <h3>Объяснение:</h3>
+                <p id="explanationText"></p>
+            </div>
+        </div>
+
+        <div class="result-section">
+            <h1>Результаты видимости переменных</h1>
+
+            <div class="scope-grid">
+                <div class="scope-cell" data-callpoint="1" data-var="animal1">
+                    <div class="scope-label">Точка 1, animal1</div>
+                    <div class="question-mark">?</div>
+                    <img class="animal" src="https://cdn-icons-png.flaticon.com/512/616/616430.png" alt="Кот">
+                    <div class="empty-hole"></div>
+                </div>
+                <div class="scope-cell" data-callpoint="1" data-var="animal2">
+                    <div class="scope-label">Точка 1, animal2</div>
+                    <div class="question-mark">?</div>
+                    <img class="animal" src="https://cdn-icons-png.flaticon.com/512/616/616522.png" alt="Лиса">
+                    <div class="empty-hole"></div>
+                </div>
+                <div class="scope-cell" data-callpoint="1" data-var="animal3">
+                    <div class="scope-label">Точка 1, animal3</div>
+                    <div class="question-mark">?</div>
+                    <img class="animal" src="https://cdn-icons-png.flaticon.com/512/616/616565.png" alt="Волк">
+                    <div class="empty-hole"></div>
+                </div>
+                <div class="scope-cell" data-callpoint="1" data-var="animal4">
+                    <div class="scope-label">Точка 1, animal4</div>
+                    <div class="question-mark">?</div>
+                    <img class="animal" src="https://cdn-icons-png.flaticon.com/512/616/616419.png" alt="Заяц">
+                    <div class="empty-hole"></div>
+                </div>
+
+                <div class="scope-cell" data-callpoint="2" data-var="animal1">
+                    <div class="scope-label">Точка 2, animal1</div>
+                    <div class="question-mark">?</div>
+                    <img class="animal" src="https://cdn-icons-png.flaticon.com/512/616/616430.png" alt="Кот">
+                    <div class="empty-hole"></div>
+                </div>
+                <div class="scope-cell" data-callpoint="2" data-var="animal2">
+                    <div class="scope-label">Точка 2, animal2</div>
+                    <div class="question-mark">?</div>
+                    <img class="animal" src="https://cdn-icons-png.flaticon.com/512/616/616522.png" alt="Лиса">
+                    <div class="empty-hole"></div>
+                </div>
+                <div class="scope-cell" data-callpoint="2" data-var="animal3">
+                    <div class="scope-label">Точка 2, animal3</div>
+                    <div class="question-mark">?</div>
+                    <img class="animal" src="https://cdn-icons-png.flaticon.com/512/616/616565.png" alt="Волк">
+                    <div class="empty-hole"></div>
+                </div>
+                <div class="scope-cell" data-callpoint="2" data-var="animal4">
+                    <div class="scope-label">Точка 2, animal4</div>
+                    <div class="question-mark">?</div>
+                    <img class="animal" src="https://cdn-icons-png.flaticon.com/512/616/616419.png" alt="Заяц">
+                    <div class="empty-hole"></div>
+                </div>
+
+                <div class="scope-cell" data-callpoint="3" data-var="animal1">
+                    <div class="scope-label">Точка 3, animal1</div>
+                    <div class="question-mark">?</div>
+                    <img class="animal" src="https://cdn-icons-png.flaticon.com/512/616/616430.png" alt="Кот">
+                    <div class="empty-hole"></div>
+                </div>
+                <div class="scope-cell" data-callpoint="3" data-var="animal2">
+                    <div class="scope-label">Точка 3, animal2</div>
+                    <div class="question-mark">?</div>
+                    <img class="animal" src="https://cdn-icons-png.flaticon.com/512/616/616522.png" alt="Лиса">
+                    <div class="empty-hole"></div>
+                </div>
+                <div class="scope-cell" data-callpoint="3" data-var="animal3">
+                    <div class="scope-label">Точка 3, animal3</div>
+                    <div class="question-mark">?</div>
+                    <img class="animal" src="https://cdn-icons-png.flaticon.com/512/616/616565.png" alt="Волк">
+                    <div class="empty-hole"></div>
+                </div>
+                <div class="scope-cell" data-callpoint="3" data-var="animal4">
+                    <div class="scope-label">Точка 3, animal4</div>
+                    <div class="question-mark">?</div>
+                    <img class="animal" src="https://cdn-icons-png.flaticon.com/512/616/616419.png" alt="Заяц">
+                    <div class="empty-hole"></div>
+                </div>
+
+                <div class="scope-cell" data-callpoint="4" data-var="animal1">
+                    <div class="scope-label">Точка 4, animal1</div>
+                    <div class="question-mark">?</div>
+                    <img class="animal" src="https://cdn-icons-png.flaticon.com/512/616/616430.png" alt="Кот">
+                    <div class="empty-hole"></div>
+                </div>
+                <div class="scope-cell" data-callpoint="4" data-var="animal2">
+                    <div class="scope-label">Точка 4, animal2</div>
+                    <div class="question-mark">?</div>
+                    <img class="animal" src="https://cdn-icons-png.flaticon.com/512/616/616522.png" alt="Лиса">
+                    <div class="empty-hole"></div>
+                </div>
+                <div class="scope-cell" data-callpoint="4" data-var="animal3">
+                    <div class="scope-label">Точка 4, animal3</div>
+                    <div class="question-mark">?</div>
+                    <img class="animal" src="https://cdn-icons-png.flaticon.com/512/616/616565.png" alt="Волк">
+                    <div class="empty-hole"></div>
+                </div>
+                <div class="scope-cell" data-callpoint="4" data-var="animal4">
+                    <div class="scope-label">Точка 4, animal4</div>
+                    <div class="question-mark">?</div>
+                    <img class="animal" src="https://cdn-icons-png.flaticon.com/512/616/616419.png" alt="Заяц">
+                    <div class="empty-hole"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const applyButton = document.getElementById('applyButton');
+            const scopeCells = document.querySelectorAll('.scope-cell');
+            const explanation = document.getElementById('explanation');
+            const explanationText = document.getElementById('explanationText');
+
+            // Обработчик клика на ячейку таблицы
+            scopeCells.forEach(cell => {
+                cell.addEventListener('click', function() {
+                    const questionMark = this.querySelector('.question-mark');
+                    const animal = this.querySelector('.animal');
+                    const emptyHole = this.querySelector('.empty-hole');
+
+                    if (questionMark.style.display !== 'none') {
+                        questionMark.style.display = 'none';
+
+                        // Показываем соответствующий результат на основе текущих значений
+                        const isVisible = checkVisibility(
+                            this.getAttribute('data-callpoint'),
+                            this.getAttribute('data-var')
+                        );
+
+                        if (isVisible) {
+                            animal.classList.add('visible');
+                        } else {
+                            emptyHole.classList.add('visible');
+                        }
+                    }
+                });
+            });
+
+            // Обработчик нажатия кнопки "Применить"
+            applyButton.addEventListener('click', function() {
+                resetResults();
+                updateExplanation();
+            });
+
+            // Функция для проверки видимости переменной в определенной точке вызова
+            function checkVisibility(callPoint, varName) {
+                const varType1 = document.getElementById('varType1').value;
+                const varType2 = document.getElementById('varType2').value;
+                const varType3 = document.getElementById('varType3').value;
+                const varType4 = document.getElementById('varType4').value;
+
+                const selectedVar1 = document.getElementById('callVar1').value;
+                const selectedVar2 = document.getElementById('callVar2').value;
+                const selectedVar3 = document.getElementById('callVar3').value;
+                const selectedVar4 = document.getElementById('callVar4').value;
+
+                // Логика видимости для точки вызова 1 (внутри блока if)
+                if (callPoint === "1") {
+                    // animal1 всегда видна, независимо от var/let
+                    if (varName === "animal1") return true;
+
+                    // animal2 всегда видна в пределах функции
+                    if (varName === "animal2") return true;
+
+                    // animal3 видна только если объявлена через var или если это текущий callVar
+                    if (varName === "animal3") return true;
+
+                    // animal4 ещё не объявлена в этой точке
+                    if (varName === "animal4") return false;
+                }
+
+                // Логика видимости для точки вызова 2 (внутри цикла for)
+                else if (callPoint === "2") {
+                    // animal1 всегда видна
+                    if (varName === "animal1") return true;
+
+                    // animal2 всегда видна в пределах функции
+                    if (varName === "animal2") return true;
+
+                    // animal3 видна только если объявлена через var
+                    if (varName === "animal3") return varType3 === "var";
+
+                    // animal4 всегда видна в этой точке, так как мы внутри блока её объявления
+                    if (varName === "animal4") return true;
+                }
+
+                // Логика видимости для точки вызова 3 (внутри функции после блоков)
+                else if (callPoint === "3") {
+                    // animal1 всегда видна
+                    if (varName === "animal1") return true;
+
+                    // animal2 всегда видна в пределах функции
+                    if (varName === "animal2") return true;
+
+                    // animal3 видна только если объявлена через var
+                    if (varName === "animal3") return varType3 === "var";
+
+                    // animal4 видна только если объявлена через var
+                    if (varName === "animal4") return varType4 === "var";
+                }
+
+                // Логика видимости для точки вызова 4 (глобальная область после функции)
+                else if (callPoint === "4") {
+                    // animal1 всегда видна
+                    if (varName === "animal1") return true;
+
+                    // animal2, animal3, animal4 не видны вне функции, если объявлены внутри
+                    if (varName === "animal2") return false;
+                    if (varName === "animal3") return false;
+                    if (varName === "animal4") return false;
+                }
+
+                return false;
+            }
+
+            function resetResults() {
+                scopeCells.forEach(cell => {
+                    const questionMark = cell.querySelector('.question-mark');
+                    const animal = cell.querySelector('.animal');
+                    const emptyHole = cell.querySelector('.empty-hole');
+
+                    questionMark.style.display = 'block';
+                    animal.classList.remove('visible');
+                    emptyHole.classList.remove('visible');
+                });
+            }
+
+
+            // Инициализация: скрываем все результаты
+            resetResults();
+        });
+    </script>
+</body>
+</html>
