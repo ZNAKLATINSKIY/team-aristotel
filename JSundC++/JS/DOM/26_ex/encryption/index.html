@@ -13,7 +13,7 @@
             color: white;
             background: black;
         }
-        .first__content {
+        .content {
             width: 400px;
             height: 500px;
             border: 1px solid white;
@@ -22,7 +22,7 @@
             flex-direction: column;
             gap: 75px;
         }
-        .encryption {
+        .encryption, .decoding {
             display: flex;
             flex-direction: column;
             gap: 20px;
@@ -43,7 +43,8 @@
     </style>
 </head>
 <body>
-    <div class="first__content">
+
+    <div class="first__content content">
         <div class="encryption">
             <div class="enter__word">
                 <span>Введите слово:</span>
@@ -69,7 +70,32 @@
         </div>
     </div>
 
+    <div class="second__content content">
+        <div class="decoding">
+            <div class="enter__word">
+                <span>Введите слово:</span>
+                <input type="text" id="decoding-word">
+            </div>
+            <div class="enter__word-input">
+                <span>Введите сдвиг:</span>
+                <input type="text" id="decoding-shift">
+                <button id="decoding-but">Расшифровать</button>
+            </div>
+        </div>
+        <div class="enc start__encryption">
+            <span>Исходный шифр:</span>
+            <span id="startDecoding">Исходный шифр</span>
+        </div>
+        <div class="enc finish__encryption">
+            <span>Зашифрованный код:</span>
+            <span id="finishDecoding">Зашифрованный код</span>
+        </div>
+        <div class="enc finish__encryption-word">
+            <span>Зашифрованный текст:</span>
+            <span id="finishDecodingWord">Зашифрованный текст</span>
+        </div>
+    </div>
 
-    <script src="main.js"></script>
+    <script src="./main.js"></script>
 </body>
 </html>

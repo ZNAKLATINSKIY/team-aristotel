@@ -3,10 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <title>Список продуктов</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .product__list-add {
+            display: flex;
+            flex-direction: column;
+            padding-top: 200px;
+            width: 500px;
+            gap: 5px;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-    <div class="block__list">
+    <div class="product__list-add">
+        <span>Введите товар:</span>
+        <input type="text" id="productInput" placeholder="Название товара">
+        <button id="addProductButton">Внести</button>
+    </div>
 
+    <div class="product__list">
+        <h2>Список продуктов:</h2>
+        <ul id="productList"></ul>
     </div>
 
     <script src="./main.js"></script>
