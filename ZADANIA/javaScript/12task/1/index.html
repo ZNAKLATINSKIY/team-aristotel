@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="block">
+            <div class="block-content">
+                <div class="block-counter">
+                    <div class="block-numbers">
+                        <span id="number">0</span>
+                    </div>
+                    <div class="block-management">
+                        <button class="button" id="button-up">UP</button>
+                        <button class="button" id="button-down">DOWN</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const buttonUp = document.getElementById('button-up');
+    const buttonDown = document.getElementById('button-down');
+    const number = document.getElementById('number');
+
+    let count = 0;
+
+
+    buttonUp.addEventListener('click', () => {
+        count++;
+        number.textContent = count;
+    })
+    buttonDown.addEventListener('click', () => {
+        if (count > 0) {
+            count--;
+            number.textContent = count;
+        } else if (count === 0) {
+
+        }
+    })
+</script>
+</html>

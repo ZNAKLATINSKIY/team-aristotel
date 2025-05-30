@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="block">
+            <div class="block-content">
+                <div class="bloc-colors">
+                    <div class="block-box-container">
+                        <div class="block-color" id="red"></div>
+                        <div class="block-color" id="blue"></div>
+                        <div class="block-color" id="yellow"></div>
+                        <div class="block-color" id="white"></div>
+                        <div class="block-color" id="black"></div>
+                    </div>
+                    <p id="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet delectus dolorem eos eveniet, expedita impedit ipsam magni mollitia necessitatibus nemo nostrum praesentium provident veniam. Et inventore iusto nemo repudiandae tempore! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus deserunt distinctio ea eligendi, id illum inventore nobis nostrum perspiciatis reiciendis reprehenderit repudiandae, voluptatem! Accusamus animi doloremque eum magnam porro, veniam.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const red = document.getElementById('red');
+    const blue = document.getElementById('blue');
+    const yellow = document.getElementById('yellow');
+    const white = document.getElementById('white');
+    const black = document.getElementById('black');
+    const paragraph = document.getElementById('paragraph');
+    const block = document.querySelector('.block-content');
+    const blockBox = document.querySelector('.block-box-container');
+
+    red.addEventListener('click', function () {
+        paragraph.style.color = 'red';
+        block.style.filter = 'invert(0%)';
+        paragraph.style.background = 'white';
+
+    })
+    blue.addEventListener('click', function () {
+        paragraph.style.color = 'blue';
+        block.style.filter = 'invert(0%)';
+        paragraph.style.background = 'white';
+    })
+    yellow.addEventListener('click', function () {
+        paragraph.style.color = 'yellow';
+        block.style.filter = 'invert(0%)';
+        paragraph.style.background = 'black';
+
+    })
+    white.addEventListener('click', function () {
+        paragraph.style.color = 'black';
+        block.style.filter = 'invert(100%)';
+        paragraph.style.background = 'white';
+
+
+    })
+    black.addEventListener('click', function () {
+        paragraph.style.color = 'black';
+        block.style.filter = 'invert(0%)';
+        paragraph.style.background = 'white';
+
+    })
+
+</script>
+</html>
