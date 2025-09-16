@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        // 1. Пропозиции
+        // Задача: Напиши функцию isDivisible(n, divisor), которая возвращает true, если n делится на divisor без остатка.
+        function isDivisible(n, divisor) {
+            return n % divisor === 0;
+        }
+
+        // 2. Логические операторы
+        // Задача: Напиши функцию isInRange(x, min, max), которая проверяет, что x лежит между min и max (включительно).
+        function isInRange(x, min, max) {
+            return x >= min && x <= max;
+        }
+
+        // 3. Комбинации условий
+        // Задача: Напиши функцию isStrongPassword(password), которая возвращает true, если пароль:
+        //     Длиной ≥ 8 символов,
+        //     Содержит хотя бы одну цифру,
+        //     Содержит хотя бы один спецсимвол (!@#$%^&*).
+        function isStrongPassword(password) {
+            if (password.length < 8) return false;
+
+            let numbers_list = '123456789';
+            let symbols_list = '!@#$%^&*';
+            let hasNumber = false;
+            let hasSymbol = false;
+
+            for (let i of password) {
+                if (numbers_list.includes(i)) {
+                    hasNumber = true;
+                }
+                if (symbols_list.includes(i)) {
+                    hasSymbol = true;
+                }
+                if (hasNumber && hasSymbol) {
+                    break;
+                }
+            }
+
+            return hasNumber && hasSymbol;
+        }
+
+        // 4. Предикаты
+        // Задача: Напиши функцию hasDuplicates(arr), которая проверяет, есть ли в массиве повторяющиеся элементы.
+        function hasDuplicates(arr) {
+            
+        }
+
+    </script>
+</body>
+</html>
