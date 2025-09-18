@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Скринсейвер с котиками и пёсиками</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      background: #fafafa;
+      padding: 20px;
+    }
+    img {
+      max-width: 400px;
+      max-height: 400px;
+      margin: 20px auto;
+      display: block;
+      transition: opacity 0.5s;
+    }
+    #controls {
+      margin: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    #source {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Скринсейвер 🐱🐶</h1>
+
+  <div id="controls">
+    <button id="toggle">Котики</button>
+    <button id="pause">Пауза</button>
+  </div>
+
+  <img id="animal-image" src="" alt="Здесь будет животное">
+  <div id="source"></div>
+
+  <script>
+
+    let imgAnimal = document.getElementById('animal-image');
+    const toggleBut = document.getElementById('toggle');
+    const pauseBut = document.getElementById('pause');
+    const source = document.getElementById('source');
+
+    let currentAnimal = "cat"; 
+    let CurrentURL;
+
+    let intervalId;
+    let imgURL;
+    let isPaused = false;
+    
+    async function fetchImage() {
+        let data;
+        if (currentAnimal === "cat") {
+            CurrentURL = "https://api.thecatapi.com/v1/images/search";
+        }
+        else {
+            CurrentURL = "https://dog.ceo/api/breeds/image/random";
+        }
+        try {
+            const response = await fetch(CurrentURL);
+            if(!response.ok) {
+                throw new Error("Ошибка загрузки");
+            }
+            data = await response.json();
+            switch(currentAnimal) {
+            case 'cat':
+                imgURL = data[0].url;
+                break;
+            case 'dog':
+                imgURL = data.message;
+                break;
+            }
+
+            imgAnimal.style.opacity = '0';
+
+            imgAnimal.onload = () => {
+                imgAnimal.style.opacity = '1';
+                console.log("Картинка готова к показу!");
+            }
+            imgAnimal.src = imgURL;
+            
+        } catch(error) {
+            console.error("Ошибка: ", error);
+        }
+
+    }
+
+    function startSlideshow() {
+        intervalId = setInterval(() => fetchImage(), 3000);
+    }
+    toggleBut.addEventListener('click', function() {
+        if (toggleBut.textContent === 'Котики') {
+            toggleBut.textContent = 'Собачки';
+            currentAnimal = 'dog';
+        } else {
+            toggleBut.textContent = 'Котики';
+            currentAnimal = 'dog';
+        }
+    })
+    pauseBut.addEventListener('click', function() {
+        if (isPaused) {
+            startSlideshow();
+            isPaused = false;
+        } else {
+            clearInterval(intervalId)
+            isPaused = true;
+        }
+    })
+
+    startSlideshow();
+  </script>
+</body>
+</html>
