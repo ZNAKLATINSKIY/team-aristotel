@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- ex1 -->
+    <script>
+        console.log(document.body.childNodes);
+    </script>
+
+    <!-- ex2 -->
+    <script>
+        const ul = document.querySelector("ul");
+        console.log(ul.firstElementChild);  
+        console.log(ul.lastElementChild);   
+    </script>
+
+    <!-- ex3 -->
+    <script>
+        const paragraphs = document.querySelectorAll("p");
+        const secondP = paragraphs[1];  
+        console.log(secondP.previousElementSibling);  
+        console.log(secondP.nextElementSibling);      
+    </script>
+
+    <!-- ex4 -->
+    <script>
+        const p = document.querySelector("p");
+        console.log(p.parentNode);    
+        console.log(p.parentElement);
+    </script>
+
+    <!-- ex5 -->
+     <script>
+        const ull = document.querySelector("ul");
+        const children = ul.children; 
+        for (let li of children) {
+        li.style.border = "1px solid red";
+        }
+     </script>
+
+     <!-- ex6 -->
+      <script>
+
+      </script>
+</body>
+</html>
