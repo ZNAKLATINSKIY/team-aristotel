@@ -1,5 +1,5 @@
 import React from 'react'
-import ProductRating from './ProductRating/ProductRating'
+import ProductRating from '../ProductRating/ProductRating.jsx'
 function ProductCardWithImage(props) {
     function Check(inStock) {
         if (inStock) {
@@ -12,7 +12,7 @@ function ProductCardWithImage(props) {
     <div>
         <h3>{props.name}</h3>
         <p>Цена: {props.price}</p>
-        {Check(props.inStock)};
+        {Check(props.inStock)}
         <ProductRating rating={4} reviewsCount={333}/>
     </div>
   )

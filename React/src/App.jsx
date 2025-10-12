@@ -9,9 +9,11 @@ import Footer from './components/Footer/Footer.jsx'
 import Cart from './components/Cart/Cart.jsx'
 import SimpleProductCard from './components/SimpleProductCard/SimpleProductCard.jsx'
 import AddToCartButton from './components/AddToCartButton/AddToCartButton.jsx'
-import ProductCardWithImage from './components/ProductCardWithImage/ProductCardWithImage.jsx'
-import ProductRating from './components/ProductCardWithImage/ProductRating/ProductRating.jsx'
-import SellerInfo from './components/SellerInfo/SellerInfo.jsx'
+import ProductCardWithImage from './components/FullProductCard/ProductCardWithImage/ProductCardWithImage.jsx'
+import ProductRating from './components/FullProductCard/ProductRating/ProductRating.jsx'
+import SellerInfo from './components/FullProductCard/SellerInfo/SellerInfo.jsx'
+import ProductSpecifications from './components/FullProductCard/ProductSpecifications/ProductSpecifications.jsx'
+import FullProductCard from './components/FullProductCard/FullProductCard.jsx'
 
 function App() {
   return (
@@ -22,27 +24,9 @@ function App() {
       <Cart cartItems={"apple"} price={25} stock={[1,2,3]}/>
       <Cart />
 
-      <SimpleProductCard 
-      name={"oreshnik"} 
-      price={'1000000'}
-      />
 
-      <AddToCartButton 
-      text={"Добавить в корзину"}
-      />
 
-      <ProductCardWithImage 
-      name={"Название картинки"} 
-      price={"Цена картинки"} 
-      inStock={true}
-      />
-
-      <SellerInfo seller = {{
-        name: "Евгений",
-        rating: 5,
-        reviewsCount: 227,
-        isVerifed: true,
-      }} />
+      <FullProductCard/>
     </>
   )
 }
