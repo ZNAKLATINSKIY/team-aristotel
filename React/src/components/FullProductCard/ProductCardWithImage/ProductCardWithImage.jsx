@@ -1,6 +1,6 @@
 import React from 'react'
 import ProductRating from '../ProductRating/ProductRating.jsx'
-function ProductCardWithImage(props) {
+function ProductCardWithImage(name, price, inStock) {
     function Check(inStock) {
         if (inStock) {
             return <button style={{color: "green"}}>Купить</button>
@@ -8,13 +8,13 @@ function ProductCardWithImage(props) {
             return <button style={{color: "red"}}>Нет в наличии</button>
         }
     }
+    
   return (
-    <div>
-        <h3>{props.name}</h3>
-        <p>Цена: {props.price}</p>
-        {Check(props.inStock)}
-        <ProductRating rating={4} reviewsCount={333}/>
-    </div>
+    {
+        name,
+        price,
+        inStock
+    }
   )
 }
 

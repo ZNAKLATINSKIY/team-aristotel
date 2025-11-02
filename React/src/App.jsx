@@ -18,15 +18,7 @@ import FullProductCard from './components/FullProductCard/FullProductCard.jsx'
 function App() {
   return (
     <>
-
-      <Cart cartItems={"cherry"}/>
-      <Cart cartItems={"banana"}/>
-      <Cart cartItems={"apple"} price={25} stock={[1,2,3]}/>
-      <Cart />
-
-
-
-      <FullProductCard/>
+        
     </>
   )
 }

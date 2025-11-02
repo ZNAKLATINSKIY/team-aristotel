@@ -29,11 +29,6 @@ function FullProductCard({
  }) {
   return (
     <div>
-      <ProductCardWithImage 
-      name={"Название картинки"} 
-      price={"Цена картинки"} 
-      inStock ={true}
-      />
       <SellerInfo seller = {{
         name: "Евгений",
         rating: 5,

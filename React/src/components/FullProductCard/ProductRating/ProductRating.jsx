@@ -7,7 +7,7 @@ function ProductRating( { rating, reviewsCount } ) {
   }
   return (
     <div>
-    {checkRating(rating, reviewsCount)}
+    {checkRating(5, 227)}
     </div>
   )
 }

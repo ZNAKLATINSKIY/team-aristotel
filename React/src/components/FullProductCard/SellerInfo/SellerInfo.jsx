@@ -1,11 +1,5 @@
 import React from 'react'
-function SellerInfo({
-    seller: {
-    name: sellerName,
-    rating: sellerRating,
-    reviewsCount: reviewsCount,
-    isVerifed: isVerifed,
-}}) {
+function SellerInfo() {
     if (isVerifed) {
         return <p>Продавец верифицирован✅</p>
     } else {
