@@ -32,6 +32,7 @@ def ex_two():
     }
     student['специальность'] = 'Разработка БПЛА'
     student['средний балл'] = 95
+
     keys = student.keys()
     values = student.values()
     print(f"Ключи: {", ".join(map(str, keys))}\nЗначения: {", ".join(map(str, values))}")
@@ -63,6 +64,7 @@ def ex_four():
     lexicon = {}
     for i in list:
         lexicon[i] = len(i)
+
     print(lexicon)
 
 
@@ -77,9 +79,21 @@ def ex_five():
     strArray = str.split()
     
     lexicon = {}
+    lexicon_one = []
+
     for i in strArray:
+        count_i = 0
         if i in test:
             continue
-        
+        for j in strArray:
+            if i.lower() == j.lower():
+                count_i += 1
+                lexicon[i] = count_i
 
-ex_five()
+    keys = lexicon.keys()
+    for i in keys:
+        if lexicon[i] == 1:
+            lexicon_one.append(i)
+
+    print(lexicon)
+    print(f'В задании было указано множество. Я решил использовать массив.\nМассив уникальных слов строки: {lexicon_one}')
