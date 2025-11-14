@@ -9,7 +9,7 @@ function Chosen( {name, price, isChosen, setChosen} ) {
       
       <button onClick = {() => 
         setChosen(!isChosen)
-      }>Клик товара</button>
+      }>В избранное</button>
     </div>
   )
 }

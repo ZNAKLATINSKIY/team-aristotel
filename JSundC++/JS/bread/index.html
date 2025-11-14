@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//         1. Максимум из двух чисел
+// Напиши функцию max(a, b), возвращающую большее из двух чисел без использования Math.max.
+        function max(a, b) {
+            alert(a>b ? a : b);
+        }
+
+        
+// 2\. Проверка на совершеннолетие
+// Если возраст меньше 18 — вывести "Доступ запрещён", иначе "Доступ разрешён" (используй тернарный оператор).
+        function TestAge(age) {
+            alert(age >= 18 ? "Доступ разрешён" : "Доступ запрещён");
+        }
+
+//         3\. Функция приветствия
+// Напиши функцию greet(name), которая выводит "Привет, name!", если имя указано, иначе "Привет, гость!".
+        function green(name) {
+            alert(name ? `Привет, ${name}` : "Привет, гость!")
+        }
+
+// 4\. Оценка по баллам
+// По введённым баллам (0–100) выведи оценку:
+        function CountBalls(ball) {
+            if (ball <= 49) {
+                alert("Плохо")
+            } else if (ball <= 69) {
+                alert("Не хорошо")
+            } else if (ball <= 89) {
+                alert("Хорошо")
+            } else if (ball <= 100) {
+                alert("Отлично")
+            }
+        }
+
+// 5\. Чётное или нечётное
+// Напиши функцию isEven(num), возвращающую true, если число чётное, и false, если нечётное.
+        function isEven(num) {
+            return isEven % 2 === 0 ? true : false;
+        }
+
+// 6\. Сумма чисел от 1 до N
+// Введи N и посчитай сумму всех чисел от 1 до N с помощью цикла for.
+        function Sum(n) {
+            let result = 0;
+            for(let i = 0; i < n; i++) {
+                result += i;
+            } 
+            alert(`Сумма чисел от 1 до ${n}`);
+        }
+
+// 7\. Подсчёт чётных чисел
+// Напиши цикл, который выводит все чётные числа от 1 до 20.
+        function EvenNumbers() {
+            for(let i = 1; i < 20; i++) {
+                if (i % 2 === 0) {
+                    alert(i);
+                }
+            }
+        }
+
+// 8\. Подсчёт гласных
+// Напиши функцию countVowels(str), которая возвращает количество гласных в строке.
+        function countVowels(str) {
+            const vowelsArray = 'уеыаоэюия'
+            let countVowels = 0;
+            for(i of vowelsArray) {
+                if (i.includes(vowelsArray) && i.includes(vowelsArray.toUpperCase())) {
+                    countVowels += 1;
+                }
+            }
+            alert(countVowels);
+        }
+
+//         9\. Факториал числа
+// Напиши функцию factorial(n), вычисляющую n! через цикл for.
+        function factorial(n) {
+            if (n === 0 || n === 1) {
+                return 1;
+            }
+            return n * factorial(n - 1);
+        }
+
+//         10\. Переверни строку
+// Напиши функцию reverseString(str), возвращающую строку наоборот.
+        function reverseString(str) {
+            return str.split('').reverse().join('');
+        }
+
+// 11\. Таблица умножения
+// Выведи таблицу умножения для числа 5 с помощью цикла for.
+        function multTable() {
+            for (let i = 1; i < 10; i++) {
+                console.log(`5x${i} = ${5*i}`)
+            }
+        }
+
+// 12\. Минимум из трёх чисел
+// Используя \&\& и ||, напиши выражение, которое возвращает минимальное из трёх чисел.
+        function minOfThree(a, b, c) {
+            if (a < b && a < c) {
+                return a;
+            }
+            else if (b < a && b < c) {
+                return b;
+            }
+            else {
+                return c;
+            }
+        }
+
+// 13\. Сумма положительных чисел массива
+// Пусть есть массив arr = \[3, -1, 5, -7, 2].
+// Найди сумму только положительных чисел.
+        function moduleArray(arr) {
+            let result = 0;
+            for(i of arr) {
+                if (i > 0) {
+                    result += i
+                }
+            }
+            alert(result);
+        }
+
+
+
+// 14\. Количество делителей
+// Напиши функцию countDivisors(n), возвращающую количество делителей числа n.
+        function countDivisors(n) {
+            let count = 0;
+            for(let i = 0; i <= 10; i++) {
+                if (n % i === 0) {
+                    count++
+                }
+            }
+            alert(count)
+        }
+
+
+        
+// 15\. Число Фибоначчи
+// Напиши функцию fibonacci(n), которая возвращает n-е число Фибоначчи.
+        function fibonacci(n) {
+            if (n === 0) return 0;
+            if (n === 1) return 1;
+            return fibonacci(n - 1) + fibonacci(n - 2); // рекурсия
+        }
+        
+    </script>
+</body>
+</html>
