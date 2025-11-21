@@ -153,6 +153,15 @@
             return fibonacci(n - 1) + fibonacci(n - 2); // рекурсия
         }
         
+
+        function spinWords(string){
+            let array = string.split(' ');
+            const new_array = array.map((item) => item.length >= 5 ? item.split('').reverse().join('') : item)
+            return new_array.join(' ');
+        }
+
+        console.log(spinWords('Welcome bbqa gsdgsfdsgsqqqq ss'));
+        
     </script>
 </body>
 </html>
