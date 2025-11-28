@@ -33,13 +33,13 @@ function App() {
 
   const [inputName, setinputName] = useState('');
 
-  useEffect(() => {
-    if (inputName) {
-      console.log(`Привет, ${inputName}`);
-    } else {
-      console.log("Введите Ваше имя!")
-    }
-  })
+  // useEffect(() => {
+  //   if (inputName) {
+  //     console.log(`Привет, ${inputName}`);
+  //   } else {
+  //     console.log("Введите Ваше имя!")
+  //   }
+  // })
 
   const [newItem, setNewItem] = useState('');
   const [items, setItems] = useState([]);
@@ -91,13 +91,15 @@ function App() {
   };
 
   
-  const [cityWeather, SetCityWeather] = useState('');
+  const [load, setLoad] = useState(false);
+  const [cityWeather, setCityWeather] = useState('');
   const [tempWeather, setTempWeather] = useState(() => {
-    return localStorage.getItem('tempWeather' || 0);
+    return localStorage.getItem('tempWeather') || 0;
   });
   const [condition, setCondition] = useState(() => {
-    return localStorage.getItem('condition' || '');
+    return localStorage.getItem('condition') || '';
   });
+
 
   useEffect(() => {
     if (weatherData[cityWeather]) {
@@ -107,11 +109,16 @@ function App() {
   }, [cityWeather]);
 
   useEffect(() => {
-    localStorage.setItem("tempWeather", tempWeather);
-    localStorage.setItem("condition", condition);
+    localStorage.setItem("tempWeather", tempWeather)
+    localStorage.setItem("condition", condition)
   }, [tempWeather, condition]);
 
-
+  useEffect(() => {
+    setLoad(true)
+    setTimeout(() => {
+      setLoad(false);
+    }, 2000)
+  }, [cityWeather])
   
   const [drink, setDrink] = useState('');
   const [timee, setTimee] = useState('');
@@ -152,7 +159,7 @@ function App() {
     value={sumCheck}
     onChange={(e) => setSumCheck(e.target.value)}
     />
-    <select onChange={(e) => setTeeCheck(e.target.value)} name="select" id="">
+    <select onChange={(e) => selectChange(e.target.value)} name="select" id="">
       <option value="15">15%</option>
       <option value="25">25%</option>
       <option value="50">50%</option>
@@ -164,13 +171,16 @@ function App() {
     <p> {filtered.length > 0 ? filtered.join(' ') : "Ничего не найдено"} </p>
 
     <div>
-      <select onChange={(e) => SetCityWeather(e.target.value)} name="" id="">
+      <select onChange={(e) => setCityWeather(e.target.value)} name="" id="">
         <option value=""></option>
         <option value="Москва">Москва</option>
         <option value="Сочи">Сочи</option>
         <option value="Екатеринбург">Екатеринбург</option>
       </select>
-      <p>Температура города: {tempWeather} Погода: {condition}</p>
+      {
+        load ? <p>Загрузка...</p>
+        : <p>Температура города: {tempWeather} Погода: {condition}</p>
+      }
     </div>
     
     <Exten drink={drink} setDrink={setDrink} timee={timee} setTimee={setTimee} season={season} setSeason={setSeason} />

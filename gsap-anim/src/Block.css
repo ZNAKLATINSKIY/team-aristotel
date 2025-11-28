@@ -1,0 +1,27 @@
+.section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.section--green {
+  background-color: green;
+}
+.section--blue {
+  background-color: blue;
+}
+.square {
+  width: 200px;
+  height: 200px;
+  background-color: aliceblue;
+  transition: border-radius 1s;
+  opacity: 1;
+}
+.square--active {
+  border-radius: 50%;
+}
