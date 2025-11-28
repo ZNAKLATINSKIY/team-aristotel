@@ -1,6 +1,6 @@
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { SplitText } from 'gsap/all';
+import { SplitText, ScrollTrigger } from 'gsap/all';
 import { useRef } from 'react';
 import { useMediaQuery } from '@custom-react-hooks/use-media-query'
 
@@ -10,6 +10,7 @@ function Hero() {
     const isMobile = useMediaQuery({ maxWidth: 767 })
 
     gsap.registerPlugin(SplitText);
+    gsap.registerPlugin(ScrollTrigger);
     useGSAP(() => {
         const heroSplit = new SplitText('.title', {type: 'chars, words'});
         const paragraphSplit = new SplitText('.subtitle', {type: 'lines'});
@@ -92,7 +93,7 @@ function Hero() {
             ref={videoRef}
             src="/videos/output.mp4" 
             muted 
-            playsInLine 
+            playsInline 
             preload="auto"
         />
 
