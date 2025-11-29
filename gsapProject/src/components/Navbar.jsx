@@ -1,4 +1,4 @@
-import {navLinks} from '../../constants/index';
+import { navLinks } from '../../constants/index';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 function Navbar() {
